@@ -1,0 +1,13 @@
+{
+  "name": "ph-s",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run strat:services\" \"npm run strat:client\"",
+    "strat:services": "cd ps-services && npm run start",
+    "strat:client": "cd ps-client && npm run start"
+  },
+  "dependencies": {
+    "concurrently": "^2.2.0"
+  }
+}
