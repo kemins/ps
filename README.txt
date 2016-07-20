@@ -1,1 +1,1 @@
-ps app seed project
+ps app seed
