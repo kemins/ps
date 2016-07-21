@@ -64,3 +64,4 @@ ehthumbs.db
 # PS services #
 /ps-services/bin
 /ps-services/node_modules
+/.idea

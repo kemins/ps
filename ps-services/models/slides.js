@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 
+var db = mongoose.connection;
 
-mongoose.model('slides', {
-  url: {
-    type: String,
-    required: true
-  }
+db.once('open', function() {
+  var Slide = mongoose.model('Slide', {
+    url: String,
+    title: String
+  });
 });

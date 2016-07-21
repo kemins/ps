@@ -5,7 +5,8 @@ var mongoose = require('mongoose');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  mongoose.model('slides').find(function(err, slides) {
+  mongoose.model('Slide').find({}, function(err, slides) {
+    console.log(slides);
     res.send(slides);
   });
 });
