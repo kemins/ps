@@ -8,6 +8,8 @@ import { AppState } from './app.service';
 import { Home } from './home';
 import { RouterActive } from './router-active';
 
+// Add the RxJS Observable operators we need in this app.
+import './rxjs-operators';
 
 /*
  * App Component

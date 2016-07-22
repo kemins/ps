@@ -4,7 +4,9 @@ var db = mongoose.connection;
 
 db.once('open', function() {
   var Slide = mongoose.model('Slide', {
-    url: String,
+    url: {
+      type: Object
+    },
     title: String
   });
 });

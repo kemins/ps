@@ -1,18 +1,18 @@
 <div>
   <div class="row">
-    <div class="col-md-6">
-      <carousel [interval]="500" [noWrap]="true">
+    <div class="col-sm-12">
+      <carousel [interval]="3000" [noWrap]="true">
         <slide *ngFor="let slide of slides; let index=index"
           [active]="slide.active">
           <picture style="margin:auto;">
-            <source [srcset]="slide.image" media="(min-width: 1000px)">
-            <source [srcset]="slide.image" media="(min-width: 800px)">
-            <img [srcset]="slide.image" alt="…">
+            <source [srcset]="slide.url.s" media="(max-width: 500px)">
+            <source [srcset]="slide.url.m" media="(max-width: 800px)">
+            <source [srcset]="slide.url.l" media="(max-width: 1024px)">
+            <source [srcset]="slide.url.xl" media="(min-width: 1025px)">
+            <img [srcset]="slide.url.m" alt="…">
           </picture>
           <div class="carousel-caption">
-            <h4>Slide {{index}}</h4>
-
-            <p>{{slide.text}}</p>
+            <h4>{{slide.title}}</h4>
           </div>
         </slide>
       </carousel>
