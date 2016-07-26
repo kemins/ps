@@ -19,9 +19,16 @@ export class SlideService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
+    let body = res.json(),
+      slides = body.slides || []
 
-    return body.slides || []
+    return slides.map(function(slide) {
+      if (slide.creationDate) {
+        slide.creationDate = new Date(slide.creationDate);
+      }
+
+      return slide;
+    });
   }
 
   private handleError (error: any) {

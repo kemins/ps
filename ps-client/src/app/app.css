@@ -32,3 +32,6 @@ footer{
   justify-content: center;
   background: #fff;
 }
+.carousel-indicators {
+  display: none;
+}
