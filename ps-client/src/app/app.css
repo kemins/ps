@@ -13,7 +13,7 @@ button.active:hover{
   flex: 1 1 auto;
 }
 .app-state{
-  margin: 15px;
+  margin: 0;
   flex: 1;
 }
 .home{

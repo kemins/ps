@@ -1,0 +1,20 @@
+<md-content>
+    <md-toolbar color="primary">
+        <span>Photo State</span>
+        <span class="fill"></span>
+        <button md-button router-active [routerLink]=" ['Index'] ">
+            Index
+        </button>
+        <button md-button router-active [routerLink]=" ['Home'] ">
+            Home
+        </button>
+    </md-toolbar>
+
+    <md-progress-bar mode="indeterminate" color="primary"
+        *ngIf="loading"></md-progress-bar>
+
+    <router-outlet></router-outlet>
+
+    <footer>
+    </footer>
+</md-content>
