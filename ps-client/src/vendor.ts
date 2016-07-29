@@ -39,8 +39,6 @@ require('bootstrap/fonts/glyphicons-halflings-regular.ttf');
 require('bootstrap/fonts/glyphicons-halflings-regular.woff');
 require('bootstrap/fonts/glyphicons-halflings-regular.woff2');
 
-import 'ng2-bootstrap/bundles/ng2-bootstrap';
-
 if ('production' === ENV) {
   // Production
 

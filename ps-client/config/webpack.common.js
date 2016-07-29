@@ -156,6 +156,14 @@ module.exports = {
         loader: 'json-loader'
       },
 
+      /**
+       * Stylus loader.
+       */
+      {
+        test: /\.styl$/,
+        loader: 'raw-loader!stylus-loader?resolve url'
+      },
+
       /*
        * Raw loader support for *.css files
        * Returns file content as string

@@ -23,7 +23,7 @@ import './rxjs-operators';
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('normalize.css'),
-    require('./app.css'),
+    require('./app.styl'),
     require('bootstrap/dist/css/bootstrap.css')
   ],
   template: require('./app.html')
