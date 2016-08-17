@@ -9,27 +9,38 @@ var mongoose = require('mongoose');
 const resolutions = [{
   name: 'xl',
   w: 2048,
-  h: 600,
+  h: 1152,
   scale: 'h',
   align: 'top'
 }, {
   name: 'l',
   w: 1224,
-  h: 400,
+  h: 689,
   scale: 'h',
   align: 'center'
 }, {
-  name: 'm',
+  name: 'm_l',
   w: 1024,
-  h: 400,
-  scale: 'h',
-  align: 'center'
-}, {
-  name: 's',
-  w: 1000,
-  h: 776,
+  h: 768,
   scale: 'v',
   align: 'center'
+}, {
+  name: 'm_p',
+  w: 768,
+  h: 1024,
+  scale: 'v',
+  align: 'center'
+}, {
+  name: 's_l',
+  w: 667,
+  h: 375,
+  align: 'center'
+}, {
+  name: 's_p',
+  w: 375,
+  h: 667,
+  align: 'center',
+  scale: 'v'
 }];
 
 let source = 'C:/Users/Andriy_Kemin/Pictures/bg/';
