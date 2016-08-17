@@ -5,7 +5,7 @@
         <slide *ngFor="let slide of slides; let index=index"
           [active]="slide.active">
           <picture style="margin:auto;">
-            <source [srcset]="slide.url.s_l" media="(max-width: 600px) and (orientation: landscape)">
+            <source [srcset]="slide.url.s_l" media="(max-width: 700px) and (orientation: landscape)">
             <source [srcset]="slide.url.s_p" media="(max-width: 500px) and (orientation: portrait)">
             <source [srcset]="slide.url.m_l" media="(max-width: 1024px) and (max-height: 768px)">
             <source [srcset]="slide.url.m_p" media="(max-width: 768px) and (max-height: 1024px)">

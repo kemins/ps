@@ -34,6 +34,7 @@ const resolutions = [{
   name: 's_l',
   w: 667,
   h: 375,
+  scale: 'h',
   align: 'center'
 }, {
   name: 's_p',
