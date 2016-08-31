@@ -2,21 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="FIX resolution of slides for landscape orientation.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular2-webpack-starter" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/app.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/app.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-192x192.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-36x36.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-48x48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-114x114.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-120x120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-152x152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-180x180.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-57x57.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-60x60.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-76x76.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-310x310.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-70x70.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/angular-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/angularclass-avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/angularclass-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/github-deploy/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/head-config.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/html-elements-plugin/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/modules/angular2-hmr-prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/protractor.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/spec-bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.github-deploy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/protractor.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/+detail/detail.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/+detail/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/about/about.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/about/about.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/about/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.e2e.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.resolver.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.routes.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/environment.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/home.e2e.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/home.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/home.style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/home.template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/title/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/title/title.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/title/title.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/x-large/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/x-large/x-large.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/home/x-large/x-large.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/md.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/no-content/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/no-content/no-content.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/css/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/humans.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/browserconfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/mock-data/mock-data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/service-worker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/custom-typings.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/main.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/polyfills.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/vendor.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/tsconfig.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/tslint.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/typedoc.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/webpack.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular2-webpack-starter" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/config/webpack.common.js" afterPath="$PROJECT_DIR$/ps-client/config/webpack.common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/package.json" afterPath="$PROJECT_DIR$/ps-client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/index.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/slides.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/slides.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/index.html" afterPath="$PROJECT_DIR$/ps-client/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/main.browser.ts" afterPath="$PROJECT_DIR$/ps-client/src/main.browser.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/platform/browser/directives.ts" afterPath="$PROJECT_DIR$/ps-client/src/platform/browser/directives.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/platform/browser/pipes.ts" afterPath="$PROJECT_DIR$/ps-client/src/platform/browser/pipes.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/platform/browser/providers.ts" afterPath="$PROJECT_DIR$/ps-client/src/platform/browser/providers.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/vendor.ts" afterPath="$PROJECT_DIR$/ps-client/src/vendor.ts" />
     </list>
     <ignored path="ps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,11 +182,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps-client/node_modules/material2/src/demo-app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5800525">
+            <state vertical-scroll-proportion="-8.5">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.4">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -217,36 +310,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ps">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ps">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ps-services">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,22 +338,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ps-client" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="ps">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular2-webpack-starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ps">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ps-services">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -483,7 +562,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28805238" sideWeight="0.51488096" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28805238" sideWeight="0.48511904" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2875817" sideWeight="0.48511904" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -567,13 +646,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/slides.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02910959">
@@ -767,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6683047">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +986,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular2-webpack-starter/.gitignore">
+    <entry file="file://$PROJECT_DIR$/client/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.7272725">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
@@ -933,8 +1004,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/node_modules/material2/src/demo-app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5800525">
+        <state vertical-scroll-proportion="-8.5">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
