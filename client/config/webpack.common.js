@@ -145,6 +145,14 @@ module.exports = {
         loader: 'json-loader'
       },
 
+    /**
+     * Stylus loader.
+     */
+      {
+        test: /\.styl$/,
+        loader: 'raw-loader!stylus-loader?resolve url'
+      },
+
       /*
        * to string and css loader support for *.css files
        * Returns file content as string
@@ -152,7 +160,7 @@ module.exports = {
        */
       {
         test: /\.css$/,
-        loaders: ['to-string-loader', 'css-loader']
+        loader: 'raw-loader'
       },
 
       {
@@ -176,6 +184,14 @@ module.exports = {
       {
         test: /\.(jpg|png|gif)$/,
         loader: 'file'
+      },
+
+      /**
+       * Fonts loader
+       */
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
 

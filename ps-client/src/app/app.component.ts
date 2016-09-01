@@ -6,6 +6,7 @@ import { RouteConfig, Router } from '@angular/router-deprecated';
 
 import { AppState } from './app.service';
 import { Home } from './home';
+import { Carousel } from './carousel';
 import { RouterActive } from './router-active';
 
 // Add the RxJS Observable operators we need in this app.
@@ -19,7 +20,7 @@ import './rxjs-operators';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ RouterActive ],
+  directives: [ RouterActive, Carousel ],
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('normalize.css'),

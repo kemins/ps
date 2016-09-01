@@ -3,6 +3,7 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
+import { Carousel } from './carousel/carousel.component';
 import { AppState } from './app.service';
 
 /*
@@ -12,8 +13,11 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.style.css'
+  directives: [Carousel],
+  styles: [
+    require('normalize.css'),
+    require('./app.styl'),
+    require('bootstrap/dist/css/bootstrap.css')
   ],
   template: `
     <md-content>
@@ -46,6 +50,7 @@ import { AppState } from './app.service';
         <span id="footerText">WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
         <img [src]="angularclassLogo" width="6%">
       </footer>
+      <ps-carousel></ps-carousel>
     </md-content>
   `
 })

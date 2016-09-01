@@ -1,0 +1,23 @@
+<div>
+  <div class="row">
+    <div class="col-sm-12">
+      <carousel [interval]="200000" [noWrap]="false">
+        <slide *ngFor="let slide of slides; let index=index"
+          [active]="slide.active">
+          <picture style="margin:auto;">
+            <source [srcset]="slide.url.s_l" media="(max-width: 700px) and (orientation: landscape)">
+            <source [srcset]="slide.url.s_p" media="(max-width: 500px) and (orientation: portrait)">
+            <source [srcset]="slide.url.m_l" media="(max-width: 1024px) and (max-height: 768px)">
+            <source [srcset]="slide.url.m_p" media="(max-width: 768px) and (max-height: 1024px)">
+            <source [srcset]="slide.url.l" media="(max-width: 1224px)">
+            <img [srcset]="slide.url.xl" alt="…">
+          </picture>
+          <div class="carousel-caption" *ngIf="slide.creationDate">
+            <h4>{{slide.creationDate | date}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
+

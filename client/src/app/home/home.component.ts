@@ -10,7 +10,7 @@ import { Title } from './title';
   selector: 'home',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
   providers: [
-    Title
+    Title,
   ],
 
   // Our list of styles in our component. We may add more to compose many styles together

@@ -26,6 +26,15 @@ import '@angularclass/hmr';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
+// bootstrap
+import 'ng2-bootstrap/bundles/ng2-bootstrap';
+
+require('bootstrap/fonts/glyphicons-halflings-regular.svg');
+require('bootstrap/fonts/glyphicons-halflings-regular.eot');
+require('bootstrap/fonts/glyphicons-halflings-regular.ttf');
+require('bootstrap/fonts/glyphicons-halflings-regular.woff');
+require('bootstrap/fonts/glyphicons-halflings-regular.woff2');
+
 if ('production' === ENV) {
   // Production
 
