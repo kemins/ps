@@ -1,0 +1,23 @@
+<div class="full-size">
+    <div class="top-bar">
+        <button md-raised-button class="grow-equally oa_sign_in">Sign In</button>
+        <button md-raised-button class="grow-equally oa_sign_up">Sign Up</button>
+    </div>
+    <md-content class="grow-equally">
+        <!--<button md-button router-active [routerLink]=" ['Index'] ">
+            Index
+        </button>
+        <button md-button router-active [routerLink]=" ['Home'] ">
+            Home
+        </button>-->
+        <!--<div id="oa_social_login_container"></div>-->
+
+        <md-progress-bar mode="indeterminate" color="primary"
+            *ngIf="loading"></md-progress-bar>
+
+        <router-outlet></router-outlet>
+    </md-content>
+    <div class="bottom-bar">
+        <button md-raised-button class="grow-equally">Contact us</button>
+    </div>
+</div>

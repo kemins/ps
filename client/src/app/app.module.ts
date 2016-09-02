@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
+import {OneAllAPI} from './social-login/oneall.ts';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -16,11 +17,8 @@ import { MdModule } from './md.module';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState } from './app.service';
 import { Home } from './home';
-import { About } from './about';
+import { ContactComponent } from './contact';
 import { NoContent } from './no-content';
-
-// Import diretives
-import { XLarge } from './home/x-large';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -35,10 +33,9 @@ const APP_PROVIDERS = [
   bootstrap: [ App ],
   declarations: [
     App,
-    About,
+    ContactComponent,
     Home,
-    NoContent,
-    XLarge
+    NoContent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -66,13 +63,17 @@ export class AppModule {
     // recreate elements
     var state = this.appState._state;
     store.state = state;
-    store.disposeOldHosts = createNewHosts(cmpLocation)
+    store.disposeOldHosts = createNewHosts(cmpLocation);
     // remove styles
     removeNgStyles();
   }
   hmrAfterDestroy(store) {
     // display new elements
-    store.disposeOldHosts()
+    store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
 }
+
+new OneAllAPI()
+    .bootstrap()
+    .showLoginWidget();
