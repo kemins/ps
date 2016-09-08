@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Contact } from './contact';
 
 @Component({
@@ -10,11 +10,11 @@ import { Contact } from './contact';
 })
 export class ContactComponent {
     title = 'Hey';
-    contact = new Contact('Andrew', '', 'a@k.ua');
 
-    @ViewChild('name') name;
+    contact = new Contact('Andrew', '', 'a@k.ua');
+    name2 = 'Test';
 
     onSubmit() {
-        console.log('Submitted!', this.name);
+        console.log('Submitted!');
     }
 }

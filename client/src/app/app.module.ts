@@ -19,59 +19,67 @@ import { AppState } from './app.service';
 import { Home } from './home';
 import { ContactComponent } from './contact';
 import { NoContent } from './no-content';
-
+import { Carousel } from './carousel/carousel.component';
+import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
 // Application wide providers
 const APP_PROVIDERS = [
-  ...APP_RESOLVER_PROVIDERS,
-  AppState
+    ...APP_RESOLVER_PROVIDERS,
+    AppState
 ];
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [ App ],
-  declarations: [
-    App,
-    ContactComponent,
-    Home,
-    NoContent
-  ],
-  imports: [ // import Angular's modules
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true }),
-    MdModule.forRoot()
-  ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
-    ENV_PROVIDERS,
-    APP_PROVIDERS
-  ]
+    bootstrap: [App],
+    declarations: [
+        App,
+        ContactComponent,
+        Home,
+        NoContent,
+        CarouselComponent,
+        SlideComponent,
+        Carousel
+    ],
+    imports: [
+        MdModule.forRoot(),
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RouterModule.forRoot(ROUTES, {useHash: true})
+    ],
+    providers: [ // expose our Services and Providers into Angular's dependency injection
+        ENV_PROVIDERS,
+        APP_PROVIDERS
+    ]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef, public appState: AppState) {}
-  hmrOnInit(store) {
-    if (!store || !store.state) return;
-    console.log('HMR store', store);
-    this.appState._state = store.state;
-    this.appRef.tick();
-    delete store.state;
-  }
-  hmrOnDestroy(store) {
-    var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-    // recreate elements
-    var state = this.appState._state;
-    store.state = state;
-    store.disposeOldHosts = createNewHosts(cmpLocation);
-    // remove styles
-    removeNgStyles();
-  }
-  hmrAfterDestroy(store) {
-    // display new elements
-    store.disposeOldHosts();
-    delete store.disposeOldHosts;
-  }
+    constructor(public appRef:ApplicationRef, public appState:AppState) {
+    }
+
+    hmrOnInit(store) {
+        if (!store || !store.state) return;
+        console.log('HMR store', store);
+        this.appState._state = store.state;
+        this.appRef.tick();
+        delete store.state;
+    }
+
+    hmrOnDestroy(store) {
+        var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+        // recreate elements
+        var state = this.appState._state;
+        store.state = state;
+        store.disposeOldHosts = createNewHosts(cmpLocation);
+        // remove styles
+        removeNgStyles();
+    }
+
+    hmrAfterDestroy(store) {
+        // display new elements
+        store.disposeOldHosts();
+        delete store.disposeOldHosts;
+    }
 }
 
 new OneAllAPI()

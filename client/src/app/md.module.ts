@@ -3,6 +3,7 @@
  */
 import { NgModule, ModuleWithProviders }      from '@angular/core';
 
+import { MdCoreModule }                     from '@angular2-material/core';
 import { MdButtonModule }                     from '@angular2-material/button';
 import { MdButtonToggleModule }               from '@angular2-material/button-toggle';
 import { MdCardModule }                       from '@angular2-material/card';
@@ -25,6 +26,7 @@ import { MdTooltipModule }                    from '@angular2-material/tooltip';
 @NgModule({
 
     exports: [
+        MdCoreModule,
         MdButtonModule,
         MdButtonToggleModule,
         MdCardModule,

@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {CAROUSEL_DIRECTIVES} from 'ng2-bootstrap';
+
 import {SlideService} from "../slides/slides.service";
 
 
 @Component({
   selector: 'ps-carousel',
   providers: [SlideService],
-  directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
-  pipes: [],
   styles: [require('./carousel.css')],
   template: require('./carousel.html')
 })

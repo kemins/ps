@@ -3,7 +3,6 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { Carousel } from './carousel/carousel.component';
 import { AppState } from './app.service';
 
 /*
@@ -12,13 +11,12 @@ import { AppState } from './app.service';
  */
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.None,
-  directives: [Carousel],
   styles: [
     require('normalize.css'),
     require('./app.styl'),
     require('bootstrap/dist/css/bootstrap.css')
   ],
+  encapsulation: ViewEncapsulation.None,
   template: require('./app.html')
 })
 export class App {
