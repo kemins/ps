@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { NgModule } from '@angular/core';
 import { EmailValidator } from './email-validator.directive';
 
 @NgModule({
-    declarations: [],
-    imports: [FormsModule],
-    providers: []
+    imports:      [ FormsModule ],
+    declarations: [ EmailValidator ],
+    exports:      [ EmailValidator ],
 })
 
-export class ValidatorsModule {}
+export class ValidatorModule {}
