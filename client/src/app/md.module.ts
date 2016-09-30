@@ -10,6 +10,7 @@ import { MdCardModule }                       from '@angular2-material/card';
 import { MdCheckboxModule }                   from '@angular2-material/checkbox';
 import { MdGridListModule }                   from '@angular2-material/grid-list';
 import { MdIconModule }                       from '@angular2-material/icon';
+import { MdIconRegistry }                     from '@angular2-material/icon';
 import { MdInputModule }                      from '@angular2-material/input';
 import { MdListModule }                       from '@angular2-material/list';
 import { MdMenuModule }                       from '@angular2-material/menu';
@@ -45,10 +46,16 @@ import { MdTooltipModule }                    from '@angular2-material/tooltip';
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule
-    ]
+    ],
+    providers: [MdIconRegistry]
 })
 
 export class MdModule {
+
+    constructor(mdIconRegistry: MdIconRegistry){
+        mdIconRegistry
+            .addSvgIconSetInNamespace('core', 'fonts/core-icon-set.svg')
+    }
 
     static forRoot(): ModuleWithProviders {
         return {
