@@ -23,6 +23,6 @@
     </div>
 
     <alert dismissible="true" (close)="closeNotification()"
-        type="success"
-        class="notification-box" *ngIf="notificationMessage">{{notificationMessage}}</alert>
+        [type]="notificationType"
+        class="notification-box" *ngIf="notificationType">{{notificationMessage}}</alert>
 </div>

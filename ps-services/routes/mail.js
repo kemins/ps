@@ -21,23 +21,20 @@ router.post('/', function(req, res, next) {
     transporter.sendMail(mailOptions, function(error, info){
       if(error){
         res.json({
-          fault: {
-            message: error
-          }
+          type: 'fault',
+          message: error
         });
       } else {
         res.json({
-          success: {
-            message: 'Message has been sent!'
-          }
+          type: 'success',
+          message: 'Message has been sent!'
         });
       }
     });
   }, function(error) {
     res.json({
-      fault: {
-        message: error
-      }
+      type: 'fault',
+      message: error
     });
   });
 });

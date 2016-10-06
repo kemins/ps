@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {IPSResponse} from "./core/ps-response";
 
 @Injectable()
 export class AppState {
@@ -26,7 +27,11 @@ export class AppState {
     return this._state[prop] = value;
   }
 
-  showNotification = (notification) => this.set('notificationMessage', notification);
+  showNotification = (data: IPSResponse) => {
+
+    this.set('notificationMessage', data ? data.message : null);
+    this.set('notificationType', data ? data.type : null);
+  };
 
   _clone(object) {
     // simple object clone

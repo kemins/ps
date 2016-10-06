@@ -4,13 +4,14 @@ import { Http, Response } from '@angular/http';
 import { Slide } from './slide';
 
 import { Observable } from 'rxjs/Observable';
+import { AppSettings } from "../core/app-settings";
 
 
 @Injectable()
 export class SlideService {
   constructor(private http: Http) {}
 
-  private slideUrl = 'http://localhost:7000/slides';
+  private slideUrl = AppSettings.getSetting('endpoint') + 'slides';
 
   getSlides(): Observable<Slide[]> {
     return this.http.get(this.slideUrl)

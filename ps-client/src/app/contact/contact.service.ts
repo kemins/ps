@@ -3,11 +3,11 @@ import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Contact } from "./contact";
 import { PsHttp } from "../core/ps-http.service";
-
+import { AppSettings } from "../core/app-settings";
 
 @Injectable()
 export class ContactService {
-    private contactUrl = 'http://localhost:7000/mail';
+    private contactUrl = AppSettings.getSetting('endpoint') + 'mail';
 
     constructor(private http: PsHttp) {}
 
@@ -17,6 +17,6 @@ export class ContactService {
     }
 
     private extractData(res: Response): Contact {
-       return res.json().success;
+       return res.json();
     }
 }

@@ -6,6 +6,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { AppState } from './app.service';
 import { PsHttp } from "./core/ps-http.service";
 
+import * as _ from 'lodash';
+
 /*
  * App Component
  * Top Level Component
@@ -42,13 +44,14 @@ export class App {
     return this.appState.get('notificationMessage');
   }
 
-  closeNotification = () => this.appState.set('notificationMessage', '');
-}
+  get notificationType() {
+    let types = {
+      fault: 'danger'
+    };
 
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */
+    return _.get(types, this.appState.get('notificationType'),
+        this.appState.get('notificationType'));
+  }
+
+  closeNotification = () => this.appState.showNotification(null);
+}

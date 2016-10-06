@@ -25,9 +25,7 @@ export class ContactComponent {
 
     onSubmit() {
         this.contactService.sendMessage(this.contact, this.token)
-            .subscribe(
-                data => this.appState.showNotification(data.message),
-                data => this.appState.showNotification(data.message));
+            .subscribe(data => this.appState.showNotification(data));
     }
 
     handleCorrectCaptcha(token) {
