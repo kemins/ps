@@ -59,7 +59,7 @@ export class MdModule {
 
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: MdModule
+            ngModule: MdModule,
         };
     }
 }

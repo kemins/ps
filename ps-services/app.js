@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var config = require('./config');
 var routes = require('./routes/index');
 var slides = require('./routes/slides');
+var mail = require('./routes/mail');
 var dbConnect = require('./db-connect');
 
 var app = express();
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/slides', slides);
+app.use('/mail', mail);
 
 
 // catch 404 and forward to error handler

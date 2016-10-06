@@ -8,6 +8,7 @@
     "strat:client": "cd ps-client && npm run start"
   },
   "dependencies": {
-    "concurrently": "^2.2.0"
+    "concurrently": "^2.2.0",
+    "nodemailer": "^2.6.4"
   }
 }

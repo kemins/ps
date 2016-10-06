@@ -29,6 +29,8 @@ import 'rxjs/add/operator/mergeMap';
 // bootstrap
 import 'ng2-bootstrap/bundles/ng2-bootstrap';
 
+import 'lodash/';
+
 require('bootstrap/fonts/glyphicons-halflings-regular.svg');
 require('bootstrap/fonts/glyphicons-halflings-regular.eot');
 require('bootstrap/fonts/glyphicons-halflings-regular.ttf');

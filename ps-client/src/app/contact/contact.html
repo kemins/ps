@@ -24,7 +24,22 @@
             class="alert alert-danger">
             Email is invalid
         </div>
-        <button md-raised-button color="primary" (click)="onSubmit()" [disabled]="!contactForm.form.valid">Send</button>
+        <div class="form-group">
+            <md-input placeholder="Message" type="input"
+                required
+                #message="ngModel"
+                [(ngModel)]="contact.message" name="message" id="message" ngDefaultControl></md-input>
+        </div>
+        <div [hidden]="message.valid || message.pristine"
+            class="alert alert-danger">
+            Message is required
+        </div>
+
+        <div class="form-group">
+            <re-captcha site_key="{{captchaKey}}" (captchaResponse)="handleCorrectCaptcha($event)" (captchaExpired)="handleCorrectCaptcha(null)"></re-captcha>
+        </div>
+
+        <button md-raised-button color="primary" (click)="onSubmit()" [disabled]="!contactForm.form.valid || !token">Send</button>
     </form>
     <div class="bottom-bar">
         <button routerLink="/" md-button color="primary" class="grow-equally">Home</button>

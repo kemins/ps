@@ -4,6 +4,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
+import { PsHttp } from "./core/ps-http.service";
 
 /*
  * App Component
@@ -24,7 +25,8 @@ export class App {
   url = 'https://twitter.com/AngularClass';
 
   constructor(
-    public appState: AppState) {
+    private appState: AppState,
+    private psHtp: PsHttp) {
 
   }
 
@@ -32,6 +34,15 @@ export class App {
     console.log('Initial App State', this.appState.state);
   }
 
+  get pendingRequests() {
+    return this.psHtp.pendingRequests;
+  }
+
+  get notificationMessage() {
+    return this.appState.get('notificationMessage');
+  }
+
+  closeNotification = () => this.appState.set('notificationMessage', '');
 }
 
 /*

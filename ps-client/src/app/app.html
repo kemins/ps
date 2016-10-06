@@ -1,0 +1,28 @@
+<div class="full-size relative">
+    <div class="top-bar">
+        <md-icon class="light menu-icon" (click)="sidebar.toggle()">menu</md-icon>
+        <button md-raised-button class="grow-equally oa_sign_in" color="primary">Sign In</button>
+        <button md-raised-button class="grow-equally oa_sign_up" color="primary">Sign Up</button>
+    </div>
+
+    <md-sidenav-layout>
+        <md-sidenav #sidebar>
+        </md-sidenav>
+        <div class="grow-equally content-holder">
+            <md-progress-bar mode="indeterminate" color="primary"
+                *ngIf="loading"></md-progress-bar>
+
+            <router-outlet></router-outlet>
+        </div>
+    </md-sidenav-layout>
+
+    <div class="backdrop" *ngIf="pendingRequests">
+        <div class="translate-center">
+            <md-progress-circle mode="indeterminate"></md-progress-circle>
+        </div>
+    </div>
+
+    <alert dismissible="true" (close)="closeNotification()"
+        type="success"
+        class="notification-box" *ngIf="notificationMessage">{{notificationMessage}}</alert>
+</div>

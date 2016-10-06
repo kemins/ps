@@ -1,7 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -16,6 +16,7 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { MdModule } from './md.module';
 import { ValidatorModule } from './validators';
+import { CoreModule } from './core';
 
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState } from './app.service';
@@ -24,10 +25,17 @@ import { ContactComponent } from './contact';
 import { NoContent } from './no-content';
 import { Carousel } from './carousel/carousel.component';
 import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
+import { PsHttp } from "./core/ps-http.service";
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+
+import { ReCaptchaModule } from 'angular2-recaptcha';
+
+
 // Application wide providers
 const APP_PROVIDERS = [
     ...APP_RESOLVER_PROVIDERS,
-    AppState
+    AppState,
+    PsHttp
 ];
 
 /**
@@ -46,15 +54,19 @@ const APP_PROVIDERS = [
     ],
     imports: [
         MdModule.forRoot(),
+        AlertModule,
+        HttpModule,
         BrowserModule,
         FormsModule,
-        HttpModule,
         RouterModule.forRoot(ROUTES, {useHash: true}),
-        ValidatorModule
+        ReCaptchaModule,
+        ValidatorModule,
+        CoreModule
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
         ENV_PROVIDERS,
-        APP_PROVIDERS
+        APP_PROVIDERS,
+        ConnectionBackend
     ]
 })
 export class AppModule {
