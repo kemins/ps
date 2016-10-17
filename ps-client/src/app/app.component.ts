@@ -7,6 +7,8 @@ import { AppState } from './app.service';
 import { PsHttp } from "./core/ps-http.service";
 
 import * as _ from 'lodash';
+import { OneAllAPI } from "./social-login/oneall";
+import {OneAllAPI} from "./social-login/oneall";
 
 /*
  * App Component
@@ -23,13 +25,13 @@ import * as _ from 'lodash';
   template: require('./app.html')
 })
 export class App {
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+  name = 'PS';
+  url = 'https://photo-state.com';
 
   constructor(
     private appState: AppState,
     private psHtp: PsHttp) {
-
+    appState.signUpSubscriber = this.onSignUp;
   }
 
   ngOnInit() {
@@ -44,6 +46,10 @@ export class App {
     return this.appState.get('notificationMessage');
   }
 
+  get isSignUp() {
+    return this.appState.get('isSignUp');
+  }
+
   get notificationType() {
     let types = {
       fault: 'danger'
@@ -54,4 +60,13 @@ export class App {
   }
 
   closeNotification = () => this.appState.showNotification(null);
+
+  openSignUp = () => this.appState.set('isSignUp', true);
+
+  closeSignUp = () => this.appState.set('isSignUp', false);
+
+  onSignUp = (data) => {
+    this.appState.showNotification(data);
+    this.closeSignUp();
+  }
 }

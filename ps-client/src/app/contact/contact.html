@@ -36,7 +36,7 @@
         </div>
 
         <div class="form-group">
-            <re-captcha site_key="{{captchaKey}}" (captchaResponse)="handleCorrectCaptcha($event)" (captchaExpired)="handleCorrectCaptcha(null)"></re-captcha>
+            <re-captcha #captcha name="captcha" site_key="{{captchaKey}}" (captchaResponse)="handleCorrectCaptcha($event)" (captchaExpired)="handleCorrectCaptcha(null)"></re-captcha>
         </div>
 
         <button md-raised-button color="primary" (click)="onSubmit()" [disabled]="!contactForm.form.valid || !token">Send</button>

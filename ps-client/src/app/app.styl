@@ -31,7 +31,7 @@ app
   padding 0
   margin 0
   position fixed
-  z-index 9999
+  z-index $backdrop-z-index
   width 100%
   top 0
   right 0
@@ -47,7 +47,13 @@ app
   position fixed
   left 5px
   top 5px
-  z-index 999
+  z-index $top-bar-z-index
+
+.close-social-box
+  top 50px
+  left 50%
+  position absolute
+  z-index $top-bar-z-index
 
 .notification-box
   position fixed
@@ -57,3 +63,22 @@ app
 
   .alert
     margin-bottom 0
+
+.oa_social_login_container
+  position absolute
+  top 45px
+  padding-top 10px
+  z-index $top-bar-z-index - 1
+  height 70px
+  transform translateX(-50%)
+  left 50%
+  overflow hidden
+  box-shadow $primaryColor 1px 1px 1px 1px
+  background-color $light-color
+  animation-name fade-in-animation
+  animation-duration 1s
+
+@keyframes fade-in-animation {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

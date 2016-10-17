@@ -1,7 +1,7 @@
-export class IPSResponse {
+export interface IPSResponse {
     message: string;
     type: Status;
-    body: string;
+    body?: string;
 }
 
 export type Status = "success" | "fault";

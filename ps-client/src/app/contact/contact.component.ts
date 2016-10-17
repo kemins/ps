@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild  } from '@angular/core';
 import { Contact } from './contact';
 import { ContactService } from "./contact.service";
 import { SlideService } from "../slides/slides.service";
 import { AppState } from "../app.service";
-import {AppSettings} from "../core/app-settings";
+import { AppSettings } from "../core/app-settings";
 
 @Component({
     selector: 'ps-contact-us',
@@ -18,14 +18,20 @@ export class ContactComponent {
     captchaKey = '';
     token = '';
 
+    @ViewChild('captcha')
+    captcha;
+
     constructor(private contactService: ContactService, private appState: AppState) {
         this.captchaKey = AppSettings.getSetting('captcha.key');
-        console.log(this.captchaKey, ' Hey');
     }
 
     onSubmit() {
         this.contactService.sendMessage(this.contact, this.token)
-            .subscribe(data => this.appState.showNotification(data));
+            .subscribe(data => {
+                this.appState.showNotification(data);
+                console.log(this.captcha);
+                this.captcha.reset(this.captcha.widgetId);
+            }, data => this.captcha.reset());
     }
 
     handleCorrectCaptcha(token) {

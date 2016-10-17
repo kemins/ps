@@ -98,6 +98,7 @@ export class AppModule {
     }
 }
 
-new OneAllAPI()
+OneAllAPI
+    .getInstance()
     .bootstrap()
     .showLoginWidget();
