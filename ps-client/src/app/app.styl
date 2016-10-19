@@ -50,8 +50,8 @@ app
   z-index $top-bar-z-index
 
 .close-social-box
-  top 50px
-  left 50%
+  right 10px
+  top 10px
   position absolute
   z-index $top-bar-z-index
 
@@ -64,19 +64,22 @@ app
   .alert
     margin-bottom 0
 
-.oa_social_login_container
+.social-login-box
   position absolute
   top 45px
-  padding-top 10px
   z-index $top-bar-z-index - 1
-  height 70px
   transform translateX(-50%)
   left 50%
-  overflow hidden
   box-shadow $primaryColor 1px 1px 1px 1px
   background-color $light-color
   animation-name fade-in-animation
   animation-duration 1s
+
+.oa_social_login_container
+  padding-top 10px
+  height 70px
+  width 170px
+  overflow hidden
 
 @keyframes fade-in-animation {
   from {opacity: 0;}

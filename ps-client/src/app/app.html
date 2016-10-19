@@ -5,10 +5,10 @@
         <button md-raised-button class="grow-equally" color="primary" (click)="openSignUp()">Sign Up</button>
     </div>
 
-    <div [hidden]="!isSignUp">
-        <md-icon class="light close-social-box" (click)="closeSignUp()">close</md-icon>
+    <span [hidden]="!isSignUp" class="social-login-box">
         <div class="oa_social_login_container"></div>
-    </div>
+        <md-icon class="light close-social-box" (click)="closeSignUp()">close</md-icon>
+    </span>
 
     <md-sidenav-layout>
         <md-sidenav #sidebar>
