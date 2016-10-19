@@ -7,8 +7,9 @@ var _ = require('lodash');
 
 
 /* Sign up */
-router.post('/signup', function(req, res, next) {
+router.post('/authenticate', function(req, res, next) {
   let connectionToken = req.body.connection_token;
+  let action = req.body.action;
   let socialLogin = config.socialLogin;
   let endpoint =  `${socialLogin.siteDomain}/connections/${connectionToken}.json`;
   let authToken = new Buffer(socialLogin.publicKey + ':' + socialLogin.privateKey).toString('base64');
@@ -27,6 +28,7 @@ router.post('/signup', function(req, res, next) {
       let data = JSON.parse(body).response.result.data;
       let userToken = data.user.user_token;
       let identity = data.user.identity;
+
       getUserByToken(userToken).then(function(user) {
         console.log(identity.emails);
         let email = _.chain(identity.emails)
@@ -34,32 +36,44 @@ router.post('/signup', function(req, res, next) {
           .get('value')
           .value();
 
-        console.log(email);
-
-        if (user) {
-          res.json({
-            type: 'fault',
-            message: 'User already registered. Please proceed with sign in.'
-          });
+        if (action === 'login') {
+          if (user) {
+            res.json({
+              type: 'success',
+              message: 'User signed in.'
+            });
+          } else {
+            res.json({
+              type: 'fault',
+              message: 'User not found.'
+            });
+          }
         } else {
-          let user = {
-            token: userToken,
-            provider: identity.provider,
-            displayName: identity.displayName,
-            active: true,
-            email: email
-          };
+          if (user) {
+            res.json({
+              type: 'fault',
+              message: 'User already registered. Please proceed with sign in.'
+            });
+          } else {
+            let user = {
+              token: userToken,
+              provider: identity.provider,
+              displayName: identity.displayName,
+              active: true,
+              email: email
+            };
 
-          mongoose.model('User').create(user, function(error) {
-            if (error) {
-              handleErrorResponse(response, error)
-            } else {
-              res.json({
-                type: 'success',
-                message: 'User successfully registered!'
-              });
-            }
-          });
+            mongoose.model('User').create(user, function(error) {
+              if (error) {
+                handleErrorResponse(response, error)
+              } else {
+                res.json({
+                  type: 'success',
+                  message: 'User successfully registered!'
+                });
+              }
+            });
+          }
         }
       }, (error) => handleErrorResponse(response, error));
     }

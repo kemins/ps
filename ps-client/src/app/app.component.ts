@@ -8,7 +8,7 @@ import { PsHttp } from "./core/ps-http.service";
 
 import * as _ from 'lodash';
 import { OneAllAPI } from "./social-login/oneall";
-import {OneAllAPI} from "./social-login/oneall";
+import { MODE } from "./social-login/oneall";
 
 /*
  * App Component
@@ -32,6 +32,7 @@ export class App {
     private appState: AppState,
     private psHtp: PsHttp) {
     appState.signUpSubscriber = this.onSignUp;
+    appState.signInSubscriber = this.onSignUp;
   }
 
   ngOnInit() {
@@ -46,8 +47,8 @@ export class App {
     return this.appState.get('notificationMessage');
   }
 
-  get isSignUp() {
-    return this.appState.get('isSignUp');
+  get socialLogin() {
+    return this.appState.get('socialLogin');
   }
 
   get notificationType() {
@@ -61,12 +62,20 @@ export class App {
 
   closeNotification = () => this.appState.showNotification(null);
 
-  openSignUp = () => this.appState.set('isSignUp', true);
+  openSignUp = () => {
+    OneAllAPI.getInstance().mode = MODE.SIGN_UP;
+    this.appState.set('socialLogin', true);
+  };
 
-  closeSignUp = () => this.appState.set('isSignUp', false);
+  openSignIn = () => {
+    OneAllAPI.getInstance().mode = MODE.SIGN_IN;
+    this.appState.set('socialLogin', true);
+  };
+
+  closeSocialLogin = () => this.appState.set('socialLogin', false);
 
   onSignUp = (data) => {
     this.appState.showNotification(data);
-    this.closeSignUp();
+    this.closeSocialLogin();
   }
 }

@@ -1,13 +1,13 @@
 <div class="full-size relative">
     <div class="top-bar">
         <md-icon class="light menu-icon" (click)="sidebar.toggle()">menu</md-icon>
-        <button md-raised-button class="grow-equally" color="primary" (click)="closeSignUp()">Sign In</button>
+        <button md-raised-button class="grow-equally" color="primary" (click)="openSignIn()">Sign In</button>
         <button md-raised-button class="grow-equally" color="primary" (click)="openSignUp()">Sign Up</button>
     </div>
 
-    <span [hidden]="!isSignUp" class="social-login-box">
+    <span [hidden]="!socialLogin" class="social-login-box">
         <div class="oa_social_login_container"></div>
-        <md-icon class="light close-social-box" (click)="closeSignUp()">close</md-icon>
+        <md-icon class="light close-social-box" (click)="closeSocialLogin()">close</md-icon>
     </span>
 
     <md-sidenav-layout>

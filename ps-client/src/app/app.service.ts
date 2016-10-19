@@ -5,15 +5,18 @@ import { OneAllAPI } from './social-login/oneall';
 import { PsHttp } from './core/ps-http.service';
 import { Observable } from 'rxjs/Observable';
 import { User } from "./social-login/user";
-import {OneAllAPI} from "./social-login/oneall";
+import { OneAllAPI } from "./social-login/oneall";
+import * as _ from 'lodash';
 
 @Injectable()
 export class AppState {
   _state = {};
   _signUpSubscriber;
+  _signInSubscriber;
 
   constructor(private psHtp: PsHttp) {
     OneAllAPI.getInstance().signUpCallback = this.onSignUp;
+    OneAllAPI.getInstance().signInCallback = this.onSignIn;
   }
 
   // already return a clone of the current state
@@ -39,6 +42,10 @@ export class AppState {
     this._signUpSubscriber = value;
   }
 
+  set signInSubscriber(value: Function) {
+    this._signInSubscriber = value;
+  }
+
   showNotification = (data: IPSResponse) => {
     this.set('notificationMessage', data ? data.message : null);
     this.set('notificationType', data ? data.type : null);
@@ -49,6 +56,13 @@ export class AppState {
       .map(this.extractUser)
       .catch(this.handleUserError)
       .subscribe(this.onSignUpSuccess);
+  };
+
+  onSignIn = (data): Observable<User> => {
+    return this.psHtp.post(data.callback_uri, _.extend(data.connection, {action: 'login'}))
+        .map(this.extractUser)
+        .catch(this.handleUserError)
+        .subscribe(this.onSignInSuccess);
   };
 
   extractUser = (res: Response) => {
@@ -62,6 +76,12 @@ export class AppState {
   onSignUpSuccess = (data) => {
     if (this._signUpSubscriber) {
       this._signUpSubscriber(data);
+    }
+  };
+
+  onSignInSuccess = (data) => {
+    if (this._signInSubscriber) {
+      this._signInSubscriber(data);
     }
   };
 
