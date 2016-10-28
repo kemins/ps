@@ -30,7 +30,6 @@ router.post('/authenticate', function(req, res, next) {
       let identity = data.user.identity;
 
       getUserByToken(userToken).then(function(user) {
-        console.log(identity.emails);
         let email = _.chain(identity.emails)
           .find({is_verified: true})
           .get('value')

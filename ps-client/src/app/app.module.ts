@@ -30,12 +30,21 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { ReCaptchaModule } from 'angular2-recaptcha';
 
+import './profile/index.tsx';
+
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { SlidesEffectService}  from './slides/slides-effect.service';
+
+import { slides } from './slides/slides.reducer';
+import { SlideDataService } from "./slides/slides-data.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
     ...APP_RESOLVER_PROVIDERS,
     AppState,
-    PsHttp
+    PsHttp,
+    SlideDataService
 ];
 
 /**
@@ -61,7 +70,9 @@ const APP_PROVIDERS = [
         RouterModule.forRoot(ROUTES, {useHash: true}),
         ReCaptchaModule,
         ValidatorModule,
-        CoreModule
+        CoreModule,
+        StoreModule.provideStore({slides}, {slides: []}),
+        EffectsModule.runAfterBootstrap(SlidesEffectService)
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
         ENV_PROVIDERS,
@@ -70,32 +81,7 @@ const APP_PROVIDERS = [
     ]
 })
 export class AppModule {
-    constructor(public appRef:ApplicationRef, public appState:AppState) {
-    }
-
-    hmrOnInit(store) {
-        if (!store || !store.state) return;
-        console.log('HMR store', store);
-        this.appState._state = store.state;
-        this.appRef.tick();
-        delete store.state;
-    }
-
-    hmrOnDestroy(store) {
-        var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-        // recreate elements
-        var state = this.appState._state;
-        store.state = state;
-        store.disposeOldHosts = createNewHosts(cmpLocation);
-        // remove styles
-        removeNgStyles();
-    }
-
-    hmrAfterDestroy(store) {
-        // display new elements
-        store.disposeOldHosts();
-        delete store.disposeOldHosts;
-    }
+    constructor() {}
 }
 
 OneAllAPI

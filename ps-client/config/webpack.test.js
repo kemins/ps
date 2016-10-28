@@ -42,7 +42,7 @@ module.exports = {
      *
      * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
      */
-    extensions: ['', '.ts', '.js'],
+    extensions: ['', '.ts', '.tsx', '.js'],
 
     /**
      * Make sure root is src
@@ -109,7 +109,7 @@ module.exports = {
        * See: https://github.com/s-panferov/awesome-typescript-loader
        */
       {
-        test: /\.ts$/,
+        test: /\.ts|tsx$/,
         loader: 'awesome-typescript-loader',
         query: {
           compilerOptions: {

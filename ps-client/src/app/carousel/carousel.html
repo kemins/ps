@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <carousel [interval]="200000" [noWrap]="false">
-        <slide *ngFor="let slide of slides; let index=index"
+        <slide *ngFor="let slide of slides | async; let index=index"
           [active]="slide.active">
           <picture style="margin:auto;">
             <source [srcset]="slide.url.s_l" media="(max-width: 700px) and (orientation: landscape)">

@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 
-import {SlideService} from "../slides/slides.service";
+import { SlideService } from "../slides/slides.service";
 
+import { AppState } from "../app.service";
+import { Slide } from "../slides/slide";
+
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'ps-carousel',
@@ -11,27 +15,12 @@ import {SlideService} from "../slides/slides.service";
 })
 export class Carousel {
 
-  public slides:Array<any> = [];
+  public slides: Observable<Slide> = [];
 
   public errorMessage = '';
 
   constructor(private slideService: SlideService) {
-  }
-
-  ngOnInit() {
-    console.debug('Carousel component created');
-    this.getSlides();
-  }
-
-  getSlides() {
-    this.slideService.getSlides()
-      .subscribe(
-        slides => this.slides = slides,
-        error =>  this.errorMessage = <any>error);
-  }
-
-
-  ngOnDestroy() {
-    console.debug('Carousel component destroyed');
+    this.slides = this.slideService.getSlides();
+    this.slideService.fetchSlides();
   }
 }

@@ -72,13 +72,13 @@ module.exports = {
      *
      * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
      */
-    extensions: ['', '.ts', '.js', '.json'],
+    extensions: ['', '.ts', '.tsx', '.js', '.json'],
 
     // Make sure root is src
     root: helpers.root('src'),
 
     // remove other default values
-    modulesDirectories: ['node_modules'],
+    modulesDirectories: ['node_modules']
 
   },
 
@@ -96,7 +96,7 @@ module.exports = {
      */
     preLoaders: [
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         loader: 'string-replace-loader',
         query: {
           search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
@@ -104,7 +104,7 @@ module.exports = {
           flags: 'g'
         },
         include: [helpers.root('src')]
-      },
+      }
 
     ],
 
@@ -126,7 +126,7 @@ module.exports = {
        * See: https://github.com/TheLarkInn/angular2-template-loader
        */
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         loaders: [
           'awesome-typescript-loader',
           'angular2-template-loader',
