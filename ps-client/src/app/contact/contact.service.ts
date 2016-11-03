@@ -1,22 +1,39 @@
 import { Injectable } from '@angular/core';
-import { Response } from '@angular/http';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { Contact } from "./contact";
-import { PsHttp } from "../core/ps-http.service";
-import { AppSettings } from "../core/app-settings";
+
+import { Contact } from './contact';
+import { AppActions } from "../app.actions";
 
 @Injectable()
 export class ContactService {
-    private contactUrl = AppSettings.getSetting('endpoint') + 'mail';
+  constructor(private store: Store) {}
 
-    constructor(private http: PsHttp) {}
+  sendMessage = () => {
+    this.getContact()
+      this.store.dispatch({
+        type: AppActions.SEND_MESSAGE,
+        payload: {
+          contact: this.getContact(),
+          token: this.getToken()
+        }
+      });
+  };
 
-    sendMessage(contact: Contact, token: string): Observable {
-        return this.http.post(this.contactUrl, {contact: contact, token: token})
-            .map(this.extractData);
-    }
+  setToken = (token: string) => {
+    this.store.dispatch({
+      type: AppActions.SET_CONTACT_TOKEN,
+      payload: token
+    });
+  };
 
-    private extractData(res: Response): Contact {
-       return res.json();
-    }
+  setContact = (contact: Contact) => {
+    this.store.dispatch({
+      type: AppActions.SET_CONTACT,
+      payload: contact
+    });
+  };
+
+  getContact = (): Observable<Contact> => this.store.select('contact').select('value');
+  getToken = (): Observable<string> => this.store.select('contact').select('token');
 }

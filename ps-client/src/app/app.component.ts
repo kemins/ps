@@ -3,12 +3,16 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 import { AppState } from './app.service';
 import { PsHttp } from "./core/ps-http.service";
 
 import * as _ from 'lodash';
+
 import { OneAllAPI } from "./social-login/oneall";
 import { MODE } from "./social-login/oneall";
+import { IPSResponse } from './core/ps-response';
 
 /*
  * App Component
@@ -27,17 +31,15 @@ import { MODE } from "./social-login/oneall";
 export class App {
   name = 'PS';
   url = 'https://photo-state.com';
+  notifications: Observable<Array<IPSResponse>> = [];
 
-  constructor(
-    private appState: AppState,
-    private psHtp: PsHttp) {
+  constructor(private appState: AppState, private psHtp: PsHttp) {
     appState.signUpSubscriber = this.onSignUp;
     appState.signInSubscriber = this.onSignUp;
+    this.notifications = appState.getNotifications();
   }
 
-  ngOnInit() {
-    console.log('Initial App State', this.appState.state);
-  }
+  ngOnInit() {}
 
   get pendingRequests() {
     return this.psHtp.pendingRequests;

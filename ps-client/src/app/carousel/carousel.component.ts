@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SlideService } from "../slides/slides.service";
 
@@ -11,7 +11,8 @@ import { Observable } from 'rxjs/Observable';
   selector: 'ps-carousel',
   providers: [SlideService],
   styles: [require('./carousel.css')],
-  template: require('./carousel.html')
+  template: require('./carousel.html'),
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Carousel {
 

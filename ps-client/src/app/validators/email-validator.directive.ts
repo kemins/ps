@@ -7,9 +7,13 @@ import { Validators, Validator, AbstractControl, ValidatorFn, NG_VALIDATORS } fr
 })
 
 export class EmailValidator implements Validator {
-    validate(control: AbstractControl): {[key: string]: any} {
+    static email(control: AbstractControl): {[key: string]: any} {
         const name = control.value;
         const valid = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm.test(name);
         return valid ? null : {emailInvalid: {name}};
+    }
+
+    validate(control: AbstractControl): {[key: string]: any} {
+        return EmailValidator.validate(control);
     }
 }

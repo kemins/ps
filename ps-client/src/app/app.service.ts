@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
+
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+
+import * as _ from 'lodash';
+
 import { IPSResponse } from './core/ps-response';
 import { OneAllAPI } from './social-login/oneall';
 import { PsHttp } from './core/ps-http.service';
-import { Observable } from 'rxjs/Observable';
-import { User } from "./social-login/user";
-import { OneAllAPI } from "./social-login/oneall";
-import * as _ from 'lodash';
+
+import { User } from './social-login/user';
+import { OneAllAPI } from './social-login/oneall';
+
 
 @Injectable()
 export class AppState {
@@ -14,23 +20,13 @@ export class AppState {
   _signUpSubscriber;
   _signInSubscriber;
 
-  constructor(private psHtp: PsHttp) {
+  constructor(private psHtp: PsHttp, private store: Store) {
     OneAllAPI.getInstance().signUpCallback = this.onSignUp;
     OneAllAPI.getInstance().signInCallback = this.onSignIn;
   }
 
-  // already return a clone of the current state
-  get state() {
-    return this._state = this._clone(this._state);
-  }
-
-  // never allow mutation
-  set state(value) {
-    throw new Error('do not mutate the `.state` directly');
-  }
-
   get(prop?: any) {
-    return this.state[prop];
+    return this._state[prop];
   }
 
   set(prop: string, value: any) {
@@ -45,6 +41,8 @@ export class AppState {
   set signInSubscriber(value: Function) {
     this._signInSubscriber = value;
   }
+
+  getNotifications = () => this.store.select('notifications');
 
   showNotification = (data: IPSResponse) => {
     this.set('notificationMessage', data ? data.message : null);
@@ -84,9 +82,4 @@ export class AppState {
       this._signInSubscriber(data);
     }
   };
-
-  _clone(object) {
-    // simple object clone
-    return JSON.parse(JSON.stringify( object ));
-  }
 }

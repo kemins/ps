@@ -28,6 +28,9 @@
     </div>
 
     <alert dismissible="true" (close)="closeNotification()"
-        [type]="notificationType"
-        class="notification-box" *ngIf="notificationType">{{notificationMessage}}</alert>
+        *ngFor="let notification of notification | async"
+        [type]="notification.type"
+        class="notification-box">
+            {{notification.message}}
+    </alert>
 </div>

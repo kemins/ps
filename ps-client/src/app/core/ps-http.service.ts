@@ -9,14 +9,14 @@ export class PsHttp {
 
     constructor(private http: Http)  {}
 
-    request(url:string | Request, options?:RequestOptionsArgs):Observable<Response> {
+    request(url:string | Request, options?: RequestOptionsArgs): Observable<Response> {
         this._pendingRequests++;
 
         return this.http.request(url, options)
             .finally(() => {this._pendingRequests--});
     }
 
-    get(url:string, options?:RequestOptionsArgs):Observable<Response> {
+    get(url:string, options?: RequestOptionsArgs): Observable<Response> {
         this._pendingRequests++;
 
         return this.http.get(url, options)
@@ -27,7 +27,10 @@ export class PsHttp {
         this._pendingRequests++;
 
         return this.http.post(url, body, options)
-            .finally(() => {this._pendingRequests--});
+            .map((response) => {
+                this._pendingRequests--;
+                return response;
+            });
     }
 
     get pendingRequests() {
