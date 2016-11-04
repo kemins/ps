@@ -13,6 +13,11 @@ export const notifications = (notifications: Array<IPSResponse>, action: Action)
             result = [...notifications.concat(action.payload)];
             break;
 
+        case AppActions.CLOSE_NOTIFICATIONS:
+            (action.payload as IPSResponse).read = true;
+            result = [...notifications];
+            break;
+
         default:
             result = notifications;
             break;

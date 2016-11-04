@@ -13,13 +13,8 @@ export class NotificationsEffectService implements OnDestroy {
     constructor(private actions$: Actions) {}
 
     @Effect() addNotification$: Observable<Action> = this.actions$
-        .filter(action => /SEND_SUCCESS$/.test(action.type))
-        .map(action => {
-            return {
-                type: AppActions.ADD_NOTIFICATION,
-                payload: action.payload
-            };
-        });
+        .filter(action => /(SEND_SUCCESS|SEND_FAIL)$/.test(action.type))
+        .map(({payload}) => ({type: AppActions.ADD_NOTIFICATION, payload}));
 
     ngOnDestroy = () => {};
 }

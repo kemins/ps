@@ -63,6 +63,9 @@ import { ContactEffectService } from './contact/contact-effect.service';
 import { SlidesEffectService}  from './slides/slides-effect.service';
 import { NotificationsEffectService } from "./notifications/notifications-effect.service";
 
+// pipes
+import { NotificationTypePipe } from './notifications/notifications.pipes';
+
 // Application wide providers
 const APP_PROVIDERS = [
     ...APP_RESOLVER_PROVIDERS,
@@ -83,7 +86,8 @@ const APP_PROVIDERS = [
         Home,
         CarouselComponent,
         SlideComponent,
-        Carousel
+        Carousel,
+        NotificationTypePipe
     ],
     imports: [
         MdModule.forRoot(),

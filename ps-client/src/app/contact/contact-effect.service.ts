@@ -11,18 +11,18 @@ import { AppActions } from '../app.actions';
 
 @Injectable()
 export class ContactEffectService implements OnDestroy {
+    types = {
+        success: AppActions.MESSAGE_SEND_SUCCESS,
+        fault: AppActions.MESSAGE_SEND_FAIL
+    };
+
     constructor(private contactDataService: ContactDataService, private actions$: Actions) {}
 
     @Effect() sendContact$: Observable<Action> = this.actions$
         .ofType(AppActions.SEND_MESSAGE)
-        .switchMap(({payload}) => payload.contact.combineLatest(payload.token).take(1))
-        .switchMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
-        .map(res => {
-            const type = res.type === 'success' ?
-                AppActions.MESSAGE_SEND_SUCCESS :
-                AppActions.MESSAGE_SEND_FAIL;
-            return {type: type, payload: res}
-        });
+        .flatMap(({payload}) => payload.contact.combineLatest(payload.token).take(1))
+        .flatMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
+        .map(res => ({type: this.types[res.type], payload: res}));
 
 
     ngOnDestroy = () => {};

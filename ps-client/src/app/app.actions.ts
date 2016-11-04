@@ -13,4 +13,7 @@ export class AppActions {
     public static FETCH_SLIDES: string = 'FETCH_SLIDES';
     public static SLIDE_FETCH_SUCCESS: string = 'SLIDE_FETCH_SUCCESS';
     public static SLIDE_FETCH_FAIL: string = 'SLIDE_FETCH_FAIL';
+
+    // app
+    public static CLOSE_NOTIFICATIONS: string = 'CLOSE_NOTIFICATIONS';
 }

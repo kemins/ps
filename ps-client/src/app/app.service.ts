@@ -13,6 +13,8 @@ import { PsHttp } from './core/ps-http.service';
 import { User } from './social-login/user';
 import { OneAllAPI } from './social-login/oneall';
 
+import { AppActions } from './app.actions';
+
 
 @Injectable()
 export class AppState {
@@ -44,9 +46,11 @@ export class AppState {
 
   getNotifications = () => this.store.select('notifications');
 
-  showNotification = (data: IPSResponse) => {
-    this.set('notificationMessage', data ? data.message : null);
-    this.set('notificationType', data ? data.type : null);
+  closeNotification = (notification: IPSResponse) => {
+    this.store.dispatch({
+      type: AppActions.CLOSE_NOTIFICATIONS,
+      payload: notification
+    })
   };
 
   onSignUp = (data): Observable<User> => {

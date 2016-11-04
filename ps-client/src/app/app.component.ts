@@ -36,7 +36,9 @@ export class App {
   constructor(private appState: AppState, private psHtp: PsHttp) {
     appState.signUpSubscriber = this.onSignUp;
     appState.signInSubscriber = this.onSignUp;
-    this.notifications = appState.getNotifications();
+
+    this.notifications = appState.getNotifications()
+      .map((notifications) => notifications.filter(({read}) => !read));
   }
 
   ngOnInit() {}
@@ -45,24 +47,14 @@ export class App {
     return this.psHtp.pendingRequests;
   }
 
-  get notificationMessage() {
-    return this.appState.get('notificationMessage');
-  }
-
   get socialLogin() {
     return this.appState.get('socialLogin');
   }
 
-  get notificationType() {
-    let types = {
-      fault: 'danger'
-    };
-
-    return _.get(types, this.appState.get('notificationType'),
-        this.appState.get('notificationType'));
-  }
-
-  closeNotification = () => this.appState.showNotification(null);
+  closeNotification = (alert, notification) => {
+    alert.closed = false;
+    this.appState.closeNotification(notification);
+  };
 
   openSignUp = () => {
     OneAllAPI.getInstance().mode = MODE.SIGN_UP;
@@ -77,7 +69,7 @@ export class App {
   closeSocialLogin = () => this.appState.set('socialLogin', false);
 
   onSignUp = (data) => {
-    this.appState.showNotification(data);
+    //this.appState.showNotification(data);
     this.closeSocialLogin();
   }
 }
