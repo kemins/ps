@@ -7,11 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import * as _ from 'lodash';
 
 import { IPSResponse } from './core/ps-response';
-import { OneAllAPI } from './social-login/oneall';
 import { PsHttp } from './core/ps-http.service';
-
-import { User } from './social-login/user';
-import { OneAllAPI } from './social-login/oneall';
 
 import { AppActions } from './app.actions';
 
@@ -22,10 +18,7 @@ export class AppState {
   _signUpSubscriber;
   _signInSubscriber;
 
-  constructor(private psHtp: PsHttp, private store: Store) {
-    OneAllAPI.getInstance().signUpCallback = this.onSignUp;
-    OneAllAPI.getInstance().signInCallback = this.onSignIn;
-  }
+  constructor(private psHtp: PsHttp, private store: Store) {}
 
   get(prop?: any) {
     return this._state[prop];
@@ -36,54 +29,19 @@ export class AppState {
     return this._state[prop] = value;
   }
 
-  set signUpSubscriber(value: Function) {
-    this._signUpSubscriber = value;
-  }
-
-  set signInSubscriber(value: Function) {
-    this._signInSubscriber = value;
-  }
-
   getNotifications = () => this.store.select('notifications');
 
   closeNotification = (notification: IPSResponse) => {
     this.store.dispatch({
-      type: AppActions.CLOSE_NOTIFICATIONS,
+      type: AppActions.READ_NOTIFICATIONS,
       payload: notification
     })
   };
 
-  onSignUp = (data): Observable<User> => {
-    return this.psHtp.post(data.callback_uri, data.connection)
-      .map(this.extractUser)
-      .catch(this.handleUserError)
-      .subscribe(this.onSignUpSuccess);
-  };
-
-  onSignIn = (data): Observable<User> => {
-    return this.psHtp.post(data.callback_uri, _.extend(data.connection, {action: 'login'}))
-        .map(this.extractUser)
-        .catch(this.handleUserError)
-        .subscribe(this.onSignInSuccess);
-  };
-
-  extractUser = (res: Response) => {
-    return res.json();
-  };
-
-  handleUserError = (error) => {
-    console.log(error);
-  };
-
-  onSignUpSuccess = (data) => {
-    if (this._signUpSubscriber) {
-      this._signUpSubscriber(data);
-    }
-  };
-
-  onSignInSuccess = (data) => {
-    if (this._signInSubscriber) {
-      this._signInSubscriber(data);
-    }
+  showNotification = (notification: IPSResponse) => {
+    this.store.dispatch({
+      type: AppActions.ADD_NOTIFICATION,
+      payload: notification
+    })
   };
 }

@@ -8,10 +8,10 @@ import { Observable } from 'rxjs/Observable';
 import { AppState } from './app.service';
 import { PsHttp } from "./core/ps-http.service";
 
-import * as _ from 'lodash';
 
-import { OneAllAPI } from "./social-login/oneall";
-import { MODE } from "./social-login/oneall";
+import { MODE } from './social-login/index.ts';
+import { SocialLoginService } from './social-login/index.ts';
+
 import { IPSResponse } from './core/ps-response';
 
 /*
@@ -25,6 +25,7 @@ import { IPSResponse } from './core/ps-response';
     require('./app.styl'),
     require('bootstrap/dist/css/bootstrap.css')
   ],
+  providers: [SocialLoginService],
   encapsulation: ViewEncapsulation.None,
   template: require('./app.html')
 })
@@ -33,22 +34,18 @@ export class App {
   url = 'https://photo-state.com';
   notifications: Observable<Array<IPSResponse>> = [];
 
-  constructor(private appState: AppState, private psHtp: PsHttp) {
-    appState.signUpSubscriber = this.onSignUp;
-    appState.signInSubscriber = this.onSignUp;
-
+  constructor(private appState: AppState, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
     this.notifications = appState.getNotifications()
       .map((notifications) => notifications.filter(({read}) => !read));
   }
-
-  ngOnInit() {}
 
   get pendingRequests() {
     return this.psHtp.pendingRequests;
   }
 
   get socialLogin() {
-    return this.appState.get('socialLogin');
+    return this.socialLoginService.mode == MODE.SIGN_UP ||
+        this.socialLoginService.mode == MODE.SIGN_IN;
   }
 
   closeNotification = (alert, notification) => {
@@ -57,19 +54,12 @@ export class App {
   };
 
   openSignUp = () => {
-    OneAllAPI.getInstance().mode = MODE.SIGN_UP;
-    this.appState.set('socialLogin', true);
+    this.socialLoginService.mode = MODE.SIGN_UP;
   };
 
   openSignIn = () => {
-    OneAllAPI.getInstance().mode = MODE.SIGN_IN;
-    this.appState.set('socialLogin', true);
+    this.socialLoginService.mode = MODE.SIGN_IN;
   };
 
-  closeSocialLogin = () => this.appState.set('socialLogin', false);
-
-  onSignUp = (data) => {
-    //this.appState.showNotification(data);
-    this.closeSocialLogin();
-  }
+  closeSocialLogin = () => this.socialLoginService.mode = MODE.NONE;
 }

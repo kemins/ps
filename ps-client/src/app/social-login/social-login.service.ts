@@ -1,27 +1,32 @@
-import { AppSettings } from "../core/app-settings";
+import { Store } from '@ngrx/store';
 
-export enum MODE {
-  SIGN_IN,
-  SIGN_UP
-}
-export class OneAllAPI {
-  private static instance;
+import { Injectable, OnDestroy } from '@angular/core';
 
-  _signUpCallback: Function;
-  _signInCallback: Function;
+import { AppActions } from '../app.actions';
+import { AppSettings } from '../core/app-settings';
 
-  mode: MODE;
+export enum MODE {SIGN_IN, SIGN_UP, NONE}
 
-  public static getInstance = () => {
-    if (!OneAllAPI.instance) {
-      OneAllAPI.instance = new OneAllAPI();
-    }
-    return OneAllAPI.instance;
-  };
+@Injectable()
+export class SocialLoginService {
+
+  constructor(private store: Store) {
+    this.bootstrap();
+    this.showLoginWidget();
+  }
+
+  public set mode(value: MODE) {
+    this._mode = value;
+  }
+
+  public get mode(): MODE {
+    return this._mode;
+  }
 
   oneallSsubdomain: string = 'photo-state';
   rootUrl = AppSettings.getSetting('endpoint');
   authenticationEndpoint: string = this.rootUrl + 'users/authenticate';
+  _mode: MODE = MODE.NONE;
 
   bootstrap() {
     /* The library is loaded asynchronously */
@@ -46,26 +51,26 @@ export class OneAllAPI {
     oneall.push(['social_login', 'set_callback_uri', this.authenticationEndpoint]);
     oneall.push(['social_login', 'do_render_ui', 'oa_social_login_container']);
 
-    oneall.push(['social_login', 'set_grid_sizes', [2,2]]);
+    oneall.push(['social_login', 'set_grid_sizes', [2, 2]]);
     //oneall.push(['social_login', 'attach_onclick_popup_ui', 'oa_sign_up']);
 
     return this;
   }
 
   onLoginRedirect = (data) => {
-    if (this.mode === MODE.SIGN_UP && this._signUpCallback) {
-      this._signUpCallback(data);
-    } else if (this.mode === MODE.SIGN_IN && this._signInCallback) {
-      this._signInCallback(data);
-    }
+    let types = {
+      [MODE.SIGN_IN]: AppActions.SIGN_IN_WITH_TOKE,
+      [MODE.SIGN_UP]: AppActions.SIGN_UP_WITH_TOKE,
+    };
+
+    let type = types[this._mode];
+
+    console.log(type);
+    this.store.dispatch({
+      type: type,
+      payload: data
+    });
+
     return false;
   };
-
-  set signUpCallback(callback: Function) {
-    this._signUpCallback = callback;
-  }
-
-  set signInCallback(callback: Function) {
-    this._signInCallback = callback;
-  }
 }

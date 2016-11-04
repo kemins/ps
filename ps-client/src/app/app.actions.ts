@@ -3,17 +3,21 @@ export class AppActions {
     public static SEND_MESSAGE: string = 'SEND_MESSAGE';
     public static SET_CONTACT_TOKEN: string = 'SET_CONTACT_TOKEN';
     public static SET_CONTACT: string = 'SET_CONTACT';
-    public static MESSAGE_SEND_SUCCESS: string = 'MESSAGE_SEND_SUCCESS';
-    public static MESSAGE_SEND_FAIL: string = 'MESSAGE_SEND_FAIL';
+    public static MESSAGE_POST_SUCCESS: string = 'MESSAGE_POST_SUCCESS';
+    public static MESSAGE_POST_FAIL: string = 'MESSAGE_POST_FAIL';
 
     // notifications
     public static ADD_NOTIFICATION: string = 'ADD_NOTIFICATION';
+    public static READ_NOTIFICATIONS: string = 'READ_NOTIFICATIONS';
 
     // slides
     public static FETCH_SLIDES: string = 'FETCH_SLIDES';
     public static SLIDE_FETCH_SUCCESS: string = 'SLIDE_FETCH_SUCCESS';
     public static SLIDE_FETCH_FAIL: string = 'SLIDE_FETCH_FAIL';
 
-    // app
-    public static CLOSE_NOTIFICATIONS: string = 'CLOSE_NOTIFICATIONS';
+    // social login
+    public static SIGN_IN_WITH_TOKE: string = 'SIGN_IN_WITH_TOKE';
+    public static SIGN_UP_WITH_TOKE: string = 'SIGN_UP_WITH_TOKE';
+    public static USER_AUTH_SUCCESS: string = 'USER_AUTH_POST_SUCCESS';
+    public static USER_AUTH_FAIL: string = 'USER_AUTH_POST_FAIL';
 }

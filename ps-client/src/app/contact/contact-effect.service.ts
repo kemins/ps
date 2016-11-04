@@ -12,8 +12,8 @@ import { AppActions } from '../app.actions';
 @Injectable()
 export class ContactEffectService implements OnDestroy {
     types = {
-        success: AppActions.MESSAGE_SEND_SUCCESS,
-        fault: AppActions.MESSAGE_SEND_FAIL
+        success: AppActions.MESSAGE_POST_SUCCESS,
+        fault: AppActions.MESSAGE_POST_FAIL
     };
 
     constructor(private contactDataService: ContactDataService, private actions$: Actions) {}

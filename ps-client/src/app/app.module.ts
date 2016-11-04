@@ -5,8 +5,6 @@ import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
-import { OneAllAPI } from './social-login/oneall.ts';
-
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -48,6 +46,7 @@ import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
 // data services
 import { SlideDataService } from './slides/slides-data.service';
 import { ContactDataService } from './contact/contact-data.service';
+import { SocialLoginDataService } from './social-login/index.ts';
 
 // regular services
 import { AppState } from './app.service';
@@ -64,7 +63,9 @@ import { notifications } from './notifications/notifications.reducer';
 // effects
 import { ContactEffectService } from './contact/contact-effect.service';
 import { SlidesEffectService}  from './slides/slides-effect.service';
-import { NotificationsEffectService } from "./notifications/notifications-effect.service";
+import { NotificationsEffectService } from './notifications/notifications-effect.service';
+import { SocialLoginEffectService } from './social-login/index.ts';
+
 
 // pipes
 import { NotificationTypePipe } from './notifications/notifications.pipes';
@@ -75,7 +76,8 @@ const APP_PROVIDERS = [
     AppState,
     PsHttp,
     SlideDataService,
-    ContactDataService
+    ContactDataService,
+    SocialLoginDataService
 ];
 
 /**
@@ -121,6 +123,7 @@ const APP_PROVIDERS = [
         EffectsModule.runAfterBootstrap(SlidesEffectService),
         EffectsModule.runAfterBootstrap(ContactEffectService),
         EffectsModule.runAfterBootstrap(NotificationsEffectService),
+        EffectsModule.runAfterBootstrap(SocialLoginEffectService),
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
@@ -132,8 +135,3 @@ const APP_PROVIDERS = [
 export class AppModule {
     constructor() {}
 }
-
-OneAllAPI
-    .getInstance()
-    .bootstrap()
-    .showLoginWidget();
