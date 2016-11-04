@@ -4,10 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 
 import { Contact } from './contact';
-import { ContactService } from "./contact.service";
-import { SlideService } from "../slides/slides.service";
-import { AppState } from "../app.service";
-import { AppSettings } from "../core/app-settings";
+import { ContactService } from './contact.service';
+import { SlideService } from '../slides/slides.service';
+import { AppSettings } from '../core/app-settings';
 
 import { EmailValidator } from '../validators/email-validator.directive';
 
@@ -39,7 +38,7 @@ export class ContactComponent implements OnInit {
         this.contact.subscribe((contact: Contact) => this.contactForm.setValue(contact));
     }
 
-    constructor(private contactService: ContactService, private appState: AppState, private formBuilder: FormBuilder) {
+    constructor(private contactService: ContactService, private formBuilder: FormBuilder) {
         this.captchaKey = AppSettings.getSetting('captcha.key');
         this.contact = contactService.getContact();
         this.token = contactService.getToken();
@@ -48,12 +47,6 @@ export class ContactComponent implements OnInit {
     onSubmit() {
         this.contactService.setContact(this.contactForm.value);
         this.contactService.sendMessage();
-        /*this.contactService.sendMessage(this.contactForm.value, this.token)
-            .subscribe(data => {
-                this.appState.showNotification(data);
-                console.log(this.captcha);
-                this.captcha.reset(this.captcha.widgetId);
-            }, data => this.captcha.reset());*/
     }
 
     handleCorrectCaptcha(token) {

@@ -38,6 +38,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { combineReducers } from '@ngrx/store';
 
+//dev
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 // bootstrap components
 import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
@@ -117,7 +120,8 @@ const APP_PROVIDERS = [
         }),
         EffectsModule.runAfterBootstrap(SlidesEffectService),
         EffectsModule.runAfterBootstrap(ContactEffectService),
-        EffectsModule.runAfterBootstrap(NotificationsEffectService)
+        EffectsModule.runAfterBootstrap(NotificationsEffectService),
+        StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
         ENV_PROVIDERS,
