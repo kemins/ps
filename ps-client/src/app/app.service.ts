@@ -1,31 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Response } from '@angular/http';
-
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs/Observable';
-
-
+import { Store, StoreModule, combineReducers } from '@ngrx/store';
+import { notifications } from './notifications';
+import { contact, contactToken, Contact } from './contact';
+import { slides } from './slides';
 import { AppActions } from './app.actions';
-import { PsHttp } from './core';
-import { IPSResponse } from './core';
-
+import { PsHttp, IPSResponse } from './core';
 
 @Injectable()
 export class AppState {
-  _state = {};
-  _signUpSubscriber;
-  _signInSubscriber;
-
   constructor(private psHtp: PsHttp, private store: Store) {}
-
-  get(prop?: any) {
-    return this._state[prop];
-  }
-
-  set(prop: string, value: any) {
-    // internally mutate our state
-    return this._state[prop] = value;
-  }
 
   getNotifications = () => this.store.select('notifications');
 
@@ -42,4 +25,23 @@ export class AppState {
       payload: notification
     })
   };
+
+  static defaultState = {
+    slides: [],
+    notifications: [],
+    contact: {
+      value: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
+      token: 'test2'
+    }
+  };
+
+  static provideStore = () => {
+    return StoreModule.provideStore({
+      slides: slides,
+      notifications: notifications,
+      contact: combineReducers({
+        value: contact,
+        token: contactToken
+      })}, AppState.defaultState);
+  }
 }

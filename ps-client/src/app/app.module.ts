@@ -5,42 +5,20 @@ import { RouterModule } from '@angular/router';
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
-import { CoreModule, PsHttp } from './core';
+import { CoreModule } from './core';
 import { AlertModule } from 'ng2-bootstrap';
 import { MdModule } from './md.module';
-import { Home } from './home';
-import {
-    contact,
-    contactToken,
-    ContactEffectService,
-    ContactModule
-} from './contact';
-import { Carousel } from './carousel/carousel.component';
-import { StoreModule, combineReducers } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { HomeModule } from './home';
+import { ContactModule } from './contact';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
-import { SocialLoginEffectService, SocialLoginModule } from './social-login';
+import { SocialLoginModule } from './social-login';
 import { AppState } from './app.service';
-import { defaultState } from './app.state';
-import {
-    notifications,
-    NotificationsEffectService,
-    NotificationsModule
-} from './notifications';
-import {
-    SlideDataService,
-    slides,
-    SlidesEffectService,
-    SlidesModule
-} from './slides';
+import { NotificationsModule } from './notifications';
 
 
 // Application wide providers
 const APP_PROVIDERS = [
-    AppState,
-    PsHttp,
-    SlideDataService,
+    AppState
 ];
 
 /**
@@ -48,13 +26,7 @@ const APP_PROVIDERS = [
  */
 @NgModule({
     bootstrap: [App],
-    declarations: [
-        App,
-        Home,
-        CarouselComponent,
-        SlideComponent,
-        Carousel
-    ],
+    declarations: [App],
     imports: [
         MdModule.forRoot(),
         AlertModule,
@@ -64,20 +36,9 @@ const APP_PROVIDERS = [
         CoreModule,
         NotificationsModule,
         SocialLoginModule,
-        SlidesModule,
         ContactModule,
-        StoreModule.provideStore({
-            slides: slides,
-            notifications: notifications,
-            contact: combineReducers({
-                value: contact,
-                token: contactToken
-            })
-        }, defaultState),
-        EffectsModule.runAfterBootstrap(SlidesEffectService),
-        EffectsModule.runAfterBootstrap(ContactEffectService),
-        EffectsModule.runAfterBootstrap(NotificationsEffectService),
-        EffectsModule.runAfterBootstrap(SocialLoginEffectService),
+        HomeModule,
+        AppState.provideStore(),
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [

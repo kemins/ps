@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { AlertModule } from 'ng2-bootstrap';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
+import { RouterModule } from '@angular/router';
+import { EffectsModule } from '@ngrx/effects';
 
 import {
     ContactComponent,
@@ -22,6 +24,7 @@ import { NotificationsModule } from '../../notifications';
         ContactComponent,
     ],
     imports: [
+        RouterModule,
         CoreModule,
         AlertModule,
         HttpModule,
@@ -31,7 +34,8 @@ import { NotificationsModule } from '../../notifications';
         FormsModule,
         ReactiveFormsModule,
         ReCaptchaModule,
-        ValidatorModule
+        ValidatorModule,
+        EffectsModule.runAfterBootstrap(ContactEffectService)
     ],
     exports: [ContactComponent],
     providers: [
