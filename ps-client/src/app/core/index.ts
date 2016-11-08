@@ -1,11 +1,5 @@
-import { NgModule } from '@angular/core';
+export * from './src/core.module';
 
-import { PsHttp } from "./ps-http.service";
-import { HttpModule } from "@angular/http";
-
-@NgModule({
-    imports: [ HttpModule ],
-    providers: [ PsHttp ]
-})
-
-export class CoreModule {}
+export * from './src/app-settings';
+export * from './src/ps-http.service';
+export * from './src/ps-response';

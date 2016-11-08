@@ -1,11 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-
-import { SlideService } from "../slides/slides.service";
-
-import { AppState } from "../app.service";
-import { Slide } from "../slides/slide";
-
 import { Observable } from 'rxjs/Observable';
+import { SlideService, Slide } from '../slides';
 
 @Component({
   selector: 'ps-carousel',
@@ -16,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class Carousel {
 
-  public slides: Observable<Slide> = [];
+  public slides: Observable<Slide>;
 
   public errorMessage = '';
 

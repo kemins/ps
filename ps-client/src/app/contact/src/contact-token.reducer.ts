@@ -1,7 +1,6 @@
 import { Action } from '@ngrx/store';
+import { AppActions } from '../../app.actions';
 
-import { Contact } from './contact';
-import { AppActions } from '../app.actions';
 
 export const contactToken = (token: string, action: Action) => {
     let result: string;

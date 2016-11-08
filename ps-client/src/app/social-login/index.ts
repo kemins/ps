@@ -1,3 +1,4 @@
-export * from './social-login.service';
-export * from './social-login-data.service';
-export * from './social-login-effect.service';
+export * from './src/social-login.service';
+export * from './src/social-login-data.service';
+export * from './src/social-login-effect.service';
+export * from './src/social-login.module';

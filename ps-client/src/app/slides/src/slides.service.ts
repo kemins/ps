@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { Store } from '@ngrx/store';
-
 import { Observable } from 'rxjs/Observable';
-
-import { Slide } from './slide';
-import { AppActions } from '../app.actions';
+import { Slide } from './..';
+import { AppActions } from '../../app.actions';
 
 @Injectable()
 export class SlideService {

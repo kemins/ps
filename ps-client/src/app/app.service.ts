@@ -4,12 +4,10 @@ import { Response } from '@angular/http';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-import * as _ from 'lodash';
-
-import { IPSResponse } from './core/ps-response';
-import { PsHttp } from './core/ps-http.service';
 
 import { AppActions } from './app.actions';
+import { PsHttp } from './core';
+import { IPSResponse } from './core';
 
 
 @Injectable()

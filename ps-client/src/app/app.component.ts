@@ -1,18 +1,8 @@
-/*
- * Angular 2 decorators and services
- */
 import { Component, ViewEncapsulation } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
-
 import { AppState } from './app.service';
-import { PsHttp } from "./core/ps-http.service";
-
-
-import { MODE } from './social-login/index.ts';
-import { SocialLoginService } from './social-login/index.ts';
-
-import { IPSResponse } from './core/ps-response';
+import { MODE, SocialLoginService } from './social-login/index.ts';
+import { IPSResponse, PsHttp } from './core';
 
 /*
  * App Component
@@ -32,7 +22,7 @@ import { IPSResponse } from './core/ps-response';
 export class App {
   name = 'PS';
   url = 'https://photo-state.com';
-  notifications: Observable<Array<IPSResponse>> = [];
+  notifications: Observable<Array<IPSResponse>>;
 
   constructor(private appState: AppState, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
     this.notifications = appState.getNotifications()

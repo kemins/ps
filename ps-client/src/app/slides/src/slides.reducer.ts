@@ -1,7 +1,6 @@
-import { Slide } from "./slide";
-
 import { Action } from '@ngrx/store';
-import { AppActions } from '../app.actions';
+import { AppActions } from '../../app.actions';
+import { Slide } from './slide.model';
 
 export const slides = (slides: Slide[], action: Action) => {
     let result;

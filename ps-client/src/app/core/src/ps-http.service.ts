@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Http, Response, ConnectionBackend, RequestOptions, RequestOptionsArgs, Request} from '@angular/http';
-import 'rxjs/Rx';
+import { Http, Response, RequestOptionsArgs, Request } from '@angular/http';
 
 @Injectable()
 export class PsHttp {

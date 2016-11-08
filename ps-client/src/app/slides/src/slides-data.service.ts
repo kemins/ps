@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-
-import { Slide } from './slide';
-
 import { Observable } from 'rxjs/Observable';
-import { AppSettings } from "../core/app-settings";
+import { Slide } from './../';
+import { AppSettings } from '../../core';
 
 @Injectable()
 export class SlideDataService {
@@ -23,7 +21,7 @@ export class SlideDataService {
 
         return slides.map(function(slide) {
             if (slide.creationDate) {
-                slide.creationDate = new Date(slide.creationDate);
+                slide.creationDate = new Date((slide.creationDate as string));
             }
 
             return slide;

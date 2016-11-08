@@ -1,11 +1,8 @@
 import { Injectable, OnDestroy } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
-
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
-
-import { AppActions } from '../app.actions';
+import { AppActions } from '../../app.actions';
 
 
 @Injectable()

@@ -1,21 +1,21 @@
-import { Component, Directive, Input, ViewChild, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {
+    Component,
+    ViewChild,
+    OnInit,
+    ChangeDetectionStrategy
+} from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-
-import { Contact } from './contact';
+import { EmailValidator } from '../../validators';
+import { AppSettings } from '../../core';
+import { Contact } from './contact.model';
 import { ContactService } from './contact.service';
-import { SlideService } from '../slides/slides.service';
-import { AppSettings } from '../core/app-settings';
-
-import { EmailValidator } from '../validators/email-validator.directive';
 
 @Component({
     selector: 'ps-contact-us',
     styles: [
         require('./contact.styl')
     ],
-    providers: [ContactService],
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './contact.html'
 })

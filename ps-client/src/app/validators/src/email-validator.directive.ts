@@ -1,5 +1,5 @@
-import { Directive, Input, SimpleChanges } from '@angular/core';
-import { Validators, Validator, AbstractControl, ValidatorFn, NG_VALIDATORS } from '@angular/forms';
+import { Directive } from '@angular/core';
+import { Validator, AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 @Directive({
     selector: '[emailValidator]',
@@ -14,6 +14,6 @@ export class EmailValidator implements Validator {
     }
 
     validate(control: AbstractControl): {[key: string]: any} {
-        return EmailValidator.validate(control);
+        return EmailValidator.email(control);
     }
 }

@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-
-import { Contact } from './contact';
-import { AppActions } from "../app.actions";
+import { AppActions } from '../../app.actions';
+import { Contact } from './contact.model';
 
 @Injectable()
 export class ContactService {
   constructor(private store: Store) {}
 
   sendMessage = () => {
-    this.getContact()
-      this.store.dispatch({
-        type: AppActions.SEND_MESSAGE,
-        payload: {
-          contact: this.getContact(),
-          token: this.getToken()
-        }
-      });
+    this.store.dispatch({
+      type: AppActions.SEND_MESSAGE,
+      payload: {
+        contact: this.getContact(),
+        token: this.getToken()
+      }
+    });
   };
 
   setToken = (token: string) => {

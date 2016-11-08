@@ -1,9 +1,7 @@
 import { Store } from '@ngrx/store';
-
-import { Injectable, OnDestroy } from '@angular/core';
-
-import { AppActions } from '../app.actions';
-import { AppSettings } from '../core/app-settings';
+import { Injectable } from '@angular/core';
+import { AppSettings } from '../../core';
+import { AppActions } from '../../app.actions';
 
 export enum MODE {SIGN_IN, SIGN_UP, NONE}
 

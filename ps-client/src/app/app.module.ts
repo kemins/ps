@@ -1,83 +1,46 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-
-/*
- * Platform and Environment providers/directives/pipes
- */
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
-import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-
-// modules
 import { App } from './app.component';
-import { ReCaptchaModule } from 'angular2-recaptcha';
-import { ValidatorModule } from './validators';
-import { CoreModule } from './core';
-
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { CoreModule, PsHttp } from './core';
+import { AlertModule } from 'ng2-bootstrap';
 import { MdModule } from './md.module';
-
-
 import { Home } from './home';
-import { ContactComponent } from './contact';
+import {
+    contact,
+    contactToken,
+    ContactEffectService,
+    ContactModule
+} from './contact';
 import { Carousel } from './carousel/carousel.component';
-
-import { PsHttp } from "./core/ps-http.service";
-
-
-import './profile/index.tsx';
-
-// rx
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, combineReducers } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { combineReducers } from '@ngrx/store';
-
-//dev
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
-
-// bootstrap components
 import { CarouselComponent, SlideComponent } from 'ng2-bootstrap';
-
-// data services
-import { SlideDataService } from './slides/slides-data.service';
-import { ContactDataService } from './contact/contact-data.service';
-import { SocialLoginDataService } from './social-login/index.ts';
-
-// regular services
+import { SocialLoginEffectService, SocialLoginModule } from './social-login';
 import { AppState } from './app.service';
+import { defaultState } from './app.state';
+import {
+    notifications,
+    NotificationsEffectService,
+    NotificationsModule
+} from './notifications';
+import {
+    SlideDataService,
+    slides,
+    SlidesEffectService,
+    SlidesModule
+} from './slides';
 
-// vo
-import { Contact } from "./contact/contact";
-
-// reducers
-import { slides } from './slides/slides.reducer';
-import { contact } from './contact/contact.reducer';
-import { contactToken } from './contact/contact-token.reducer';
-import { notifications } from './notifications/notifications.reducer';
-
-// effects
-import { ContactEffectService } from './contact/contact-effect.service';
-import { SlidesEffectService}  from './slides/slides-effect.service';
-import { NotificationsEffectService } from './notifications/notifications-effect.service';
-import { SocialLoginEffectService } from './social-login/index.ts';
-
-
-// pipes
-import { NotificationTypePipe } from './notifications/notifications.pipes';
 
 // Application wide providers
 const APP_PROVIDERS = [
-    ...APP_RESOLVER_PROVIDERS,
     AppState,
     PsHttp,
     SlideDataService,
-    ContactDataService,
-    SocialLoginDataService
 ];
 
 /**
@@ -87,24 +50,22 @@ const APP_PROVIDERS = [
     bootstrap: [App],
     declarations: [
         App,
-        ContactComponent,
         Home,
         CarouselComponent,
         SlideComponent,
-        Carousel,
-        NotificationTypePipe
+        Carousel
     ],
     imports: [
         MdModule.forRoot(),
         AlertModule,
         HttpModule,
         BrowserModule,
-        FormsModule,
-        ReactiveFormsModule,
         RouterModule.forRoot(ROUTES, {useHash: true}),
-        ReCaptchaModule,
-        ValidatorModule,
         CoreModule,
+        NotificationsModule,
+        SocialLoginModule,
+        SlidesModule,
+        ContactModule,
         StoreModule.provideStore({
             slides: slides,
             notifications: notifications,
@@ -112,21 +73,14 @@ const APP_PROVIDERS = [
                 value: contact,
                 token: contactToken
             })
-        }, {
-            slides: [],
-            notifications: [],
-            contact: {
-                value: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
-                token: 'test2'
-            }
-        }),
+        }, defaultState),
         EffectsModule.runAfterBootstrap(SlidesEffectService),
         EffectsModule.runAfterBootstrap(ContactEffectService),
         EffectsModule.runAfterBootstrap(NotificationsEffectService),
         EffectsModule.runAfterBootstrap(SocialLoginEffectService),
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
-    providers: [ // expose our Services and Providers into Angular's dependency injection
+    providers: [
         ENV_PROVIDERS,
         APP_PROVIDERS,
         ConnectionBackend

@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Response } from '@angular/http';
-
 import { Observable } from 'rxjs/Observable';
+import { AppSettings, PsHttp } from '../../core/';
+import { Contact } from './contact.model';
 
-import { Contact } from "./contact";
-import { PsHttp } from '../core/ps-http.service';
-import { AppSettings } from '../core/app-settings';
 
 @Injectable()
 export class ContactDataService {

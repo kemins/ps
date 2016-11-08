@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
-
-import { Observable } from 'rxjs/Observable';
-
-import { PsHttp } from '../core/ps-http.service';
-import { AppSettings } from '../core/app-settings';
-
 import * as _ from 'lodash';
+import { AppSettings, PsHttp } from '../../core';
 
 @Injectable()
 export class SocialLoginDataService {
