@@ -3,10 +3,12 @@ import { Observable } from 'rxjs/Observable';
 import { Slide } from './slide.model';
 import { SlideService } from './slides.service';
 
+import * as carouselStyles from './carousel.css';
+
 @Component({
   selector: 'ps-slide-carousel',
-  styles: [require('./carousel.css')],
-  template: require('./carousel.html'),
+  styles: [carouselStyles],
+  templateUrl: 'carousel.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Carousel {

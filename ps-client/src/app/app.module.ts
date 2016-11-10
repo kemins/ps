@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { CoreModule } from './core';
@@ -16,14 +15,6 @@ import { AppState } from './app.service';
 import { NotificationsModule } from './notifications';
 
 
-// Application wide providers
-const APP_PROVIDERS = [
-    AppState
-];
-
-/**
- * `AppModule` is the main entry point into Angular2's bootstraping process
- */
 @NgModule({
     bootstrap: [App],
     declarations: [App],
@@ -42,8 +33,7 @@ const APP_PROVIDERS = [
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [
-        ENV_PROVIDERS,
-        APP_PROVIDERS,
+        AppState,
         ConnectionBackend
     ]
 })

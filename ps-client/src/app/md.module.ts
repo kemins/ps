@@ -1,7 +1,7 @@
 /* This module is an example how you can package all services and components
  from Angular2-Material into one Angular2 module, which you can import in other modules
  */
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { MdCoreModule } from '@angular2-material/core';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdButtonToggleModule } from '@angular2-material/button-toggle';
@@ -48,7 +48,7 @@ import { MdTooltipModule } from '@angular2-material/tooltip';
     providers: [MdIconRegistry]
 })
 
-export class MdModule {
+export class MdModule extends Type {
 
     constructor(mdIconRegistry: MdIconRegistry){
         mdIconRegistry

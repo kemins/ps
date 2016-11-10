@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
+import * as homeStyles from './home.styl';
 
 @Component({
   selector: 'home',
-  styles: [
-    require('./home.styl')
-  ],
+  styles: [homeStyles],
   templateUrl: 'home.html'
 })
 export class Home {

@@ -1,5 +1,4 @@
 import {
-  addProviders,
   inject
 } from '@angular/core/testing';
 
@@ -9,10 +8,10 @@ import { AppState } from './app.service';
 
 describe('App', () => {
   // provide our implementations or mocks to the dependency injector
-  beforeEach(() => addProviders([
+  /*beforeEach(() => addProviders([
     AppState,
     App
-  ]));
+  ]));*/
 
   it('should have a url', inject([ App ], (app) => {
     expect(app.url).toEqual('https://twitter.com/AngularClass');

@@ -1,4 +1,4 @@
-import { Injectable, OnDestroy } from '@angular/core';
+import { Injectable, OnDestroy, Type } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
@@ -6,7 +6,7 @@ import { AppActions } from '../../app.actions';
 
 
 @Injectable()
-export class NotificationsEffectService implements OnDestroy {
+export class NotificationsEffectService extends Type implements OnDestroy {
     constructor(private actions$: Actions) {}
 
     @Effect() addNotification$: Observable<Action> = this.actions$

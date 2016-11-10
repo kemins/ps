@@ -11,11 +11,11 @@ import { AppSettings } from '../../core';
 import { Contact } from './contact.model';
 import { ContactService } from './contact.service';
 
+import * as contactStyles from './contact.styl';
+
 @Component({
     selector: 'ps-contact-us',
-    styles: [
-        require('./contact.styl')
-    ],
+    styles: [contactStyles],
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './contact.html'
 })

@@ -4,11 +4,11 @@ import { notifications } from './notifications';
 import { contact, contactToken, Contact } from './contact';
 import { slides } from './slides';
 import { AppActions } from './app.actions';
-import { PsHttp, IPSResponse } from './core';
+import { IPSResponse } from './core';
 
 @Injectable()
 export class AppState {
-  constructor(private psHtp: PsHttp, private store: Store) {}
+  constructor(private store: Store) {}
 
   getNotifications = () => this.store.select('notifications');
 

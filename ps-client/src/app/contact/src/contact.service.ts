@@ -32,6 +32,6 @@ export class ContactService {
     });
   };
 
-  getContact = (): Observable<Contact> => this.store.select('contact').select('value');
-  getToken = (): Observable<string> => this.store.select('contact').select('token');
+  getContact = (): Observable<Contact> => this.store.select('contact', 'value');
+  getToken = (): Observable<string> => this.store.select('contact', 'token');
 }

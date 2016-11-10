@@ -88,6 +88,7 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#module
    */
   module: {
+    exprContextCritical: false,
 
     /*
      * An array of applied pre and post loaders.
@@ -273,8 +274,7 @@ module.exports = {
      */
     new HtmlElementsPlugin({
       headTags: require('./head-config.common')
-    }),
-
+    })
   ],
 
   /*

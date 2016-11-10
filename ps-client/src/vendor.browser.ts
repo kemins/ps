@@ -30,11 +30,11 @@ import 'ng2-bootstrap/bundles/ng2-bootstrap';
 
 import 'lodash/';
 
-require('bootstrap/fonts/glyphicons-halflings-regular.svg');
-require('bootstrap/fonts/glyphicons-halflings-regular.eot');
-require('bootstrap/fonts/glyphicons-halflings-regular.ttf');
-require('bootstrap/fonts/glyphicons-halflings-regular.woff');
-require('bootstrap/fonts/glyphicons-halflings-regular.woff2');
+import 'bootstrap/fonts/glyphicons-halflings-regular.svg';
+import 'bootstrap/fonts/glyphicons-halflings-regular.eot';
+import 'bootstrap/fonts/glyphicons-halflings-regular.ttf';
+import 'bootstrap/fonts/glyphicons-halflings-regular.woff';
+import 'bootstrap/fonts/glyphicons-halflings-regular.woff2';
 
 if ('production' === ENV) {
   // Production

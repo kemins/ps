@@ -4,6 +4,8 @@ import { AppState } from './app.service';
 import { MODE, SocialLoginService } from './social-login/index.ts';
 import { IPSResponse, PsHttp } from './core';
 
+import * as normalizeStyles from './normalize.css';
+
 /*
  * App Component
  * Top Level Component
@@ -11,7 +13,7 @@ import { IPSResponse, PsHttp } from './core';
 @Component({
   selector: 'app',
   styles: [
-    require('normalize.css'),
+    normalizeStyles,
     require('./app.styl'),
     require('bootstrap/dist/css/bootstrap.css')
   ],

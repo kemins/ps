@@ -10,7 +10,7 @@ export class ContactDataService {
 
     constructor(private http: PsHttp) {}
 
-    sendMessage(contact: Contact, token: string): Observable {
+    sendMessage(contact: Contact, token: string): Observable<Contact> {
         return this.http.post(this.contactUrl, {contact: contact, token: token})
             .map(res => res.json());
     }
