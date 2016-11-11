@@ -1,10 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AppState } from './app.service';
-import { MODE, SocialLoginService } from './social-login/index.ts';
+import { MODE, SocialLoginService } from './social-login';
 import { IPSResponse, PsHttp } from './core';
 
-import * as normalizeStyles from './normalize.css';
+import * as normalizeStyles from 'normalize.css/normalize.css';
+import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.css';
+import * as appStyles from './app.styl';
 
 /*
  * App Component
@@ -14,30 +16,32 @@ import * as normalizeStyles from './normalize.css';
   selector: 'app',
   styles: [
     normalizeStyles,
-    require('./app.styl'),
-    require('bootstrap/dist/css/bootstrap.css')
+    bootstrapStyles,
+    appStyles,
   ],
   providers: [SocialLoginService],
   encapsulation: ViewEncapsulation.None,
-  template: require('./app.html')
+  templateUrl: './app.html'
 })
 export class App {
   name = 'PS';
   url = 'https://photo-state.com';
   notifications: Observable<Array<IPSResponse>>;
+  slMode: Observable<MODE>;
 
   constructor(private appState: AppState, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
     this.notifications = appState.getNotifications()
       .map((notifications) => notifications.filter(({read}) => !read));
+
+    this.slMode = socialLoginService.getMode();
   }
 
   get pendingRequests() {
     return this.psHtp.pendingRequests;
   }
 
-  get socialLogin() {
-    return this.socialLoginService.mode == MODE.SIGN_UP ||
-        this.socialLoginService.mode == MODE.SIGN_IN;
+  isSocialLogin(mode: MODE) {
+    return mode == MODE.SIGN_UP || mode == MODE.SIGN_IN;
   }
 
   closeNotification = (alert, notification) => {
@@ -46,12 +50,12 @@ export class App {
   };
 
   openSignUp = () => {
-    this.socialLoginService.mode = MODE.SIGN_UP;
+    this.socialLoginService.setMode(MODE.SIGN_UP);
   };
 
   openSignIn = () => {
-    this.socialLoginService.mode = MODE.SIGN_IN;
+    this.socialLoginService.setMode(MODE.SIGN_IN);
   };
 
-  closeSocialLogin = () => this.socialLoginService.mode = MODE.NONE;
+  closeSocialLogin = () => this.socialLoginService.setMode(MODE.NONE);
 }

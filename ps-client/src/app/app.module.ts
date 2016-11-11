@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -13,7 +13,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { SocialLoginModule } from './social-login';
 import { AppState } from './app.service';
 import { NotificationsModule } from './notifications';
-
+import { HMRModule } from './hmr';
+import { Store } from '@ngrx/store';
 
 @NgModule({
     bootstrap: [App],
@@ -37,6 +38,8 @@ import { NotificationsModule } from './notifications';
         ConnectionBackend
     ]
 })
-export class AppModule {
-    constructor() {}
+export class AppModule extends HMRModule{
+    constructor(public appRef: ApplicationRef, appStore: Store) {
+        super.constructor(appRef, appStore);
+    }
 }

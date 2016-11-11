@@ -17,9 +17,17 @@ export class ContactEffectService extends Type  implements OnDestroy{
 
     @Effect() sendContact$: Observable<Action> = this.actions$
         .ofType(AppActions.SEND_MESSAGE)
-        .flatMap(({payload}) => payload.contact.combineLatest(payload.token).head())
-        .flatMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
+        .mergeMap(({payload}) => payload.contact.combineLatest(payload.token).first())
+        .mergeMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
         .map(res => ({type: this.types[res.type], payload: res}));
+
+
+    @Effect() commitDirtyContact$: Observable<Action> = this.actions$
+        .ofType(AppActions.COMMIT_DIRTY_CONTACT)
+        .map(item => {console.log(item);return item;})
+        .mergeMap(({payload}) => payload.first())
+        .map(item => {console.log(item);return item;})
+        .map((dirtyContact) => ({type: AppActions.SET_CONTACT, payload: dirtyContact}));
 
 
     ngOnDestroy = () => {};

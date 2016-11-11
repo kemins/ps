@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run strat:services\" \"npm run strat:client\"",
     "strat:services": "cd ps-services && npm run start",
-    "strat:client": "cd ps-client && npm run start"
+    "strat:client": "cd ps-client && npm run start:hmr"
   },
   "dependencies": {
     "@ngrx/core": "^1.2.0",

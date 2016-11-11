@@ -12,7 +12,7 @@ export class ContactService {
     this.store.dispatch({
       type: AppActions.SEND_MESSAGE,
       payload: {
-        contact: this.getContact(),
+        contact: this.getDirtyContact(),
         token: this.getToken()
       }
     });
@@ -25,13 +25,21 @@ export class ContactService {
     });
   };
 
-  setContact = (contact: Contact) => {
+  commitDirtyContact = () => {
     this.store.dispatch({
-      type: AppActions.SET_CONTACT,
+      type: AppActions.COMMIT_DIRTY_CONTACT,
+      payload: this.getDirtyContact()
+    });
+  };
+
+  setDirtyContact = (contact: Contact) => {
+    this.store.dispatch({
+      type: AppActions.SET_DIRTY_CONTACT,
       payload: contact
     });
   };
 
   getContact = (): Observable<Contact> => this.store.select('contact', 'value');
+  getDirtyContact = (): Observable<Contact> => this.store.select('contact', 'dirtyValue');
   getToken = (): Observable<string> => this.store.select('contact', 'token');
 }

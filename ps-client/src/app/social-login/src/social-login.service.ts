@@ -2,24 +2,23 @@ import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { AppSettings } from '../../core';
 import { AppActions } from '../../app.actions';
+import { App } from '../../app.component';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 export enum MODE {SIGN_IN, SIGN_UP, NONE}
 
 @Injectable()
 export class SocialLoginService {
-
   constructor(private store: Store) {
     this.bootstrap();
     this.showLoginWidget();
   }
 
-  public set mode(value: MODE) {
-    this._mode = value;
-  }
+  setMode = (value: MODE) => {
+    this.store.dispatch({type: AppActions.SL_SET_MODE, payload: value});
+  };
 
-  public get mode(): MODE {
-    return this._mode;
-  }
+  getMode = (): Observable<MODE> => this.store.select('socialLogin', 'mode');
 
   oneallSsubdomain: string = 'photo-state';
   rootUrl = AppSettings.getSetting('endpoint');

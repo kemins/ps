@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreModule, combineReducers } from '@ngrx/store';
 import { notifications } from './notifications';
-import { contact, contactToken, Contact } from './contact';
+import { contact, dirtyContact, contactToken, Contact } from './contact';
 import { slides } from './slides';
 import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
+import { socialLoginMode, MODE } from './social-login';
 
 @Injectable()
 export class AppState {
@@ -29,19 +30,43 @@ export class AppState {
   static defaultState = {
     slides: [],
     notifications: [],
+    socialLogin: {
+      mode: MODE.NONE
+    },
     contact: {
       value: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
-      token: 'test2'
+      dirtyValue: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
+      token: 'test_t'
     }
   };
 
   static provideStore = () => {
-    return StoreModule.provideStore({
+    let appReducer = combineReducers({
       slides: slides,
       notifications: notifications,
+      socialLogin: combineReducers({
+        mode: socialLoginMode,
+      }),
       contact: combineReducers({
         value: contact,
+        dirtyValue: dirtyContact,
         token: contactToken
-      })}, AppState.defaultState);
-  }
+      })});
+
+    return StoreModule.provideStore(AppState.rootReducer(appReducer), AppState.defaultState);
+  };
+
+  private static rootReducer = (reducer) => {
+    return (state, action) => {
+      let nextState;
+
+      if (action.type === AppActions.HMR_RESTORE) {
+        nextState = action.payload;
+      } else {
+        nextState = reducer(state, action);
+      }
+
+      return nextState;
+    }
+  };
 }

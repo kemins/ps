@@ -13,6 +13,8 @@ import { ContactService } from './contact.service';
 
 import * as contactStyles from './contact.styl';
 
+import * as _ from 'lodash';
+
 @Component({
     selector: 'ps-contact-us',
     styles: [contactStyles],
@@ -21,6 +23,7 @@ import * as contactStyles from './contact.styl';
 })
 export class ContactComponent implements OnInit {
     contact: Observable<Contact>;
+    dirtyContact: Observable<Contact>;
     token: Observable<string>;
     captchaKey = '';
     contactForm;
@@ -35,17 +38,23 @@ export class ContactComponent implements OnInit {
             message: ['', Validators.required]
         });
 
-        this.contact.subscribe((contact: Contact) => this.contactForm.setValue(contact));
+        this.dirtyContact
+            .distinctUntilChanged((contact) => _.isEqual(contact, this.contactForm.value))
+            .subscribe((contact) => this.contactForm.patchValue(contact));
+
+        this.contactForm.valueChanges
+            .subscribe((contact) => this.contactService.setDirtyContact(contact));
     }
 
     constructor(private contactService: ContactService, private formBuilder: FormBuilder) {
         this.captchaKey = AppSettings.getSetting('captcha.key');
         this.contact = contactService.getContact();
+        this.dirtyContact = contactService.getDirtyContact();
         this.token = contactService.getToken();
     }
 
     onSubmit() {
-        this.contactService.setContact(this.contactForm.value);
+        this.contactService.commitDirtyContact();
         this.contactService.sendMessage();
     }
 
