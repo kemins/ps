@@ -26,7 +26,7 @@ import '@angularclass/hmr';
 import 'rxjs/Rx';
 
 // bootstrap
-import 'ng2-bootstrap/bundles/ng2-bootstrap';
+/*import 'ng2-bootstrap/ng2-bootstrap;*/
 
 import 'lodash/';
 
