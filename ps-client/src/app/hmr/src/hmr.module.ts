@@ -27,9 +27,6 @@ export class HMRModule {
         var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
         // recreate elements
         store.disposeOldHosts = createNewHosts(cmpLocation);
-        // inject your AppStore and grab state then set it on store
-        // var appState = this.AppStore.get()
-        // store.state = Object.assign({}, appState)
         // save input values
         ///store.restoreInputValues  = createInputTransfer();
         // remove styles

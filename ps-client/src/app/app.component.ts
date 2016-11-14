@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AppState } from './app.service';
+import { AppService } from './app.service';
 import { MODE, SocialLoginService } from './social-login';
 import { IPSResponse, PsHttp } from './core';
 
@@ -29,7 +29,7 @@ export class App {
   notifications: Observable<Array<IPSResponse>>;
   slMode: Observable<MODE>;
 
-  constructor(private appState: AppState, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
+  constructor(private appState: AppService, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
     this.notifications = appState.getNotifications()
       .map((notifications) => notifications.filter(({read}) => !read));
 

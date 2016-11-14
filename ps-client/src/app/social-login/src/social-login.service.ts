@@ -2,8 +2,7 @@ import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { AppSettings } from '../../core';
 import { AppActions } from '../../app.actions';
-import { App } from '../../app.component';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export enum MODE {SIGN_IN, SIGN_UP, NONE}
 
@@ -23,7 +22,6 @@ export class SocialLoginService {
   oneallSsubdomain: string = 'photo-state';
   rootUrl = AppSettings.getSetting('endpoint');
   authenticationEndpoint: string = this.rootUrl + 'users/authenticate';
-  _mode: MODE = MODE.NONE;
 
   bootstrap() {
     /* The library is loaded asynchronously */
@@ -60,12 +58,13 @@ export class SocialLoginService {
       [MODE.SIGN_UP]: AppActions.SIGN_UP_WITH_TOKE,
     };
 
-    let type = types[this._mode];
+    this.getMode().first().subscribe((mode) => {
+      let type = types[mode];
 
-    console.log(type);
-    this.store.dispatch({
-      type: type,
-      payload: data
+      this.store.dispatch({
+        type: type,
+        payload: data
+      });
     });
 
     return false;

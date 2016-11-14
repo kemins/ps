@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Slide } from './slide.model';
 import { SlideService } from './slides.service';
 
-import * as carouselStyles from './carousel.css';
+import * as carouselStyles from './carousel.styl';
 
 @Component({
   selector: 'ps-slide-carousel',

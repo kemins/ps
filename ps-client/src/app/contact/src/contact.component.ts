@@ -10,9 +10,7 @@ import { EmailValidator } from '../../validators';
 import { AppSettings } from '../../core';
 import { Contact } from './contact.model';
 import { ContactService } from './contact.service';
-
 import * as contactStyles from './contact.styl';
-
 import * as _ from 'lodash';
 
 @Component({
@@ -46,6 +44,8 @@ export class ContactComponent implements OnInit {
             .subscribe((contact) => this.contactService.setDirtyContact(contact));
     }
 
+    ngAfterViewInit() {}
+
     constructor(private contactService: ContactService, private formBuilder: FormBuilder) {
         this.captchaKey = AppSettings.getSetting('captcha.key');
         this.contact = contactService.getContact();
@@ -56,6 +56,8 @@ export class ContactComponent implements OnInit {
     onSubmit() {
         this.contactService.commitDirtyContact();
         this.contactService.sendMessage();
+        this.captcha.reset();
+        this.handleCorrectCaptcha(null);
     }
 
     handleCorrectCaptcha(token) {

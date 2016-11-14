@@ -12,6 +12,10 @@
 
     <md-sidenav-layout>
         <md-sidenav #sidebar>
+            <button md-icon-button color="primary">
+                <md-icon class="light" (click)="sidebar.toggle()">account_circle</md-icon>
+                <label>Sign In</label>
+            </button>
         </md-sidenav>
         <div class="grow-equally content-holder">
             <md-progress-bar mode="indeterminate" color="primary"
@@ -26,6 +30,8 @@
             <md-progress-circle mode="indeterminate"></md-progress-circle>
         </div>
     </div>
+
+    <ps-footer></ps-footer>
 
     <alert dismissible="true" (close)="closeNotification($event, notification)"
         *ngFor="let notification of notifications | async"

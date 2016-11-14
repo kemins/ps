@@ -11,10 +11,6 @@ export const contact = (contact:Contact, action:Action) => {
             result = Object.assign({}, action.payload);
             break;
 
-        case AppActions.MESSAGE_POST_SUCCESS:
-            result = new Contact();
-            break;
-
         default:
             result = contact;
             break;

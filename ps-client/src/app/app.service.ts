@@ -6,9 +6,10 @@ import { slides } from './slides';
 import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
+import { footerActions } from './footer-bar';
 
 @Injectable()
-export class AppState {
+export class AppService {
   constructor(private store: Store) {}
 
   getNotifications = () => this.store.select('notifications');
@@ -36,12 +37,20 @@ export class AppState {
     contact: {
       value: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
       dirtyValue: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
-      token: 'test_t'
-    }
+      token: ''
+    },
+    footerActions: [{
+      label: 'Home',
+      link: '/home'
+    }, {
+      label: 'Contact us',
+      link: '/contact'
+    }]
   };
 
   static provideStore = () => {
     let appReducer = combineReducers({
+      footerActions: footerActions,
       slides: slides,
       notifications: notifications,
       socialLogin: combineReducers({
@@ -53,7 +62,7 @@ export class AppState {
         token: contactToken
       })});
 
-    return StoreModule.provideStore(AppState.rootReducer(appReducer), AppState.defaultState);
+    return StoreModule.provideStore(AppService.rootReducer(appReducer), AppService.defaultState);
   };
 
   private static rootReducer = (reducer) => {

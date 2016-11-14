@@ -1,6 +1,4 @@
 <div>
-  <div class="row">
-    <div class="col-sm-12">
       <carousel [interval]="200000" [noWrap]="false">
         <slide *ngFor="let slide of slides | async; let index=index"
           [active]="slide.active">
@@ -17,7 +15,5 @@
           </div>
         </slide>
       </carousel>
-    </div>
-  </div>
 </div>
 

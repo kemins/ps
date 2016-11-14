@@ -11,10 +11,11 @@ import { HomeModule } from './home';
 import { ContactModule } from './contact';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { SocialLoginModule } from './social-login';
-import { AppState } from './app.service';
+import { AppService } from './app.service';
 import { NotificationsModule } from './notifications';
 import { HMRModule } from './hmr';
 import { Store } from '@ngrx/store';
+import { FooterBarModule } from './footer-bar';
 
 @NgModule({
     bootstrap: [App],
@@ -30,16 +31,18 @@ import { Store } from '@ngrx/store';
         SocialLoginModule,
         ContactModule,
         HomeModule,
-        AppState.provideStore(),
+        FooterBarModule,
+        AppService.provideStore(),
+        StoreDevtoolsModule,
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [
-        AppState,
+        AppService,
         ConnectionBackend
     ]
 })
 export class AppModule extends HMRModule{
-    constructor(public appRef: ApplicationRef, appStore: Store) {
+    constructor(appRef: ApplicationRef, appStore: Store) {
         super.constructor(appRef, appStore);
     }
 }

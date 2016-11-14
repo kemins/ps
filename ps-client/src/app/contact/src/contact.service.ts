@@ -12,7 +12,7 @@ export class ContactService {
     this.store.dispatch({
       type: AppActions.SEND_MESSAGE,
       payload: {
-        contact: this.getDirtyContact(),
+        contact: this.getContact(),
         token: this.getToken()
       }
     });

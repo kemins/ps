@@ -17,6 +17,7 @@ import {
 import { ValidatorModule } from '../../validators';
 import { MdModule } from '../../md.module';
 import { NotificationsModule } from '../../notifications';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 @NgModule({

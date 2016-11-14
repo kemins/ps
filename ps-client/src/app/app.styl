@@ -31,14 +31,20 @@ app
   padding 0
   margin 0
   position fixed
-  z-index $backdrop-z-index
   width 100%
   top 0
   right 0
 
 .bottom-bar
+  position fixed
   top auto
   bottom 0
+
+.top-bar
+  z-index $backdrop-z-index
+
+md-sidenav
+  padding-top 50px
 
 .carousel-indicators
   display none

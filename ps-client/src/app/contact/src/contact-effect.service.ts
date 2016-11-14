@@ -24,9 +24,7 @@ export class ContactEffectService extends Type  implements OnDestroy{
 
     @Effect() commitDirtyContact$: Observable<Action> = this.actions$
         .ofType(AppActions.COMMIT_DIRTY_CONTACT)
-        .map(item => {console.log(item);return item;})
         .mergeMap(({payload}) => payload.first())
-        .map(item => {console.log(item);return item;})
         .map((dirtyContact) => ({type: AppActions.SET_CONTACT, payload: dirtyContact}));
 
 

@@ -17,7 +17,7 @@ export class SocialLoginEffectService extends Type {
 
     @Effect() signIn$: Observable<Action> = this.actions$
         .ofType(AppActions.SIGN_IN_WITH_TOKE)
-        .flatMap(({payload}) => {
+        .mergeMap(({payload}) => {
             return this.socialLoginDataService.signIn(payload);
         })
         .map(res => ({type: this.types[res.type], payload: res}));
@@ -25,6 +25,6 @@ export class SocialLoginEffectService extends Type {
 
     @Effect() signUp$: Observable<Action> = this.actions$
         .ofType(AppActions.SIGN_UP_WITH_TOKE)
-        .flatMap(({payload}) => this.socialLoginDataService.signUp(payload))
+        .mergeMap(({payload}) => this.socialLoginDataService.signUp(payload))
         .map(res => ({type: this.types[res.type], payload: res}));
 }

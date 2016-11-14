@@ -4,12 +4,12 @@ import {
 
 // Load the implementations that should be tested
 import { App } from './app.component';
-import { AppState } from './app.service';
+import { AppService } from './app.service';
 
 describe('App', () => {
   // provide our implementations or mocks to the dependency injector
   /*beforeEach(() => addProviders([
-    AppState,
+    AppService,
     App
   ]));*/
 
