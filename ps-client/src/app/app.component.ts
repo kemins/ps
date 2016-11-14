@@ -7,6 +7,7 @@ import { IPSResponse, PsHttp } from './core';
 import * as normalizeStyles from 'normalize.css/normalize.css';
 import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.css';
 import * as appStyles from './app.styl';
+import * as mdStyles from '@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 
 /*
  * App Component
@@ -17,6 +18,7 @@ import * as appStyles from './app.styl';
   styles: [
     normalizeStyles,
     bootstrapStyles,
+    mdStyles,
     appStyles,
   ],
   providers: [SocialLoginService],

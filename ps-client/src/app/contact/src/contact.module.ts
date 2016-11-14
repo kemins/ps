@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReCaptchaModule } from 'angular2-recaptcha';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,6 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
-
 import {
     ContactComponent,
     ContactService,
@@ -15,9 +15,7 @@ import {
     ContactEffectService
 } from './../';
 import { ValidatorModule } from '../../validators';
-import { MdModule } from '../../md.module';
 import { NotificationsModule } from '../../notifications';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 @NgModule({
@@ -31,7 +29,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         HttpModule,
         CommonModule,
         NotificationsModule,
-        MdModule.forRoot(),
+        MaterialModule,
         FormsModule,
         ReactiveFormsModule,
         ReCaptchaModule,

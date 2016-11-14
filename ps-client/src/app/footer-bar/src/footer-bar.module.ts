@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MdModule } from '../../md.module';
+import { MaterialModule } from '@angular/material';
 import { FooterComponent } from './footer-bar.component';
 import { FooterBarService } from './footer-bar.service';
 
@@ -10,7 +10,7 @@ import { FooterBarService } from './footer-bar.service';
     imports: [
         RouterModule,
         CommonModule,
-        MdModule.forRoot(),
+        MaterialModule
     ],
     exports: [FooterComponent],
     declarations: [FooterComponent],

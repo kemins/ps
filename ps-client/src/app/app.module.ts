@@ -1,4 +1,5 @@
 import { NgModule, ApplicationRef } from '@angular/core';
+import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, ConnectionBackend } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -6,7 +7,6 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { CoreModule } from './core';
 import { AlertModule } from 'ng2-bootstrap';
-import { MdModule } from './md.module';
 import { HomeModule } from './home';
 import { ContactModule } from './contact';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -21,7 +21,7 @@ import { FooterBarModule } from './footer-bar';
     bootstrap: [App],
     declarations: [App],
     imports: [
-        MdModule.forRoot(),
+        MaterialModule.forRoot(),
         AlertModule,
         HttpModule,
         BrowserModule,

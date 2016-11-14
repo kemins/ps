@@ -12,10 +12,10 @@
 
     <md-sidenav-layout>
         <md-sidenav #sidebar>
-            <button md-icon-button color="primary">
-                <md-icon class="light" (click)="sidebar.toggle()">account_circle</md-icon>
-                <label>Sign In</label>
+            <button id="sign-in-btn" md-icon-button color="primary">
+                <md-icon class="light">account_circle</md-icon>
             </button>
+            <label for="sign-in-btn">Sign In</label>
         </md-sidenav>
         <div class="grow-equally content-holder">
             <md-progress-bar mode="indeterminate" color="primary"

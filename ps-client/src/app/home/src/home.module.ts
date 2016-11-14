@@ -5,7 +5,7 @@ import { AlertModule } from 'ng2-bootstrap';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
-import { MdModule } from '../../md.module';
+import { MaterialModule } from '@angular/material';
 import { Home } from './home.component';
 import { SlidesModule } from '../../slides';
 
@@ -19,7 +19,7 @@ import { SlidesModule } from '../../slides';
         AlertModule,
         HttpModule,
         CommonModule,
-        MdModule.forRoot(),
+        MaterialModule,
         FormsModule,
         ReactiveFormsModule
     ],
