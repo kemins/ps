@@ -3,10 +3,11 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { AppActions } from '../../app.actions';
 import { Contact } from './contact.model';
+import { AppStore } from '../../app.state';
 
 @Injectable()
 export class ContactService {
-  constructor(private store: Store) {}
+  constructor(private store: Store<AppStore>) {}
 
   sendMessage = () => {
     this.store.dispatch({
@@ -39,7 +40,7 @@ export class ContactService {
     });
   };
 
-  getContact = (): Observable<Contact> => this.store.select('contact', 'value');
-  getDirtyContact = (): Observable<Contact> => this.store.select('contact', 'dirtyValue');
-  getToken = (): Observable<string> => this.store.select('contact', 'token');
+  getContact = (): Observable<Contact> => this.store.select<Contact>('contact', 'value');
+  getDirtyContact = (): Observable<Contact> => this.store.select<Contact>('contact', 'dirtyValue');
+  getToken = (): Observable<string> => this.store.select<string>('contact', 'token');
 }

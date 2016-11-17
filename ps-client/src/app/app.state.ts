@@ -5,9 +5,11 @@ import { Contact } from './contact';
 import { BarAction } from './footer-bar';
 import { MODE } from './social-login';
 
-export interface AppStore {
+export interface AppStore{
     notifications: Observable<Array<IPSResponse>>
-    socialLogin: {mode: MODE},
+    socialLogin: {
+        mode: Observable<MODE>
+    },
     slides: Observable<Array<Slide>>
     notes: Observable<Array<IPSResponse>>
     contact: {
@@ -15,5 +17,5 @@ export interface AppStore {
         dirtyValue: Observable<Contact>,
         token: Observable<string>
     },
-    footerBarActions: Observable<Array<BarAction>>;
+    footerActions: Observable<Array<BarAction>>;
 }

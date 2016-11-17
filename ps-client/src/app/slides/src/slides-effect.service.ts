@@ -1,4 +1,4 @@
-import { Injectable, OnDestroy, Type } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
@@ -7,7 +7,7 @@ import { SlideDataService } from './slides-data.service';
 
 
 @Injectable()
-export class SlidesEffectService extends Type {
+export class SlidesEffectService {
     constructor(private slideDataService: SlideDataService, private actions$: Actions) {}
 
     @Effect() fetchSlides$: Observable<Action> = this.actions$

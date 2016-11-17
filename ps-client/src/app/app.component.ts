@@ -33,7 +33,7 @@ export class App {
 
   constructor(private appState: AppService, private psHtp: PsHttp, private socialLoginService: SocialLoginService) {
     this.notifications = appState.getNotifications()
-      .map((notifications) => notifications.filter(({read}) => !read));
+      .map((notifications: Array<IPSResponse>) => notifications.filter(({read}) => !read));
 
     this.slMode = socialLoginService.getMode();
   }

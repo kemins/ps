@@ -1,7 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule, ConnectionBackend } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
@@ -17,6 +17,7 @@ import { HMRModule } from './hmr';
 import { Store } from '@ngrx/store';
 import { FooterBarModule } from './footer-bar';
 import { SideBarModule } from './side-bar';
+import { AppStore } from './app.state';
 
 @NgModule({
     bootstrap: [App],
@@ -39,12 +40,11 @@ import { SideBarModule } from './side-bar';
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [
-        AppService,
-        ConnectionBackend
+        AppService
     ]
 })
 export class AppModule extends HMRModule{
-    constructor(appRef: ApplicationRef, appStore: Store) {
-        super.constructor(appRef, appStore);
+    constructor(appRef: ApplicationRef, appStore: Store<AppStore>) {
+        super(appRef, appStore);
     }
 }

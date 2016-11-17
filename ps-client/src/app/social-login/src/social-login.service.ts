@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { AppSettings } from '../../core';
 import { AppActions } from '../../app.actions';
 import { Observable } from 'rxjs';
+import { AppStore } from '../../app.state';
 
 export enum MODE {SIGN_IN, SIGN_UP, NONE}
 
 @Injectable()
 export class SocialLoginService {
-  constructor(private store: Store) {
+  constructor(private store: Store<AppStore>) {
     this.bootstrap();
     this.showLoginWidget();
   }
@@ -17,7 +18,7 @@ export class SocialLoginService {
     this.store.dispatch({type: AppActions.SL_SET_MODE, payload: value});
   };
 
-  getMode = (): Observable<MODE> => this.store.select('socialLogin', 'mode');
+  getMode = (): Observable<MODE> => this.store.select<MODE>('socialLogin', 'mode');
 
   oneallSsubdomain: string = 'photo-state';
   rootUrl = AppSettings.getSetting('endpoint');

@@ -8,5 +8,5 @@ export class AppSettings {
         }
     };
 
-    static getSetting = (key) => _.get(AppSettings.settings, key);
+    static getSetting = (key: string): string => _.get(AppSettings.settings, key) as string;
 }

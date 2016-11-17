@@ -2,9 +2,10 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { ApplicationRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
+import { AppStore } from '../../app.state';
 
 export class HMRModule {
-    constructor(private appRef: ApplicationRef, private appStore: Store) {}
+    constructor(private appRef: ApplicationRef, private appStore: Store<AppStore>) {}
 
     hmrOnInit(store) {
         if (store && store.state) {

@@ -7,10 +7,11 @@ import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
 import { footerActions } from './footer-bar';
+import { AppStore } from './app.state';
 
 @Injectable()
 export class AppService {
-  constructor(private store: Store) {}
+  constructor(private store: Store<AppStore>) {}
 
   getNotifications = () => this.store.select('notifications');
 
