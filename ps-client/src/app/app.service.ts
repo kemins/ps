@@ -8,6 +8,7 @@ import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
 import { footerActions } from './footer-bar';
 import { AppStore } from './app.state';
+import { profile, dirtyCProfile } from './profile';
 
 @Injectable()
 export class AppService {
@@ -40,6 +41,10 @@ export class AppService {
       dirtyValue: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
       token: ''
     },
+    profile: {
+      value: {},
+      dirtyValue: {},
+    },
     footerActions: [{
       label: 'Home',
       link: '/home'
@@ -61,7 +66,12 @@ export class AppService {
         value: contact,
         dirtyValue: dirtyContact,
         token: contactToken
-      })});
+      }),
+      profile: combineReducers({
+        value: profile,
+        dirtyValue: dirtyCProfile,
+      })
+    });
 
     return StoreModule.provideStore(AppService.rootReducer(appReducer), AppService.defaultState);
   };

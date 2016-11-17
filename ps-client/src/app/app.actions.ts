@@ -26,6 +26,14 @@ export class AppActions {
     // social login
     public static SL_SET_MODE: string = 'SL_SET_MODE';
 
+    // profile
+    public static COMMIT_DIRTY_PROFILE: string = 'COMMIT_DIRTY_PROFILE';
+    public static SET_DIRTY_PROFILE: string = 'SET_DIRTY_PROFILE';
+    public static SAVE_PROFILE: string = 'SAVE_PROFILE';
+    public static PROFILE_POST_SUCCESS: string = 'PROFILE_POST_SUCCESS';
+    public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
+
+
     // hmr
     public static HMR_RESTORE: string = 'HMR_RESTORE';
     public static HMR_INIT_STATE: string = 'HMR_INIT_STATE';

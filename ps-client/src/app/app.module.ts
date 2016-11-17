@@ -18,6 +18,7 @@ import { Store } from '@ngrx/store';
 import { FooterBarModule } from './footer-bar';
 import { SideBarModule } from './side-bar';
 import { AppStore } from './app.state';
+import { ProfileModule } from './profile';
 
 @NgModule({
     bootstrap: [App],
@@ -35,6 +36,7 @@ import { AppStore } from './app.state';
         HomeModule,
         FooterBarModule,
         SideBarModule,
+        ProfileModule,
         AppService.provideStore(),
         StoreDevtoolsModule,
         StoreDevtoolsModule.instrumentOnlyWithExtension()
