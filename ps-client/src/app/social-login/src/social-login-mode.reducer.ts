@@ -3,16 +3,16 @@ import { AppActions } from '../../app.actions';
 import { MODE } from './social-login.service';
 
 export const socialLoginMode = (mode: MODE, action: Action) => {
-    let mode: MODE;
+    let result: MODE;
 
     switch (action.type) {
         case AppActions.SL_SET_MODE:
-            mode = action.payload;
+            result = action.payload;
             break;
         default:
-            mode = mode;
+            result = mode;
             break;
     }
 
-    return mode;
+    return result;
 };

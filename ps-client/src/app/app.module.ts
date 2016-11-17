@@ -16,6 +16,7 @@ import { NotificationsModule } from './notifications';
 import { HMRModule } from './hmr';
 import { Store } from '@ngrx/store';
 import { FooterBarModule } from './footer-bar';
+import { SideBarModule } from './side-bar';
 
 @NgModule({
     bootstrap: [App],
@@ -32,6 +33,7 @@ import { FooterBarModule } from './footer-bar';
         ContactModule,
         HomeModule,
         FooterBarModule,
+        SideBarModule,
         AppService.provideStore(),
         StoreDevtoolsModule,
         StoreDevtoolsModule.instrumentOnlyWithExtension()

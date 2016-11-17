@@ -12,15 +12,9 @@
 
     <md-sidenav-layout>
         <md-sidenav #sidebar>
-            <button id="sign-in-btn" md-icon-button color="primary">
-                <md-icon class="light">account_circle</md-icon>
-            </button>
-            <label for="sign-in-btn">Sign In</label>
+            <ps-side-bar (actionDone)="sidebar.close()"></ps-side-bar>
         </md-sidenav>
         <div class="grow-equally content-holder">
-            <md-progress-bar mode="indeterminate" color="primary"
-                *ngIf="loading"></md-progress-bar>
-
             <router-outlet></router-outlet>
         </div>
     </md-sidenav-layout>
@@ -31,6 +25,7 @@
         </div>
     </div>
 
+    SL Mode: {{slMode | async}}
     <ps-footer></ps-footer>
 
     <alert dismissible="true" (close)="closeNotification($event, notification)"

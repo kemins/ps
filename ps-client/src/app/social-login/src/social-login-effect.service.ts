@@ -1,4 +1,4 @@
-import { Injectable, Type } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
@@ -7,7 +7,7 @@ import { SocialLoginDataService } from './social-login-data.service';
 
 
 @Injectable()
-export class SocialLoginEffectService extends Type {
+export class SocialLoginEffectService {
     types = {
         success: AppActions.USER_AUTH_SUCCESS,
         fault: AppActions.USER_AUTH_FAIL

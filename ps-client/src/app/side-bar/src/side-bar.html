@@ -1,0 +1,28 @@
+<div>
+    <button id="home-btn" md-icon-button color="primary"
+        routerLink="/">
+        <md-icon class="light">home</md-icon>
+    </button>
+    <label for="home-btn">Home</label>
+
+    <br>
+    <button id="sign-in-btn" md-icon-button color="primary"
+        (click)="signIn()">
+        <md-icon class="light">account_circle</md-icon>
+    </button>
+    <label for="sign-in-btn">Sign In</label>
+
+    <br>
+    <button id="sign-up-btn" md-icon-button color="primary"
+        (click)="signUp()">
+        <md-icon class="light">person_add</md-icon>
+    </button>
+    <label for="sign-up-btn">Sign Un</label>
+
+    <br>
+    <button id="mail-btn" md-icon-button color="primary"
+        routerLink="/contact">
+        <md-icon class="light">mail</md-icon>
+    </button>
+    <label for="mail-btn">Contact Us</label>
+</div>
