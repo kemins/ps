@@ -34,6 +34,8 @@ export class AppActions {
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
 
 
+    // footer
+    public static SET_FOOTER_ACTIONS: string = 'SET_FOOTER_ACTIONS';
     // hmr
     public static HMR_RESTORE: string = 'HMR_RESTORE';
     public static HMR_INIT_STATE: string = 'HMR_INIT_STATE';

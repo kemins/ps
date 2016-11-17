@@ -6,14 +6,13 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { HomeComponent } from './home.component';
-import { SlidesModule } from '../../slides';
+import { UserBoardComponent } from './user-board.component';
+import { FooterBarModule } from '../../footer-bar';
 
 
 @NgModule({
-    declarations: [HomeComponent],
+    declarations: [UserBoardComponent],
     imports: [
-        SlidesModule,
         RouterModule,
         CoreModule,
         AlertModule,
@@ -21,11 +20,12 @@ import { SlidesModule } from '../../slides';
         CommonModule,
         MaterialModule,
         FormsModule,
+        FooterBarModule,
         ReactiveFormsModule
     ],
-    exports: [HomeComponent],
+    exports: [UserBoardComponent],
     providers: []
 })
-export class HomeModule {
+export class UserBoardModule {
     constructor() {}
 }

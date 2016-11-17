@@ -6,7 +6,7 @@ import { slides } from './slides';
 import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
-import { footerActions } from './footer-bar';
+import { footerActions, GUEST_ACTIONS } from './footer-bar';
 import { AppStore } from './app.state';
 import { profile, dirtyCProfile } from './profile';
 
@@ -45,13 +45,7 @@ export class AppService {
       value: {},
       dirtyValue: {},
     },
-    footerActions: [{
-      label: 'Home',
-      link: '/home'
-    }, {
-      label: 'Contact us',
-      link: '/contact'
-    }]
+    footerActions: GUEST_ACTIONS
   };
 
   static provideStore = () => {

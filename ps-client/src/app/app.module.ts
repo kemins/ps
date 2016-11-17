@@ -19,6 +19,7 @@ import { FooterBarModule } from './footer-bar';
 import { SideBarModule } from './side-bar';
 import { AppStore } from './app.state';
 import { ProfileModule } from './profile';
+import { UserBoardModule } from './user-board';
 
 @NgModule({
     bootstrap: [App],
@@ -34,6 +35,7 @@ import { ProfileModule } from './profile';
         SocialLoginModule,
         ContactModule,
         HomeModule,
+        UserBoardModule,
         FooterBarModule,
         SideBarModule,
         ProfileModule,
@@ -45,7 +47,7 @@ import { ProfileModule } from './profile';
         AppService
     ]
 })
-export class AppModule extends HMRModule{
+export class AppModule extends HMRModule {
     constructor(appRef: ApplicationRef, appStore: Store<AppStore>) {
         super(appRef, appStore);
     }

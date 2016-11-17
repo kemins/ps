@@ -7,6 +7,6 @@ import * as homeStyles from './home.styl';
   styles: [homeStyles],
   templateUrl: 'home.html'
 })
-export class Home {
+export class HomeComponent {
   constructor() {}
 }
