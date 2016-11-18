@@ -19,21 +19,14 @@ import {
     templateUrl: 'guest-board.html'
 })
 export class GuestBoardComponent implements OnInit {
-    slMode: Observable<MODE>;
-
     constructor(private footerBarService: FooterBarService,
                 private socialLoginService: SocialLoginService,
                 private sideBarService: SideBarService) {
-        this.slMode = socialLoginService.getMode();
     }
 
     ngOnInit() {
         this.footerBarService.setActions(FOOTER_ACTIONS);
         this.sideBarService.setActions(SIDE_BAR_ACTIONS);
-    }
-
-    isSocialLogin(mode: MODE) {
-        return mode == MODE.SIGN_UP || mode == MODE.SIGN_IN;
     }
 
     openSignUp() {
@@ -55,6 +48,4 @@ export class GuestBoardComponent implements OnInit {
                 break;
         }
     }
-
-    closeSocialLogin = () => this.socialLoginService.setMode(MODE.NONE);
 }

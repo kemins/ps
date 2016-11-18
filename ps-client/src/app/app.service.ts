@@ -6,10 +6,10 @@ import { slides } from './slides';
 import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
-import { footerActions, GUEST_ACTIONS } from './footer-bar';
+import { footerActions } from './footer-bar';
 import { AppStore } from './app.state';
 import { profile, dirtyCProfile } from './profile';
-import { sideBarActions } from './side-bar';
+import { sideBarActions, sideBarCurrentAction } from './side-bar';
 
 @Injectable()
 export class AppService {
@@ -45,14 +45,14 @@ export class AppService {
     profile: {
       value: {},
       dirtyValue: {},
-    },
-    footerActions: GUEST_ACTIONS
+    }
   };
 
   static provideStore = () => {
     let appReducer = combineReducers({
       footerActions: footerActions,
       sideBarActions: sideBarActions,
+      sideBarCurrentAction: sideBarCurrentAction,
       slides: slides,
       notifications: notifications,
       socialLogin: combineReducers({

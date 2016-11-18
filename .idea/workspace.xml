@@ -2,21 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-effect.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.reducer.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-current-action.reducer.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.html" afterPath="$PROJECT_DIR$/ps-client/src/app/app.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.state.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/app.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/users.js" afterPath="$PROJECT_DIR$/ps-services/routes/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/styles/layout.styl" afterPath="$PROJECT_DIR$/ps-client/src/styles/layout.styl" />
     </list>
     <ignored path="ps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,74 +52,8 @@
       <file leaf-file-name="social-login-effect.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.actions.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.actions.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/router/src/router.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="330" column="4" selection-start-line="330" selection-start-column="4" selection-end-line="330" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.reducer.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile-dirty.reducer.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-board.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="social-login-data.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-data.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="447">
+              <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -115,8 +62,8 @@
       <file leaf-file-name="user-board.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state relative-caret-position="170">
+              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -124,22 +71,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="119">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.routes.ts">
+      <file leaf-file-name="user-board.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guest-board.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guest-board.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="social-login.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="47" column="75" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <element signature="n#!!block;n#canActivate#0;n#ProfileService#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,11 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ps-client/src/app/hmr/src/hmr.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.model.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-data.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/app-settings.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/package.json" />
         <option value="$PROJECT_DIR$/ps-client/config/webpack.common.js" />
@@ -166,43 +177,48 @@
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/index.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/user-albums/src/user-albums.styl" />
         <option value="$PROJECT_DIR$/ps-client/src/app/user-board/index.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/home/src/home.component.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.reducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/index.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-reducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.styl" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.module.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login.service.ts" />
         <option value="$PROJECT_DIR$/ps-services/routes/users.js" />
         <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-current-action.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/styles/layout.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" />
       </list>
     </option>
   </component>
@@ -219,8 +235,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -407,7 +423,7 @@
       <workItem from="1479112179471" duration="612000" />
       <workItem from="1479119658784" duration="21526000" />
       <workItem from="1479227858059" duration="1185000" />
-      <workItem from="1479310372500" duration="38355000" />
+      <workItem from="1479310372500" duration="56068000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE readme">
       <created>1469011654434</created>
@@ -703,24 +719,31 @@
       <option name="project" value="LOCAL" />
       <updated>1479461432756</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="ADD routes check for user actions.">
+      <created>1479474065000</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1479474065000</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129824000" />
+    <option name="totallyTimeSpent" value="147537000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1743941" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3045311" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45937163" sideWeight="0.53477347" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32394367" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24815595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45937163" sideWeight="0.46522656" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45826513" sideWeight="0.46522656" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44607842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -737,12 +760,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45937163" sideWeight="0.53477347" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45937163" sideWeight="0.53477347" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45937163" sideWeight="0.46522656" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1743941" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45826513" sideWeight="0.46522656" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3045311" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32394367" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24815595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -765,7 +788,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="ADD contact from with ng models." />
     <MESSAGE value="MOVE to rc6" />
     <MESSAGE value="CONTACT form in progress" />
     <MESSAGE value="ADD email validator." />
@@ -790,7 +812,8 @@
     <MESSAGE value="ADD profile stab module" />
     <MESSAGE value="ADD user bar view" />
     <MESSAGE value="MAKE side bar actions dynamic." />
-    <option name="LAST_COMMIT_MESSAGE" value="MAKE side bar actions dynamic." />
+    <MESSAGE value="ADD routes check for user actions." />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD routes check for user actions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -818,225 +841,11 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#75#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/src/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/src/home.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/src/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/styles/layout.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,7 +862,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1063,32 +872,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.state.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="6" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1113,7 +896,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,75 +917,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/custom-typings.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="48" column="33" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,28 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.actions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1248,10 +949,337 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.state.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-current-action.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/rxjs/src/operator/mergeMap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/rxjs/src/add/operator/mergeMap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="65" selection-start-line="6" selection-start-column="8" selection-end-line="10" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/styles/layout.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <element signature="n#!!block;n#canActivate#0;n#ProfileService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="47" column="75" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

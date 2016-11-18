@@ -29,6 +29,7 @@ export class AppActions {
     // profile
     public static COMMIT_DIRTY_PROFILE: string = 'COMMIT_DIRTY_PROFILE';
     public static SET_DIRTY_PROFILE: string = 'SET_DIRTY_PROFILE';
+    public static LOGOUT: string = 'LOGOUT';
     public static SAVE_PROFILE: string = 'SAVE_PROFILE';
     public static PROFILE_POST_SUCCESS: string = 'PROFILE_POST_SUCCESS';
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
@@ -39,6 +40,8 @@ export class AppActions {
 
     // side bar
     public static SET_SIDE_BAR_ACTIONS: string = 'SET_SIDE_BAR_ACTIONS';
+    public static SET_CURRENT_ACTION: string = 'SET_CURRENT_ACTION';
+    public static SET_CURRENT_ACTION_BY_NAME: string = 'SET_CURRENT_ACTION_BY_NAME';
 
     // hmr
     public static HMR_RESTORE: string = 'HMR_RESTORE';

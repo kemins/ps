@@ -24,4 +24,5 @@ export interface AppStore{
     },
     footerActions: Observable<Array<BarAction>>;
     sideBarActions: Observable<Array<BarAction>>;
+    sideBarCurrentAction: Observable<BarAction>
 }

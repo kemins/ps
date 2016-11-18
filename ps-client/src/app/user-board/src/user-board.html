@@ -1,21 +1,32 @@
-<div class="full-size">
-    <div class="top-bar">
-        <md-icon class="light menu-icon" (click)="sidebar.toggle()">menu
-        </md-icon>
-        <button md-raised-button class="grow-equally" color="primary"
-            (click)="openSignIn()">Sign In
-        </button>
-        <button md-raised-button class="grow-equally" color="primary"
-            (click)="openSignUp()">Sign Up
-        </button>
-    </div>
+<div class="flex-column">
+    <md-toolbar color="primary" class="top-tool-bar">
+        <md-icon class="light" (click)="menu.toggle()">menu</md-icon>
+
+        <div class="centered-box">
+            <button id="sign-in-btn" md-icon-button color="accent"
+                (click)="menu.toggle();openProfile()">
+                <md-icon class="light">account_circle</md-icon>
+            </button>
+            <label for="sign-in-btn" class="single-line">Profile</label>
+        </div>
+
+        <span class="remaining-space"></span>
+
+        <div class="centered-box">
+            <button id="logout-btn" md-icon-button color="accent"
+                (click)="logout()">
+                <md-icon class="light">lock</md-icon>
+            </button>
+            <label for="logout-btn" class="single-line">Logout</label>
+        </div>
+    </md-toolbar>
 
     <md-sidenav-layout>
-        <md-sidenav #sidebar>
-            <ps-side-bar (actionDone)="sidebar.close()"></ps-side-bar>
+        <md-sidenav #menu (close)="menuClose()" [style.width]="profileAction(currentAction | async) ? '400px' : '200px'">
+            <ps-profile *ngIf="profileAction(currentAction | async)"></ps-profile>
+            <ps-side-bar *ngIf="!profileAction(currentAction | async)" (actionDone)="doAction($event)"></ps-side-bar>
         </md-sidenav>
-        <div class="grow-equally content-holder">
-            <router-outlet></router-outlet>
-        </div>
+
+        <router-outlet></router-outlet>
     </md-sidenav-layout>
 </div>

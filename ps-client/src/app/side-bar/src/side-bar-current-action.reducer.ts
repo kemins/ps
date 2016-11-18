@@ -3,13 +3,14 @@ import { BarAction } from './../../footer-bar';
 import { AppActions } from '../../app.actions';
 
 
-export const sideBarActions = (barActions: BarAction[], action: Action) => {
-    let result: BarAction[];
+export const sideBarCurrentAction = (barActions: BarAction, action: Action) => {
+    let result: BarAction;
 
     switch (action.type) {
-        case AppActions.SET_SIDE_BAR_ACTIONS:
-            result = [... action.payload];
+        case AppActions.SET_CURRENT_ACTION:
+            result = Object.assign({}, action.payload);
             break;
+
         default:
             result = barActions;
             break;

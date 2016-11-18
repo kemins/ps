@@ -19,6 +19,9 @@ export const dirtyCProfile = (profile: Profile, action: Action) => {
             result = Object.assign({}, action.payload.body);
             break;
 
+        case AppActions.LOGOUT:
+            result = {};
+
         default:
             result = profile;
             break;

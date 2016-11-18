@@ -1,4 +1,4 @@
-$header-height = 100px
+$header-height = 40px
 $backdrop-z-index = 999
 $top-bar-z-index = $backdrop-z-index - 1
 
@@ -6,6 +6,17 @@ $top-bar-z-index = $backdrop-z-index - 1
 
 .grow-equally
   flex-grow 1
+
+.remaining-space
+  flex 1 1 auto
+
+.flex-column
+  height 100%
+  display flex
+  flex-direction column
+
+.single-line
+  white-space nowrap
 
 .full-size
   width 100%

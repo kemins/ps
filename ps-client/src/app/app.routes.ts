@@ -32,8 +32,7 @@ export const ROUTES: Routes = [
     component: UserBoardComponent,
     children: [{
       path: 'home',
-      component: HomeComponent,
-      canActivate: [ProfileService]
+      component: HomeComponent
     }, {
       path: 'contact',
       canActivate: [ProfileService],

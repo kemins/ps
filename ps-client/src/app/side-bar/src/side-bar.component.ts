@@ -6,7 +6,6 @@ import {
     EventEmitter
 } from '@angular/core';
 import * as sideBarStyles from './side-bar.styl';
-import { SocialLoginService, MODE } from '../../social-login';
 import { Observable } from 'rxjs';
 import { BarAction } from '../../footer-bar/src/bar-action.model';
 import { SideBarService } from './side-bar.service';
@@ -25,25 +24,12 @@ export class SideBarComponent implements OnInit {
 
     @Output() actionDone = new EventEmitter();
 
-    constructor(private socialLoginService: SocialLoginService,
-                private sideBarService: SideBarService) {
+    constructor(private sideBarService: SideBarService) {
         this.actions = sideBarService.getActions();
     }
 
-    signIn() {
-        this.authenticate(MODE.SIGN_IN);
-    }
-
-    signUp() {
-        this.authenticate(MODE.SIGN_IN);
-    }
-
     doAction(action: BarAction) {
-        this.actionDone.emit(action);
-    }
-
-    private authenticate(action: MODE) {
-        this.socialLoginService.setMode(action);
+        this.sideBarService.setCurrentAction(action);
         this.actionDone.emit(action);
     }
 }

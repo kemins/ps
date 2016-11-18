@@ -5,4 +5,4 @@ export interface BarAction {
     name?: BAR_ACTION
 }
 
-export enum BAR_ACTION {SIGN_IN, SIGN_UP}
+export enum BAR_ACTION {SIGN_IN, SIGN_UP, OPEN_PROFILE, NONE}

@@ -40,11 +40,19 @@ app
   top auto
   bottom 0
 
-.top-bar
-  z-index $backdrop-z-index
+.top-tool-bar
+  height $header-height
+  min-height $header-height
+  md-toolbar-row
+    height $header-height
 
-md-sidenav
-  padding-top 50px
+
+.centered-box
+  display flex
+
+  label
+    line-height $header-height
+    font-size 0.8em
 
 .carousel-indicators
   display none

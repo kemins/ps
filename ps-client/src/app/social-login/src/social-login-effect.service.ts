@@ -5,6 +5,7 @@ import { Action } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
 import { SocialLoginDataService } from './social-login-data.service';
 import { Router } from '@angular/router';
+import { MODE } from './social-login.service';
 
 
 @Injectable()
@@ -33,5 +34,10 @@ export class SocialLoginEffectService {
     @Effect() authSuccess$: Observable<Action> = this.actions$
         .ofType(AppActions.USER_AUTH_SUCCESS)
         .do(() => this.router.navigate(['/user']))
-        .map(() => ({type: AppActions.NAVIGATE_TO, payload: 'user'}))
+        .map(() => ({type: AppActions.SL_SET_MODE, payload: MODE.NONE}));
+
+    @Effect() logout$: Observable<Action> = this.actions$
+        .ofType(AppActions.LOGOUT)
+        .do(() => this.router.navigate(['/home']))
+        .map(() => ({type: AppActions.NAVIGATE_TO, payload: 'home'}));
 }

@@ -32,6 +32,12 @@ export class ProfileService implements CanActivate{
     getProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'value');
     getDirtyProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'dirtyValue');
 
+    logout = () => {
+        this.store.dispatch({
+            type: AppActions.LOGOUT
+        });
+    };
+
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
         return this.getProfile()
             .first()

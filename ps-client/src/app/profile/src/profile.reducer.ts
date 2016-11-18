@@ -16,6 +16,10 @@ export const profile = (profile: Profile, action: Action) => {
             result = Object.assign({}, action.payload.body);
             break;
 
+        case AppActions.LOGOUT:
+            result = {};
+            break;
+
         default:
             result = profile;
             break;
