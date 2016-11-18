@@ -11,6 +11,7 @@ import { FooterBarModule } from '../../footer-bar';
 import { SideBarModule } from '../../side-bar';
 import { HomeModule } from '../../home';
 import { ContactModule } from '../../contact';
+import { SocialLoginModule } from '../../social-login';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ContactModule } from '../../contact';
         SideBarModule,
         HomeModule,
         ContactModule,
+        SocialLoginModule,
         MaterialModule.forRoot(),
         FooterBarModule,
         ReactiveFormsModule

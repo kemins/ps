@@ -9,6 +9,7 @@ import { MaterialModule } from '@angular/material';
 import { UserBoardComponent } from './user-board.component';
 import { FooterBarModule } from '../../footer-bar';
 import { SideBarModule } from '../../side-bar';
+import { ProfileModule } from '../../profile';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SideBarModule } from '../../side-bar';
         HttpModule,
         CommonModule,
         SideBarModule,
+        ProfileModule,
         MaterialModule.forRoot(),
         MaterialModule,
         FormsModule,

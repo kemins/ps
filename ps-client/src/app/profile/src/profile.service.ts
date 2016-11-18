@@ -4,10 +4,15 @@ import { Observable } from 'rxjs/Observable';
 import { AppActions } from '../../app.actions';
 import { Profile } from './profile.model';
 import { AppStore } from '../../app.state';
+import {
+    CanActivate,
+    ActivatedRouteSnapshot,
+    RouterStateSnapshot, Router
+} from '@angular/router';
 
 @Injectable()
-export class ProfileService {
-    constructor(private store: Store<AppStore>) {
+export class ProfileService implements CanActivate{
+    constructor(private store: Store<AppStore>, private router: Router) {
     }
 
     commitDirtyProfile = () => {
@@ -26,4 +31,15 @@ export class ProfileService {
 
     getProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'value');
     getDirtyProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'dirtyValue');
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
+        return this.getProfile()
+            .first()
+            .do((profile) => {
+                if (!profile.active) {
+                    this.router.navigate(['/']);
+                }
+            })
+            .map(profile => profile.active) as Observable<boolean>;
+    }
 }

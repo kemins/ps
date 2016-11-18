@@ -39,7 +39,8 @@ router.post('/authenticate', function(req, res, next) {
           if (user) {
             res.json({
               type: 'success',
-              message: 'User signed in.'
+              message: 'You are signed in.',
+              body: user
             });
           } else {
             res.json({

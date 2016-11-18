@@ -8,18 +8,25 @@ import {
     SideBarService,
     USER_ACTIONS as SIDE_BAR_ACTIONS
 } from '../../side-bar';
+import { Profile, ProfileService } from '../../profile';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'user-board',
-  styles: [userBoardStyles],
-  templateUrl: 'user-board.html'
+    selector: 'user-board',
+    styles: [userBoardStyles],
+    templateUrl: 'user-board.html'
 })
-export class UserBoardComponent implements OnInit{
-  constructor(private footerBarService: FooterBarService,
-              private sideBarService: SideBarService) {}
+export class UserBoardComponent implements OnInit {
+    profile: Observable<Profile>;
 
-  ngOnInit() {
-    this.footerBarService.setActions(FOOTER_ACTIONS);
-    this.sideBarService.setActions(SIDE_BAR_ACTIONS);
-  }
+    constructor(private footerBarService: FooterBarService,
+                private sideBarService: SideBarService,
+                private profileService: ProfileService) {
+        this.profile = profileService.getProfile();
+    }
+
+    ngOnInit() {
+        this.footerBarService.setActions(FOOTER_ACTIONS);
+        this.sideBarService.setActions(SIDE_BAR_ACTIONS);
+    }
 }

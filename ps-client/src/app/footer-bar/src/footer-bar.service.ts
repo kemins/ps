@@ -27,5 +27,5 @@ export const GUEST_ACTIONS = [{
 
 export const USER_ACTIONS = [{
     label: 'Contact us',
-    link: '/contact'
+    link: 'user//contact'
 }];

@@ -13,28 +13,33 @@ import * as mdStyles from '@angular/material/core/theming/prebuilt/deeppurple-am
  * Top Level Component
  */
 @Component({
-  selector: 'app',
-  styles: [
-    normalizeStyles,
-    bootstrapStyles,
-    mdStyles,
-    appStyles,
-  ],
-  providers: [SocialLoginService],
-  encapsulation: ViewEncapsulation.None,
-  templateUrl: './app.html'
+    selector: 'app',
+    styles: [
+        normalizeStyles,
+        bootstrapStyles,
+        mdStyles,
+        appStyles,
+    ],
+    providers: [SocialLoginService],
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: './app.html'
 })
 export class App {
-  name = 'PS';
-  url = 'https://photo-state.com';
-  notifications: Observable<Array<IPSResponse>>;
+    name = 'PS';
+    url = 'https://photo-state.com';
+    notifications: Observable<Array<IPSResponse>>;
 
-  constructor(private appState: AppService, private psHtp: PsHttp) {
-    this.notifications = appState.getNotifications()
-      .map((notifications: Array<IPSResponse>) => notifications.filter(({read}) => !read));
-  }
+    constructor(private appState: AppService, private psHtp: PsHttp) {
+        this.notifications = appState.getNotifications()
+            .map((notifications: Array<IPSResponse>) => notifications.filter(({read}) => !read));
+    }
 
-  get pendingRequests() {
-    return this.psHtp.pendingRequests;
-  }
+    get pendingRequests() {
+        return this.psHtp.pendingRequests;
+    }
+
+    closeNotification = (alert, notification) => {
+        alert.closed = false;
+        this.appState.closeNotification(notification);
+    };
 }

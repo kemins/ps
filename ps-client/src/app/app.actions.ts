@@ -43,4 +43,8 @@ export class AppActions {
     // hmr
     public static HMR_RESTORE: string = 'HMR_RESTORE';
     public static HMR_INIT_STATE: string = 'HMR_INIT_STATE';
+
+    // navigate to
+    public static NAVIGATE_TO: string = 'NAVIGATE_TO';
+
 }

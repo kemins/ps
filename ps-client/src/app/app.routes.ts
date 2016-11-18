@@ -3,6 +3,7 @@ import { HomeComponent } from './home';
 import { ContactComponent } from './contact';
 import { UserBoardComponent } from './user-board';
 import { GuestBoardComponent } from './guest-board';
+import { ProfileService } from './profile/src/profile.service';
 
 export const ROUTES: Routes = [
   {
@@ -31,9 +32,11 @@ export const ROUTES: Routes = [
     component: UserBoardComponent,
     children: [{
       path: 'home',
-      component: HomeComponent
+      component: HomeComponent,
+      canActivate: [ProfileService]
     }, {
       path: 'contact',
+      canActivate: [ProfileService],
       component: ContactComponent
     },]
   },
