@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { SideBarComponent } from './side-bar.component';
+import { SideBarService } from './side-bar.service';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { SideBarComponent } from './side-bar.component';
         MaterialModule
     ],
     exports: [SideBarComponent],
+    providers: [SideBarService],
     declarations: [SideBarComponent]
 })
 export class SideBarModule {

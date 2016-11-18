@@ -9,6 +9,7 @@ import { socialLoginMode, MODE } from './social-login';
 import { footerActions, GUEST_ACTIONS } from './footer-bar';
 import { AppStore } from './app.state';
 import { profile, dirtyCProfile } from './profile';
+import { sideBarActions } from './side-bar';
 
 @Injectable()
 export class AppService {
@@ -51,6 +52,7 @@ export class AppService {
   static provideStore = () => {
     let appReducer = combineReducers({
       footerActions: footerActions,
+      sideBarActions: sideBarActions,
       slides: slides,
       notifications: notifications,
       socialLogin: combineReducers({

@@ -10,12 +10,18 @@
         </button>
     </div>
 
+    <span [hidden]="!isSocialLogin(slMode | async)" class="social-login-box">
+        <div class="oa_social_login_container"></div>
+        <md-icon class="light close-social-box" (click)="closeSocialLogin()">close</md-icon>
+    </span>
+
     <md-sidenav-layout>
         <md-sidenav #sidebar>
-            <ps-side-bar (actionDone)="sidebar.close()"></ps-side-bar>
+            <ps-side-bar (actionDone)="sidebar.close();doAction($event)"></ps-side-bar>
         </md-sidenav>
         <div class="grow-equally content-holder">
             <router-outlet></router-outlet>
         </div>
     </md-sidenav-layout>
+
 </div>

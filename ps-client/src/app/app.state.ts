@@ -23,4 +23,5 @@ export interface AppStore{
         dirtyValue: Observable<Profile>,
     },
     footerActions: Observable<Array<BarAction>>;
+    sideBarActions: Observable<Array<BarAction>>;
 }

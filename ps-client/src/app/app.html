@@ -1,23 +1,5 @@
 <div class="full-size relative">
-    <div class="top-bar">
-        <md-icon class="light menu-icon" (click)="sidebar.toggle()">menu</md-icon>
-        <button md-raised-button class="grow-equally" color="primary" (click)="openSignIn()">Sign In</button>
-        <button md-raised-button class="grow-equally" color="primary" (click)="openSignUp()">Sign Up</button>
-    </div>
-
-    <span [hidden]="!isSocialLogin(slMode | async)" class="social-login-box">
-        <div class="oa_social_login_container"></div>
-        <md-icon class="light close-social-box" (click)="closeSocialLogin()">close</md-icon>
-    </span>
-
-    <md-sidenav-layout>
-        <md-sidenav #sidebar>
-            <ps-side-bar (actionDone)="sidebar.close()"></ps-side-bar>
-        </md-sidenav>
-        <div class="grow-equally content-holder">
-            <router-outlet></router-outlet>
-        </div>
-    </md-sidenav-layout>
+    <router-outlet></router-outlet>
 
     <div class="backdrop" *ngIf="pendingRequests">
         <div class="translate-center">
@@ -31,6 +13,6 @@
         *ngFor="let notification of notifications | async"
         [type]="notification.type | notificationType"
         class="notification-box">
-            {{notification.message}}
+        {{notification.message}}
     </alert>
 </div>

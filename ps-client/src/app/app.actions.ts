@@ -36,6 +36,10 @@ export class AppActions {
 
     // footer
     public static SET_FOOTER_ACTIONS: string = 'SET_FOOTER_ACTIONS';
+
+    // side bar
+    public static SET_SIDE_BAR_ACTIONS: string = 'SET_SIDE_BAR_ACTIONS';
+
     // hmr
     public static HMR_RESTORE: string = 'HMR_RESTORE';
     public static HMR_INIT_STATE: string = 'HMR_INIT_STATE';

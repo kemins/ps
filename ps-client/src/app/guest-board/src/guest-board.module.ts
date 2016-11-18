@@ -6,29 +6,32 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { UserBoardComponent } from './user-board.component';
+import { GuestBoardComponent } from './guest-board.component';
 import { FooterBarModule } from '../../footer-bar';
 import { SideBarModule } from '../../side-bar';
+import { HomeModule } from '../../home';
+import { ContactModule } from '../../contact';
 
 
 @NgModule({
-    declarations: [UserBoardComponent],
+    declarations: [GuestBoardComponent],
     imports: [
         RouterModule,
         CoreModule,
         AlertModule,
         HttpModule,
         CommonModule,
-        SideBarModule,
-        MaterialModule.forRoot(),
-        MaterialModule,
         FormsModule,
+        SideBarModule,
+        HomeModule,
+        ContactModule,
+        MaterialModule.forRoot(),
         FooterBarModule,
         ReactiveFormsModule
     ],
-    exports: [UserBoardComponent],
+    exports: [GuestBoardComponent],
     providers: []
 })
-export class UserBoardModule {
+export class GuestBoardModule {
     constructor() {}
 }

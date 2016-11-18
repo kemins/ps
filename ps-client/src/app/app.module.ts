@@ -7,18 +7,14 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { CoreModule } from './core';
 import { AlertModule } from 'ng2-bootstrap';
-import { HomeModule } from './home';
-import { ContactModule } from './contact';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { SocialLoginModule } from './social-login';
 import { AppService } from './app.service';
 import { NotificationsModule } from './notifications';
 import { HMRModule } from './hmr';
 import { Store } from '@ngrx/store';
 import { FooterBarModule } from './footer-bar';
-import { SideBarModule } from './side-bar';
 import { AppStore } from './app.state';
-import { ProfileModule } from './profile';
+import { GuestBoardModule } from './guest-board';
 import { UserBoardModule } from './user-board';
 
 @NgModule({
@@ -32,13 +28,9 @@ import { UserBoardModule } from './user-board';
         RouterModule.forRoot(ROUTES, {useHash: true}),
         CoreModule,
         NotificationsModule,
-        SocialLoginModule,
-        ContactModule,
-        HomeModule,
+        GuestBoardModule,
         UserBoardModule,
         FooterBarModule,
-        SideBarModule,
-        ProfileModule,
         AppService.provideStore(),
         StoreDevtoolsModule,
         StoreDevtoolsModule.instrumentOnlyWithExtension()

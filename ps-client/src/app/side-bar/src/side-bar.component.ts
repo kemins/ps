@@ -7,6 +7,9 @@ import {
 } from '@angular/core';
 import * as sideBarStyles from './side-bar.styl';
 import { SocialLoginService, MODE } from '../../social-login';
+import { Observable } from 'rxjs';
+import { BarAction } from '../../footer-bar/src/bar-action.model';
+import { SideBarService } from './side-bar.service';
 
 @Component({
     selector: 'ps-side-bar',
@@ -15,13 +18,17 @@ import { SocialLoginService, MODE } from '../../social-login';
     templateUrl: './side-bar.html'
 })
 export class SideBarComponent implements OnInit {
-    ngOnInit() {}
+    actions: Observable<BarAction[]>;
 
-    ngAfterViewInit() {}
+    ngOnInit() {
+    }
 
     @Output() actionDone = new EventEmitter();
 
-    constructor(private socialLoginService: SocialLoginService) {}
+    constructor(private socialLoginService: SocialLoginService,
+                private sideBarService: SideBarService) {
+        this.actions = sideBarService.getActions();
+    }
 
     signIn() {
         this.authenticate(MODE.SIGN_IN);
@@ -29,6 +36,10 @@ export class SideBarComponent implements OnInit {
 
     signUp() {
         this.authenticate(MODE.SIGN_IN);
+    }
+
+    doAction(action: BarAction) {
+        this.actionDone.emit(action);
     }
 
     private authenticate(action: MODE) {
