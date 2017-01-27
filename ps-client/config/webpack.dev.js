@@ -10,6 +10,7 @@ const commonConfig = require('./webpack.common.js'); // the settings that are co
  * Webpack Plugins
  */
 const DefinePlugin = require('webpack/lib/DefinePlugin');
+const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 /**
  * Webpack Constants
@@ -31,28 +32,6 @@ const METADATA = webpackMerge(commonConfig.metadata, {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = webpackMerge(commonConfig, {
-
-  /**
-   * Merged metadata from webpack.common.js for index.html
-   *
-   * See: (custom attribute)
-   */
-  metadata: METADATA,
-
-  /**
-   * Switch loaders to debug mode.
-   *
-   * See: http://webpack.github.io/docs/configuration.html#debug
-   */
-  debug: true,
-
-  /**
-   * Developer tool to enhance debugging
-   *
-   * See: http://webpack.github.io/docs/configuration.html#devtool
-   * See: https://github.com/webpack/docs/wiki/build-performance#sourcemaps
-   */
-  devtool: 'cheap-module-source-map',
 
   /**
    * Options affecting the output of the compilation.
@@ -97,6 +76,53 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
 
+    new LoaderOptionsPlugin({
+      options: {
+        tslint: {
+          emitErrors: false,
+          failOnHint: false,
+          resourcePath: 'src'
+        },
+        devServer: {
+          port: METADATA.port,
+          host: METADATA.host,
+          historyApiFallback: true,
+          watchOptions: {
+            aggregateTimeout: 300,
+            poll: 1000
+          },
+          outputPath: helpers.root('dist')
+        },
+        node: {
+          global: true,
+          crypto: 'empty',
+          process: true,
+          module: false,
+          clearImmediate: false,
+          setImmediate: false
+        },
+        /**
+         * Switch loaders to debug mode.
+         *
+         * See: http://webpack.github.io/docs/configuration.html#debug
+         */
+        debug: true,
+        /**
+         * Developer tool to enhance debugging
+         *
+         * See: http://webpack.github.io/docs/configuration.html#devtool
+         * See: https://github.com/webpack/docs/wiki/build-performance#sourcemaps
+         */
+        devtool: 'cheap-module-source-map',
+
+        /**
+         * Merged metadata from webpack.common.js for index.html
+         *
+         * See: (custom attribute)
+         */
+        metadata: METADATA
+      }
+    }),
     /**
      * Plugin: DefinePlugin
      * Description: Define free variables.
@@ -115,53 +141,6 @@ module.exports = webpackMerge(commonConfig, {
         'NODE_ENV': JSON.stringify(METADATA.ENV),
         'HMR': METADATA.HMR,
       }
-    }),
+    })
   ],
-
-  /**
-   * Static analysis linter for TypeScript advanced options configuration
-   * Description: An extensible linter for the TypeScript language.
-   *
-   * See: https://github.com/wbuchwalter/tslint-loader
-   */
-  tslint: {
-    emitErrors: false,
-    failOnHint: false,
-    resourcePath: 'src'
-  },
-
-  /**
-   * Webpack Development Server configuration
-   * Description: The webpack-dev-server is a little node.js Express server.
-   * The server emits information about the compilation state to the client,
-   * which reacts to those events.
-   *
-   * See: https://webpack.github.io/docs/webpack-dev-server.html
-   */
-  devServer: {
-    port: METADATA.port,
-    host: METADATA.host,
-    historyApiFallback: true,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    },
-    outputPath: helpers.root('dist')
-  },
-
-  /*
-   * Include polyfills or mocks for various node stuff
-   * Description: Node configuration
-   *
-   * See: https://webpack.github.io/docs/configuration.html#node
-   */
-  node: {
-    global: 'window',
-    crypto: 'empty',
-    process: true,
-    module: false,
-    clearImmediate: false,
-    setImmediate: false
-  }
-
 });

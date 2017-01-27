@@ -1,1 +1,25 @@
-<h1>Profile here -> -> -> -> -></h1>
+<div class="container-fluid">
+    <form novalidate [formGroup]="profileForm">
+        <div class="form-group">
+            <md-input placeholder="Name"
+                formControlName="displayName"
+                [dividerColor]="profileForm.controls.displayName.valid || profileForm.controls.displayName.pristine ? 'primary' : 'accent'"
+                name="displayName" id="displayName"></md-input>
+        </div>
+        <div [hidden]="!profileForm.controls.displayName.errors || profileForm.controls.displayName.pristine"
+            class="alert alert-danger">
+            Name is required
+        </div>
+        <div class="form-group">
+            <md-input placeholder="Email" type="email"
+                formControlName="email"
+                [dividerColor]="profileForm.controls.email.valid || profileForm.controls.email.pristine ? 'primary' : 'accent'"></md-input>
+        </div>
+        <div [hidden]="profileForm.controls.email.valid || profileForm.controls.email.pristine"
+            class="alert alert-danger">
+            Email is invalid
+        </div>
+
+        <button md-raised-button color="primary" (click)="onSubmit()" [disabled]="!profileForm.valid">Save</button>
+    </form>
+</div>

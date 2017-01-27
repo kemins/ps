@@ -20,9 +20,8 @@ export class ProfileComponent implements OnInit {
 
     ngOnInit() {
         this.profileForm = this.formBuilder.group({
-            name: ['', Validators.required],
-            email: ['', Validators.compose([Validators.required, EmailValidator.email])],
-            message: ['', Validators.required]
+            displayName: ['', Validators.required],
+            email: ['', Validators.compose([Validators.required, EmailValidator.email])]
         });
 
         this.dirtyProfile

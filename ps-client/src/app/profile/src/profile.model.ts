@@ -1,1 +1,3 @@
-export interface Profile {}
+export interface Profile {
+    active: boolean;
+}

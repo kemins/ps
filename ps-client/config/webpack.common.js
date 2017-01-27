@@ -11,8 +11,9 @@ const helpers = require('./helpers');
 // problem with copy-webpack-plugin
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
+
+const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 /*
  * Webpack Constants
@@ -29,14 +30,6 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = {
-
-  /*
-   * Static metadata for index.html
-   *
-   * See: (custom attribute)
-   */
-  metadata: METADATA,
-
   /*
    * Cache generated modules and chunks to improve performance for multiple incremental builds.
    * This is enabled by default in watch mode.
@@ -72,13 +65,12 @@ module.exports = {
      *
      * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
      */
-    extensions: ['', '.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
 
-    // Make sure root is src
-    root: helpers.root('src'),
-
-    // remove other default values
-    modulesDirectories: ['node_modules']
+    modules: [
+      helpers.root('src'),
+      'node_modules'
+    ]
 
   },
 
@@ -91,25 +83,6 @@ module.exports = {
     exprContextCritical: false,
 
     /*
-     * An array of applied pre and post loaders.
-     *
-     * See: http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders
-     */
-    preLoaders: [
-      {
-        test: /\.(ts|tsx)$/,
-        loader: 'string-replace-loader',
-        query: {
-          search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
-          replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
-          flags: 'g'
-        },
-        include: [helpers.root('src')]
-      }
-
-    ],
-
-    /*
      * An array of automatically applied loaders.
      *
      * IMPORTANT: The loaders here are resolved relative to the resource which they are applied to.
@@ -118,7 +91,17 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#module-loaders
      */
     loaders: [
-
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'string-replace-loader',
+        query: {
+          search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
+          replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
+          flags: 'g'
+        },
+        enforce: 'pre',
+        include: [helpers.root('src')]
+      },
       /*
        * Typescript loader support for .ts and Angular 2 async routes via .async.ts
        * Replace templateUrl and stylesUrl with require()
@@ -204,14 +187,6 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
-
-    /*
-     * Plugin: ForkCheckerPlugin
-     * Description: Do type checking in a separate process, so webpack don't need to wait.
-     *
-     * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
-     */
-    new ForkCheckerPlugin(),
     /*
      * Plugin: CommonsChunkPlugin
      * Description: Shares common code between the pages.
@@ -246,6 +221,7 @@ module.exports = {
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
     new HtmlWebpackPlugin({
+      metadata: METADATA,
       template: 'src/index.html',
       chunksSortMode: 'dependency'
     }),
@@ -284,7 +260,7 @@ module.exports = {
    * See: https://webpack.github.io/docs/configuration.html#node
    */
   node: {
-    global: 'window',
+    global: true,
     crypto: 'empty',
     process: true,
     module: false,

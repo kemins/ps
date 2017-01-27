@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <title><%= webpackConfig.metadata.title %></title>
+  <title><%= htmlWebpackPlugin.options.metadata.title  %></title>
 
-  <meta name="description" content="<%= webpackConfig.metadata.title %>">
+  <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.title %>">
 
   <% if (webpackConfig.htmlElements.headTags) { %>
   <!-- Configured Head Tags  -->
@@ -16,7 +16,7 @@
   <% } %>
 
   <!-- base url -->
-  <base href="<%= webpackConfig.metadata.baseUrl %>">
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
 
   <!-- Host locally-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,7 +30,7 @@
     Loading...
   </app>
 
-  <% if (webpackConfig.metadata.isDevServer && webpackConfig.metadata.HMR !== true) { %>
+  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
   <!-- Webpack Dev Server reload -->
   <script src="/webpack-dev-server.js"></script>
   <% } %>
