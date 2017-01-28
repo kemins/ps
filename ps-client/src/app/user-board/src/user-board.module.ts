@@ -17,7 +17,7 @@ import { ProfileModule } from '../../profile';
     imports: [
         RouterModule,
         CoreModule,
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         CommonModule,
         SideBarModule,

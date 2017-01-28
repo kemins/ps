@@ -16,7 +16,7 @@ import { SlidesModule } from '../../slides';
         SlidesModule,
         RouterModule,
         CoreModule,
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         CommonModule,
         MaterialModule,

@@ -19,7 +19,7 @@ import { SocialLoginModule } from '../../social-login';
     imports: [
         RouterModule,
         CoreModule,
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         CommonModule,
         FormsModule,

@@ -25,7 +25,7 @@ import { NotificationsModule } from '../../notifications';
     imports: [
         RouterModule,
         CoreModule,
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         CommonModule,
         NotificationsModule,

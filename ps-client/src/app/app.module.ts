@@ -22,7 +22,7 @@ import { UserBoardModule } from './user-board';
     declarations: [App],
     imports: [
         MaterialModule.forRoot(),
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         BrowserModule,
         RouterModule.forRoot(ROUTES, {useHash: true}),

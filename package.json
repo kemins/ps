@@ -8,12 +8,8 @@
     "strat:client": "cd ps-client && npm run start:hmr"
   },
   "dependencies": {
-    "@ngrx/core": "^1.2.0",
-    "@ngrx/store": "^2.2.1",
     "concurrently": "^2.2.0",
     "nodemailer": "^2.6.4"
   },
-  "devDependencies": {
-    "webpack-dev-server": "^1.16.2"
-  }
+  "devDependencies": {}
 }

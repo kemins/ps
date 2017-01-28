@@ -23,7 +23,7 @@ import { ValidatorModule } from '../../validators';
     imports: [
         RouterModule,
         CoreModule,
-        AlertModule,
+        AlertModule.forRoot(),
         HttpModule,
         CommonModule,
         MaterialModule,
