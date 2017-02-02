@@ -60,6 +60,8 @@ router.post('/authenticate', function(req, res, next) {
               provider: identity.provider,
               displayName: identity.displayName,
               active: true,
+              gender: identity.gender,
+              picture: identity.pictureUrl,
               email: email
             };
 

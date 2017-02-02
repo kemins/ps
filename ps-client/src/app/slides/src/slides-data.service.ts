@@ -8,7 +8,7 @@ import { AppSettings } from '../../core';
 export class SlideDataService {
     constructor(private http: Http) {}
 
-    private slideUrl = AppSettings.getSetting('endpoint') + 'slides';
+    private slideUrl = AppSettings.getSetting('endpoint') + 'slides/';
 
     fetchSlides(): Observable<Slide[]> {
         return this.http.get(this.slideUrl)

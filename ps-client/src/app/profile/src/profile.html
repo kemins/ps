@@ -1,5 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid profile-container">
     <form novalidate [formGroup]="profileForm">
+        <div class="form-group" *ngIf="(dirtyProfile | async)?.picture">
+            <div class="form-group">
+                <img [src]="(dirtyProfile | async)?.picture"
+                    class="img-circle"/>
+            </div>
+        </div>
         <div class="form-group">
             <md-input placeholder="Name"
                 formControlName="displayName"

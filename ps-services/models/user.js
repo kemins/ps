@@ -11,6 +11,14 @@ var User = mongoose.model('User', {
     type: String,
     required: false
   },
+  gender: {
+    type: String,
+    required: false
+  },
+  picture: {
+    type: String,
+    required: false
+  },
   active: Boolean
 });
 
