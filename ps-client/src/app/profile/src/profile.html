@@ -2,8 +2,13 @@
     <form novalidate [formGroup]="profileForm">
         <div class="form-group" *ngIf="(dirtyProfile | async)?.picture">
             <div class="form-group">
-                <img [src]="(dirtyProfile | async)?.picture"
-                    class="img-circle"/>
+                <img [src]="(dirtyProfile | async)?.picture" class="img-circle"/>
+                <br>
+                <label class="fileContainer">
+                    change
+                    <input type="file" ng2FileSelect [uploader]="uploader" />
+                </label>
+                <!--<a href="#" (click)="$event.preventDefault();uploadPhoto()">change</a>-->
             </div>
         </div>
         <div class="form-group">

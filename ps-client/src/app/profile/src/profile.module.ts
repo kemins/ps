@@ -14,6 +14,7 @@ import {
     ProfileEffectService
 } from './../';
 import { ValidatorModule } from '../../validators';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ValidatorModule } from '../../validators';
         FormsModule,
         ReactiveFormsModule,
         ValidatorModule,
+        FileUploadModule,
         EffectsModule.runAfterBootstrap(ProfileEffectService)
     ],
     exports: [ProfileComponent],

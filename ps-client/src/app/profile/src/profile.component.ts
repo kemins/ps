@@ -1,11 +1,15 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { Observable } from 'rxjs/Observable';
 import { EmailValidator } from '../../validators';
 import { Profile } from './profile.model';
 import { ProfileService } from './profile.service';
 import * as profileStyles from './profile.styl';
+
 import * as _ from 'lodash';
+
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 
 @Component({
     selector: 'ps-profile',
@@ -16,6 +20,7 @@ import * as _ from 'lodash';
 export class ProfileComponent implements OnInit {
     profile: Observable<Profile>;
     dirtyProfile: Observable<Profile>;
+    uploader: FileUploader = new FileUploader({url: URL});
     profileForm;
 
     ngOnInit() {
@@ -41,5 +46,9 @@ export class ProfileComponent implements OnInit {
     onSubmit() {
         this.profileService.commitDirtyProfile();
         //this.profileService.save();
+    }
+
+    uploadPhoto() {
+
     }
 }

@@ -99,6 +99,23 @@ app
 .img-circle
   border-radius 50%
 
+.fileContainer
+  overflow hidden
+  position relative
+  color: $primaryColor
+  text-decoration underline
+
+  label
+    cursor pointer
+
+.fileContainer [type=file]
+  width  100%
+  height  100%
+  opacity 0
+  position absolute
+  right 0
+  top: 0
+
 @keyframes fade-in-animation {
   from {opacity: 0;}
   to {opacity: 1;}
