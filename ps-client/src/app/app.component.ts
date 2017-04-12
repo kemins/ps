@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { SocialLoginService } from './social-login';
 import { IPSResponse, PsHttp } from './core';
 import * as normalizeStyles from 'normalize.css/normalize.css';
-import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.css';
+import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.min.css';
+import * as bootstrapThemeStyles from 'bootstrap/dist/css/bootstrap-theme.min.css';
 import * as appStyles from './app.styl';
-import * as mdStyles from '@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+import * as mdStyles from '@angular/material/prebuilt-themes/deeppurple-amber.css';
 import { MODE } from './social-login/src/social-login.service';
 
 /*
@@ -18,6 +19,7 @@ import { MODE } from './social-login/src/social-login.service';
     styles: [
         normalizeStyles,
         bootstrapStyles,
+        bootstrapThemeStyles,
         mdStyles,
         appStyles,
     ],

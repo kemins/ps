@@ -21,12 +21,12 @@
         </div>
     </md-toolbar>
 
-    <md-sidenav-layout>
+    <md-sidenav-container>
         <md-sidenav #menu (close)="menuClose()" [style.width]="profileAction(currentAction | async) ? '400px' : '200px'">
             <ps-profile *ngIf="profileAction(currentAction | async)"></ps-profile>
             <ps-side-bar *ngIf="!profileAction(currentAction | async)" (actionDone)="doAction($event)"></ps-side-bar>
         </md-sidenav>
 
         <router-outlet></router-outlet>
-    </md-sidenav-layout>
+    </md-sidenav-container>
 </div>

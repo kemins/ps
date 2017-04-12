@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { CoreModule } from './core';
-import { AlertModule } from 'ng2-bootstrap';
+import { AlertModule } from 'ngx-bootstrap/alert';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppService } from './app.service';
 import { NotificationsModule } from './notifications';
@@ -16,6 +16,7 @@ import { FooterBarModule } from './footer-bar';
 import { AppStore } from './app.state';
 import { GuestBoardModule } from './guest-board';
 import { UserBoardModule } from './user-board';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     bootstrap: [App],
@@ -25,6 +26,7 @@ import { UserBoardModule } from './user-board';
         AlertModule.forRoot(),
         HttpModule,
         BrowserModule,
+        BrowserAnimationsModule,
         RouterModule.forRoot(ROUTES, {useHash: true}),
         CoreModule,
         NotificationsModule,

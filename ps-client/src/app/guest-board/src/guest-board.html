@@ -22,7 +22,7 @@
         <span class="remaining-space"></span>
     </md-toolbar>
 
-    <md-sidenav-layout>
+    <md-sidenav-container>
         <md-sidenav #sidebar>
             <ps-side-bar
                 (actionDone)="sidebar.close();doAction($event)"></ps-side-bar>
@@ -30,6 +30,6 @@
         <div class="grow-equally content-holder">
             <router-outlet></router-outlet>
         </div>
-    </md-sidenav-layout>
+    </md-sidenav-container>
 
 </div>

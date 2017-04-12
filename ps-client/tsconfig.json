@@ -30,7 +30,9 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/**/*.e2e.ts",
+    "src/**/*.spec.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
