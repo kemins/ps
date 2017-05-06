@@ -13,7 +13,7 @@ import { SideBarService } from './side-bar.service';
         RouterModule,
         CommonModule,
         MaterialModule,
-        EffectsModule.runAfterBootstrap(SideBarEffectService)
+        EffectsModule.run(SideBarEffectService)
     ],
     exports: [SideBarComponent],
     providers: [SideBarService],

@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
     declarations: [],
     imports: [
         CoreModule,
-        EffectsModule.runAfterBootstrap(SocialLoginEffectService)
+        EffectsModule.run(SocialLoginEffectService)
     ],
     providers: [
         SocialLoginDataService,

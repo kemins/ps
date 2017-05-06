@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
 import * as _ from 'lodash';
-import { AppSettings, PsHttp } from '../../core';
+import { PsHttp } from '../../core';
 
 @Injectable()
 export class SocialLoginDataService {
-    private contactUrl = AppSettings.getSetting('endpoint') + 'mail';
-
     constructor(private http: PsHttp) {}
 
     signIn = ({callback_uri, connection}) => this.authenticate(callback_uri, connection, 'login');

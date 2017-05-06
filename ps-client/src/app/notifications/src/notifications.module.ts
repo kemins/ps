@@ -10,8 +10,8 @@ import { EffectsModule } from '@ngrx/effects';
         NotificationTypePipe
     ],
     imports: [
-      CoreModule,
-        EffectsModule.runAfterBootstrap(NotificationsEffectService)
+        CoreModule,
+        EffectsModule.run(NotificationsEffectService)
     ],
     exports: [NotificationTypePipe],
     providers: [
@@ -19,5 +19,6 @@ import { EffectsModule } from '@ngrx/effects';
     ]
 })
 export class NotificationsModule {
-    constructor() {}
+    constructor() {
+    }
 }

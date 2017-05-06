@@ -32,7 +32,7 @@ import { FileUploadModule } from 'ng2-file-upload';
         ReactiveFormsModule,
         ValidatorModule,
         FileUploadModule,
-        EffectsModule.runAfterBootstrap(ProfileEffectService)
+        EffectsModule.run(ProfileEffectService)
     ],
     exports: [ProfileComponent],
     providers: [

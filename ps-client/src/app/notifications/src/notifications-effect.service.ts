@@ -11,6 +11,7 @@ export class NotificationsEffectService implements OnDestroy {
 
     @Effect() addNotification$: Observable<Action> = this.actions$
         .filter(action => /(POST_SUCCESS|POST_FAIL)$/.test(action.type))
+        .do(({type}) => console.log(type))
         .map(({payload}) => ({type: AppActions.ADD_NOTIFICATION, payload}));
 
 

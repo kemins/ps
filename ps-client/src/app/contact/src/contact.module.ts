@@ -15,8 +15,6 @@ import {
     ContactEffectService
 } from './../';
 import { ValidatorModule } from '../../validators';
-import { NotificationsModule } from '../../notifications';
-
 
 @NgModule({
     declarations: [
@@ -28,13 +26,12 @@ import { NotificationsModule } from '../../notifications';
         AlertModule.forRoot(),
         HttpModule,
         CommonModule,
-        NotificationsModule,
         MaterialModule,
         FormsModule,
         ReactiveFormsModule,
         ReCaptchaModule,
         ValidatorModule,
-        EffectsModule.runAfterBootstrap(ContactEffectService)
+        EffectsModule.run(ContactEffectService)
     ],
     exports: [ContactComponent],
     providers: [

@@ -19,23 +19,23 @@ export class ContactEffectService implements OnDestroy {
 
     @Effect() sendContact$: Observable<Action> = this.actions$
         .ofType(AppActions.SEND_MESSAGE)
-        .mergeMap(({payload}) => payload.contact.combineLatest(payload.token).first())
-        .mergeMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
+        .switchMap(({payload}) => payload.contact.combineLatest(payload.token).first())
+        .switchMap(([contact, token]) => this.contactDataService.sendMessage(contact, token))
         .map((res: IPSResponse) => ({
             type: this.types[res.type],
             payload: res
-        }));
+        }))
+        .do(() => console.log('On send success!'));
 
 
     @Effect() commitDirtyContact$: Observable<Action> = this.actions$
         .ofType(AppActions.COMMIT_DIRTY_CONTACT)
-        .mergeMap(({payload}) => payload.first())
+        .switchMap(({payload}) => payload.first())
         .map((dirtyContact) => ({
             type: AppActions.SET_CONTACT,
             payload: dirtyContact
         }));
 
 
-    ngOnDestroy = () => {
-    };
+    ngOnDestroy = () => {};
 }

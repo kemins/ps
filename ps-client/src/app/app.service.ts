@@ -24,13 +24,6 @@ export class AppService {
     })
   };
 
-  showNotification = (notification: IPSResponse) => {
-    this.store.dispatch({
-      type: AppActions.ADD_NOTIFICATION,
-      payload: notification
-    })
-  };
-
   static defaultState = {
     slides: [],
     notifications: [],
@@ -49,7 +42,7 @@ export class AppService {
   };
 
   static provideStore = () => {
-    let appReducer = combineReducers({
+    const appReducer = combineReducers({
       footerActions: footerActions,
       sideBarActions: sideBarActions,
       sideBarCurrentAction: sideBarCurrentAction,

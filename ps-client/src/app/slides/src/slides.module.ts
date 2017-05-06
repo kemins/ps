@@ -15,7 +15,7 @@ import { EffectsModule } from '@ngrx/effects';
     imports: [
         CommonModule,
         CarouselModule,
-        EffectsModule.runAfterBootstrap(SlidesEffectService)
+        EffectsModule.run(SlidesEffectService)
     ],
     providers: [
         SlideService,
