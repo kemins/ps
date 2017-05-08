@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AppService } from './app.service';
 import { SocialLoginService } from './social-login';
@@ -23,6 +23,7 @@ import { MODE } from './social-login/src/social-login.service';
         mdStyles,
         appStyles,
     ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [SocialLoginService],
     encapsulation: ViewEncapsulation.None,
     templateUrl: './app.html'

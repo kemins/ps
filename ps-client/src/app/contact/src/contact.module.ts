@@ -7,13 +7,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
-import { EffectsModule } from '@ngrx/effects';
-import {
-    ContactComponent,
-    ContactService,
-    ContactDataService,
-    ContactEffectService
-} from './../';
+import { ContactComponent, ContactService, ContactDataService, ContactEffectService } from './../';
 import { ValidatorModule } from '../../validators';
 
 @NgModule({
@@ -30,8 +24,7 @@ import { ValidatorModule } from '../../validators';
         FormsModule,
         ReactiveFormsModule,
         ReCaptchaModule,
-        ValidatorModule,
-        EffectsModule.run(ContactEffectService)
+        ValidatorModule
     ],
     exports: [ContactComponent],
     providers: [

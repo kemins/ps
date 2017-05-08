@@ -10,8 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
         NotificationTypePipe
     ],
     imports: [
-        CoreModule,
-        EffectsModule.run(NotificationsEffectService)
+        CoreModule
     ],
     exports: [NotificationTypePipe],
     providers: [

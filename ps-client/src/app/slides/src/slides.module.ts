@@ -14,13 +14,11 @@ import { EffectsModule } from '@ngrx/effects';
     exports: [Carousel],
     imports: [
         CommonModule,
-        CarouselModule,
-        EffectsModule.run(SlidesEffectService)
+        CarouselModule
     ],
     providers: [
         SlideService,
-        SlideDataService,
-        SlidesEffectService
+        SlideDataService
     ]
 })
 export class SlidesModule {

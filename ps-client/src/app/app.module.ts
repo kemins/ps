@@ -17,6 +17,13 @@ import { AppStore } from './app.state';
 import { GuestBoardModule } from './guest-board';
 import { UserBoardModule } from './user-board';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects';
+import { SideBarEffectService } from './side-bar/src/side-bar-effect.service';
+import { ContactEffectService } from './contact/src/contact-effect.service';
+import { NotificationsEffectService } from './notifications/src/notifications-effect.service';
+import { SlidesEffectService } from './slides/src/slides-effect.service';
+import { ProfileEffectService } from './profile/src/profile-effect.service';
+import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
 
 @NgModule({
     bootstrap: [App],
@@ -35,6 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FooterBarModule,
         AppService.provideStore(),
         StoreDevtoolsModule,
+        EffectsModule.run(SideBarEffectService),
+        EffectsModule.run(ContactEffectService),
+        EffectsModule.run(NotificationsEffectService),
+        EffectsModule.run(SlidesEffectService),
+        EffectsModule.run(ProfileEffectService),
+        EffectsModule.run(SocialLoginEffectService),
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [

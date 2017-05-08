@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import * as userBoardStyles from './user-board.styl';
 import {
     FooterBarService,
@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
 @Component({
     selector: 'user-board',
     styles: [userBoardStyles],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: 'user-board.html'
 })
 export class UserBoardComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import * as guestBoardStyles from './guest-board.styl';
 import {
     FooterBarService,
@@ -16,6 +16,7 @@ import {
 @Component({
     selector: 'guest-board',
     styles: [guestBoardStyles],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: 'guest-board.html'
 })
 export class GuestBoardComponent implements OnInit {
