@@ -1,17 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import * as guestBoardStyles from './guest-board.styl';
-import {
-    FooterBarService,
-    GUEST_ACTIONS as FOOTER_ACTIONS,
-    BarAction,
-    BAR_ACTION
-} from '../../footer-bar';
+import { FooterBarService, GUEST_ACTIONS as FOOTER_ACTIONS, BarAction, BAR_ACTION } from '../../footer-bar';
 import { MODE, SocialLoginService } from '../../social-login';
-import { Observable } from 'rxjs';
-import {
-    SideBarService,
-    GUEST_ACTIONS as SIDE_BAR_ACTIONS
-} from '../../side-bar';
+import { SideBarService, GUEST_ACTIONS as SIDE_BAR_ACTIONS } from '../../side-bar';
 
 @Component({
     selector: 'guest-board',

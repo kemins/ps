@@ -49,5 +49,6 @@ export class AppActions {
 
     // navigate to
     public static NAVIGATE_TO: string = 'NAVIGATE_TO';
+    public static POST_NAVIGATE_TO: string = 'POST_NAVIGATE_TO';
 
 }

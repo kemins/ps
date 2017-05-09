@@ -94,7 +94,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
     "typings": "^2.0.0",
-    "zone.js": "^0.8.5"
+    "zone.js": "^0.8.10"
   },
   "devDependencies": {
     "@angularclass/hmr": "1.2.2",

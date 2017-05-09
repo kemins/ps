@@ -24,6 +24,7 @@ import { NotificationsEffectService } from './notifications/src/notifications-ef
 import { SlidesEffectService } from './slides/src/slides-effect.service';
 import { ProfileEffectService } from './profile/src/profile-effect.service';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
+import { AppEffectService } from './core/src/app-effext.service';
 
 @NgModule({
     bootstrap: [App],
@@ -42,6 +43,7 @@ import { SocialLoginEffectService } from './social-login/src/social-login-effect
         FooterBarModule,
         AppService.provideStore(),
         StoreDevtoolsModule,
+        EffectsModule.runAfterBootstrap(AppEffectService),
         EffectsModule.run(SideBarEffectService),
         EffectsModule.run(ContactEffectService),
         EffectsModule.run(NotificationsEffectService),
