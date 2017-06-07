@@ -64,4 +64,10 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     this.avatarForm.nativeElement.reset();
     this.profileService.resetAvatar();
   }
+
+  public get isDirtyAvatar(): Observable<boolean> {
+    return this.avatar
+      .withLatestFrom(this.dirtyProfile)
+      .map(([avatar, profile]) => avatar !== profile.picture);
+  }
 }

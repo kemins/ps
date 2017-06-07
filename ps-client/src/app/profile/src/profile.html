@@ -8,7 +8,7 @@
           <input type="file" #file/>
         </form>
       </label>
-      <div *ngIf="file.value">
+      <div *ngIf="(isDirtyAvatar | async)">
         <button md-raised-button color="primary">Upload</button>
         <button md-raised-button color="secondary" (click)="resetAvatar()">Cancel</button>
       </div>
