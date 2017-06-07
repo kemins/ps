@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { CoreModule } from './core';
-import { AlertModule } from 'ngx-bootstrap/alert';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppService } from './app.service';
 import { NotificationsModule } from './notifications';
@@ -25,13 +24,13 @@ import { SlidesEffectService } from './slides/src/slides-effect.service';
 import { ProfileEffectService } from './profile/src/profile-effect.service';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
 import { AppEffectService } from './core/src/app-effext.service';
+import { AvatarEffectService } from './profile/src/avatar-effect.service';
 
 @NgModule({
     bootstrap: [App],
     declarations: [App],
     imports: [
         MaterialModule.forRoot(),
-        AlertModule.forRoot(),
         HttpModule,
         BrowserModule,
         BrowserAnimationsModule,
@@ -49,6 +48,7 @@ import { AppEffectService } from './core/src/app-effext.service';
         EffectsModule.run(NotificationsEffectService),
         EffectsModule.run(SlidesEffectService),
         EffectsModule.run(ProfileEffectService),
+        EffectsModule.run(AvatarEffectService),
         EffectsModule.run(SocialLoginEffectService),
         StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],

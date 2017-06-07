@@ -24,8 +24,7 @@ export class ContactEffectService implements OnDestroy {
         .map((res: IPSResponse) => ({
             type: this.types[res.type],
             payload: res
-        }))
-        .do(() => console.log('On send success!'));
+        }));
 
 
     @Effect() commitDirtyContact$: Observable<Action> = this.actions$

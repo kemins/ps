@@ -21,6 +21,7 @@ export interface AppStore{
     profile: {
         value: Observable<Profile>,
         dirtyValue: Observable<Profile>,
+        avatar: Observable<any>
     },
     footerActions: Observable<Array<BarAction>>;
     sideBarActions: Observable<Array<BarAction>>;

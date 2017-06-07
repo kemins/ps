@@ -3,7 +3,7 @@ import { AppActions } from '../../app.actions';
 import { Profile } from './profile.model';
 
 
-export const dirtyCProfile = (profile: Profile, action: Action) => {
+export const dirtyProfile = (profile: Profile, action: Action) => {
     let result: Profile;
 
     switch (action.type) {

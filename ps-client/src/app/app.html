@@ -13,11 +13,4 @@
     </span>
 
     <ps-footer></ps-footer>
-
-    <alert dismissible="true" (close)="closeNotification($event, notification)"
-        *ngFor="let notification of notifications | async"
-        [type]="notification.type | notificationType"
-        class="notification-box">
-        {{notification.message}}
-    </alert>
 </div>

@@ -33,6 +33,8 @@ export class AppActions {
     public static SAVE_PROFILE: string = 'SAVE_PROFILE';
     public static PROFILE_POST_SUCCESS: string = 'PROFILE_POST_SUCCESS';
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
+    public static SET_AVATAR: string = 'SET_AVATAR';
+    public static RESET_AVATAR: string = 'RESET_AVATAR';
 
 
     // footer

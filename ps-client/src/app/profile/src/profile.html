@@ -1,13 +1,16 @@
 <div class="container-fluid profile-container">
   <form novalidate [formGroup]="profileForm">
     <div class="form-group" *ngIf="(dirtyProfile | async)?.picture">
-      <div class="form-group">
-        <label class="file-container">
-          <img [src]="(dirtyProfile | async)?.picture" class="img-circle"
-              title="change the avatar"/>
-          <input type="file" ng2FileSelect [uploader]="uploader"/>
-        </label>
-        <!--<a href="#" (click)="$event.preventDefault();uploadPhoto()">change</a>-->
+      <label class="file-container">
+        <img [src]="avatar | async" class="img-circle img-avatar"
+            title="change the avatar"/>
+        <form #avatarForm id="avatarForm">
+          <input type="file" #file/>
+        </form>
+      </label>
+      <div *ngIf="file.value">
+        <button md-raised-button color="primary">Upload</button>
+        <button md-raised-button color="secondary" (click)="resetAvatar()">Cancel</button>
       </div>
     </div>
     <div class="form-group">

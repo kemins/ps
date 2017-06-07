@@ -8,21 +8,24 @@ import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
 import { footerActions } from './footer-bar';
 import { AppStore } from './app.state';
-import { profile, dirtyCProfile } from './profile';
+import { profile, dirtyProfile } from './profile';
 import { sideBarActions, sideBarCurrentAction } from './side-bar';
+import { profileAvatar } from './profile/src/profile-avatar.reducer';
 
 @Injectable()
 export class AppService {
   constructor(private store: Store<AppStore>) {}
 
-  getNotifications = () => this.store.select('notifications');
+  getNotifications() {
+    return this.store.select('notifications');
+  }
 
-  closeNotification = (notification: IPSResponse) => {
+  closeNotification(notification: IPSResponse) {
     this.store.dispatch({
       type: AppActions.READ_NOTIFICATIONS,
       payload: notification
     })
-  };
+  }
 
   static defaultState = {
     slides: [],
@@ -41,7 +44,7 @@ export class AppService {
     }
   };
 
-  static provideStore = () => {
+  static provideStore() {
     const appReducer = combineReducers({
       footerActions: footerActions,
       sideBarActions: sideBarActions,
@@ -58,14 +61,15 @@ export class AppService {
       }),
       profile: combineReducers({
         value: profile,
-        dirtyValue: dirtyCProfile,
+        dirtyValue: dirtyProfile,
+        avatar: profileAvatar
       })
     });
 
     return StoreModule.provideStore(AppService.rootReducer(appReducer), AppService.defaultState);
   };
 
-  private static rootReducer = (reducer) => {
+  private static rootReducer(reducer) {
     return (state, action) => {
       let nextState;
 
