@@ -65,6 +65,10 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     this.profileService.resetAvatar();
   }
 
+  public uploadAvatar() {
+    this.profileService.uploadAvatar();
+  }
+
   public get isDirtyAvatar(): Observable<boolean> {
     return this.avatar
       .withLatestFrom(this.dirtyProfile)

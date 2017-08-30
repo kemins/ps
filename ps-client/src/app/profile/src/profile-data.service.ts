@@ -18,10 +18,7 @@ export class ProfileDataService {
     }
 
     public uploadAvatar(data) {
-        /*const headers = new Headers({'Content-Type': 'multipart/form-data'});
-        const options = new RequestOptions({ headers: headers });
-
-        return this.http.post(this.avatarUrl, data)
-          .map((response: Response) => response.json());*/
+        return this.http.post(this.avatarUrl, {avatar: data})
+          .map((response: Response) => response.json());
     }
 }

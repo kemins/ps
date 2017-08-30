@@ -35,6 +35,9 @@ export class AppActions {
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
     public static SET_AVATAR: string = 'SET_AVATAR';
     public static RESET_AVATAR: string = 'RESET_AVATAR';
+    public static UPLOAD_AVATAR: string = 'UPLOAD_AVATAR';
+    public static AVATAR_POST_SUCCESS: string = 'AVATAR_POST_SUCCESS';
+    public static AVATAR_POST_FAIL: string = 'AVATAR_POST_FAIL';
 
 
     // footer

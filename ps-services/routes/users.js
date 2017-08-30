@@ -1,61 +1,36 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-var config = require('../config');
-var request = require('request');
-var _ = require('lodash');
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
+const config = require('../config');
+const request = require('request');
+const _ = require('lodash');
+const Strategy = require('passport-custom');
 
+const passport = require('passport');
 
-/* Sign up */
-router.post('/authenticate', function(req, res, next) {
-  let connectionToken = req.body.connection_token;
-  let action = req.body.action;
-  let socialLogin = config.socialLogin;
-  let endpoint =  `${socialLogin.siteDomain}/connections/${connectionToken}.json`;
-  let authToken = new Buffer(socialLogin.publicKey + ':' + socialLogin.privateKey).toString('base64');
+passport.use('register', new Strategy(
+  (req, done) => {
+    const data = req.slData;
+    const userToken = data.user.user_token;
+    const identity = data.user.identity;
+    const email = _.chain(identity.emails)
+      .find({is_verified: true})
+      .get('value')
+      .value();
 
-  let options = {
-    uri: endpoint,
-    headers: {
-      'Authorization': `Basic ${authToken}`
-    }
-  };
+    getUserByToken(userToken)
+      .then(
+        (oldUser) => {
+          let error = null,
+            user = null;
 
-  request(options, function (error, response, body) {
-    if (error) {
-      handleErrorResponse(response, error);
-    } else {
-      let data = JSON.parse(body).response.result.data;
-      let userToken = data.user.user_token;
-      let identity = data.user.identity;
-
-      getUserByToken(userToken).then(function(user) {
-        let email = _.chain(identity.emails)
-          .find({is_verified: true})
-          .get('value')
-          .value();
-
-        if (action === 'login') {
-          if (user) {
-            res.json({
-              type: 'success',
-              message: 'You are signed in.',
-              body: user
-            });
-          } else {
-            res.json({
-              type: 'fault',
-              message: 'User not found.'
-            });
-          }
-        } else {
-          if (user) {
-            res.json({
+          if (oldUser) {
+            error = {
               type: 'fault',
               message: 'User already registered. Please proceed with sign in.'
-            });
+            };
           } else {
-            let user = {
+            user = {
               token: userToken,
               provider: identity.provider,
               displayName: identity.displayName,
@@ -65,27 +40,110 @@ router.post('/authenticate', function(req, res, next) {
               email: email
             };
 
-            mongoose.model('User').create(user, function(error) {
+            mongoose.model('User').create(user, (e) => {
+              if (e) {
+                error = {
+                  type: 'fault',
+                  error: error
+                };
+              }
+            });
+          }
+          done(error, user)
+        },
+        (error) => done(error)
+      );
+  }
+));
+
+passport.use('login', new Strategy(
+  (req, done) => {
+    console.log(req);
+    getUserByToken(req.slData.user.user_token)
+      .then(
+        (user) => {
+          let error = null;
+
+          if (!user) {
+            error = {
+              type: 'fault',
+              message: 'User not found.'
+            };
+          }
+          done(error, user);
+        },
+        (error) => done(error)
+      );
+  }
+));
+
+passport.serializeUser((user, done) => done(null, user));
+passport.deserializeUser((user, done) => done(null, user));
+
+/* Sign in/up */
+router.post('/authenticate', (req, res, next) => {
+  const connectionToken = req.body.connection_token;
+  const action = req.body.action;
+  const socialLogin = config.socialLogin;
+  const endpoint = `${socialLogin.siteDomain}/connections/${connectionToken}.json`;
+  const authToken = new Buffer(socialLogin.publicKey + ':' + socialLogin.privateKey).toString('base64');
+
+  const options = {
+    uri: endpoint,
+    headers: {
+      'Authorization': `Basic ${authToken}`
+    }
+  };
+
+  request(options, (error, response, body) => {
+    if (error) {
+      handleErrorResponse(response, error);
+    } else {
+      req.slData = JSON.parse(body).response.result.data;
+      if (action === 'login') {
+        passport.authenticate('login', (error, user) => {
+          if (error) {
+            res.json(error);
+          } else {
+            req.login(user, (error) => {
               if (error) {
-                handleErrorResponse(response, error)
-              } else {
+                res.json(error);
+              } else{
                 res.json({
                   type: 'success',
-                  message: 'User successfully registered!'
+                  message: 'You are signed in.',
+                  body: user
                 });
               }
             });
           }
-        }
-      }, (error) => handleErrorResponse(response, error));
+        })(req, res, next);
+      } else {
+        passport.authenticate('register', (error, user) => {
+          if (error) {
+            res.json(error);
+          } else {
+            req.login(user, (error) => {
+              if (error) {
+                res.json(error);
+              } else {
+                res.json({
+                  type: 'success',
+                  message: 'User successfully registered!',
+                  body: user
+                });
+              }
+            });
+          }
+        })(req, res, next);
+      }
     }
   });
 });
 
-
-let searchUser = (criteria) => {
-  return new Promise(function(resolve, reject) {
-    mongoose.model('User').find(criteria, function(err, users) {
+const searchUser = (criteria) => {
+  return new Promise((resolve, reject) => {
+    mongoose.model('User').find(criteria, (err, users) => {
       if (err) {
         reject(err);
       } else {
@@ -95,11 +153,11 @@ let searchUser = (criteria) => {
   });
 };
 
-let getUserByToken = (token) => searchUser({token: token});
+const getUserByToken = (token) => searchUser({token: token});
 
-let getUserById = (id) => searchUser({id: id});
+const getUserById = (id) => searchUser({id: id});
 
-let handleErrorResponse = (response, error) => {
+const handleErrorResponse = (response, error) => {
   response.json({
     type: 'fault',
     message: error

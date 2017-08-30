@@ -9,7 +9,7 @@
         </form>
       </label>
       <div *ngIf="(isDirtyAvatar | async)">
-        <button md-raised-button color="primary">Upload</button>
+        <button md-raised-button color="primary" (click)="uploadAvatar()">Upload</button>
         <button md-raised-button color="secondary" (click)="resetAvatar()">Cancel</button>
       </div>
     </div>
