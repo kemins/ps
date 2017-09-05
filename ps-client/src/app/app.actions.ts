@@ -30,6 +30,8 @@ export class AppActions {
     public static COMMIT_DIRTY_PROFILE: string = 'COMMIT_DIRTY_PROFILE';
     public static SET_DIRTY_PROFILE: string = 'SET_DIRTY_PROFILE';
     public static LOGOUT: string = 'LOGOUT';
+    public static LOGOUT_SUCCESS: string = 'LOGOUT_POST_SUCCESS';
+    public static LOGOUT_FAIL: string = 'LOGOUT_FAIL_SUCCESS';
     public static SAVE_PROFILE: string = 'SAVE_PROFILE';
     public static PROFILE_POST_SUCCESS: string = 'PROFILE_POST_SUCCESS';
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';

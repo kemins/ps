@@ -44,7 +44,7 @@ export class SocialLoginEffectService {
     }));
 
   @Effect() logout$: Observable<Action> = this.actions$
-    .ofType(AppActions.LOGOUT)
+    .ofType(AppActions.LOGOUT_SUCCESS)
     .map(() => ({
       type: AppActions.NAVIGATE_TO, payload: {
         state: '/home'

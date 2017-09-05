@@ -14,7 +14,7 @@ export const profileAvatar = (data, action: Action) => {
             result = action.payload.data;
             break;
 
-        case AppActions.LOGOUT:
+        case AppActions.LOGOUT_SUCCESS:
             result = {};
 
         default:

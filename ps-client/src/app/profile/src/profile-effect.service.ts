@@ -7,18 +7,28 @@ import { ProfileDataService } from './profile-data.service';
 
 @Injectable()
 export class ProfileEffectService {
-    types = {
-        success: AppActions.PROFILE_POST_SUCCESS,
-        fault: AppActions.PROFILE_POST_FAIL
-    };
+  private saveTypes = {
+    success: AppActions.PROFILE_POST_SUCCESS,
+    fault: AppActions.PROFILE_POST_FAIL
+  };
 
-    constructor(private profileDataService: ProfileDataService, private actions$: Actions) {
-    }
+  private logoutTypes = {
+    success: AppActions.LOGOUT_SUCCESS,
+    fault: AppActions.LOGOUT_FAIL
+  };
 
-    @Effect() save$: Observable<Action> = this.actions$
-        .ofType(AppActions.SAVE_PROFILE)
-        .mergeMap(({payload}) => {
-            return this.profileDataService.save(payload);
-        })
-        .map(res => ({type: this.types[res.type], payload: res}));
+  constructor(private profileDataService: ProfileDataService, private actions$: Actions) {
+  }
+
+  @Effect() save$: Observable<Action> = this.actions$
+    .ofType(AppActions.SAVE_PROFILE)
+    .mergeMap(({payload}) => {
+      return this.profileDataService.save(payload);
+    })
+    .map(res => ({type: this.saveTypes[res.type], payload: res}));
+
+  @Effect() logout$: Observable<Action> = this.actions$
+    .ofType(AppActions.LOGOUT)
+    .mergeMap(() => this.profileDataService.logout())
+    .map(res => ({type: this.logoutTypes[res.type], payload: res}));
 }

@@ -19,7 +19,7 @@ export const dirtyProfile = (profile: Profile, action: Action) => {
             result = Object.assign({}, action.payload.body);
             break;
 
-        case AppActions.LOGOUT:
+        case AppActions.LOGOUT_SUCCESS:
             result = {};
 
         default:
