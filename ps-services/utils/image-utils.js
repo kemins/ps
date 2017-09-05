@@ -1,208 +1,252 @@
-var gm = require('gm');
-var fs = require('fs');
-var path = require('path');
-var process = require('process');
-var dbConnect = require('./../db-connect');
-var mongoose = require('mongoose');
+const gm = require('gm');
+const fs = require('fs');
+const path = require('path');
+const process = require('process');
+const dbConnect = require('./../db-connect');
+const mongoose = require('mongoose');
 
-
-const resolutions = [{
-  name: 'xl',
-  w: 2048,
-  h: 1152,
-  scale: 'h',
-  align: 'top'
-}, {
-  name: 'l',
-  w: 1224,
-  h: 689,
-  scale: 'h',
-  align: 'center'
-}, {
-  name: 'm_l',
-  w: 1024,
-  h: 768,
-  scale: 'v',
-  align: 'center'
-}, {
-  name: 'm_p',
-  w: 768,
-  h: 1024,
-  scale: 'v',
-  align: 'center'
-}, {
-  name: 's_l',
-  w: 667,
-  h: 375,
-  scale: 'h',
-  align: 'center'
-}, {
-  name: 's_p',
-  w: 375,
-  h: 667,
-  align: 'center',
-  scale: 'v'
-}];
-
-let source = 'C:/Users/Andriy_Kemin/Pictures/bg/';
-let destination = 'C:/programing/workspace/ps/ps-services/public/slides/';
-let format = '.png';
-
-/**
- * Generate slides from source directory.
- */
-dbConnect.connect().then(function(status) {
-  console.log(status);
-  mongoose.model('Slide').remove({}, function(error) {
-    if (error) {
-      console.log(error);
-    }
-  });
-  processSlides();
-});
-
-/**
- * Insert slide to db.
- *
- * @param {Object} meta
- * @param {number} index
- */
-function insertSlide(meta, index) {
-  let url = {};
-
-  // loop through all supported resolutions.
-  resolutions.forEach(function(resolution) {
-    url[resolution.name] = resolution.name + index + format;
-  });
-
-  // Read creation date from metadata.
-  let dateStr = meta['Date Time'] || meta['Date Time Original'],
-    date;
-
-  if (dateStr) {
-    let datePart = dateStr.split(' ')[0];
-    date = new Date(datePart.replace(':', '-'));
+class ImageUtils {
+  constructor() {
+    this.resolutions = [
+      {
+        name: 'xl',
+        w: 2048,
+        h: 1152,
+        scale: 'h',
+        align: 'top'
+      },
+      {
+        name: 'l',
+        w: 1224,
+        h: 689,
+        scale: 'h',
+        align: 'center'
+      },
+      {
+        name: 'm_l',
+        w: 1024,
+        h: 768,
+        scale: 'v',
+        align: 'center'
+      },
+      {
+        name: 'm_p',
+        w: 768,
+        h: 1024,
+        scale: 'v',
+        align: 'center'
+      },
+      {
+        name: 's_l',
+        w: 667,
+        h: 375,
+        scale: 'h',
+        align: 'center'
+      },
+      {
+        name: 's_p',
+        w: 375,
+        h: 667,
+        align: 'center',
+        scale: 'v'
+      }
+    ];
+    this.source = 'C:/Users/Andriy_Kemin/Pictures/bg/';
+    this.destination = 'C:/programing/workspace/ps/ps-services/public/slides/';
+    this.format = '.png';
   }
 
-  console.log('Creating slide ', url, date);
+  /**
+   * Generate slides from source directory.
+   */
+  generateSlides() {
+    dbConnect.connect().then((status) => {
+      console.log(status);
+      mongoose.model('Slide').remove({}, (error) => {
+        if (error) {
+          console.log(error);
+        }
+      });
+      this.processSlides();
+    });
+  }
 
-  mongoose.model('Slide').create({
-    url: url,
-    title: '',
-    creationDate: date
-  }, function(err, slides) {
-    if (err) {
-      console.log(err);
+  /**
+   * Insert slide to db.
+   *
+   * @param {Object} meta
+   * @param {number} index
+   */
+  insertSlide(meta, index) {
+    const url = {};
+
+    // loop through all supported resolutions.
+    this.resolutions.forEach((resolution) => {
+      url[resolution.name] = resolution.name + index + format;
+    });
+
+    // Read creation date from metadata.
+    const dateStr = meta['Date Time'] || meta['Date Time Original'];
+    let date;
+
+    if (dateStr) {
+      let datePart = dateStr.split(' ')[0];
+      date = new Date(datePart.replace(':', '-'));
     }
-  });
-}
 
-/**
- * Read image metadata.
- *
- * @param {string} input
- * @returns {Promise<T>|Promise}
- */
-function getImageMetaData(input) {
-  return new Promise(function(resolve, reject) {
-    let img = gm(input),
-      meta;
+    console.log('Creating slide ', url, date);
 
-    img.identify(function(error, value) {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log('Metadata received for image: ', input);
-        meta = value['Profile-EXIF'];
-        resolve(meta);
+    mongoose.model('Slide').create({
+      url: url,
+      title: '',
+      creationDate: date
+    }, (err, slides) => {
+      if (err) {
+        console.log(err);
       }
     });
-  });
-}
+  }
 
-/**
- * Resize images for different resolutions.
- *
- * @param {Object} options.
- * @returns {Promise<T>|Promise}
- */
-function resizeImage(options) {
-  return new Promise(function(resolve, reject) {
-    let img = gm(options.fromPath);
-    let scaleWidth = options.scale === 'h' ? options.width : null;
-    let scaleHeight = options.scale === 'v' ? options.height : null;
+  /**
+   * Read image metadata.
+   *
+   * @param {string} input
+   * @returns {Promise<T>|Promise}
+   */
+  getImageMetaData(input) {
+    return new Promise((resolve, reject) => {
+      let img = gm(input),
+        meta;
 
-    console.log('Scale to w:', scaleWidth);
-    console.log('Scale to h:', scaleHeight);
+      img.identify((error, value) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log('Metadata received for image: ', input);
+          meta = value['Profile-EXIF'];
+          resolve(meta);
+        }
+      });
+    });
+  }
 
-    img.resize(scaleWidth, scaleHeight);
+  /**
+   * Resize images for different resolutions.
+   *
+   * @param {Object} options.
+   * @returns {Promise<T>|Promise}
+   */
+  resizeImage(options) {
+    return new Promise((resolve, reject) => {
+      const img = gm(options.fromPath);
+      const scaleWidth = options.scale === 'h' ? options.width : null;
+      const scaleHeight = options.scale === 'v' ? options.height : null;
 
-    img.size(function(error, size) {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        let alignConfig = {
-          top: {
-            x: 0,
-            y: 0
-          },
-          center: {
-            x: scaleHeight ? Math.max(0, (scaleWidth - options.width)/2) : 0,
-            y: scaleWidth ? Math.max(0, (scaleHeight - options.height)/2) : 0
+      console.log('Scale to w:', scaleWidth);
+      console.log('Scale to h:', scaleHeight);
+
+      img.resize(scaleWidth, scaleHeight);
+
+      img.size((error, size) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          if (options.crop) {
+            const alignConfig = {
+              top: {
+                x: 0,
+                y: 0
+              },
+              center: {
+                x: scaleHeight ? Math.max(0, (scaleWidth - options.width) / 2) : 0,
+                y: scaleWidth ? Math.max(0, (scaleHeight - options.height) / 2) : 0
+              }
+            };
+            const coordinate = alignConfig[options.align] || alignConfig.top;
+
+            img.crop(options.width, options.height, coordinate.x, coordinate.y)
+              .write(options.toPath, (err) => {
+                if (err) {
+                  console.log(err);
+                  reject(err)
+                } else {
+                  resolve(options);
+                }
+              });
+          } else {
+            resolve(options);
           }
-        };
-        let coordinate = alignConfig[options.align] || alignConfig.top;
-
-        img.crop(options.width, options.height, coordinate.x, coordinate.y)
-          .write(options.toPath, function(err) {
-            if (err) {
-              console.log(err);
-              reject(err)
-            }
-          });
-      }
-      resolve(options);
+        }
+      });
     });
-  });
-}
+  }
 
-/**
- * Process/generate slides form file system source directory.
- */
-function processSlides() {
-  // Loop through all the files in the temp directory
-  fs.readdir(source, function(err, files) {
-    if( err ) {
-      console.error("Could not list the directory.", err );
-      process.exit(1);
-    }
+  /**
+   * Process/generate slides from file system source directory.
+   */
+  processSlides() {
+    // Loop through all the files in the temp directory
+    fs.readdir(source, (err, files) => {
+      if (err) {
+        console.error("Could not list the directory.", err);
+        process.exit(1);
+      }
 
-    files.forEach(function(file, index) {
-      // Make one pass and make the file complete
-      let fromPath = path.join(source, file);
-      let n = index + 1;
+      files.forEach((file, index) => {
+        // Make one pass and make the file complete
+        let fromPath = path.join(source, file);
+        let n = index + 1;
 
-      resolutions.forEach(function(resolution) {
-        let slideName = resolution.name + n + format;
-        let toPath = path.join(destination, slideName);
+        this.resolutions.forEach((resolution) => {
+          let slideName = resolution.name + n + format;
+          let toPath = path.join(destination, slideName);
 
-        resizeImage({
-          fromPath: fromPath,
-          toPath: toPath,
-          width: resolution.w,
-          height: resolution.h,
-          align: resolution.align,
-          scale: resolution.scale
+          this.resizeImage({
+            fromPath: fromPath,
+            toPath: toPath,
+            width: resolution.w,
+            height: resolution.h,
+            align: resolution.align,
+            scale: resolution.scale,
+            crop: true
+          });
+        });
+
+        this.getImageMetaData(fromPath).then((meta) => {
+          this.insertSlide(meta, n);
+        }, (error) => {
+          console.log(error);
         });
       });
+    });
+  }
 
-      getImageMetaData(fromPath).then(function(meta) {
-        insertSlide(meta, n);
-      }, function(error) {
-        console.log(error);
+  mountSlides(path, data) {
+    const imageData = data.split(';base64,').pop();
+
+    return new Promise((resolve, reject) => {
+      fs.writeFile(path, imageData, {encoding: "base64",}, (err) => {
+        if (err) {
+          console.log(err);
+          reject(err);
+        } else{
+          console.log("The file was saved!");
+          resolve();
+
+          /*this.resizeImage({
+            fromPath: fromPath,
+            toPath: toPath,
+            width: resolution.w,
+            height: resolution.h,
+            scale: 'h',
+            crop: false
+          });*/
+        }
       });
     });
-  });
+  }
 }
+
+module.exports = ImageUtils;
