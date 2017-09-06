@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { EmailValidator } from '../../validators';
@@ -7,6 +7,7 @@ import { ProfileService } from './profile.service';
 import * as profileStyles from './profile.styl';
 import * as _ from 'lodash';
 import { FileUploader } from '../../core';
+import { Subscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -15,11 +16,12 @@ import { FileUploader } from '../../core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './profile.html'
 })
-export class ProfileComponent implements OnInit, AfterViewInit {
+export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy  {
   private profile: Observable<Profile>;
   private dirtyProfile: Observable<Profile>;
   private avatar: Observable<any>;
   private profileForm;
+  private avatarSubscription: Subscription;
 
   @ViewChild('file')
   private file;
@@ -43,7 +45,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   }
 
   public ngAfterViewInit() {
-    this.fileUploader.uploadFiles(this.file.nativeElement)
+    this.avatarSubscription = this.fileUploader.uploadFiles(this.file.nativeElement)
       .subscribe((data) => this.profileService.setAvatar(data));
   }
 
@@ -58,6 +60,11 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   public onSubmit() {
     this.profileService.commitDirtyProfile();
     //this.profileService.save();
+  }
+
+  public ngOnDestroy() {
+    this.avatarSubscription.unsubscribe();
+    this.avatarSubscription = null;
   }
 
   public resetAvatar() {

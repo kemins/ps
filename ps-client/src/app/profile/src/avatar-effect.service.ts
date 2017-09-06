@@ -22,8 +22,8 @@ export class AvatarEffectService {
   @Effect()
   public save$: Observable<Action> = this.actions$
     .ofType(AppActions.RESET_AVATAR)
-    .mergeMap(() => this.profileService.getDirtyProfile())
-    .map(({picture}) => ({type: AppActions.SET_AVATAR, payload: {data: picture}}));
+    .withLatestFrom(this.profileService.getDirtyProfile())
+    .map(([action, {picture}]) => ({type: AppActions.SET_AVATAR, payload: {data: picture}}));
 
   @Effect()
   public uploadAvatar$: Observable<Action> = this.actions$
