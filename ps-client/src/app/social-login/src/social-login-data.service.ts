@@ -5,14 +5,19 @@ import { PsHttp } from '../../core';
 
 @Injectable()
 export class SocialLoginDataService {
-    constructor(private http: PsHttp) {}
+  public constructor(private http: PsHttp) {
+  }
 
-    signIn = ({callback_uri, connection}) => this.authenticate(callback_uri, connection, 'login');
+  public signIn({callback_uri, connection}) {
+    return this.authenticate(callback_uri, connection, 'login');
+  }
 
-    signUp = ({callback_uri, connection}) => this.authenticate(callback_uri, connection, 'register');
+  public signUp({callback_uri, connection}) {
+    return this.authenticate(callback_uri, connection, 'register');
+  }
 
-    authenticate = (url: string, data: any, action: string) => {
-        return this.http.post(url, _.extend(data, {action}))
-            .map((response: Response) => response.json());
-    }
+  public authenticate(url: string, data: any, action: string) {
+    return this.http.post(url, _.extend(data, {action}))
+      .map((response: Response) => response.json());
+  }
 }

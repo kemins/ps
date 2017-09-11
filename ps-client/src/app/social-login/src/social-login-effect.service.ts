@@ -30,7 +30,9 @@ export class SocialLoginEffectService {
 
   @Effect() signUp$: Observable<Action> = this.actions$
     .ofType(AppActions.SIGN_UP_WITH_TOKE)
-    .mergeMap(({payload}) => this.socialLoginDataService.signUp(payload))
+    .mergeMap(({payload}) => {
+      return this.socialLoginDataService.signUp(payload);
+    })
     .map(res => ({type: this.types[res.type], payload: res}));
 
   @Effect() authSuccess$: Observable<Action> = this.actions$

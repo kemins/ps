@@ -4,6 +4,8 @@ const path = require('path');
 const process = require('process');
 const dbConnect = require('./../db-connect');
 const mongoose = require('mongoose');
+const config = require('../config');
+const _ = require('lodash');
 
 class ImageUtils {
   constructor() {
@@ -153,31 +155,30 @@ class ImageUtils {
           console.log(error);
           reject(error);
         } else {
-          if (options.crop) {
-            const alignConfig = {
-              top: {
-                x: 0,
-                y: 0
-              },
-              center: {
-                x: scaleHeight ? Math.max(0, (scaleWidth - options.width) / 2) : 0,
-                y: scaleWidth ? Math.max(0, (scaleHeight - options.height) / 2) : 0
-              }
-            };
-            const coordinate = alignConfig[options.align] || alignConfig.top;
+          const alignConfig = {
+            top: {
+              x: 0,
+              y: 0
+            },
+            center: {
+              x: scaleHeight ? Math.max(0, (scaleWidth - options.width) / 2) : 0,
+              y: scaleWidth ? Math.max(0, (scaleHeight - options.height) / 2) : 0
+            }
+          };
+          const coordinate = alignConfig[options.align] || alignConfig.top;
 
-            img.crop(options.width, options.height, coordinate.x, coordinate.y)
-              .write(options.toPath, (err) => {
-                if (err) {
-                  console.log(err);
-                  reject(err)
-                } else {
-                  resolve(options);
-                }
-              });
-          } else {
-            resolve(options);
+          if (options.crop) {
+            img.crop(options.width, options.height, coordinate.x, coordinate.y);
           }
+
+          img.write(options.toPath, (err) => {
+            if (err) {
+              console.log(err);
+              reject(err)
+            } else {
+              resolve(options);
+            }
+          });
         }
       });
     });
@@ -223,26 +224,31 @@ class ImageUtils {
     });
   }
 
-  mountSlides(path, data) {
-    const imageData = data.split(';base64,').pop();
-
+  mountSlides(path, name, data) {
     return new Promise((resolve, reject) => {
-      fs.writeFile(path, imageData, {encoding: "base64",}, (err) => {
-        if (err) {
-          console.log(err);
-          reject(err);
-        } else{
-          console.log("The file was saved!");
-          resolve();
+      const writePath = `${path}${name}`;
 
-          /*this.resizeImage({
-            fromPath: fromPath,
-            toPath: toPath,
-            width: resolution.w,
-            height: resolution.h,
-            scale: 'h',
-            crop: false
-          });*/
+      // Store original file
+      fs.writeFile(writePath, data, {encoding: "base64"}, (err) => {
+        if (err) {
+          reject(err);
+        } else {
+          const queue = [];
+
+          _.forEach(config.slides.resolutions, (resolution) => {
+            const toPath = `${path}${resolution.prefix}${name}`;
+
+            queue.push(this.resizeImage({
+              fromPath: writePath,
+              toPath: toPath,
+              width: resolution.width,
+              scale: 'h',
+              crop: false
+            }));
+          });
+
+          Promise.all(queue)
+            .then(resolve, reject);
         }
       });
     });

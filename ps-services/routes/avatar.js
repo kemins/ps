@@ -5,7 +5,15 @@ const ImageUtils = require('../utils/image-utils');
 
 /* Upload avatar */
 router.post('/', function(req, res, next) {
-  new ImageUtils().mountSlides('c:/1/test.png', req.body.avatar)
+  const user = req.user,
+    id = user._id,
+    data = req.body.avatar;
+
+  const imageData = data.split(';base64,').pop(),
+    extension = data.substring('data:image/'.length, data.indexOf(';base64')),
+    name = `avatar.${extension}`;
+
+  new ImageUtils().mountSlides(`${config.fs.users}${id}/`, name, imageData)
     .then(() => {
       res.json({
         type: 'success',

@@ -18,5 +18,20 @@ module.exports = {
     publicKey: 'ec78409e-3513-4a17-9a2e-84e03b95c86a',
     privateKey: 'a881e06e-2f83-4a17-bb05-6d9a6a2a530e',
     siteDomain: 'https://photo-state.api.oneall.com'
+  },
+  fs: {
+    users: 'c:/ps/users/',
+  },
+  slides: {
+    resolutions: [
+      {
+        width: 1920,
+        prefix: '_'
+      },
+      {
+        width: 800,
+        prefix: '__'
+      }
+    ]
   }
 };

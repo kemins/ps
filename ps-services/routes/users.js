@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const config = require('../config');
 const request = require('request');
 const _ = require('lodash');
+const fs = require('fs');
 const Strategy = require('passport-custom');
 
 const passport = require('passport');
@@ -21,16 +22,13 @@ passport.use('register', new Strategy(
     getUserByToken(userToken)
       .then(
         (oldUser) => {
-          let error = null,
-            user = null;
-
           if (oldUser) {
-            error = {
+            done({
               type: 'fault',
               message: 'User already registered. Please proceed with sign in.'
-            };
+            });
           } else {
-            user = {
+            mongoose.model('User').create({
               token: userToken,
               provider: identity.provider,
               displayName: identity.displayName,
@@ -38,18 +36,18 @@ passport.use('register', new Strategy(
               gender: identity.gender,
               picture: identity.pictureUrl,
               email: email
-            };
-
-            mongoose.model('User').create(user, (e) => {
-              if (e) {
-                error = {
+            }, (error, user) => {
+              if (error) {
+                done({
                   type: 'fault',
-                  error: error
-                };
+                  error
+                });
+              } else {
+                fs.mkdirSync(`${config.fs.users}${user._id}`);
+                done(null, user);
               }
             });
           }
-          done(error, user)
         },
         (error) => done(error)
       );
