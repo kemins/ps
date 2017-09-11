@@ -34,4 +34,11 @@ export class AvatarEffectService {
       type: this.types[res.type],
       payload: {message: res.message}
     }));
+
+  @Effect()
+  public uploadAvatarSuccess$: Observable<Action> = this.actions$
+    .ofType(AppActions.AVATAR_POST_SUCCESS)
+    .map((res: IPSResponse) => ({
+      type: AppActions.RESET_AVATAR
+    }));
 }
