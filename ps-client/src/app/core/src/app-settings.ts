@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 
 export class AppSettings {
     private static settings = {
-        endpoint: 'http://localhost:7000/',
+        endpoint: 'http://localhost:8000/',
         captcha: {
             key: '6LcTiwMTAAAAAOmlZPpue41lesvXZI-YSX7OxGFd'
         }

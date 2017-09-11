@@ -7,11 +7,11 @@ export const profileAvatar = (data, action: Action) => {
 
     switch (action.type) {
         case AppActions.USER_AUTH_SUCCESS:
-            result = action.payload.body.picture;
+            result = {...action.payload.body.picture};
             break;
 
         case AppActions.SET_AVATAR:
-            result = action.payload.data;
+            result = {...action.payload};
             break;
 
         case AppActions.LOGOUT_SUCCESS:

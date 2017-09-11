@@ -2,7 +2,7 @@
   <form novalidate [formGroup]="profileForm">
     <div class="form-group" *ngIf="(dirtyProfile | async)?.picture">
       <label class="file-container">
-        <img [src]="avatar | async" class="img-circle img-avatar"
+        <img [src]="(avatar | async)?.m" class="img-circle img-avatar"
             title="change the avatar"/>
         <form #avatarForm id="avatarForm">
           <input type="file" #file/>

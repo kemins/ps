@@ -1,6 +1,9 @@
-var mongoose = require('mongoose');
+const _ = require('lodash');
+const config = require('../config');
 
-var User = mongoose.model('User', {
+const mongoose = require('mongoose');
+
+const UserSchema = new mongoose.Schema({
   token: String,
   email: String,
   displayName: {
@@ -16,10 +19,26 @@ var User = mongoose.model('User', {
     required: false
   },
   picture: {
-    type: String,
+    type: Object,
     required: false
   },
   active: Boolean
+});
+
+const User = mongoose.model('User', UserSchema);
+
+UserSchema.set('toJSON', {
+  transform: (doc, user, options) => {
+    const picture = {};
+
+    _.forEach(config.slides.resolutions, (resolution) => {
+      picture[resolution.type] = `${config.slides.endpoint.avatar}/${resolution.type}`;
+    });
+
+    user.picture = picture;
+
+    return user;
+  }
 });
 
 console.log('Setup schema for user model.');

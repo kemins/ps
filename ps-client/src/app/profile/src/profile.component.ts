@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs/Subscription';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './profile.html'
 })
-export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy  {
+export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   private profile: Observable<Profile>;
   private dirtyProfile: Observable<Profile>;
   private avatar: Observable<any>;
@@ -46,12 +46,16 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy  {
 
   public ngAfterViewInit() {
     this.avatarSubscription = this.fileUploader.uploadFiles(this.file.nativeElement)
-      .subscribe((data) => this.profileService.setAvatar(data));
+      .subscribe((image) => this.profileService.setAvatar({
+        s: image.data,
+        m: image.data,
+        l: image.data
+      }));
   }
 
   public constructor(private profileService: ProfileService,
-              private formBuilder: FormBuilder,
-              private fileUploader: FileUploader) {
+                     private formBuilder: FormBuilder,
+                     private fileUploader: FileUploader) {
     this.profile = profileService.getProfile();
     this.dirtyProfile = profileService.getDirtyProfile();
     this.avatar = profileService.getAvatar();
@@ -79,6 +83,6 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy  {
   public get isDirtyAvatar(): Observable<boolean> {
     return this.avatar
       .withLatestFrom(this.dirtyProfile)
-      .map(([avatar, profile]) => avatar !== profile.picture);
+      .map(([avatar, profile]) => avatar.m !== profile.picture.m);
   }
 }

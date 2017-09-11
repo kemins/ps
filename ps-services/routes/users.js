@@ -34,7 +34,11 @@ passport.use('register', new Strategy(
               displayName: identity.displayName,
               active: true,
               gender: identity.gender,
-              picture: identity.pictureUrl,
+              picture: {
+                s: identity.pictureUrl,
+                m: identity.pictureUrl,
+                l: identity.pictureUrl
+              },
               email: email
             }, (error, user) => {
               if (error) {
@@ -106,7 +110,7 @@ router.post('/authenticate', (req, res, next) => {
             req.login(user, (error) => {
               if (error) {
                 res.json(error);
-              } else{
+              } else {
                 res.json({
                   type: 'success',
                   message: 'You are signed in.',
@@ -153,7 +157,7 @@ const searchUser = (criteria) => {
 
 const getUserByToken = (token) => searchUser({token: token});
 
-const getUserById = (id) => searchUser({id: id});
+const getUserById = (id) => searchUser({_id: id});
 
 const handleErrorResponse = (response, error) => {
   response.json({
@@ -162,4 +166,6 @@ const handleErrorResponse = (response, error) => {
   });
 };
 
-module.exports = router;
+module.exports = {
+  router, api: {getUserById}
+};

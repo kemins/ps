@@ -23,13 +23,13 @@ export class AvatarEffectService {
   public save$: Observable<Action> = this.actions$
     .ofType(AppActions.RESET_AVATAR)
     .withLatestFrom(this.profileService.getDirtyProfile())
-    .map(([action, {picture}]) => ({type: AppActions.SET_AVATAR, payload: {data: picture}}));
+    .map(([action, {picture}]) => ({type: AppActions.SET_AVATAR, payload: picture}));
 
   @Effect()
   public uploadAvatar$: Observable<Action> = this.actions$
     .ofType(AppActions.UPLOAD_AVATAR)
     .withLatestFrom(this.profileService.getAvatar())
-    .switchMap(([action, avatar]) => this.profileDataService.uploadAvatar(avatar))
+    .switchMap(([action, avatar]) => this.profileDataService.uploadAvatar(avatar.m))
     .map((res: IPSResponse) => ({
       type: this.types[res.type],
       payload: {message: res.message}

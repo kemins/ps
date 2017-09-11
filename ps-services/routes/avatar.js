@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const config = require('../config');
 const ImageUtils = require('../utils/image-utils');
+const users = require('../routes/users').api;
+
+const imageUtils = new ImageUtils();
 
 /* Upload avatar */
 router.post('/', function(req, res, next) {
@@ -13,18 +16,46 @@ router.post('/', function(req, res, next) {
     extension = data.substring('data:image/'.length, data.indexOf(';base64')),
     name = `avatar.${extension}`;
 
-  new ImageUtils().mountSlides(`${config.fs.users}${id}/`, name, imageData)
-    .then(() => {
-      res.json({
-        type: 'success',
-        message: 'Avatar has been changed!'
-      });
+  imageUtils.mountSlides(`${config.fs.users}${id}/`, name, imageData)
+    .then((avatar) => {
+      users.getUserById(id)
+        .then((model) => {
+          user.picture = avatar;
+          model.picture = avatar;
+          model.save((error, user) => {
+            if (error) {
+              sendError(res, error);
+            } else {
+              res.json({
+                type: 'success',
+                message: 'Avatar has been changed!'
+              });
+            }
+          });
+        }, (error) => sendError(res, error));
     }, (error) => {
-      res.json({
-        type: 'fault',
-        message: error
-      });
+      sendError(res, error);
     });
 });
+
+/* Upload avatar */
+router.get('/:type', function(req, res, next) {
+  const user = req.user,
+    id = user._id;
+
+  users.getUserById(id)
+    .then((model) => model.picture[req.params.type])
+    .then(
+      (path) => res.sendFile(path, {root: '/'}),
+      (error) => sendError(res, error)
+    );
+});
+
+sendError = (response, error) => {
+  response.json({
+    type: 'fault',
+    message: error
+  });
+};
 
 module.exports = router;
