@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
             } else {
               res.json({
                 type: 'success',
-                message: 'Avatar has been changed!',
+                message: 'Avatar has being updated!',
                 body: userAPI.transformAvatar(user.picture)
               });
             }

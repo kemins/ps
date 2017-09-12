@@ -14,12 +14,12 @@ export class ProfileDataService {
   }
 
   public save(profile: Profile) {
-    return this.http.post(this.profileUrl, profile)
+    return this.http.post(this.profileUrl, {profile})
       .map((response: Response) => response.json());
   }
 
-  public uploadAvatar(data) {
-    return this.http.post(this.avatarUrl, {avatar: data})
+  public uploadAvatar(avatar) {
+    return this.http.post(this.avatarUrl, {avatar})
       .map((response: Response) => response.json());
   }
 

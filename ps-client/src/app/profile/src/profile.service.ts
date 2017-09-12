@@ -16,10 +16,9 @@ export class ProfileService implements CanActivate {
                      private router: Router) {
   }
 
-  public commitDirtyProfile() {
+  public save() {
     this.store.dispatch({
-      type: AppActions.COMMIT_DIRTY_PROFILE,
-      payload: this.getDirtyProfile()
+      type: AppActions.SAVE_PROFILE
     });
   }
 
@@ -27,13 +26,6 @@ export class ProfileService implements CanActivate {
     this.store.dispatch({
       type: AppActions.SET_DIRTY_PROFILE,
       payload: profile
-    });
-  }
-
-  public setAvatar(data) {
-    this.store.dispatch({
-      type: AppActions.SET_AVATAR,
-      payload: data
     });
   }
 

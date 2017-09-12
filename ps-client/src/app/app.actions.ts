@@ -27,7 +27,6 @@ export class AppActions {
     public static SL_SET_MODE: string = 'SL_SET_MODE';
 
     // profile
-    public static COMMIT_DIRTY_PROFILE: string = 'COMMIT_DIRTY_PROFILE';
     public static SET_DIRTY_PROFILE: string = 'SET_DIRTY_PROFILE';
     public static SET_PROFILE: string = 'SET_PROFILE';
     public static LOGOUT: string = 'LOGOUT';

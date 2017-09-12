@@ -64,8 +64,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public onSubmit() {
-    this.profileService.commitDirtyProfile();
-    //this.profileService.save();
+    this.profileService.save();
   }
 
   public ngOnDestroy() {
