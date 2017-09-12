@@ -7,6 +7,8 @@ const _ = require('lodash');
 const fs = require('fs');
 const Strategy = require('passport-custom');
 
+console.log('Instantiating users module...');
+
 const passport = require('passport');
 
 passport.use('register', new Strategy(
@@ -28,18 +30,24 @@ passport.use('register', new Strategy(
               message: 'User already registered. Please proceed with sign in.'
             });
           } else {
+            const picture = {},
+              pictureUrl = _.first(identity.pictureUrl.split('?'));
+
+            _.forEach(config.slides.resolutions, (resolution) => {
+              picture[resolution.type] = pictureUrl;
+
+              if (resolution.width) {
+                picture[resolution.type] = `${picture[resolution.type]}?sz=${resolution.width}`;
+              }
+            });
             mongoose.model('User').create({
               token: userToken,
               provider: identity.provider,
               displayName: identity.displayName,
               active: true,
               gender: identity.gender,
-              picture: {
-                s: identity.pictureUrl,
-                m: identity.pictureUrl,
-                l: identity.pictureUrl
-              },
-              email: email
+              picture,
+              email
             }, (error, user) => {
               if (error) {
                 done({
@@ -166,6 +174,27 @@ const handleErrorResponse = (response, error) => {
   });
 };
 
+const transformAvatar = (picture) => {
+  const result = {};
+
+  _.forEach(config.slides.resolutions, (resolution) => {
+    const type  = resolution.type,
+      url = picture[type],
+      stored = !_.includes(url, 'http');
+
+    if (stored) {
+      result[type] = `${config.slides.endpoint.avatar}/${type}`;
+    } else {
+      result[type] = url;
+    }
+  });
+
+  return result;
+};
+
 module.exports = {
-  router, api: {getUserById}
+  router, api: {
+    getUserById,
+    transformAvatar
+  }
 };

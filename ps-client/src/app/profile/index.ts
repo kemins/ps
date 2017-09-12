@@ -1,4 +1,5 @@
 export * from './src/profile.model';
+export * from './src/picture.model';
 export * from './src/profile.component';
 export * from './src/profile.service';
 export * from './src/profile-data.service';

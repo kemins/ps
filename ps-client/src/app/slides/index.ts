@@ -4,6 +4,5 @@ export * from './src/slides.service';
 export * from './src/slides-data.service';
 export * from './src/slides-effect.service';
 export * from './src/slides.module';
-export * from './src/slide.model';
 
 export * from './src/carousel.component';

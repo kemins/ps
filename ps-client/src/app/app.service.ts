@@ -11,6 +11,7 @@ import { AppStore } from './app.state';
 import { profile, dirtyProfile } from './profile';
 import { sideBarActions, sideBarCurrentAction } from './side-bar';
 import { profileAvatar } from './profile/src/profile-avatar.reducer';
+import { dirtyProfileAvatar } from './profile/src/dirty-profile-avatar.reducer';
 
 @Injectable()
 export class AppService {
@@ -62,7 +63,8 @@ export class AppService {
       profile: combineReducers({
         value: profile,
         dirtyValue: dirtyProfile,
-        avatar: profileAvatar
+        avatar: profileAvatar,
+        dirtyAvatar: dirtyProfileAvatar
       })
     });
 

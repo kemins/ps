@@ -37,6 +37,13 @@ export class ProfileService implements CanActivate {
     });
   }
 
+  public setDirtyAvatar(data) {
+    this.store.dispatch({
+      type: AppActions.SET_DIRTY_AVATAR,
+      payload: data
+    });
+  }
+
   public resetAvatar() {
     this.store.dispatch({
       type: AppActions.RESET_AVATAR
@@ -52,6 +59,7 @@ export class ProfileService implements CanActivate {
   public getProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'value');
   public getDirtyProfile = (): Observable<Profile> => this.store.select<Profile>('profile', 'dirtyValue');
   public getAvatar = (): Observable<any> => this.store.select<any>('profile', 'avatar');
+  public getDirtyAvatar = (): Observable<any> => this.store.select<any>('profile', 'dirtyAvatar');
 
   public logout() {
     this.store.dispatch({

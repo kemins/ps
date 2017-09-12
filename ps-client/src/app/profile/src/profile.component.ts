@@ -20,6 +20,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   private profile: Observable<Profile>;
   private dirtyProfile: Observable<Profile>;
   private avatar: Observable<any>;
+  private dirtyAvatar: Observable<any>;
   private profileForm;
   private avatarSubscription: Subscription;
 
@@ -33,7 +34,6 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
     this.profileForm = this.formBuilder.group({
       displayName: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, EmailValidator.email])],
-      picture: ['']
     });
 
     this.dirtyProfile
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public ngAfterViewInit() {
     this.avatarSubscription = this.fileUploader.uploadFiles(this.file.nativeElement)
-      .subscribe((image) => this.profileService.setAvatar({
+      .subscribe((image) => this.profileService.setDirtyAvatar({
         s: image.data,
         m: image.data,
         l: image.data
@@ -58,6 +58,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
                      private fileUploader: FileUploader) {
     this.profile = profileService.getProfile();
     this.dirtyProfile = profileService.getDirtyProfile();
+    this.dirtyAvatar = profileService.getDirtyAvatar();
     this.avatar = profileService.getAvatar();
   }
 
@@ -82,7 +83,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public get isDirtyAvatar(): Observable<boolean> {
     return this.avatar
-      .withLatestFrom(this.dirtyProfile)
-      .map(([avatar, profile]) => avatar.m !== profile.picture.m);
+      .withLatestFrom(this.dirtyAvatar)
+      .map(([avatar, dirtyAvatar]) => avatar.m !== dirtyAvatar.m);
   }
 }

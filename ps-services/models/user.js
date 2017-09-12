@@ -1,5 +1,7 @@
 const _ = require('lodash');
 const config = require('../config');
+const usersAPI = require('../routes/users').api;
+
 
 const mongoose = require('mongoose');
 
@@ -29,13 +31,7 @@ const User = mongoose.model('User', UserSchema);
 
 UserSchema.set('toJSON', {
   transform: (doc, user, options) => {
-    const picture = {};
-
-    _.forEach(config.slides.resolutions, (resolution) => {
-      picture[resolution.type] = `${config.slides.endpoint.avatar}/${resolution.type}`;
-    });
-
-    user.picture = picture;
+    user.picture = usersAPI.transformAvatar(user.picture);
 
     return user;
   }

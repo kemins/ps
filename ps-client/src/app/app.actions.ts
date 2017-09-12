@@ -29,6 +29,7 @@ export class AppActions {
     // profile
     public static COMMIT_DIRTY_PROFILE: string = 'COMMIT_DIRTY_PROFILE';
     public static SET_DIRTY_PROFILE: string = 'SET_DIRTY_PROFILE';
+    public static SET_PROFILE: string = 'SET_PROFILE';
     public static LOGOUT: string = 'LOGOUT';
     public static LOGOUT_SUCCESS: string = 'LOGOUT_POST_SUCCESS';
     public static LOGOUT_FAIL: string = 'LOGOUT_FAIL_SUCCESS';
@@ -36,6 +37,7 @@ export class AppActions {
     public static PROFILE_POST_SUCCESS: string = 'PROFILE_POST_SUCCESS';
     public static PROFILE_POST_FAIL: string = 'PROFILE_POST_FAIL';
     public static SET_AVATAR: string = 'SET_AVATAR';
+    public static SET_DIRTY_AVATAR: string = 'SET_DIRTY_AVATAR';
     public static RESET_AVATAR: string = 'RESET_AVATAR';
     public static UPLOAD_AVATAR: string = 'UPLOAD_AVATAR';
     public static AVATAR_POST_SUCCESS: string = 'AVATAR_POST_SUCCESS';

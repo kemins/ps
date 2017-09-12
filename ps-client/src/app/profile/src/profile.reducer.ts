@@ -5,25 +5,29 @@ import { Profile } from './profile.model';
 
 
 export const profile = (profile: Profile, action: Action) => {
-    let result: Profile;
+  let result: Profile;
 
-    switch (action.type) {
-        case AppActions.USER_AUTH_SUCCESS:
-            result = Object.assign({}, action.payload.body);
-            break;
+  switch (action.type) {
+    case AppActions.USER_AUTH_SUCCESS:
+      result = Object.assign({}, action.payload.body);
+      break;
 
-        case AppActions.PROFILE_POST_SUCCESS:
-            result = Object.assign({}, action.payload.body);
-            break;
+    case AppActions.SET_PROFILE:
+      result = Object.assign({}, action.payload.body);
+      break;
 
-        case AppActions.LOGOUT_SUCCESS:
-            result = {};
-            break;
+    case AppActions.PROFILE_POST_SUCCESS:
+      result = Object.assign({}, action.payload.body);
+      break;
 
-        default:
-            result = profile;
-            break;
-    }
+    case AppActions.LOGOUT_SUCCESS:
+      result = {};
+      break;
 
-    return result;
+    default:
+      result = profile;
+      break;
+  }
+
+  return result;
 };

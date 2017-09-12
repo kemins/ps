@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const config = require('../config');
 const ImageUtils = require('../utils/image-utils');
-const users = require('../routes/users').api;
+const userAPI = require('../routes/users').api;
 
 const imageUtils = new ImageUtils();
 
@@ -18,9 +18,8 @@ router.post('/', function(req, res, next) {
 
   imageUtils.mountSlides(`${config.fs.users}${id}/`, name, imageData)
     .then((avatar) => {
-      users.getUserById(id)
+      userAPI.getUserById(id)
         .then((model) => {
-          user.picture = avatar;
           model.picture = avatar;
           model.save((error, user) => {
             if (error) {
@@ -28,7 +27,8 @@ router.post('/', function(req, res, next) {
             } else {
               res.json({
                 type: 'success',
-                message: 'Avatar has been changed!'
+                message: 'Avatar has been changed!',
+                body: userAPI.transformAvatar(user.picture)
               });
             }
           });
@@ -43,7 +43,7 @@ router.get('/:type', function(req, res, next) {
   const user = req.user,
     id = user._id;
 
-  users.getUserById(id)
+  userAPI.getUserById(id)
     .then((model) => model.picture[req.params.type])
     .then(
       (path) => res.sendFile(path, {root: '/'}),

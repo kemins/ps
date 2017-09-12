@@ -4,7 +4,7 @@ import { IPSResponse } from './core';
 import { Contact } from './contact';
 import { BarAction } from './footer-bar';
 import { MODE } from './social-login';
-import { Profile } from './profile';
+import { Profile, Picture } from './profile';
 
 export interface AppStore{
     notifications: Observable<Array<IPSResponse>>
@@ -21,7 +21,8 @@ export interface AppStore{
     profile: {
         value: Observable<Profile>,
         dirtyValue: Observable<Profile>,
-        avatar: Observable<any>
+        avatar: Observable<Picture>
+        dirtyAvatar: Observable<Picture>
     },
     footerActions: Observable<Array<BarAction>>;
     sideBarActions: Observable<Array<BarAction>>;
