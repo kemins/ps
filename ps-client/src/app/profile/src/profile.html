@@ -35,6 +35,13 @@
       </md-input-container>
     </div>
 
+    <div class="form-group">
+      <md-radio-group formControlName="gender">
+        <md-radio-button value="male">Male</md-radio-button>
+        <md-radio-button value="female">Female</md-radio-button>
+      </md-radio-group>
+    </div>
+
     <button md-raised-button color="primary" (click)="onSubmit()"
         [disabled]="!profileForm.valid">Save
     </button>

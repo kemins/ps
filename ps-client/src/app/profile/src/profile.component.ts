@@ -34,6 +34,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
     this.profileForm = this.formBuilder.group({
       displayName: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, EmailValidator.email])],
+      gender: ['', Validators.required]
     });
 
     this.dirtyProfile
