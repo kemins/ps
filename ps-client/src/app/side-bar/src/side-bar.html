@@ -1,13 +1,9 @@
 <div>
-    <div *ngFor="let action of actions | async">
-        <button *ngIf="action.link" [id]="action.label" md-icon-button color="primary"
-            routerLink="{{action.link}}">
-            <md-icon class="light">{{action.icon}}</md-icon>
-        </button>
-        <button *ngIf="!action.link" [id]="action.label" md-icon-button color="primary"
-            (click)="doAction(action)">
-            <md-icon class="light">{{action.icon}}</md-icon>
-        </button>
-        <label [attr.for]="action.label">{{action.label}}</label>
-    </div>
+  <div *ngFor="let action of actions | async">
+    <ps-side-bar-item [action]="action" (actionDone)="doAction($event)"></ps-side-bar-item>
+    <ps-side-bar-item class="sub-item" *ngFor="let action of action.actions"
+        [action]="action"
+        (actionDone)="doAction($event)">
+    </ps-side-bar-item>
+  </div>
 </div>

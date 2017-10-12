@@ -4,18 +4,23 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { SideBarComponent } from './side-bar.component';
 import { SideBarService } from './side-bar.service';
+import { SideBarItemComponent } from './side-bar-item.component';
 
 
 @NgModule({
-    imports: [
-        RouterModule,
-        CommonModule,
-        MaterialModule
-    ],
-    exports: [SideBarComponent],
-    providers: [SideBarService],
-    declarations: [SideBarComponent]
+  imports: [
+    RouterModule,
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [SideBarComponent],
+  providers: [SideBarService],
+  declarations: [
+    SideBarComponent,
+    SideBarItemComponent
+  ]
 })
 export class SideBarModule {
-    constructor() {}
+  constructor() {
+  }
 }

@@ -69,9 +69,26 @@ export const USER_ACTIONS = [{
   link: '',
   icon: 'account_circle'
 }, {
-  label: 'My Albums',
+  label: 'Albums',
   link: '/user/albums',
-  icon: 'book'
+  icon: 'book',
+  actions: [
+    {
+      label: 'My',
+      link: '/user/albums/mine',
+      icon: 'home'
+    },
+    {
+      label: 'Friends',
+      link: '/user/albums/shared',
+      icon: 'home'
+    },
+    {
+      label: 'Create',
+      link: '/user/albums/create',
+      icon: 'home'
+    }
+  ]
 }, {
   label: 'Contact Us',
   link: '/user/contact',
