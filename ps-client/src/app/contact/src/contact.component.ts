@@ -1,8 +1,7 @@
 import {
-    Component,
-    ViewChild,
-    OnInit,
-    ChangeDetectionStrategy
+  Component,
+  ViewChild,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
@@ -14,53 +13,51 @@ import * as contactStyles from './contact.styl';
 import * as _ from 'lodash';
 
 @Component({
-    selector: 'ps-contact-us',
-    styles: [contactStyles],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    templateUrl: './contact.html'
+  selector: 'ps-contact-us',
+  styles: [contactStyles],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './contact.html'
 })
-export class ContactComponent implements OnInit {
-    contact: Observable<Contact>;
-    dirtyContact: Observable<Contact>;
-    token: Observable<string>;
-    captchaKey = '';
-    contactForm;
+export class ContactComponent {
+  private contact: Observable<Contact>;
+  private dirtyContact: Observable<Contact>;
+  private token: Observable<string>;
+  private captchaKey = '';
+  private contactForm;
 
-    @ViewChild('captcha')
-    captcha;
+  @ViewChild('captcha')
+  public captcha;
 
-    ngOnInit() {
-        this.contactForm = this.formBuilder.group({
-            name: ['', Validators.required],
-            email: ['', Validators.compose([Validators.required, EmailValidator.email])],
-            message: ['', Validators.required]
-        });
+  public ngOnInit() {
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, EmailValidator.email])],
+      message: ['', Validators.required]
+    });
 
-        this.dirtyContact
-            .distinctUntilChanged((contact) => _.isEqual(contact, this.contactForm.value))
-            .subscribe((contact) => this.contactForm.patchValue(contact));
+    this.dirtyContact
+      .distinctUntilChanged((contact) => _.isEqual(contact, this.contactForm.value))
+      .subscribe((contact) => this.contactForm.patchValue(contact));
 
-        this.contactForm.valueChanges
-            .subscribe((contact) => this.contactService.setDirtyContact(contact));
-    }
+    this.contactForm.valueChanges
+      .subscribe((contact) => this.contactService.setDirtyContact(contact));
+  }
 
-    ngAfterViewInit() {}
+  public constructor(private contactService: ContactService, private formBuilder: FormBuilder) {
+    this.captchaKey = AppSettings.getSetting('captcha.key');
+    this.contact = contactService.getContact();
+    this.dirtyContact = contactService.getDirtyContact();
+    this.token = contactService.getToken();
+  }
 
-    constructor(private contactService: ContactService, private formBuilder: FormBuilder) {
-        this.captchaKey = AppSettings.getSetting('captcha.key');
-        this.contact = contactService.getContact();
-        this.dirtyContact = contactService.getDirtyContact();
-        this.token = contactService.getToken();
-    }
+  public onSubmit() {
+    this.contactService.commitDirtyContact();
+    this.contactService.sendMessage();
+    this.captcha.reset();
+    this.handleCorrectCaptcha(null);
+  }
 
-    onSubmit() {
-        this.contactService.commitDirtyContact();
-        this.contactService.sendMessage();
-        this.captcha.reset();
-        this.handleCorrectCaptcha(null);
-    }
-
-    handleCorrectCaptcha(token) {
-        this.contactService.setToken(token);
-    }
+  public handleCorrectCaptcha(token) {
+    this.contactService.setToken(token);
+  }
 }

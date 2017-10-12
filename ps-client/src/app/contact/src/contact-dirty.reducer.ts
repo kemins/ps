@@ -9,7 +9,7 @@ export const dirtyContact = (contact:Contact, action:Action) => {
 
     switch (action.type) {
         case AppActions.SET_DIRTY_CONTACT:
-            result = Object.assign({}, action.payload);
+            result = {...action.payload};
             break;
 
         case AppActions.MESSAGE_POST_SUCCESS:

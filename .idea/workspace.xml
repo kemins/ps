@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="COMPLETE file reader stream">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/routes/avatar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/routes/profile.js" />
+    <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="ADD avatar upload init feature.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/album.model.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/album.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-data.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-data.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-dirty.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-dirty.reducer.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/app.js" afterPath="$PROJECT_DIR$/ps-services/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/package.json" afterPath="$PROJECT_DIR$/ps-services/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/users.js" afterPath="$PROJECT_DIR$/ps-services/routes/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.component.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" />
     </list>
     <ignored path="ps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,101 +39,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/routes/users.js">
+      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.routes.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="131" column="42" lean-forward="false" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+            <state relative-caret-position="420">
+              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="albums.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/http/request.js">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authenticator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/authenticator.js">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5094">
-              <caret line="283" column="7" lean-forward="false" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
+            <state relative-caret-position="204">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-board.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/strategies/session.js">
+      <file leaf-file-name="guest-board.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+            <state relative-caret-position="108">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport-custom/lib/strategy.js">
+      <file leaf-file-name="guest-board.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            <state relative-caret-position="468">
+              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authenticate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/middleware/authenticate.js">
+      <file leaf-file-name="side-bar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6246">
-              <caret line="347" column="14" lean-forward="false" selection-start-line="347" selection-start-column="14" selection-end-line="347" selection-end-column="14" />
+            <state relative-caret-position="108">
+              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ps-services/app.js">
+      <file leaf-file-name="side-bar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/routes/profile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initialize.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/middleware/initialize.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+            <state relative-caret-position="216">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -138,36 +147,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>log</find>
-      <find>profi</find>
-      <find>dirtyCProfile</find>
-      <find>console</find>
-      <find>consol</find>
-      <find>console.log</find>
-      <find>se</find>
-      <find>dirtyP</find>
-      <find>dirtyProfile</find>
-      <find>AppActions.SET_AVATAR</find>
-      <find>set_a</find>
-      <find>img-avatar</find>
-      <find>get</find>
-      <find>avata</find>
-      <find>mongoose</find>
-      <find>is_verified</find>
-      <find>getUserByToken</find>
-      <find>handleErrorResponse</find>
-      <find>ava</find>
+      <find>ыещку</find>
+      <find>store</find>
+      <find>AppStore</find>
+      <find>AVATAR</find>
       <find>avatar</find>
+      <find>withLatestF</find>
+      <find>avatar =</find>
+      <find>RESET_AVAT</find>
+      <find>SET_DIRTY_AVATAR</find>
+      <find>RES</find>
+      <find>reset</find>
+      <find>RESET_AVATAR</find>
+      <find>reg</find>
+      <find>input</find>
+      <find>primary</find>
+      <find>$primaryColor$primaryColor</find>
+      <find>inpu</find>
+      <find>COMMIT_DIRTY_PROFILE</find>
+      <find>SAVE_PROFILE</find>
+      <find>COmmit_Di</find>
+      <find>withLatestFrom</find>
+      <find>USER_AUTH_SUCCESS</find>
+      <find>SET_PROFILE</find>
+      <find>SET_DIRTY_PROFILE</find>
+      <find>Andrew</find>
       <find>profile</find>
-      <find>getUserByI</find>
-      <find>passp</find>
-      <find>pass</find>
-      <find>loginUser</find>
-      <find>bodyparser</find>
-      <find>use =</find>
-      <find>authenticate</find>
-      <find>func</find>
-      <find>fun</find>
+      <find>Route</find>
+      <find>Pr</find>
+      <find>a</find>
+      <find>albums</find>
     </findStrings>
     <replaceStrings>
       <replace>2.3.1</replace>
@@ -191,57 +200,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-current-action.reducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/slides.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/home/src/home.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/slides-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/app-effext.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/package.json" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/core.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/file-reader.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/index.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/tsconfig.json" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-avatar.reducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.styl" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/file-uploader.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/rx-extensions.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-data.service.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts" />
-        <option value="$PROJECT_DIR$/ps-services/routes/profilet.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/avatar.js" />
         <option value="_stream_readable.js" />
         <option value="internal/process/next_tick.js" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/rx-extensions.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-data.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/file-uploader.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-avatar.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-services/utils/image-utils.js" />
+        <option value="$PROJECT_DIR$/ps-services/config.js" />
         <option value="$PROJECT_DIR$/ps-services/app.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/profile.js" />
+        <option value="$PROJECT_DIR$/ps-services/models/user.js" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/dirty-profile-avatar.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/avatar.model.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/picture.model.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/index.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/slides/index.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts" />
         <option value="$PROJECT_DIR$/ps-services/routes/users.js" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.actions.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts" />
+        <option value="$PROJECT_DIR$/ps-services/routes/avatar.js" />
+        <option value="$PROJECT_DIR$/ps-services/routes/profile.js" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-dirty.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/my-albums/src/album.model.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/my-albums/index.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/my-albums/src/album.module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/my-albums/src/album.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/album.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.component.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/album.module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/index.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
       </list>
     </option>
   </component>
@@ -267,8 +276,8 @@
     <handled-path value="$PROJECT_DIR$/ps-client/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="199" />
-    <option name="y" value="180" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1378" />
     <option name="height" value="780" />
   </component>
@@ -318,16 +327,78 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="albums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="albums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\programing\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="js.eslint.nodeInterpreter" value="C:\programing\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -339,19 +410,19 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/node6js/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\albums\src" />
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\my-albums\src" />
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\profile\src" />
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\side-bar\src" />
+      <recent name="C:\programing\workspace\ps\ps-client\src\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\programing\workspace\ps\ps-client\src\app\slides\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\social-login\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\notifications\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\home" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\home\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\profile\src" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\side-bar\src" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\user-board\src" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\user-albums\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -571,77 +642,33 @@
       <workItem from="1504116722216" duration="971000" />
       <workItem from="1504117775938" duration="382000" />
       <workItem from="1504118187818" duration="480000" />
-      <workItem from="1504118694421" duration="2008000" />
-    </task>
-    <task id="LOCAL-00009" summary="FIX styles">
-      <created>1469628981092</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1469628981092</updated>
-    </task>
-    <task id="LOCAL-00010" summary="ADD stylus support">
-      <created>1469782053357</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1469782053357</updated>
-    </task>
-    <task id="LOCAL-00011" summary="ADD toll bars, MOVE styles to stylus format.">
-      <created>1471417247828</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1471417247828</updated>
-    </task>
-    <task id="LOCAL-00012" summary="FIX resolution of slides for landscape orientation.">
-      <created>1471419219635</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1471419219635</updated>
-    </task>
-    <task id="LOCAL-00013" summary="SETUP angular rc5 seed project">
-      <created>1472654156990</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1472654156990</updated>
-    </task>
-    <task id="LOCAL-00014" summary="MOVE carousel component.">
-      <created>1472729143943</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1472729143943</updated>
-    </task>
-    <task id="LOCAL-00015" summary="ADD skeleton for contact form.">
-      <created>1472805043997</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1472805043997</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ADD contact from with ng models.">
-      <created>1473249110143</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1473249110143</updated>
-    </task>
-    <task id="LOCAL-00017" summary="MOVE to rc6">
-      <created>1473337542308</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1473337542308</updated>
-    </task>
-    <task id="LOCAL-00018" summary="CONTACT form in progress">
-      <created>1474379451555</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1474379451555</updated>
+      <workItem from="1504118694421" duration="2063000" />
+      <workItem from="1504166327028" duration="137000" />
+      <workItem from="1504271518432" duration="2733000" />
+      <workItem from="1504603574724" duration="4147000" />
+      <workItem from="1504609175497" duration="293000" />
+      <workItem from="1504614181601" duration="841000" />
+      <workItem from="1504616530158" duration="780000" />
+      <workItem from="1504617348983" duration="362000" />
+      <workItem from="1504617732714" duration="4168000" />
+      <workItem from="1504623045166" duration="73000" />
+      <workItem from="1504623130646" duration="137000" />
+      <workItem from="1504623318767" duration="54000" />
+      <workItem from="1504623398206" duration="916000" />
+      <workItem from="1504688991687" duration="15056000" />
+      <workItem from="1504711528734" duration="538000" />
+      <workItem from="1504712089963" duration="4244000" />
+      <workItem from="1504870821128" duration="4336000" />
+      <workItem from="1505115521740" duration="3627000" />
+      <workItem from="1505119235665" duration="6619000" />
+      <workItem from="1505131404336" duration="749000" />
+      <workItem from="1505133014526" duration="541000" />
+      <workItem from="1505133602308" duration="5240000" />
+      <workItem from="1505141116795" duration="1433000" />
+      <workItem from="1505142579977" duration="23297000" />
+      <workItem from="1505392015597" duration="7062000" />
+      <workItem from="1507796802423" duration="1267000" />
+      <workItem from="1507811539975" duration="3300000" />
     </task>
     <task id="LOCAL-00019" summary="ADD email validator.">
       <created>1474975539941</created>
@@ -916,33 +943,104 @@
       <option name="project" value="LOCAL" />
       <updated>1496860225761</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="ADD support for authentication.">
+      <created>1504120823934</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1504120823935</updated>
+    </task>
+    <task id="LOCAL-00059" summary="ADD logout feature.">
+      <created>1504606000620</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1504606000620</updated>
+    </task>
+    <task id="LOCAL-00060" summary="ADD avatar upload init feature.">
+      <created>1504624162537</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1504624162538</updated>
+    </task>
+    <task id="LOCAL-00061" summary="MAKE file uploader observable uncompleted.">
+      <created>1504709079754</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1504709079754</updated>
+    </task>
+    <task id="LOCAL-00062" summary="RESIZE avatar on slides per resolutions.">
+      <created>1505120289296</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1505120289297</updated>
+    </task>
+    <task id="LOCAL-00063" summary="SUPPORT avatar resolutions.">
+      <created>1505144967217</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1505144967218</updated>
+    </task>
+    <task id="LOCAL-00064" summary="RESET avatar on success.">
+      <created>1505145774353</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1505145774353</updated>
+    </task>
+    <task id="LOCAL-00065" summary="ADD dirty profile in store support.">
+      <created>1505216135953</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1505216135953</updated>
+    </task>
+    <task id="LOCAL-00066" summary="ADD radio button control for user gender.">
+      <created>1505220310878</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1505220310878</updated>
+    </task>
+    <task id="LOCAL-00067" summary="INTEGRATE profile save api.">
+      <created>1505223066506</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1505223066506</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346172000" />
+    <option name="totallyTimeSpent" value="438177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20535715" sideWeight="0.43739837" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17860906" sideWeight="0.42647058" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43862522" sideWeight="0.5368809" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36630434" sideWeight="0.5389884" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40425533" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20535715" sideWeight="0.5626016" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33552632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24776785" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36677632" sideWeight="0.46311906" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20389885" sideWeight="0.5735294" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24762908" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27608696" sideWeight="0.4610116" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24673913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40425533" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -951,20 +1049,20 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43862522" sideWeight="0.5368809" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36630434" sideWeight="0.5389884" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20535715" sideWeight="0.5626016" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33552632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36677632" sideWeight="0.46311906" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20389885" sideWeight="0.5735294" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27608696" sideWeight="0.4610116" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20535715" sideWeight="0.43739837" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17860906" sideWeight="0.42647058" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40425533" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24776785" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24762908" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24673913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -984,16 +1082,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Extract components into module." />
-    <MESSAGE value="FIX ts warnings." />
-    <MESSAGE value="ADD hmr support." />
-    <MESSAGE value="FIX carousel layout, improve hmr support. Extract footer to component." />
-    <MESSAGE value="UPDATE angular material" />
-    <MESSAGE value="UPDATE angular bootstrap" />
-    <MESSAGE value="UPDATE ts version" />
-    <MESSAGE value="FIX compilation warnings" />
-    <MESSAGE value="ADD profile stab module" />
-    <MESSAGE value="ADD user bar view" />
     <MESSAGE value="MAKE side bar actions dynamic." />
     <MESSAGE value="ADD routes check for user actions." />
     <MESSAGE value="ADD logout and profile components features," />
@@ -1009,31 +1097,25 @@
     <MESSAGE value="ADD cancel flow for avatar change." />
     <MESSAGE value="ADD dirty checking for avatar" />
     <MESSAGE value="COMPLETE file reader stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE file reader stream" />
+    <MESSAGE value="ADD support for authentication." />
+    <MESSAGE value="ADD logout feature." />
+    <MESSAGE value="ADD avatar upload init feature." />
+    <MESSAGE value="MAKE file uploader observable uncompleted." />
+    <MESSAGE value="RESIZE avatar on slides per resolutions." />
+    <MESSAGE value="SUPPORT avatar resolutions." />
+    <MESSAGE value="RESET avatar on success." />
+    <MESSAGE value="ADD dirty profile in store support." />
+    <MESSAGE value="ADD radio button control for user gender." />
+    <MESSAGE value="INTEGRATE profile save api." />
+    <option name="LAST_COMMIT_MESSAGE" value="INTEGRATE profile save api." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ps-services/utils/image-utils.js</url>
-          <line>115</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/middleware/authenticate.js</url>
           <line>275</line>
           <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ps-services/routes/profile.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ps-services/app.js</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1044,7 +1126,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="111" />
+      <option name="time" value="141" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSRemoteDebug">
@@ -1065,370 +1147,409 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps-services/db-connect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="69" lean-forward="false" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/tsconfig.json">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-avatar.reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/carousel.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/core/src/file-uploader.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/core/src/rx-extensions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/slides.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/mail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact-data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.actions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="51" column="75" lean-forward="false" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/dist/vendor.f585aeeb77b88e054839.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="0" column="272408" lean-forward="false" selection-start-line="0" selection-start-column="272408" selection-end-line="0" selection-end-column="272408" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/config/spec-bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/config/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/config/webpack.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/config/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/config/webpack.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="184" column="44" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="89" column="19" lean-forward="false" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/request/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="969" column="3" lean-forward="false" selection-start-line="969" selection-start-column="3" selection-end-line="969" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/body-parser/lib/types/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="117" column="3" lean-forward="false" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/avatar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/express/lib/router/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="130" column="11" lean-forward="false" selection-start-line="130" selection-start-column="11" selection-end-line="130" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport-custom/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/5.6.0/core-modules/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
-          <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/5.6.0/core-modules/timers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11412">
-          <caret line="634" column="0" lean-forward="false" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/express-session/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8676">
-          <caret line="488" column="5" lean-forward="false" selection-start-line="488" selection-start-column="5" selection-end-line="488" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5490">
-          <caret line="311" column="11" lean-forward="false" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/express/lib/router/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="94" column="3" lean-forward="false" selection-start-line="94" selection-start-column="3" selection-end-line="94" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/middleware/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport-custom/lib/strategy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/middleware/authenticate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6246">
-          <caret line="347" column="14" lean-forward="false" selection-start-line="347" selection-start-column="14" selection-end-line="347" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/strategies/session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/authenticator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5094">
-          <caret line="283" column="7" lean-forward="false" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/passport/lib/http/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-services/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="131" column="42" lean-forward="false" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/main.browser.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/styles/colors.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="116" column="23" lean-forward="true" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/avatar-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="59" column="38" lean-forward="false" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/app.js">
+    <entry file="file://$PROJECT_DIR$/ps-services/routes/avatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="522">
+          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-services/routes/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact-dirty.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/social-login-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile-dirty.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.state.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/src/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#75#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="50" column="4" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/bar-action.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/custom-typings.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/album.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/album.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/albums.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/albums.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>

@@ -5,6 +5,7 @@ import { Action } from '@ngrx/store';
 import { ContactDataService } from './../';
 import { AppActions } from '../../app.actions';
 import { IPSResponse } from '../../core/src/ps-response';
+import { ContactService } from './contact.service';
 
 
 @Injectable()
@@ -15,6 +16,7 @@ export class ContactEffectService {
   };
 
   public constructor(private contactDataService: ContactDataService,
+                     private contactService: ContactService,
                      private actions$: Actions) {
   }
 
@@ -37,4 +39,17 @@ export class ContactEffectService {
       type: AppActions.SET_CONTACT,
       payload: dirtyContact
     }));
+
+  @Effect()
+  public profileChange$: Observable<Action> = this.actions$
+    .ofType(AppActions.SET_PROFILE)
+    .withLatestFrom(this.contactService.getContact())
+    .map(([{payload}, profile]) => {
+      const patch = {email: payload.email};
+
+      return {
+        type: AppActions.SET_DIRTY_CONTACT,
+        payload: {...profile, ...patch}
+      };
+    });
 }

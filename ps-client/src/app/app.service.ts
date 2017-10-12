@@ -35,8 +35,8 @@ export class AppService {
       mode: MODE.NONE
     },
     contact: {
-      value: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
-      dirtyValue: new Contact('Andrew', 'Test', 'andriy.kemin@gmail.com'),
+      value: new Contact(),
+      dirtyValue: new Contact(),
       token: ''
     },
     profile: {

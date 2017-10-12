@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
+import { AlbumsComponent } from './albums';
 import { ContactComponent } from './contact';
 import { UserBoardComponent } from './user-board';
 import { GuestBoardComponent } from './guest-board';
@@ -37,7 +38,11 @@ export const ROUTES: Routes = [
       path: 'contact',
       canActivate: [ProfileService],
       component: ContactComponent
-    },]
+    }, {
+      path: 'albums',
+      canActivate: [ProfileService],
+      component: AlbumsComponent
+    }]
   },
   {
     path: '**',

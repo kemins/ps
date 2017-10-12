@@ -8,68 +8,72 @@ import { BAR_ACTION } from '../../footer-bar';
 
 @Injectable()
 export class SideBarService {
-    constructor(private store: Store<AppStore>) {
+  constructor(private store: Store<AppStore>) {
+  }
+
+  getActions = (): Observable<Array<BarAction>> => this.store.select<BarAction[]>('sideBarActions');
+
+  setActions = (actions: BarAction[]) => this.store.dispatch({
+    type: AppActions.SET_SIDE_BAR_ACTIONS,
+    payload: actions
+  });
+
+  getCurrentAction = (): Observable<BarAction> => this.store.select<BarAction>('sideBarCurrentAction');
+
+  setCurrentAction = (action: BarAction) => this.store.dispatch({
+    type: AppActions.SET_CURRENT_ACTION,
+    payload: action
+  });
+
+  setCurrentActionByName = (name: BAR_ACTION) => this.store.dispatch({
+    type: AppActions.SET_CURRENT_ACTION_BY_NAME,
+    payload: {
+      actions: this.getActions(),
+      name: name
     }
+  });
 
-    getActions = (): Observable<Array<BarAction>> => this.store.select<BarAction[]>('sideBarActions');
-
-    setActions = (actions: BarAction[]) => this.store.dispatch({
-        type: AppActions.SET_SIDE_BAR_ACTIONS,
-        payload: actions
-    });
-
-    getCurrentAction = (): Observable<BarAction> => this.store.select<BarAction>('sideBarCurrentAction');
-
-    setCurrentAction = (action: BarAction) => this.store.dispatch({
-        type: AppActions.SET_CURRENT_ACTION,
-        payload: action
-    });
-
-    setCurrentActionByName = (name: BAR_ACTION) => this.store.dispatch({
-        type: AppActions.SET_CURRENT_ACTION_BY_NAME,
-        payload: {
-            actions: this.getActions(),
-            name: name
-        }
-    });
-
-    resetCurrentAction = () => this.store.dispatch({
-        type: AppActions.SET_CURRENT_ACTION,
-        payload: BAR_ACTION.NONE
-    });
+  resetCurrentAction = () => this.store.dispatch({
+    type: AppActions.SET_CURRENT_ACTION,
+    payload: BAR_ACTION.NONE
+  });
 }
 
 export const GUEST_ACTIONS = [{
-    label: 'Home',
-    link: '/home',
-    icon: 'home'
+  label: 'Home',
+  link: '/home',
+  icon: 'home'
 }, {
-    label: 'Sign In',
-    name: BAR_ACTION.SIGN_IN,
-    link: '',
-    icon: 'account_circle'
+  label: 'Sign In',
+  name: BAR_ACTION.SIGN_IN,
+  link: '',
+  icon: 'account_circle'
 }, {
-    label: 'Sign Up',
-    name: BAR_ACTION.SIGN_UP,
-    link: '',
-    icon: 'person_add'
+  label: 'Sign Up',
+  name: BAR_ACTION.SIGN_UP,
+  link: '',
+  icon: 'person_add'
 }, {
-    label: 'Contact Us',
-    link: '/contact',
-    icon: 'mail'
+  label: 'Contact Us',
+  link: '/contact',
+  icon: 'mail'
 }];
 
 export const USER_ACTIONS = [{
-    label: 'Home',
-    link: '/user/home',
-    icon: 'home'
+  label: 'Home',
+  link: '/user/home',
+  icon: 'home'
 }, {
-    label: 'Profile',
-    name: BAR_ACTION.OPEN_PROFILE,
-    link: '',
-    icon: 'account_circle'
+  label: 'Profile',
+  name: BAR_ACTION.OPEN_PROFILE,
+  link: '',
+  icon: 'account_circle'
 }, {
-    label: 'Contact Us',
-    link: '/user/contact',
-    icon: 'mail'
+  label: 'My Albums',
+  link: '/user/albums',
+  icon: 'book'
+}, {
+  label: 'Contact Us',
+  link: '/user/contact',
+  icon: 'mail'
 }];

@@ -10,6 +10,7 @@ import { UserBoardComponent } from './user-board.component';
 import { FooterBarModule } from '../../footer-bar';
 import { SideBarModule } from '../../side-bar';
 import { ProfileModule } from '../../profile';
+import { AlbumsModule } from '../../albums';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProfileModule } from '../../profile';
         MaterialModule,
         FormsModule,
         FooterBarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AlbumsModule
     ],
     exports: [UserBoardComponent],
     providers: []

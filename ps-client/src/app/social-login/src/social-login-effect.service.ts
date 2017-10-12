@@ -36,7 +36,11 @@ export class SocialLoginEffectService {
 
   @Effect() public authSuccess$: Observable<Action> = this.actions$
     .ofType(AppActions.USER_AUTH_SUCCESS)
-    .do(() => this.store.dispatch({type: AppActions.SL_SET_MODE, payload: MODE.NONE}))
+    .do(({payload}) => {
+      this.store.dispatch({type: AppActions.SL_SET_MODE, payload: MODE.NONE});
+      this.store.dispatch({type: AppActions.SET_PROFILE, payload: payload.body});
+      this.store.dispatch({type: AppActions.SET_DIRTY_PROFILE, payload: payload.body});
+    })
     .map(() => ({
       type: AppActions.NAVIGATE_TO, payload: {
         state: '/user',
