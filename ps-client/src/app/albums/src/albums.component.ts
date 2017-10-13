@@ -1,6 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, OnDestroy } from '@angular/core';
-import { Profile } from './profile.model';
-import { ProfileService } from './profile.service';
 import * as albumsStyles from './albums.styl';
 
 @Component({

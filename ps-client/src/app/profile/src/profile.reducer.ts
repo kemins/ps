@@ -1,5 +1,4 @@
 import { Action } from '@ngrx/store';
-import { IPSResponse } from '../../core';
 import { AppActions } from '../../app.actions';
 import { Profile } from './profile.model';
 

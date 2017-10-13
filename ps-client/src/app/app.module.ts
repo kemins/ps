@@ -25,6 +25,7 @@ import { ProfileEffectService } from './profile/src/profile-effect.service';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
 import { AppEffectService } from './core/src/app-effext.service';
 import { AvatarEffectService } from './profile/src/avatar-effect.service';
+import { NewAlbumEffectService } from './albums/src/new-album-effect.service';
 
 @NgModule({
     bootstrap: [App],
@@ -48,6 +49,7 @@ import { AvatarEffectService } from './profile/src/avatar-effect.service';
         EffectsModule.run(NotificationsEffectService),
         EffectsModule.run(SlidesEffectService),
         EffectsModule.run(ProfileEffectService),
+        EffectsModule.run(NewAlbumEffectService),
         EffectsModule.run(AvatarEffectService),
         EffectsModule.run(SocialLoginEffectService),
         StoreDevtoolsModule.instrumentOnlyWithExtension()

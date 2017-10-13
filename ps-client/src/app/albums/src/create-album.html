@@ -1,0 +1,31 @@
+<div class="container-fluid profile-container">
+  <form novalidate [formGroup]="albumForm">
+    <div class="form-group">
+      <md-input-container>
+        <input mdInput
+            placeholder="Name"
+            formControlName="name"
+            name="name" id="name">
+        <md-error *ngIf="!albumForm.controls.name.valid">
+          Name is required
+        </md-error>
+      </md-input-container>
+      <div class="form-group">
+        <md-input-container>
+          <textarea mdInput
+              placeholder="Description"
+              formControlName="description"
+              maxlength="500">
+          </textarea>
+        </md-input-container>
+      </div>
+    </div>
+    <button md-raised-button color="primary" (click)="create()"
+        [disabled]="!albumForm.valid">
+      Create
+    </button>
+    <button md-raised-button color="secondary" (click)="cancel()">
+      Close
+    </button>
+  </form>
+</div>

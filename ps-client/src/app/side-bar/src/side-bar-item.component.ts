@@ -17,6 +17,8 @@ export class SideBarItemComponent {
   public actionDone: EventEmitter<BarAction> = new EventEmitter<BarAction>();
 
   public doAction(action) {
-    this.actionDone.emit(action);
+    if (action.button) {
+      this.actionDone.emit(action);
+    }
   }
 }

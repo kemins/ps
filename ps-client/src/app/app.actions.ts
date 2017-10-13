@@ -59,4 +59,11 @@ export class AppActions {
     public static NAVIGATE_TO: string = 'NAVIGATE_TO';
     public static POST_NAVIGATE_TO: string = 'POST_NAVIGATE_TO';
 
+    // albums
+    public static SET_NEW_ALBUM: string = 'SET_NEW_ALBUM';
+    public static CREATE_NEW_ALBUM: string = 'CREATE_NEW_ALBUM';
+    public static ALBUM_POST_SUCCESS: string = 'ALBUM_POST_SUCCESS';
+    public static ALBUM_POST_FAIL: string = 'ALBUM_POST_FAIL';
+
+
 }

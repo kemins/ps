@@ -46,12 +46,12 @@ export const GUEST_ACTIONS = [{
 }, {
   label: 'Sign In',
   name: BAR_ACTION.SIGN_IN,
-  link: '',
+  button: true,
   icon: 'account_circle'
 }, {
   label: 'Sign Up',
   name: BAR_ACTION.SIGN_UP,
-  link: '',
+  button: true,
   icon: 'person_add'
 }, {
   label: 'Contact Us',
@@ -66,27 +66,27 @@ export const USER_ACTIONS = [{
 }, {
   label: 'Profile',
   name: BAR_ACTION.OPEN_PROFILE,
-  link: '',
+  button: true,
   icon: 'account_circle'
 }, {
   label: 'Albums',
-  link: '/user/albums',
   icon: 'book',
   actions: [
     {
       label: 'My',
-      link: '/user/albums/mine',
-      icon: 'home'
+      link: '/user/albums',
+      icon: 'person'
     },
     {
       label: 'Friends',
-      link: '/user/albums/shared',
-      icon: 'home'
+      link: '/user/albums',
+      icon: 'group'
     },
     {
       label: 'Create',
-      link: '/user/albums/create',
-      icon: 'home'
+      button: true,
+      name: BAR_ACTION.CREATE_ALBUM,
+      icon: 'library_add'
     }
   ]
 }, {

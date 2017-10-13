@@ -8,12 +8,18 @@ import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { AlbumsComponent } from './../';
 import { ValidatorModule } from '../../validators';
+import { CreateAlbumComponent } from './create-album.component';
+import { AlbumService } from './album.service';
+import { AlbumDataService } from './album-data.service';
+import { NewAlbumEffectService } from './new-album-effect.service';
 
 
 @NgModule({
   declarations: [
     AlbumsComponent,
+    CreateAlbumComponent
   ],
+  entryComponents: [CreateAlbumComponent],
   imports: [
     RouterModule,
     CoreModule,
@@ -25,8 +31,14 @@ import { ValidatorModule } from '../../validators';
     ReactiveFormsModule,
     ValidatorModule
   ],
-  exports: [AlbumsComponent],
+  exports: [
+    AlbumsComponent,
+    CreateAlbumComponent
+  ],
   providers: [
+    AlbumService,
+    AlbumDataService,
+    NewAlbumEffectService,
   ]
 })
 export class AlbumsModule {
