@@ -5,7 +5,9 @@ import { Contact } from './contact';
 import { BarAction } from './footer-bar';
 import { MODE } from './social-login';
 import { Profile, Picture } from './profile';
-import { Album } from './albums/src/album.model';
+import { IAlbum } from './albums/src/IAlbum';
+import { MdDialogRef } from '@angular/material';
+import { CreateAlbumComponent } from './albums/src/create-album.component';
 
 export interface AppStore {
   notifications: Observable<Array<IPSResponse>>
@@ -26,7 +28,7 @@ export interface AppStore {
     dirtyAvatar: Observable<Picture>
   },
   albums: {
-    newAlbum: Observable<Album>
+    newAlbum: Observable<IAlbum>
   },
   footerActions: Observable<Array<BarAction>>;
   sideBarActions: Observable<Array<BarAction>>;

@@ -14,6 +14,7 @@ import { Profile, ProfileService } from '../../profile';
 import { Observable } from 'rxjs';
 import { MdDialog } from '@angular/material';
 import { CreateAlbumComponent } from '../../albums';
+import { AlbumService } from '../../albums/src/album.service';
 
 @Component({
   selector: 'user-board',
@@ -28,6 +29,7 @@ export class UserBoardComponent implements OnInit {
   constructor(private footerBarService: FooterBarService,
               private sideBarService: SideBarService,
               private profileService: ProfileService,
+              private albumService: AlbumService,
               private dialog: MdDialog) {
     this.profile = profileService.getProfile();
     this.currentAction = sideBarService.getCurrentAction();
@@ -43,15 +45,10 @@ export class UserBoardComponent implements OnInit {
       case BAR_ACTION.OPEN_PROFILE:
         break;
       case BAR_ACTION.CREATE_ALBUM:
-        const createDialogRef = this.dialog.open(CreateAlbumComponent, {
+        this.albumService.setAlbumDialog(this.dialog.open<CreateAlbumComponent>(CreateAlbumComponent, {
           width: '400px'
-        });
+        }));
 
-        createDialogRef.afterClosed().subscribe(album => {
-          if (album) {
-            console.log(album);
-          }
-        });
         break;
     }
   }

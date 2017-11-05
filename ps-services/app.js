@@ -10,6 +10,7 @@ const routes = require('./routes/index');
 const slides = require('./routes/slides');
 const mail = require('./routes/mail');
 const users = require('./routes/users').router;
+const albums = require('./routes/albums');
 const avatar = require('./routes/avatar');
 const profile = require('./routes/profile');
 const dbConnect = require('./db-connect');
@@ -39,6 +40,7 @@ app.use('/', routes);
 app.use('/slides', slides);
 app.use('/mail', mail);
 app.use('/users', users);
+app.use('/albums', albums);
 
 app.use((req, res, next) => {
   if (req.isAuthenticated() ) {

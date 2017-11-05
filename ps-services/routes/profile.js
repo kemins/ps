@@ -36,7 +36,7 @@ router.post('/', (req, res, next) => {
         } else {
           res.json({
             type: 'success',
-            message: 'Profile has being updated!',
+            message: 'Profile has been updated!',
             body: user
           });
         }
@@ -44,7 +44,7 @@ router.post('/', (req, res, next) => {
     }, (error) => sendError(res, error));
 });
 
-sendError = (response, error) => {
+const sendError = (response, error) => {
   response.json({
     type: 'fault',
     message: error

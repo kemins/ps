@@ -1,4 +1,4 @@
-export * from './src/album.model';
+export * from './src/IAlbum';
 export * from './src/albums.component';
 export * from './src/create-album.component';
 export * from './src/album.module'

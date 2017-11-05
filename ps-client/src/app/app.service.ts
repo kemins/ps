@@ -43,6 +43,9 @@ export class AppService {
     profile: {
       value: {},
       dirtyValue: {},
+    },
+    albums: {
+      newAlbum: {}
     }
   };
 
