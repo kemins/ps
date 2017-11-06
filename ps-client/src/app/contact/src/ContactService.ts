@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { AppActions } from '../../app.actions';
-import { Contact } from './contact.model';
 import { AppStore } from '../../app.state';
+import { IContact } from './IContact';
 
 @Injectable()
 export class ContactService {
-  constructor(private store: Store<AppStore>) {}
+  constructor(private store: Store<AppStore>) {
+  }
 
-  sendMessage = () => {
+  public sendMessage(): void {
     this.store.dispatch({
       type: AppActions.SEND_MESSAGE,
       payload: {
@@ -17,30 +18,38 @@ export class ContactService {
         token: this.getToken()
       }
     });
-  };
+  }
 
-  setToken = (token: string) => {
+  public setToken(token: string): void {
     this.store.dispatch({
       type: AppActions.SET_CONTACT_TOKEN,
       payload: token
     });
-  };
+  }
 
-  commitDirtyContact = () => {
+  public commitDirtyContact(): void {
     this.store.dispatch({
       type: AppActions.COMMIT_DIRTY_CONTACT,
       payload: this.getDirtyContact()
     });
-  };
+  }
 
-  setDirtyContact = (contact: Contact) => {
+  public setDirtyContact(contact: IContact): void {
     this.store.dispatch({
       type: AppActions.SET_DIRTY_CONTACT,
       payload: contact
     });
-  };
+  }
 
-  getContact = (): Observable<Contact> => this.store.select<Contact>('contact', 'value');
-  getDirtyContact = (): Observable<Contact> => this.store.select<Contact>('contact', 'dirtyValue');
-  getToken = (): Observable<string> => this.store.select<string>('contact', 'token');
+  public getContact(): Observable<IContact> {
+    return this.store.select<IContact>('contact', 'value');
+  }
+
+  public getDirtyContact(): Observable<IContact> {
+    return this.store.select<IContact>('contact', 'dirtyValue');
+  }
+
+  public getToken(): Observable<string> {
+    return this.store.select<string>('contact', 'token');
+  }
 }

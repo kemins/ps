@@ -1,11 +1,11 @@
 import { Observable } from 'rxjs/Observable';
 import { Slide } from './slides';
 import { IPSResponse } from './core';
-import { Contact } from './contact';
 import { BarAction } from './footer-bar';
 import { MODE } from './social-login';
 import { Profile, Picture } from './profile';
-import { IAlbum, CreateAlbumComponent } from './albums';
+import { IAlbum } from './albums';
+import { IContact } from './contact';
 
 export interface AppStore {
   notifications: Observable<Array<IPSResponse>>
@@ -15,8 +15,8 @@ export interface AppStore {
   slides: Observable<Array<Slide>>
   notes: Observable<Array<IPSResponse>>
   contact: {
-    value: Observable<Contact>,
-    dirtyValue: Observable<Contact>,
+    value: Observable<IContact>,
+    dirtyValue: Observable<IContact>,
     token: Observable<string>
   },
   profile: {

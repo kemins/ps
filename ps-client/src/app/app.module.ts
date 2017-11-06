@@ -18,7 +18,7 @@ import { UserBoardModule } from './user-board';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
 import { SideBarEffectService } from './side-bar/src/side-bar-effect.service';
-import { ContactEffectService } from './contact/src/contact-effect.service';
+import { ContactEffectService } from './contact';
 import { NotificationsEffectService } from './notifications/src/notifications-effect.service';
 import { SlidesEffectService } from './slides/src/slides-effect.service';
 import { ProfileEffectService } from './profile/src/profile-effect.service';
@@ -26,12 +26,14 @@ import { SocialLoginEffectService } from './social-login/src/social-login-effect
 import { AppEffectService } from './core/src/app-effext.service';
 import { AvatarEffectService } from './profile/src/avatar-effect.service';
 import { NewAlbumEffectService } from './albums';
+import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
     bootstrap: [App],
     declarations: [App],
     imports: [
         MaterialModule.forRoot(),
+        AlertModule.forRoot(),
         HttpModule,
         BrowserModule,
         BrowserAnimationsModule,

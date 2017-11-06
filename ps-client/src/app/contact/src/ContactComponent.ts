@@ -7,8 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { EmailValidator } from '../../validators';
 import { AppSettings } from '../../core';
-import { Contact } from './contact.model';
-import { ContactService } from './contact.service';
+import { IContact } from './IContact';
+import { ContactService } from './ContactService';
 import * as contactStyles from './contact.styl';
 import * as _ from 'lodash';
 
@@ -19,8 +19,8 @@ import * as _ from 'lodash';
   templateUrl: './contact.html'
 })
 export class ContactComponent {
-  private contact: Observable<Contact>;
-  private dirtyContact: Observable<Contact>;
+  private contact: Observable<IContact>;
+  private dirtyContact: Observable<IContact>;
   private token: Observable<string>;
   private captchaKey = '';
   private contactForm;
@@ -28,7 +28,7 @@ export class ContactComponent {
   @ViewChild('captcha')
   public captcha;
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, EmailValidator.email])],
@@ -50,14 +50,15 @@ export class ContactComponent {
     this.token = contactService.getToken();
   }
 
-  public onSubmit() {
+  public onSubmit(): void {
     this.contactService.commitDirtyContact();
     this.contactService.sendMessage();
     this.captcha.reset();
     this.handleCorrectCaptcha(null);
   }
 
-  public handleCorrectCaptcha(token) {
+  public handleCorrectCaptcha(token): void {
     this.contactService.setToken(token);
   }
 }
+

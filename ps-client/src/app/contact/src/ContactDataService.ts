@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AppSettings, PsHttp, IPSResponse } from '../../core';
-import { Contact } from './contact.model';
+import { AppSettings, IPSResponse, PsHttp } from '../../core';
+import { IContact } from './IContact';
 
 
 @Injectable()
@@ -11,7 +11,7 @@ export class ContactDataService {
   public constructor(private http: PsHttp) {
   }
 
-  public sendMessage(contact: Contact, token: string): Observable<IPSResponse> {
+  public sendMessage(contact: IContact, token: string): Observable<IPSResponse> {
     return this.http.post(this.contactUrl, {contact: contact, token: token})
       .map(res => res.json());
   }

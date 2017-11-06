@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreModule, combineReducers } from '@ngrx/store';
 import { notifications } from './notifications';
-import { contact, dirtyContact, contactToken, Contact } from './contact';
+import { contact, dirtyContact, contactToken } from './contact';
 import { slides } from './slides';
 import { AppActions } from './app.actions';
 import { IPSResponse } from './core';
@@ -16,7 +16,8 @@ import { newAlbum } from './albums/src/NewAlbumReducer';
 
 @Injectable()
 export class AppService {
-  constructor(private store: Store<AppStore>) {}
+  constructor(private store: Store<AppStore>) {
+  }
 
   getNotifications() {
     return this.store.select('notifications');
@@ -36,8 +37,8 @@ export class AppService {
       mode: MODE.NONE
     },
     contact: {
-      value: new Contact(),
-      dirtyValue: new Contact(),
+      value: {},
+      dirtyValue: {},
       token: ''
     },
     profile: {

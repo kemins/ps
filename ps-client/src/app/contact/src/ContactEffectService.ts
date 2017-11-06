@@ -4,8 +4,8 @@ import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { ContactDataService } from './../';
 import { AppActions } from '../../app.actions';
-import { IPSResponse } from '../../core/src/ps-response';
-import { ContactService } from './contact.service';
+import { IPSResponse } from '../../core';
+import { ContactService } from './ContactService';
 
 
 @Injectable()

@@ -7,7 +7,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
-import { ContactComponent, ContactService, ContactDataService, ContactEffectService } from './../';
+import { ContactComponent, ContactDataService, ContactEffectService, ContactService } from './../';
 import { ValidatorModule } from '../../validators';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ValidatorModule } from '../../validators';
     imports: [
         RouterModule,
         CoreModule,
-        AlertModule.forRoot(),
+        AlertModule,
         HttpModule,
         CommonModule,
         MaterialModule,

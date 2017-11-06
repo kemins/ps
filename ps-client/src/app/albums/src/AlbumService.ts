@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
-import { Contact } from './contact.model';
+import { IContact } from './IContact';
 import { AppStore } from '../../app.state';
 import { IAlbum } from './IAlbum';
 import { Observable } from 'rxjs/Observable';
