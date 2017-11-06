@@ -6,4 +6,7 @@ export * from './src/ProfileDataService';
 export * from './src/ProfileEffectService';
 export * from './src/ProfileReducer';
 export * from './src/ProfileDirtyReducer';
+export * from './src/AvatarEffectService';
+export * from './src/ProfileAvatarReducer';
+export * from './src/DirtyProfileAvatarReducer';
 export * from './src/Module';

@@ -3,34 +3,33 @@ import { Store, StoreModule, combineReducers } from '@ngrx/store';
 import { notifications } from './notifications';
 import { contact, dirtyContact, contactToken } from './contact';
 import { slides } from './slides';
-import { AppActions } from './app.actions';
+import { AppActions } from './AppActions';
 import { IPSResponse } from './core';
 import { socialLoginMode, MODE } from './social-login';
 import { footerActions } from './footer-bar';
-import { AppStore } from './app.state';
-import { profile, dirtyProfile } from './profile';
+import { IAppStore } from './IAppState';
+import { profile, dirtyProfile, profileAvatar, dirtyProfileAvatar } from './profile';
 import { sideBarActions, sideBarCurrentAction } from './side-bar';
-import { profileAvatar } from './profile/src/ProfileAvatarReducer';
-import { dirtyProfileAvatar } from './profile/src/DirtyProfileAvatarReducer';
-import { newAlbum } from './albums/src/NewAlbumReducer';
+import { newAlbum } from './albums';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AppService {
-  constructor(private store: Store<AppStore>) {
+  public constructor(private store: Store<IAppStore>) {
   }
 
-  getNotifications() {
-    return this.store.select('notifications');
+  public getNotifications(): Observable<IPSResponse[]> {
+    return this.store.select<IPSResponse[]>('notifications');
   }
 
-  closeNotification(notification: IPSResponse) {
+  public closeNotification(notification: IPSResponse): void {
     this.store.dispatch({
       type: AppActions.READ_NOTIFICATIONS,
       payload: notification
     })
   }
 
-  static defaultState = {
+  public static defaultState = {
     slides: [],
     notifications: [],
     socialLogin: {
@@ -50,7 +49,7 @@ export class AppService {
     }
   };
 
-  static provideStore() {
+  public static provideStore() {
     const appReducer = combineReducers({
       footerActions: footerActions,
       sideBarActions: sideBarActions,

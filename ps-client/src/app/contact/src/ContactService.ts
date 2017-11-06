@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { AppActions } from '../../app.actions';
-import { AppStore } from '../../app.state';
+import { AppActions } from '../../AppActions';
+import { IAppStore } from '../../IAppState';
 import { IContact } from './IContact';
 
 @Injectable()
 export class ContactService {
-  constructor(private store: Store<AppStore>) {
+  constructor(private store: Store<IAppStore>) {
   }
 
   public sendMessage(): void {

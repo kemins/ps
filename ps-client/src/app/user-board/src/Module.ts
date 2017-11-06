@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { UserBoardComponent } from './user-board.component';
+import { UserBoardComponent } from './UserBoardComponent';
 import { FooterBarModule } from '../../footer-bar';
 import { SideBarModule } from '../../side-bar';
 import { ProfileModule } from '../../profile';

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { IProfile } from './IProfile';
-import { AppStore } from '../../app.state';
+import { IAppStore } from '../../IAppState';
 import {
   CanActivate,
   ActivatedRouteSnapshot,
@@ -12,7 +12,7 @@ import {
 
 @Injectable()
 export class ProfileService implements CanActivate {
-  public constructor(private store: Store<AppStore>,
+  public constructor(private store: Store<IAppStore>,
                      private router: Router) {
   }
 

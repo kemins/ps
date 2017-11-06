@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { IBarAction } from './IBarAction';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 
 
 export const footerActions = (barActions: IBarAction[], action: Action) => {

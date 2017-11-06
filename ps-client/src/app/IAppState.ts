@@ -7,7 +7,7 @@ import { IProfile, IPicture } from './profile';
 import { IAlbum } from './albums';
 import { IContact } from './contact';
 
-export interface AppStore {
+export interface IAppStore {
   notifications: Observable<Array<IPSResponse>>
   socialLogin: {
     mode: Observable<MODE>

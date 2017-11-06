@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action, Store } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { ProfileService } from './ProfileService';
 import { ProfileDataService } from './ProfileDataService';
 import { IPSResponse } from '../../core';
-import { AppStore } from '../../app.state';
+import { IAppStore } from '../../IAppState';
 import { includes } from 'lodash';
 
 @Injectable()
@@ -23,7 +23,7 @@ export class AvatarEffectService {
   public constructor(private profileService: ProfileService,
                      private profileDataService: ProfileDataService,
                      private actions$: Actions,
-                     private store: Store<AppStore>) {
+                     private store: Store<IAppStore>) {
   }
 
   @Effect()

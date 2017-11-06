@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { IProfile } from './IProfile';
 
 export const dirtyProfile = (profile: IProfile, action: Action) => {

@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { IPSResponse } from '../../core';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 
 
 export const notifications = (notifications: Array<IPSResponse>, action: Action) => {

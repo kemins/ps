@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 
 export const profileAvatar = (data, action: Action) => {
   let result;

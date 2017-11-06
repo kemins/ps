@@ -22,24 +22,24 @@ import { AlbumService, CreateAlbumComponent } from '../../albums';
   templateUrl: 'user-board.html'
 })
 export class UserBoardComponent implements OnInit {
-  profile: Observable<IProfile>;
-  currentAction: Observable<IBarAction>;
+  private profile: Observable<IProfile>;
+  private currentAction: Observable<IBarAction>;
 
-  constructor(private footerBarService: FooterBarService,
-              private sideBarService: SideBarService,
-              private profileService: ProfileService,
-              private albumService: AlbumService,
-              private dialog: MdDialog) {
+  public constructor(private footerBarService: FooterBarService,
+                      private sideBarService: SideBarService,
+                      private profileService: ProfileService,
+                      private albumService: AlbumService,
+                      private dialog: MdDialog) {
     this.profile = profileService.getProfile();
     this.currentAction = sideBarService.getCurrentAction();
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.footerBarService.setActions(FOOTER_ACTIONS);
     this.sideBarService.setActions(SIDE_BarActionS);
   }
 
-  doAction(action: IBarAction) {
+  public doAction(action: IBarAction): void {
     switch (action.name) {
       case BarAction.OPEN_PROFILE:
         break;
@@ -52,17 +52,19 @@ export class UserBoardComponent implements OnInit {
     }
   }
 
-  menuClose() {
+  public menuClose(): void {
     this.sideBarService.resetCurrentAction();
   }
 
-  openProfile() {
+  public openProfile(): void {
     this.sideBarService.setCurrentActionByName(BarAction.OPEN_PROFILE);
   }
 
-  logout() {
+  public logout(): void {
     this.profileService.logout();
   }
 
-  profileAction = (action: IBarAction): boolean => action && action.name === BarAction.OPEN_PROFILE;
+  public profileAction(action: IBarAction): boolean {
+    return action && action.name === BarAction.OPEN_PROFILE;
+  }
 }

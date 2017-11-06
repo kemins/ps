@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { IBarAction } from './../../footer-bar';
-import { AppStore } from '../../app.state';
-import { AppActions } from '../../app.actions';
+import { IAppStore } from '../../IAppState';
+import { AppActions } from '../../AppActions';
 import { BarAction } from '../../footer-bar';
 
 @Injectable()
 export class SideBarService {
-  public constructor(private store: Store<AppStore>) {
+  public constructor(private store: Store<IAppStore>) {
   }
 
   public getActions(): Observable<Array<IBarAction>> {

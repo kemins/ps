@@ -1,14 +1,14 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AppService } from './app.service';
+import { AppService } from './AppService';
 import { SocialLoginService } from './social-login';
-import { IPSResponse, HttpService } from './core';
+import { HttpService, IPSResponse } from './core';
 import * as normalizeStyles from 'normalize.css/normalize.css';
 import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrapThemeStyles from 'bootstrap/dist/css/bootstrap-theme.min.css';
 import * as appStyles from './app.styl';
 import * as mdStyles from '@angular/material/prebuilt-themes/deeppurple-amber.css';
-import { MODE } from './social-login/src/social-login.service';
+import { MODE } from './social-login/src/SocialLoginService';
 import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 import { Subscription } from 'rxjs';
 
@@ -37,8 +37,9 @@ export class App implements OnDestroy {
   slMode: Observable<MODE>;
   private nSubscription: Subscription;
 
-  constructor(private appState: AppService, private psHtp: HttpService, private socialLoginService: SocialLoginService,
-              private snackBar: MdSnackBar, private ref: ChangeDetectorRef) {
+  public constructor(private appState: AppService, private psHtp: HttpService,
+                     private socialLoginService: SocialLoginService,
+                     private snackBar: MdSnackBar, private ref: ChangeDetectorRef) {
     this.notifications = appState.getNotifications()
       .map((notifications: IPSResponse[]) => notifications.filter(({read}) => !read));
 
@@ -50,26 +51,26 @@ export class App implements OnDestroy {
     this.slMode = socialLoginService.getMode();
   }
 
-  get pendingRequests() {
+  public get pendingRequests() {
     return this.psHtp.pendingRequests;
   }
 
-  isSocialLogin(mode: MODE) {
+  public isSocialLogin(mode: MODE): boolean {
     return mode == MODE.SIGN_UP || mode == MODE.SIGN_IN;
   }
 
-  openNotification = (notification: IPSResponse) => {
+  public openNotification = (notification: IPSResponse): void => {
     const config = new MdSnackBarConfig();
     config.duration = 3000;
 
     this.snackBar.open(notification.message, '', config);
   };
 
-  closeSocialLogin() {
+  public closeSocialLogin(): void {
     this.socialLoginService.setMode(MODE.NONE);
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.nSubscription.unsubscribe();
   }
 }

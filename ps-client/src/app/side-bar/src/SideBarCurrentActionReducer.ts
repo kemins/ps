@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { IBarAction } from './../../footer-bar';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 
 
 export const sideBarCurrentAction = (barActions: IBarAction, action: Action) => {

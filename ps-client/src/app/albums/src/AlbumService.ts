@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { IContact } from './IContact';
-import { AppStore } from '../../app.state';
+import { IAppStore } from '../../IAppState';
 import { IAlbum } from './IAlbum';
 import { Observable } from 'rxjs/Observable';
 import { CreateAlbumComponent } from './CreateAlbumComponent';
@@ -12,7 +12,7 @@ import { MdDialogRef } from '@angular/material';
 export class AlbumService {
   private _albumDialog: MdDialogRef<CreateAlbumComponent>;
 
-  public constructor(private store: Store<AppStore>) {
+  public constructor(private store: Store<IAppStore>) {
   }
 
   public setNewAlbum(album: IAlbum): void {

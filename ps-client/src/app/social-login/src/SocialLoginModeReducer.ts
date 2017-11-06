@@ -1,16 +1,16 @@
 import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
+import { MODE } from './SocialLoginService';
 
-export const contactToken = (token: string, action: Action) => {
-  let result: string;
+export const socialLoginMode = (mode: MODE, action: Action) => {
+  let result: MODE;
 
   switch (action.type) {
-    case AppActions.SET_CONTACT_TOKEN:
+    case AppActions.SL_SET_MODE:
       result = action.payload;
       break;
-
     default:
-      result = token;
+      result = mode;
       break;
   }
 

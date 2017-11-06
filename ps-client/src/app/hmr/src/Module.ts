@@ -1,11 +1,11 @@
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { ApplicationRef } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
-import { AppStore } from '../../app.state';
+import { AppActions } from '../../AppActions';
+import { IAppStore } from '../../IAppState';
 
 export class HMRModule {
-  public constructor(private appRef: ApplicationRef, private appStore: Store<AppStore>) {
+  public constructor(private appRef: ApplicationRef, private appStore: Store<IAppStore>) {
   }
 
   public hmrOnInit(store): void {

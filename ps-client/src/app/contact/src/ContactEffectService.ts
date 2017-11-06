@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { ContactDataService } from './../';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { IPSResponse } from '../../core';
 import { ContactService } from './ContactService';
 

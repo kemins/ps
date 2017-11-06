@@ -1,2 +1,2 @@
-export * from './src/validators.module';
-export * from './src/email-validator.directive';
+export * from './src/Module';
+export * from './src/EmailValidator';

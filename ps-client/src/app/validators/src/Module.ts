@@ -1,6 +1,6 @@
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { EmailValidator } from './email-validator.directive';
+import { EmailValidator } from './EmailValidator';
 
 @NgModule({
     imports:      [ FormsModule ],

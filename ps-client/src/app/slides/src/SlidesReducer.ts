@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { ISlide } from './ISlide';
 
 export const slides = (slides: ISlide[], action: Action) => {

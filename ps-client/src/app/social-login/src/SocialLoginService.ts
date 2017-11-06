@@ -1,32 +1,34 @@
 import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { AppSettings } from '../../core';
-import { AppActions } from '../../app.actions';
+import { AppActions } from '../../AppActions';
 import { Observable } from 'rxjs';
-import { AppStore } from '../../app.state';
+import { IAppStore } from '../../IAppState';
 
 export enum MODE {SIGN_IN, SIGN_UP, NONE}
 
 @Injectable()
 export class SocialLoginService {
-  constructor(private store: Store<AppStore>) {
+  private oneallSsubdomain: string = 'photo-state';
+  private rootUrl = AppSettings.getSetting('endpoint');
+  private authenticationEndpoint: string = `${this.rootUrl}users/authenticate`;
+
+  public constructor(private store: Store<IAppStore>) {
     this.bootstrap();
     this.showLoginWidget();
   }
 
-  setMode = (value: MODE) => {
+  public setMode(value: MODE) {
     this.store.dispatch({type: AppActions.SL_SET_MODE, payload: value});
-  };
+  }
 
-  getMode = (): Observable<MODE> => this.store.select<MODE>('socialLogin', 'mode');
+  public getMode(): Observable<MODE> {
+    return this.store.select<MODE>('socialLogin', 'mode');
+  }
 
-  oneallSsubdomain: string = 'photo-state';
-  rootUrl = AppSettings.getSetting('endpoint');
-  authenticationEndpoint: string = this.rootUrl + 'users/authenticate';
-
-  bootstrap() {
+  public bootstrap() {
     /* The library is loaded asynchronously */
-    let oa = document.createElement('script');
+    const oa = document.createElement('script');
 
     oa.type = 'text/javascript';
     oa.async = true;
@@ -36,12 +38,12 @@ export class SocialLoginService {
     return this;
   }
 
-  showLoginWidget() {
+  public showLoginWidget() {
     if (!window['_oneall']) {
       window['_oneall'] = [];
     }
 
-    let oneall = window['_oneall'];
+    const oneall = window['_oneall'];
     oneall.push(['social_login', 'set_providers', ['facebook', 'google']]);
     oneall.push(['social_login', 'set_event', 'on_login_redirect', this.onLoginRedirect]);
     oneall.push(['social_login', 'set_callback_uri', this.authenticationEndpoint]);
@@ -53,7 +55,7 @@ export class SocialLoginService {
     return this;
   }
 
-  onLoginRedirect = (data) => {
+  public onLoginRedirect = (data) => {
     let types = {
       [MODE.SIGN_IN]: AppActions.SIGN_IN_WITH_TOKE,
       [MODE.SIGN_UP]: AppActions.SIGN_UP_WITH_TOKE,
