@@ -5,12 +5,12 @@ import { Contact } from './contact.model';
 import { AppStore } from '../../app.state';
 import { IAlbum } from './IAlbum';
 import { Observable } from 'rxjs/Observable';
-import { CreateAlbumComponent } from './create-album.component';
+import { CreateAlbumComponent } from './CreateAlbumComponent';
 import { MdDialogRef } from '@angular/material';
 
 @Injectable()
 export class AlbumService {
-  private newAlbumDialog: MdDialogRef<CreateAlbumComponent>;
+  private _albumDialog: MdDialogRef<CreateAlbumComponent>;
 
   public constructor(private store: Store<AppStore>) {
   }
@@ -26,12 +26,12 @@ export class AlbumService {
     return this.store.select<IAlbum>('albums', 'newAlbum');
   }
 
-  public getAlbumDialog(): MdDialogRef<CreateAlbumComponent> {
-    return this.newAlbumDialog;
+  public get albumDialog(): MdDialogRef<CreateAlbumComponent> {
+    return this._albumDialog;
   }
 
-  public setAlbumDialog(dialog: MdDialogRef<CreateAlbumComponent>): void {
-    this.newAlbumDialog = dialog;
+  public set albumDialog(dialog: MdDialogRef<CreateAlbumComponent>) {
+    this._albumDialog = dialog;
   }
 
   public createAlbum(): void {

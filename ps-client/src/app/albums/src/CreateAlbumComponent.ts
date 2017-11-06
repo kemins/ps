@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as createAlbumStyles from './create-album.styl';
 import { MdDialogRef } from '@angular/material';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AlbumService } from './album.service';
+import { AlbumService } from './AlbumService';
 
 @Component({
   selector: 'ps-create-album',
@@ -19,7 +19,7 @@ export class CreateAlbumComponent implements OnInit {
 
   }
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.albumForm = this.formBuilder.group({
       name: ['', Validators.required],
       description: ['']
@@ -29,11 +29,11 @@ export class CreateAlbumComponent implements OnInit {
       .subscribe((album) => this.albumService.setNewAlbum(album))
   }
 
-  public cancel() {
+  public cancel(): void {
     this.dialogRef.close();
   }
 
-  public create() {
+  public create(): void {
     this.albumService.createAlbum()
   }
 }

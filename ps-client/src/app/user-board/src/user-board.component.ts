@@ -13,8 +13,7 @@ import {
 import { Profile, ProfileService } from '../../profile';
 import { Observable } from 'rxjs';
 import { MdDialog } from '@angular/material';
-import { CreateAlbumComponent } from '../../albums';
-import { AlbumService } from '../../albums/src/album.service';
+import { AlbumService, CreateAlbumComponent } from '../../albums';
 
 @Component({
   selector: 'user-board',
@@ -45,9 +44,9 @@ export class UserBoardComponent implements OnInit {
       case BAR_ACTION.OPEN_PROFILE:
         break;
       case BAR_ACTION.CREATE_ALBUM:
-        this.albumService.setAlbumDialog(this.dialog.open<CreateAlbumComponent>(CreateAlbumComponent, {
+        this.albumService.albumDialog = this.dialog.open<CreateAlbumComponent>(CreateAlbumComponent, {
           width: '400px'
-        }));
+        });
 
         break;
     }

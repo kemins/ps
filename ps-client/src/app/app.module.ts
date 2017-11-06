@@ -25,7 +25,7 @@ import { ProfileEffectService } from './profile/src/profile-effect.service';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
 import { AppEffectService } from './core/src/app-effext.service';
 import { AvatarEffectService } from './profile/src/avatar-effect.service';
-import { NewAlbumEffectService } from './albums/src/new-album-effect.service';
+import { NewAlbumEffectService } from './albums';
 
 @NgModule({
     bootstrap: [App],

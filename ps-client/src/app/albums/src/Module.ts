@@ -8,10 +8,10 @@ import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { AlbumsComponent } from './../';
 import { ValidatorModule } from '../../validators';
-import { CreateAlbumComponent } from './create-album.component';
-import { AlbumService } from './album.service';
-import { AlbumDataService } from './album-data.service';
-import { NewAlbumEffectService } from './new-album-effect.service';
+import { CreateAlbumComponent } from './CreateAlbumComponent';
+import { AlbumService } from './AlbumService';
+import { AlbumDataService } from './AlbumDataService';
+import { NewAlbumEffectService } from './NewAlbumEffectService';
 
 
 @NgModule({

@@ -5,9 +5,7 @@ import { Contact } from './contact';
 import { BarAction } from './footer-bar';
 import { MODE } from './social-login';
 import { Profile, Picture } from './profile';
-import { IAlbum } from './albums/src/IAlbum';
-import { MdDialogRef } from '@angular/material';
-import { CreateAlbumComponent } from './albums/src/create-album.component';
+import { IAlbum, CreateAlbumComponent } from './albums';
 
 export interface AppStore {
   notifications: Observable<Array<IPSResponse>>

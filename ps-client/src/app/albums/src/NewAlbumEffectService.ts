@@ -6,9 +6,8 @@ import { AppActions } from '../../app.actions';
 import { ProfileService } from './profile.service';
 import { ProfileDataService } from './profile-data.service';
 import { IPSResponse } from '../../core/src/ps-response';
-import { AlbumService } from './album.service';
-import { AlbumDataService } from './album-data.service';
-import { IAlbum } from './IAlbum';
+import { AlbumService } from './AlbumService';
+import { AlbumDataService } from './AlbumDataService';
 
 @Injectable()
 export class NewAlbumEffectService {
@@ -27,7 +26,7 @@ export class NewAlbumEffectService {
     .ofType(AppActions.CREATE_NEW_ALBUM)
     .withLatestFrom(this.albumService.getNewAlbum())
     .switchMap(([action, album]) => this.albumDataService.create(album))
-    .do(() => this.albumService.getAlbumDialog().close())
+    .do(() => this.albumService.albumDialog.close())
     .map((res: IPSResponse) => ({
       type: this.types[res.type],
       payload: {

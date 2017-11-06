@@ -12,7 +12,7 @@ import { profile, dirtyProfile } from './profile';
 import { sideBarActions, sideBarCurrentAction } from './side-bar';
 import { profileAvatar } from './profile/src/profile-avatar.reducer';
 import { dirtyProfileAvatar } from './profile/src/dirty-profile-avatar.reducer';
-import { newAlbum } from './albums/src/new-album.reducer';
+import { newAlbum } from './albums/src/NewAlbumReducer';
 
 @Injectable()
 export class AppService {
