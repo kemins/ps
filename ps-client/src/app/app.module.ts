@@ -20,7 +20,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { SideBarEffectService } from './side-bar/src/SideBarEffectService';
 import { ContactEffectService } from './contact';
 import { NotificationsEffectService } from './notifications/src/notifications-effect.service';
-import { SlidesEffectService } from './slides/src/slides-effect.service';
+import { SlidesEffectService } from './slides/src/SlidesEffectService';
 import { ProfileEffectService } from './profile/src/ProfileEffectService';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
 import { AvatarEffectService } from './profile/src/AvatarEffectService';

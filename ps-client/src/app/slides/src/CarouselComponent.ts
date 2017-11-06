@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Slide } from './slide.model';
-import { SlideService } from './slides.service';
+import { ISlide } from './ISlide';
+import { SlideService } from './SlidesService';
 
 import * as carouselStyles from './carousel.styl';
 
@@ -13,9 +13,9 @@ import * as carouselStyles from './carousel.styl';
 })
 export class Carousel {
 
-  public slides: Observable<Array<Slide>>;
+  public slides: Observable<Array<ISlide>>;
 
-  constructor(private slideService: SlideService) {
+  public constructor(private slideService: SlideService) {
     this.slides = this.slideService.getSlides();
     this.slideService.fetchSlides();
   }

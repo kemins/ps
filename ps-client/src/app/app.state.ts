@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import { Slide } from './slides';
+import { ISlide } from './slides';
 import { IPSResponse } from './core';
 import { IBarAction } from './footer-bar';
 import { MODE } from './social-login';
@@ -12,7 +12,7 @@ export interface AppStore {
   socialLogin: {
     mode: Observable<MODE>
   },
-  slides: Observable<Array<Slide>>
+  slides: Observable<Array<ISlide>>
   notes: Observable<Array<IPSResponse>>
   contact: {
     value: Observable<IContact>,
