@@ -47,7 +47,7 @@ export class AppActions {
   public static SET_FOOTER_ACTIONS: string = 'SET_FOOTER_ACTIONS';
 
   // side bar
-  public static SET_SIDE_BAR_ACTIONS: string = 'SET_SIDE_BAR_ACTIONS';
+  public static SET_SIDE_BarActionS: string = 'SET_SIDE_BarActionS';
   public static SET_CURRENT_ACTION: string = 'SET_CURRENT_ACTION';
   public static SET_CURRENT_ACTION_BY_NAME: string = 'SET_CURRENT_ACTION_BY_NAME';
 

@@ -21,9 +21,9 @@ import { SideBarEffectService } from './side-bar/src/side-bar-effect.service';
 import { ContactEffectService } from './contact';
 import { NotificationsEffectService } from './notifications/src/notifications-effect.service';
 import { SlidesEffectService } from './slides/src/slides-effect.service';
-import { ProfileEffectService } from './profile/src/profile-effect.service';
+import { ProfileEffectService } from './profile/src/ProfileEffectService';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
-import { AvatarEffectService } from './profile/src/avatar-effect.service';
+import { AvatarEffectService } from './profile/src/AvatarEffectService';
 import { NewAlbumEffectService } from './albums';
 import { AlertModule } from 'ngx-bootstrap';
 

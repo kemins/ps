@@ -4,12 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { HttpModule } from '@angular/http';
-import { CoreModule } from './../../core';
+import { CoreModule, FileUploaderService } from './../../core';
 import { RouterModule } from '@angular/router';
-import { ProfileComponent, ProfileService, ProfileDataService, ProfileEffectService } from './../';
+import { ProfileComponent, ProfileDataService, ProfileEffectService, ProfileService } from './../';
 import { ValidatorModule } from '../../validators';
-import { FileUploaderService } from '../../core';
-
 
 @NgModule({
   declarations: [
@@ -35,6 +33,6 @@ import { FileUploaderService } from '../../core';
   ]
 })
 export class ProfileModule {
-  constructor() {
+  public constructor() {
   }
 }

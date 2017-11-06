@@ -3,7 +3,7 @@ import { Slide } from './slides';
 import { IPSResponse } from './core';
 import { IBarAction } from './footer-bar';
 import { MODE } from './social-login';
-import { Profile, Picture } from './profile';
+import { IProfile, IPicture } from './profile';
 import { IAlbum } from './albums';
 import { IContact } from './contact';
 
@@ -20,10 +20,10 @@ export interface AppStore {
     token: Observable<string>
   },
   profile: {
-    value: Observable<Profile>,
-    dirtyValue: Observable<Profile>,
-    avatar: Observable<Picture>
-    dirtyAvatar: Observable<Picture>
+    value: Observable<IProfile>,
+    dirtyValue: Observable<IProfile>,
+    avatar: Observable<IPicture>
+    dirtyAvatar: Observable<IPicture>
   },
   albums: {
     newAlbum: Observable<IAlbum>

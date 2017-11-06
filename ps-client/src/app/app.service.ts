@@ -10,8 +10,8 @@ import { footerActions } from './footer-bar';
 import { AppStore } from './app.state';
 import { profile, dirtyProfile } from './profile';
 import { sideBarActions, sideBarCurrentAction } from './side-bar';
-import { profileAvatar } from './profile/src/profile-avatar.reducer';
-import { dirtyProfileAvatar } from './profile/src/dirty-profile-avatar.reducer';
+import { profileAvatar } from './profile/src/ProfileAvatarReducer';
+import { dirtyProfileAvatar } from './profile/src/DirtyProfileAvatarReducer';
 import { newAlbum } from './albums/src/NewAlbumReducer';
 
 @Injectable()

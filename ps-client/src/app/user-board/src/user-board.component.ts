@@ -8,9 +8,9 @@ import {
 } from '../../footer-bar';
 import {
   SideBarService,
-  USER_ACTIONS as SIDE_BAR_ACTIONS
+  USER_ACTIONS as SIDE_BarActionS
 } from '../../side-bar';
-import { Profile, ProfileService } from '../../profile';
+import { IProfile, ProfileService } from '../../profile';
 import { Observable } from 'rxjs';
 import { MdDialog } from '@angular/material';
 import { AlbumService, CreateAlbumComponent } from '../../albums';
@@ -22,7 +22,7 @@ import { AlbumService, CreateAlbumComponent } from '../../albums';
   templateUrl: 'user-board.html'
 })
 export class UserBoardComponent implements OnInit {
-  profile: Observable<Profile>;
+  profile: Observable<IProfile>;
   currentAction: Observable<IBarAction>;
 
   constructor(private footerBarService: FooterBarService,
@@ -36,7 +36,7 @@ export class UserBoardComponent implements OnInit {
 
   ngOnInit() {
     this.footerBarService.setActions(FOOTER_ACTIONS);
-    this.sideBarService.setActions(SIDE_BAR_ACTIONS);
+    this.sideBarService.setActions(SIDE_BarActionS);
   }
 
   doAction(action: IBarAction) {

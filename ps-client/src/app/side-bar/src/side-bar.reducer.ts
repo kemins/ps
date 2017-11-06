@@ -7,7 +7,7 @@ export const sideBarActions = (barActions: IBarAction[], action: Action) => {
     let result: IBarAction[];
 
     switch (action.type) {
-        case AppActions.SET_SIDE_BAR_ACTIONS:
+        case AppActions.SET_SIDE_BarActionS:
             result = [... action.payload];
             break;
 

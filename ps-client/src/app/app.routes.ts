@@ -4,7 +4,7 @@ import { AlbumsComponent } from './albums';
 import { ContactComponent } from './contact';
 import { UserBoardComponent } from './user-board';
 import { GuestBoardComponent } from './guest-board';
-import { ProfileService } from './profile/src/profile.service';
+import { ProfileService } from './profile/src/ProfileService';
 
 export const ROUTES: Routes = [
   {

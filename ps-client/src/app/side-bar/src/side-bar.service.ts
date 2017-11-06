@@ -14,7 +14,7 @@ export class SideBarService {
   getActions = (): Observable<Array<IBarAction>> => this.store.select<IBarAction[]>('sideBarActions');
 
   setActions = (actions: IBarAction[]) => this.store.dispatch({
-    type: AppActions.SET_SIDE_BAR_ACTIONS,
+    type: AppActions.SET_SIDE_BarActionS,
     payload: actions
   });
 

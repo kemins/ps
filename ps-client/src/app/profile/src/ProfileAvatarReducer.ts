@@ -1,13 +1,15 @@
 import { Action } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
-import { Profile } from './profile.model';
 
-
-export const dirtyProfile = (profile: Profile, action: Action) => {
-  let result: Profile;
+export const profileAvatar = (data, action: Action) => {
+  let result;
 
   switch (action.type) {
-    case AppActions.SET_DIRTY_PROFILE:
+    case AppActions.USER_AUTH_SUCCESS:
+      result = {...action.payload.body.picture};
+      break;
+
+    case AppActions.SET_AVATAR:
       result = {...action.payload};
       break;
 
@@ -15,7 +17,7 @@ export const dirtyProfile = (profile: Profile, action: Action) => {
       result = {};
 
     default:
-      result = profile;
+      result = data;
       break;
   }
 

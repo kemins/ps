@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Response, RequestOptions } from '@angular/http';
+import { Response } from '@angular/http';
 import { AppSettings, HttpService } from '../../core';
-import { Profile } from './profile.model';
-import { Headers } from 'ng2-file-upload';
+import { IProfile } from './IProfile';
 
 @Injectable()
 export class ProfileDataService {
@@ -13,7 +12,7 @@ export class ProfileDataService {
   public constructor(private http: HttpService) {
   }
 
-  public save(profile: Profile) {
+  public save(profile: IProfile) {
     return this.http.post(this.profileUrl, {profile})
       .map((response: Response) => response.json());
   }

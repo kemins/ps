@@ -3,9 +3,9 @@ import { Observable } from 'rxjs/Observable';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action, Store } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
-import { ProfileService } from './profile.service';
-import { ProfileDataService } from './profile-data.service';
-import { IPSResponse } from '../../core/src/IPSResponse';
+import { ProfileService } from './ProfileService';
+import { ProfileDataService } from './ProfileDataService';
+import { IPSResponse } from '../../core';
 import { AppStore } from '../../app.state';
 import { includes } from 'lodash';
 

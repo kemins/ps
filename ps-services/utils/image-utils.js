@@ -126,7 +126,7 @@ class ImageUtils {
           reject(error);
         } else {
           console.log('Metadata received for image: ', input);
-          meta = value['Profile-EXIF'];
+          meta = value['IProfile-EXIF'];
           resolve(meta);
         }
       });

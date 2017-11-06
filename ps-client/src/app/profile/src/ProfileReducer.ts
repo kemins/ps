@@ -1,10 +1,9 @@
 import { Action } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
-import { Profile } from './profile.model';
+import { IProfile } from './IProfile';
 
-
-export const profile = (profile: Profile, action: Action) => {
-  let result: Profile;
+export const profile = (profile: IProfile, action: Action) => {
+  let result: IProfile;
 
   switch (action.type) {
     case AppActions.SET_PROFILE:
