@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, OnDestroy, Chang
 import { Observable } from 'rxjs/Observable';
 import { AppService } from './app.service';
 import { SocialLoginService } from './social-login';
-import { IPSResponse, PsHttp } from './core';
+import { IPSResponse, HttpService } from './core';
 import * as normalizeStyles from 'normalize.css/normalize.css';
 import * as bootstrapStyles from 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrapThemeStyles from 'bootstrap/dist/css/bootstrap-theme.min.css';
@@ -37,7 +37,7 @@ export class App implements OnDestroy {
   slMode: Observable<MODE>;
   private nSubscription: Subscription;
 
-  constructor(private appState: AppService, private psHtp: PsHttp, private socialLoginService: SocialLoginService,
+  constructor(private appState: AppService, private psHtp: HttpService, private socialLoginService: SocialLoginService,
               private snackBar: MdSnackBar, private ref: ChangeDetectorRef) {
     this.notifications = appState.getNotifications()
       .map((notifications: IPSResponse[]) => notifications.filter(({read}) => !read));

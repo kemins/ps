@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import { Slide } from './slides';
 import { IPSResponse } from './core';
-import { BarAction } from './footer-bar';
+import { IBarAction } from './footer-bar';
 import { MODE } from './social-login';
 import { Profile, Picture } from './profile';
 import { IAlbum } from './albums';
@@ -28,7 +28,7 @@ export interface AppStore {
   albums: {
     newAlbum: Observable<IAlbum>
   },
-  footerActions: Observable<Array<BarAction>>;
-  sideBarActions: Observable<Array<BarAction>>;
-  sideBarCurrentAction: Observable<BarAction>
+  footerActions: Observable<Array<IBarAction>>;
+  sideBarActions: Observable<Array<IBarAction>>;
+  sideBarCurrentAction: Observable<IBarAction>
 }

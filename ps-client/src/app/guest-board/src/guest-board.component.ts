@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import * as guestBoardStyles from './guest-board.styl';
-import { FooterBarService, GUEST_ACTIONS as FOOTER_ACTIONS, BarAction, BAR_ACTION } from '../../footer-bar';
+import { FooterBarService, GUEST_ACTIONS as FOOTER_ACTIONS, IBarAction, BarAction } from '../../footer-bar';
 import { MODE, SocialLoginService } from '../../social-login';
 import { SideBarService, GUEST_ACTIONS as SIDE_BAR_ACTIONS } from '../../side-bar';
 
@@ -29,13 +29,13 @@ export class GuestBoardComponent implements OnInit {
     this.socialLoginService.setMode(MODE.SIGN_IN);
   }
 
-  doAction(action: BarAction) {
+  doAction(action: IBarAction) {
     switch (action.name) {
-      case BAR_ACTION.SIGN_IN:
+      case BarAction.SIGN_IN:
         this.openSignIn();
         break;
 
-      case BAR_ACTION.SIGN_UP:
+      case BarAction.SIGN_UP:
         this.openSignUp();
         break;
     }

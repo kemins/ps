@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import * as sideBarStyles from './side-bar.styl';
 import { Observable } from 'rxjs';
-import { BarAction } from '../../footer-bar/src/bar-action.model';
+import { IBarAction } from '../../footer-bar/src/IBarAction';
 import { SideBarService } from './side-bar.service';
 
 @Component({
@@ -17,7 +17,7 @@ import { SideBarService } from './side-bar.service';
   templateUrl: './side-bar.html'
 })
 export class SideBarComponent implements OnInit {
-  public actions: Observable<BarAction[]>;
+  public actions: Observable<IBarAction[]>;
 
   public ngOnInit() {
   }
@@ -29,7 +29,7 @@ export class SideBarComponent implements OnInit {
     this.actions = sideBarService.getActions();
   }
 
-  public doAction(action: BarAction) {
+  public doAction(action: IBarAction) {
     this.sideBarService.setCurrentAction(action);
     this.actionDone.emit(action);
   }

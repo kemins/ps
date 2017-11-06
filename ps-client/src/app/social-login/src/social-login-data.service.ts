@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
 import * as _ from 'lodash';
-import { PsHttp } from '../../core';
+import { HttpService } from '../../core';
 
 @Injectable()
 export class SocialLoginDataService {
-  public constructor(private http: PsHttp) {
+  public constructor(private http: HttpService) {
   }
 
   public signIn({callback_uri, connection}) {

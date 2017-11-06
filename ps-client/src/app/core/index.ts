@@ -1,8 +1,8 @@
-export * from './src/core.module';
+export * from './src/Module';
 
-export * from './src/app-settings';
-export * from './src/ps-http.service';
-export * from './src/ps-response';
-export * from './src/app-effext.service';
-export * from './src/file-uploader.service';
+export * from './src/AppSettings';
+export * from './src/HttpService';
+export * from './src/IPSResponse';
+export * from './src/AppEffectService';
+export * from './src/FileUploaderService';
 export * from './src/rx-extensions';

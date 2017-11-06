@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { App } from './app.component';
-import { CoreModule } from './core';
+import { CoreModule, AppEffectService } from './core';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppService } from './app.service';
 import { NotificationsModule } from './notifications';
@@ -23,7 +23,6 @@ import { NotificationsEffectService } from './notifications/src/notifications-ef
 import { SlidesEffectService } from './slides/src/slides-effect.service';
 import { ProfileEffectService } from './profile/src/profile-effect.service';
 import { SocialLoginEffectService } from './social-login/src/social-login-effect.service';
-import { AppEffectService } from './core/src/app-effext.service';
 import { AvatarEffectService } from './profile/src/avatar-effect.service';
 import { NewAlbumEffectService } from './albums';
 import { AlertModule } from 'ngx-bootstrap';

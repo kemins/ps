@@ -6,7 +6,7 @@ import { Profile } from './profile.model';
 import { ProfileService } from './profile.service';
 import * as profileStyles from './profile.styl';
 import * as _ from 'lodash';
-import { FileUploader } from '../../core';
+import { FileUploaderService } from '../../core';
 import { Subscription } from 'rxjs/Subscription';
 
 
@@ -56,7 +56,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public constructor(private profileService: ProfileService,
                      private formBuilder: FormBuilder,
-                     private fileUploader: FileUploader) {
+                     private fileUploader: FileUploaderService) {
     this.profile = profileService.getProfile();
     this.dirtyProfile = profileService.getDirtyProfile();
     this.dirtyAvatar = profileService.getDirtyAvatar();

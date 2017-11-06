@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { PsHttp } from './ps-http.service';
+import { HttpService } from './HttpService';
 import { HttpModule } from '@angular/http';
 
 
 @NgModule({
     imports: [ HttpModule ],
-    providers: [ PsHttp ]
+    providers: [ HttpService ]
 })
 
 export class CoreModule {}

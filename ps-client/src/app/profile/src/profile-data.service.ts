@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Response, RequestOptions } from '@angular/http';
-import { AppSettings, PsHttp } from '../../core';
+import { AppSettings, HttpService } from '../../core';
 import { Profile } from './profile.model';
 import { Headers } from 'ng2-file-upload';
 
@@ -10,7 +10,7 @@ export class ProfileDataService {
   private avatarUrl = AppSettings.getSetting('endpoint') + 'profile/avatar';
   private logoutUrl = AppSettings.getSetting('endpoint') + 'profile/logout';
 
-  public constructor(private http: PsHttp) {
+  public constructor(private http: HttpService) {
   }
 
   public save(profile: Profile) {

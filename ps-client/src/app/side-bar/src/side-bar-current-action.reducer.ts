@@ -1,10 +1,10 @@
 import { Action } from '@ngrx/store';
-import { BarAction } from './../../footer-bar';
+import { IBarAction } from './../../footer-bar';
 import { AppActions } from '../../app.actions';
 
 
-export const sideBarCurrentAction = (barActions: BarAction, action: Action) => {
-    let result: BarAction;
+export const sideBarCurrentAction = (barActions: IBarAction, action: Action) => {
+    let result: IBarAction;
 
     switch (action.type) {
         case AppActions.SET_CURRENT_ACTION:

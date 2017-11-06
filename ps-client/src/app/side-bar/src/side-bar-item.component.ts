@@ -3,7 +3,7 @@ import {
   EventEmitter,
   Input, Output
 } from '@angular/core';
-import { BarAction } from '../../footer-bar';
+import { IBarAction } from '../../footer-bar';
 
 @Component({
   selector: 'ps-side-bar-item',
@@ -11,10 +11,10 @@ import { BarAction } from '../../footer-bar';
 })
 export class SideBarItemComponent {
   @Input()
-  public action: BarAction;
+  public action: IBarAction;
 
   @Output()
-  public actionDone: EventEmitter<BarAction> = new EventEmitter<BarAction>();
+  public actionDone: EventEmitter<IBarAction> = new EventEmitter<IBarAction>();
 
   public doAction(action) {
     if (action.button) {

@@ -1,31 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { BarAction } from './../../footer-bar';
+import { IBarAction } from './../../footer-bar';
 import { AppStore } from '../../app.state';
 import { AppActions } from '../../app.actions';
-import { BAR_ACTION } from '../../footer-bar';
+import { BarAction } from '../../footer-bar';
 
 @Injectable()
 export class SideBarService {
   constructor(private store: Store<AppStore>) {
   }
 
-  getActions = (): Observable<Array<BarAction>> => this.store.select<BarAction[]>('sideBarActions');
+  getActions = (): Observable<Array<IBarAction>> => this.store.select<IBarAction[]>('sideBarActions');
 
-  setActions = (actions: BarAction[]) => this.store.dispatch({
+  setActions = (actions: IBarAction[]) => this.store.dispatch({
     type: AppActions.SET_SIDE_BAR_ACTIONS,
     payload: actions
   });
 
-  getCurrentAction = (): Observable<BarAction> => this.store.select<BarAction>('sideBarCurrentAction');
+  getCurrentAction = (): Observable<IBarAction> => this.store.select<IBarAction>('sideBarCurrentAction');
 
-  setCurrentAction = (action: BarAction) => this.store.dispatch({
+  setCurrentAction = (action: IBarAction) => this.store.dispatch({
     type: AppActions.SET_CURRENT_ACTION,
     payload: action
   });
 
-  setCurrentActionByName = (name: BAR_ACTION) => this.store.dispatch({
+  setCurrentActionByName = (name: BarAction) => this.store.dispatch({
     type: AppActions.SET_CURRENT_ACTION_BY_NAME,
     payload: {
       actions: this.getActions(),
@@ -35,7 +35,7 @@ export class SideBarService {
 
   resetCurrentAction = () => this.store.dispatch({
     type: AppActions.SET_CURRENT_ACTION,
-    payload: BAR_ACTION.NONE
+    payload: BarAction.NONE
   });
 }
 
@@ -45,12 +45,12 @@ export const GUEST_ACTIONS = [{
   icon: 'home'
 }, {
   label: 'Sign In',
-  name: BAR_ACTION.SIGN_IN,
+  name: BarAction.SIGN_IN,
   button: true,
   icon: 'account_circle'
 }, {
   label: 'Sign Up',
-  name: BAR_ACTION.SIGN_UP,
+  name: BarAction.SIGN_UP,
   button: true,
   icon: 'person_add'
 }, {
@@ -65,7 +65,7 @@ export const USER_ACTIONS = [{
   icon: 'home'
 }, {
   label: 'Profile',
-  name: BAR_ACTION.OPEN_PROFILE,
+  name: BarAction.OPEN_PROFILE,
   button: true,
   icon: 'account_circle'
 }, {
@@ -85,7 +85,7 @@ export const USER_ACTIONS = [{
     {
       label: 'Create',
       button: true,
-      name: BAR_ACTION.CREATE_ALBUM,
+      name: BarAction.CREATE_ALBUM,
       icon: 'library_add'
     }
   ]

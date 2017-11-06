@@ -3,8 +3,8 @@ import * as userBoardStyles from './user-board.styl';
 import {
   FooterBarService,
   USER_ACTIONS as FOOTER_ACTIONS,
-  BarAction,
-  BAR_ACTION
+  IBarAction,
+  BarAction
 } from '../../footer-bar';
 import {
   SideBarService,
@@ -23,7 +23,7 @@ import { AlbumService, CreateAlbumComponent } from '../../albums';
 })
 export class UserBoardComponent implements OnInit {
   profile: Observable<Profile>;
-  currentAction: Observable<BarAction>;
+  currentAction: Observable<IBarAction>;
 
   constructor(private footerBarService: FooterBarService,
               private sideBarService: SideBarService,
@@ -39,11 +39,11 @@ export class UserBoardComponent implements OnInit {
     this.sideBarService.setActions(SIDE_BAR_ACTIONS);
   }
 
-  doAction(action: BarAction) {
+  doAction(action: IBarAction) {
     switch (action.name) {
-      case BAR_ACTION.OPEN_PROFILE:
+      case BarAction.OPEN_PROFILE:
         break;
-      case BAR_ACTION.CREATE_ALBUM:
+      case BarAction.CREATE_ALBUM:
         this.albumService.albumDialog = this.dialog.open<CreateAlbumComponent>(CreateAlbumComponent, {
           width: '400px'
         });
@@ -57,12 +57,12 @@ export class UserBoardComponent implements OnInit {
   }
 
   openProfile() {
-    this.sideBarService.setCurrentActionByName(BAR_ACTION.OPEN_PROFILE);
+    this.sideBarService.setCurrentActionByName(BarAction.OPEN_PROFILE);
   }
 
   logout() {
     this.profileService.logout();
   }
 
-  profileAction = (action: BarAction): boolean => action && action.name === BAR_ACTION.OPEN_PROFILE;
+  profileAction = (action: IBarAction): boolean => action && action.name === BarAction.OPEN_PROFILE;
 }

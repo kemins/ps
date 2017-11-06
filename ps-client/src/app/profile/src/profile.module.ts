@@ -8,7 +8,7 @@ import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent, ProfileService, ProfileDataService, ProfileEffectService } from './../';
 import { ValidatorModule } from '../../validators';
-import { FileUploader } from '../../core';
+import { FileUploaderService } from '../../core';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { FileUploader } from '../../core';
     ProfileService,
     ProfileDataService,
     ProfileEffectService,
-    FileUploader
+    FileUploaderService
   ]
 })
 export class ProfileModule {

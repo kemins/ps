@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
-import { AppSettings, PsHttp, IPSResponse } from '../../core';
+import { AppSettings, HttpService, IPSResponse } from '../../core';
 import { Profile } from './profile.model';
 import { IAlbum } from './IAlbum';
 import { Observable } from 'rxjs/Observable';
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 export class AlbumDataService {
   private albumUrl = `${AppSettings.getSetting('endpoint')}albums`;
 
-  public constructor(private http: PsHttp) {
+  public constructor(private http: HttpService) {
   }
 
   public create(album: IAlbum): Observable<IPSResponse> {

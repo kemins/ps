@@ -5,7 +5,7 @@ import { Action, Store } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
 import { ProfileService } from './profile.service';
 import { ProfileDataService } from './profile-data.service';
-import { IPSResponse } from '../../core/src/ps-response';
+import { IPSResponse } from '../../core/src/IPSResponse';
 import { AppStore } from '../../app.state';
 import { includes } from 'lodash';
 

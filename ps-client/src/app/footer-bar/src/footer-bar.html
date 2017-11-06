@@ -1,8 +1,8 @@
 <nav class="bottom-bar">
-    <button *ngFor="let action of actions | async" routerLink="{{action.link}}"
-        md-button color="primary" class="grow-equally"
-        routerLinkActive="active-route"
-        [routerLinkActiveOptions]="{exact: true}">
-        {{action.label}}
-    </button>
+  <button *ngFor="let action of actions | async" routerLink="{{action.link}}"
+      md-button color="primary" class="grow-equally"
+      routerLinkActive="active-route"
+      [routerLinkActiveOptions]="{exact: true}">
+    {{action.label}}
+  </button>
 </nav>

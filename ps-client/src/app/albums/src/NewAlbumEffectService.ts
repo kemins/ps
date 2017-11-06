@@ -5,7 +5,7 @@ import { Action } from '@ngrx/store';
 import { AppActions } from '../../app.actions';
 import { ProfileService } from './profile.service';
 import { ProfileDataService } from './profile-data.service';
-import { IPSResponse } from '../../core/src/ps-response';
+import { IPSResponse } from '../../core/src/IPSResponse';
 import { AlbumService } from './AlbumService';
 import { AlbumDataService } from './AlbumDataService';
 
