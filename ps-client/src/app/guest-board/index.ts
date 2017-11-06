@@ -1,2 +1,2 @@
-export * from './src/guest-board.component';
-export * from './src/guest-board.module';
+export * from './src/GuestBoardComponent';
+export * from './src/Module';

@@ -9,5 +9,6 @@ import * as homeStyles from './home.styl';
   templateUrl: 'home.html'
 })
 export class HomeComponent {
-  constructor() {}
+  public constructor() {
+  }
 }

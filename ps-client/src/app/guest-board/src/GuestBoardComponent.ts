@@ -11,25 +11,25 @@ import { SideBarService, GUEST_ACTIONS as SIDE_BAR_ACTIONS } from '../../side-ba
   templateUrl: 'guest-board.html'
 })
 export class GuestBoardComponent implements OnInit {
-  constructor(private footerBarService: FooterBarService,
+  public constructor(private footerBarService: FooterBarService,
               private socialLoginService: SocialLoginService,
               private sideBarService: SideBarService) {
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.footerBarService.setActions(FOOTER_ACTIONS);
     this.sideBarService.setActions(SIDE_BAR_ACTIONS);
   }
 
-  openSignUp() {
+  public openSignUp(): void {
     this.socialLoginService.setMode(MODE.SIGN_UP);
   }
 
-  openSignIn() {
+  public openSignIn(): void {
     this.socialLoginService.setMode(MODE.SIGN_IN);
   }
 
-  doAction(action: IBarAction) {
+  public doAction(action: IBarAction): void {
     switch (action.name) {
       case BarAction.SIGN_IN:
         this.openSignIn();

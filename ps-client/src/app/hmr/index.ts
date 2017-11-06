@@ -1,1 +1,1 @@
-export * from './src/hmr.module';
+export * from './src/Module';

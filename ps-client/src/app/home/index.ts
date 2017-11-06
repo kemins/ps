@@ -1,2 +1,2 @@
-export * from './src/home.component';
-export * from './src/home.module';
+export * from './src/HomeComponent';
+export * from './src/Module';

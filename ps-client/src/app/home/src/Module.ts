@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './../../core';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './HomeComponent';
 import { SlidesModule } from '../../slides';
 
 
