@@ -17,7 +17,7 @@ import { GuestBoardModule } from './guest-board';
 import { UserBoardModule } from './user-board';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
-import { SideBarEffectService } from './side-bar/src/side-bar-effect.service';
+import { SideBarEffectService } from './side-bar/src/SideBarEffectService';
 import { ContactEffectService } from './contact';
 import { NotificationsEffectService } from './notifications/src/notifications-effect.service';
 import { SlidesEffectService } from './slides/src/slides-effect.service';

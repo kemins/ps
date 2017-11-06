@@ -1,14 +1,8 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import * as sideBarStyles from './side-bar.styl';
 import { Observable } from 'rxjs';
 import { IBarAction } from '../../footer-bar/src/IBarAction';
-import { SideBarService } from './side-bar.service';
+import { SideBarService } from './SideBarService';
 
 @Component({
   selector: 'ps-side-bar',
@@ -16,11 +10,8 @@ import { SideBarService } from './side-bar.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './side-bar.html'
 })
-export class SideBarComponent implements OnInit {
+export class SideBarComponent {
   public actions: Observable<IBarAction[]>;
-
-  public ngOnInit() {
-  }
 
   @Output()
   public actionDone = new EventEmitter();

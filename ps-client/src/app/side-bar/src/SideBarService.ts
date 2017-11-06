@@ -8,35 +8,47 @@ import { BarAction } from '../../footer-bar';
 
 @Injectable()
 export class SideBarService {
-  constructor(private store: Store<AppStore>) {
+  public constructor(private store: Store<AppStore>) {
   }
 
-  getActions = (): Observable<Array<IBarAction>> => this.store.select<IBarAction[]>('sideBarActions');
+  public getActions(): Observable<Array<IBarAction>> {
+    return this.store.select<IBarAction[]>('sideBarActions');
+  }
 
-  setActions = (actions: IBarAction[]) => this.store.dispatch({
-    type: AppActions.SET_SIDE_BarActionS,
-    payload: actions
-  });
+  public setActions(actions: IBarAction[]): void {
+    this.store.dispatch({
+      type: AppActions.SET_SIDE_BarActionS,
+      payload: actions
+    });
+  }
 
-  getCurrentAction = (): Observable<IBarAction> => this.store.select<IBarAction>('sideBarCurrentAction');
+  public getCurrentAction(): Observable<IBarAction> {
+    return this.store.select<IBarAction>('sideBarCurrentAction');
+  }
 
-  setCurrentAction = (action: IBarAction) => this.store.dispatch({
-    type: AppActions.SET_CURRENT_ACTION,
-    payload: action
-  });
+  public setCurrentAction(action: IBarAction): void {
+    this.store.dispatch({
+      type: AppActions.SET_CURRENT_ACTION,
+      payload: action
+    });
+  }
 
-  setCurrentActionByName = (name: BarAction) => this.store.dispatch({
-    type: AppActions.SET_CURRENT_ACTION_BY_NAME,
-    payload: {
-      actions: this.getActions(),
-      name: name
-    }
-  });
+  public setCurrentActionByName(name: BarAction): void {
+    this.store.dispatch({
+      type: AppActions.SET_CURRENT_ACTION_BY_NAME,
+      payload: {
+        actions: this.getActions(),
+        name: name
+      }
+    });
+  }
 
-  resetCurrentAction = () => this.store.dispatch({
-    type: AppActions.SET_CURRENT_ACTION,
-    payload: BarAction.NONE
-  });
+  public resetCurrentAction(): void {
+    this.store.dispatch({
+      type: AppActions.SET_CURRENT_ACTION,
+      payload: BarAction.NONE
+    });
+  }
 }
 
 export const GUEST_ACTIONS = [{

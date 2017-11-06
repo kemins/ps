@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { SideBarComponent } from './side-bar.component';
-import { SideBarService } from './side-bar.service';
-import { SideBarItemComponent } from './side-bar-item.component';
-
+import { SideBarComponent } from './SideBarComponent';
+import { SideBarService } from './SideBarService';
+import { SideBarItemComponent } from './SideBarItemComponent';
 
 @NgModule({
   imports: [
@@ -21,6 +20,6 @@ import { SideBarItemComponent } from './side-bar-item.component';
   ]
 })
 export class SideBarModule {
-  constructor() {
+  public constructor() {
   }
 }
