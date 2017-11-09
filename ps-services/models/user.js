@@ -1,7 +1,6 @@
 const _ = require('lodash');
 const config = require('../config');
-const usersAPI = require('../routes/users').api;
-
+const usersAPI = require('../api/user-api');
 
 const mongoose = require('mongoose');
 
@@ -27,7 +26,7 @@ const UserSchema = new mongoose.Schema({
   active: Boolean
 });
 
-const User = mongoose.model('User', UserSchema);
+mongoose.model('User', UserSchema);
 
 UserSchema.set('toJSON', {
   transform: (doc, user, options) => {
@@ -36,5 +35,3 @@ UserSchema.set('toJSON', {
     return user;
   }
 });
-
-console.log('Setup schema for user model.');

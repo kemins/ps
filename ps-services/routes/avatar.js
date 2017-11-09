@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const config = require('../config');
 const ImageUtils = require('../utils/image-utils');
-const userAPI = require('../routes/users').api;
+const userAPI = require('../api/user-api');
 
 const imageUtils = new ImageUtils();
 
@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
             } else {
               res.json({
                 type: 'success',
-                message: 'Avatar has being updated!',
+                message: 'Avatar has been updated!',
                 body: userAPI.transformAvatar(user.picture)
               });
             }

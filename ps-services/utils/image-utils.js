@@ -8,7 +8,11 @@ const config = require('../config');
 const _ = require('lodash');
 
 class ImageUtils {
-  constructor() {
+  constructor(source, destination) {
+    this.source = source;
+    this.destination = destination;
+
+    this.format = '.jpeg';
     this.resolutions = [
       {
         name: 'xl',
@@ -53,9 +57,6 @@ class ImageUtils {
         scale: 'v'
       }
     ];
-    this.source = 'C:/Users/Andriy_Kemin/Pictures/bg/';
-    this.destination = 'C:/programing/workspace/ps/ps-services/public/slides/';
-    this.format = '.png';
   }
 
   /**
@@ -84,11 +85,11 @@ class ImageUtils {
 
     // loop through all supported resolutions.
     this.resolutions.forEach((resolution) => {
-      url[resolution.name] = resolution.name + index + format;
+      url[resolution.name] = `${resolution.name}${index}${this.format}`;
     });
 
     // Read creation date from metadata.
-    const dateStr = meta['Date Time'] || meta['Date Time Original'];
+    const dateStr = _.get(meta, 'Date Time') || _.get(meta, 'Date Time Original');
     let date;
 
     if (dateStr) {
@@ -189,7 +190,7 @@ class ImageUtils {
    */
   processSlides() {
     // Loop through all the files in the temp directory
-    fs.readdir(source, (err, files) => {
+    fs.readdir(this.source, (err, files) => {
       if (err) {
         console.error("Could not list the directory.", err);
         process.exit(1);
@@ -197,12 +198,12 @@ class ImageUtils {
 
       files.forEach((file, index) => {
         // Make one pass and make the file complete
-        let fromPath = path.join(source, file);
+        let fromPath = path.join(this.source, file);
         let n = index + 1;
 
         this.resolutions.forEach((resolution) => {
-          let slideName = resolution.name + n + format;
-          let toPath = path.join(destination, slideName);
+          let slideName = `${resolution.name}${n}${this.format}`;
+          let toPath = path.join(this.destination, slideName);
 
           this.resizeImage({
             fromPath: fromPath,
@@ -263,5 +264,8 @@ class ImageUtils {
     });
   }
 }
+
+/*new ImageUtils('C:/Users/Andriy_Kemin/Pictures/bg/', 'C:/programing/workspace/ps/ps-services/public/slides/')
+  .generateSlides();*/
 
 module.exports = ImageUtils;
