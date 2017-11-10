@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="UI: REFACTOR sides package.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/api/album-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/api/captcha-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/api/mail-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-services/api/slide-api.js" />
+    <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/api/user-api.js" afterPath="$PROJECT_DIR$/ps-services/api/user-api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/config.js" afterPath="$PROJECT_DIR$/ps-services/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/albums.js" afterPath="$PROJECT_DIR$/ps-services/routes/albums.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/avatar.js" afterPath="$PROJECT_DIR$/ps-services/routes/avatar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/index.js" afterPath="$PROJECT_DIR$/ps-services/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/README.md" afterPath="$PROJECT_DIR$/ps-client/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/mail.js" afterPath="$PROJECT_DIR$/ps-services/routes/mail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/profile.js" afterPath="$PROJECT_DIR$/ps-services/routes/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/slides.js" afterPath="$PROJECT_DIR$/ps-services/routes/slides.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/utils/image-utils.js" afterPath="$PROJECT_DIR$/ps-services/utils/image-utils.js" />
     </list>
     <ignored path="ps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mail.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps-services/routes/mail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+            <state relative-caret-position="368">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ps-client/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -60,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/ps-services/routes/slides.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/ps-services/api/response-api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -80,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/ps-services/api/user-api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1566">
-              <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+              <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -207,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarReducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarCurrentActionReducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts" />
@@ -258,6 +254,7 @@
         <option value="$PROJECT_DIR$/ps-services/routes/slides.js" />
         <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" />
         <option value="$PROJECT_DIR$/ps-services/routes/mail.js" />
+        <option value="$PROJECT_DIR$/ps-client/README.md" />
       </list>
     </option>
   </component>
@@ -334,12 +331,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ps" type="b2602c69:ProjectViewProjectNode" />
               <item name="ps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps" type="462c0819:PsiDirectoryNode" />
+              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ps" type="b2602c69:ProjectViewProjectNode" />
@@ -368,8 +372,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -661,14 +663,7 @@
       <workItem from="1510218100401" duration="70000" />
       <workItem from="1510235534946" duration="4762000" />
       <workItem from="1510305471525" duration="2214000" />
-      <workItem from="1510307703485" duration="1012000" />
-    </task>
-    <task id="LOCAL-00029" summary="ADD dev tool support.">
-      <created>1478270683583</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1478270683583</updated>
+      <workItem from="1510307703485" duration="1152000" />
     </task>
     <task id="LOCAL-00030" summary="Integrate social login to rx data flow.">
       <created>1478281814781</created>
@@ -1006,18 +1001,25 @@
       <option name="project" value="LOCAL" />
       <updated>1510007482217</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="SERVICES: REFACTOR services by introducing api level.">
+      <created>1510308765797</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1510308765798</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507227000" />
+    <option name="totallyTimeSpent" value="507367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30505794" sideWeight="0.52290076" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30505794" sideWeight="0.52290076" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31743422" sideWeight="0.5416667" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40326086" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
@@ -1075,7 +1077,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="MOVE sides effect into root module" />
     <MESSAGE value="NAVIGATE to user through native hash to avoid routing ng-rx conflicts" />
     <MESSAGE value="ADD cancel flow for avatar change." />
     <MESSAGE value="ADD dirty checking for avatar" />
@@ -1100,7 +1101,8 @@
     <MESSAGE value="UI: REFACTOR profile package." />
     <MESSAGE value="UI: REFACTOR side bar package." />
     <MESSAGE value="UI: REFACTOR sides package." />
-    <option name="LAST_COMMIT_MESSAGE" value="UI: REFACTOR sides package." />
+    <MESSAGE value="SERVICES: REFACTOR services by introducing api level." />
+    <option name="LAST_COMMIT_MESSAGE" value="SERVICES: REFACTOR services by introducing api level." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1134,18 +1136,6 @@
           <properties />
           <option name="timeStamp" value="187" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ps-services/routes/mail.js</url>
-          <line>21</line>
-          <properties lambdaOrdinal="0" />
-          <option name="timeStamp" value="188" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ps-services/routes/mail.js</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="189" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1171,13 +1161,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/ISlide.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/IRawSlide.ts" />
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesService.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1451,7 +1434,7 @@
     <entry file="file://$PROJECT_DIR$/ps-services/api/user-api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1566">
-          <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1483,7 +1466,7 @@
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1507,7 +1490,7 @@
     <entry file="file://$PROJECT_DIR$/ps-services/api/response-api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1515,15 +1498,23 @@
     <entry file="file://$PROJECT_DIR$/ps-services/routes/slides.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-services/routes/mail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+        <state relative-caret-position="368">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
           <folding />
         </state>
       </provider>
