@@ -85,7 +85,7 @@ export const USER_ACTIONS = [{
   icon: 'book',
   actions: [
     {
-      label: 'My',
+      label: 'Mine',
       link: '/user/albums',
       icon: 'person'
     },

@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const _ = require('lodash');
-const mongoose = require('mongoose');
+const albumAPI = require('../api/album-api');
+const responseAPI = require('../api/response-api');
 
 router.post('/', (req, res, next) => {
   const {album} = req.body,
@@ -10,33 +11,15 @@ router.post('/', (req, res, next) => {
     modificationDate = new Date(),
     user = req.user._id;
 
-  mongoose.model('Album').create({
+  albumAPI.createAlbum({
     name,
     description,
     creationDate,
     modificationDate,
     user
-  }, (error, album) => {
-    if (error) {
-      sendError(res, error);
-    } else {
-      sendSuccess(res, 'Album has been created!');
-    }
-  });
+  })
+    .then(() => responseAPI.handleSuccessResponse(res, 'Album has been created!'),
+      ({message}) => responseAPI.handleErrorResponse(res, message));
 });
-
-const sendError = (response, error) => {
-  response.json({
-    type: 'fault',
-    message: error
-  });
-};
-
-const sendSuccess = (response, message) => {
-  response.json({
-    type: 'success',
-    message
-  });
-};
 
 module.exports = router;

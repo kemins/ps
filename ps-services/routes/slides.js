@@ -1,25 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-var config = require('../config');
-var utils = require('../utils/common-utils');
-
+const express = require('express');
+const router = express.Router();
+const slideAPI = require('../api/slide-api');
+const responseAPI = require('../api/response-api');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  mongoose.model('Slide').find({}, function(err, slides) {
-    slides.forEach(normalizeSlide);
-
-    res.json({slides: slides});
-  });
-
-  let normalizeSlide = (slide) => {
-
-    for (let [key, value] of utils.entries(slide.url)) {
-      slide.url[key] = config.storage.slides + value;
-    }
-  };
+router.get('/', (req, res, next) => {
+  slideAPI.getAllSlides()
+    .then((slides) => responseAPI.handleSuccessResponse(res, '', {slides}),
+      ({message}) => responseAPI.handleErrorResponse(res, message));
 });
-
 
 module.exports = router;

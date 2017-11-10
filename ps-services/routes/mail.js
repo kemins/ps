@@ -1,67 +1,26 @@
-var express = require('express');
-var router = express.Router();
-var config = require('../config');
-var nodemailer = require('nodemailer');
-var request = require('request');
+const express = require('express');
+const router = express.Router();
+const config = require('../config');
+const responseAPI = require('../api/response-api');
+const captchaAPI = require('../api/captcha-api');
+const mailAPI = require('../api/mail-api');
 
 /* Send message. */
-router.post('/', function(req, res, next) {
-  let transporter = nodemailer.createTransport(config.mail.endpoint);
-  let contact = req.body.contact;
-  let token = req.body.token;
+router.post('/', (req, res, next) => {
+  const {contact, token} = req.body;
+  const {name, email, message} = contact;
 
-  let mailOptions = {
-    from: 'me',
-    to: 'andriy.kemin@gmail.com',
+  const mailOptions = {
+    from: config.mail.sendFrom,
+    to: config.mail.sendTo,
     subject: 'Contact form',
-    text: `From: ${contact.name} -> ${contact.email}.\n\nMessage: ${contact.message}`
+    text: `From: ${name} -> ${email}.\n\nMessage: ${message}`
   };
 
-  checkCaptcha(token).then(function() {
-    transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-        res.json({
-          type: 'fault',
-          message: error
-        });
-      } else {
-        res.json({
-          type: 'success',
-          message: 'Message has been sent!'
-        });
-      }
-    });
-  }, function(error) {
-    res.json({
-      type: 'fault',
-      message: error
-    });
-  });
+  captchaAPI.checkCaptcha(token)
+    .then(() => mailAPI.sendMail(mailOptions))
+    .then(() => responseAPI.handleSuccessResponse(res, 'Message has been sent!'),
+      ({message}) => responseAPI.handleErrorResponse(res, message));
 });
-
-checkCaptcha = (userResponse) => {
-  return new Promise(function(resolve, reject) {
-    let options = {
-      uri: config.captcha.url,
-      form: {
-        secret: config.captcha.token,
-        response: userResponse
-      }
-    };
-
-    request.post(config.captcha.url, options,
-      function (error, response, body) {
-        let data = JSON.parse(body);
-
-        if (!error && response.statusCode == 200 && data.success) {
-          resolve(response);
-        } else {
-          reject('Captcha verification fails.');
-        }
-      }
-    );
-  });
-};
-
 
 module.exports = router;

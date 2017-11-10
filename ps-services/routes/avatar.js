@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../config');
-const ImageUtils = require('../utils/image-utils');
+const imageUtils = require('../utils/image-utils');
 const userAPI = require('../api/user-api');
-
-const imageUtils = new ImageUtils();
+const responseAPI = require('../api/response-api');
 
 /* Upload avatar */
-router.post('/', function(req, res, next) {
+router.post('/', (req, res, next) => {
   const user = req.user,
     id = user._id,
     data = req.body.avatar;
@@ -17,45 +16,23 @@ router.post('/', function(req, res, next) {
     name = `avatar.${extension}`;
 
   imageUtils.mountSlides(`${config.fs.users}${id}/`, name, imageData)
-    .then((avatar) => {
-      userAPI.getUserById(id)
-        .then((model) => {
-          model.picture = avatar;
-          model.save((error, user) => {
-            if (error) {
-              sendError(res, error);
-            } else {
-              res.json({
-                type: 'success',
-                message: 'Avatar has been updated!',
-                body: userAPI.transformAvatar(user.picture)
-              });
-            }
-          });
-        }, (error) => sendError(res, error));
-    }, (error) => {
-      sendError(res, error);
-    });
+    .then((avatar) => userAPI.updateAvatar(id, avatar))
+    .then((user) => responseAPI.handleSuccessResponse(res, 'Avatar has been updated!',
+      userAPI.transformAvatar(user.picture)),
+      ({message}) => responseAPI.handleErrorResponse(res, message));
 });
 
-/* Upload avatar */
-router.get('/:type', function(req, res, next) {
+/* Send avatar back */
+router.get('/:type', (req, res, next) => {
   const user = req.user,
     id = user._id;
 
   userAPI.getUserById(id)
-    .then((model) => model.picture[req.params.type])
+    .then(({picture}) => picture[req.params.type])
     .then(
       (path) => res.sendFile(path, {root: '/'}),
-      (error) => sendError(res, error)
+      ({message}) => responseAPI.handleErrorResponse(res, message)
     );
 });
-
-sendError = (response, error) => {
-  response.json({
-    type: 'fault',
-    message: error
-  });
-};
 
 module.exports = router;

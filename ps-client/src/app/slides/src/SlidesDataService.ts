@@ -17,8 +17,8 @@ export class SlideDataService {
   }
 
   private extractData(res: Response) {
-    const body = res.json(),
-      slides = body.slides || [];
+    const data = res.json(),
+      {slides} = data.body;
 
     return slides.map(({creationDate, url}) => ({
       url,

@@ -64,7 +64,6 @@ class ImageUtils {
    */
   generateSlides() {
     dbConnect.connect().then((status) => {
-      console.log(status);
       mongoose.model('Slide').remove({}, (error) => {
         if (error) {
           console.log(error);
@@ -84,8 +83,8 @@ class ImageUtils {
     const url = {};
 
     // loop through all supported resolutions.
-    this.resolutions.forEach((resolution) => {
-      url[resolution.name] = `${resolution.name}${index}${this.format}`;
+    this.resolutions.forEach(({name}) => {
+      url[name] = `${name}${index}${this.format}`;
     });
 
     // Read creation date from metadata.
@@ -93,11 +92,9 @@ class ImageUtils {
     let date;
 
     if (dateStr) {
-      let datePart = dateStr.split(' ')[0];
+      const datePart = _.first(dateStr.split(' '));
       date = new Date(datePart.replace(':', '-'));
     }
-
-    console.log('Creating slide ', url, date);
 
     mongoose.model('Slide').create({
       url: url,
@@ -118,8 +115,8 @@ class ImageUtils {
    */
   getImageMetaData(input) {
     return new Promise((resolve, reject) => {
-      let img = gm(input),
-        meta;
+      const img = gm(input);
+      let meta;
 
       img.identify((error, value) => {
         if (error) {
@@ -145,9 +142,6 @@ class ImageUtils {
       const img = gm(options.fromPath);
       const scaleWidth = options.scale === 'h' ? options.width : null;
       const scaleHeight = options.scale === 'v' ? options.height : null;
-
-      console.log('Scale to w:', scaleWidth);
-      console.log('Scale to h:', scaleHeight);
 
       img.resize(scaleWidth, scaleHeight);
 
@@ -198,12 +192,12 @@ class ImageUtils {
 
       files.forEach((file, index) => {
         // Make one pass and make the file complete
-        let fromPath = path.join(this.source, file);
-        let n = index + 1;
+        const fromPath = path.join(this.source, file),
+          n = index + 1;
 
         this.resolutions.forEach((resolution) => {
-          let slideName = `${resolution.name}${n}${this.format}`;
-          let toPath = path.join(this.destination, slideName);
+          const slideName = `${resolution.name}${n}${this.format}`,
+            toPath = path.join(this.destination, slideName);
 
           this.resizeImage({
             fromPath: fromPath,
@@ -268,4 +262,4 @@ class ImageUtils {
 /*new ImageUtils('C:/Users/Andriy_Kemin/Pictures/bg/', 'C:/programing/workspace/ps/ps-services/public/slides/')
   .generateSlides();*/
 
-module.exports = ImageUtils;
+module.exports = new ImageUtils();

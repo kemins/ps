@@ -11,7 +11,9 @@ module.exports = {
     slides: `${host}/slides/`
   },
   mail: {
-    endpoint: 'smtps://andriy.kemin%40gmail.com:19852828@smtp.gmail.com'
+    endpoint: 'smtps://andriy.kemin%40gmail.com:19852828@smtp.gmail.com',
+    sendTo: 'andriy.kemin@gmail.com',
+    sendFrom: 'auto'
   },
   captcha: {
     token: '6LcTiwMTAAAAAOG94fJQ_lGvt2jPTRLHjgDWwQlR',

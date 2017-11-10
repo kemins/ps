@@ -92,6 +92,34 @@ class UserApi {
       });
     });
   }
+
+  updateAvatar(id, avatar) {
+    return new Promise((resolve, reject) => {
+      this.getUserById(id)
+        .then((model) => {
+          model.picture = avatar;
+          model.save((error, user) => {
+            if (error) {
+              reject(error);
+            }
+            else {
+              resolve(user);
+            }
+          });
+        })
+    });
+  }
+
+  updateUser(id, data) {
+    return new Promise((resolve, reject) => {
+      this.getUserById(id)
+        .then((model) => {
+          _.assign(model, data);
+
+          model.save((error, user) => error ? reject(error) : resolve(user));
+        })
+    });
+  }
 }
 
 module.exports = new UserApi();
