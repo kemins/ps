@@ -6,11 +6,11 @@ import { IAppStore } from '../../IAppState';
 import { IAlbum } from './IAlbum';
 import { Observable } from 'rxjs/Observable';
 import { CreateAlbumComponent } from './CreateAlbumComponent';
-import { MdDialogRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 
 @Injectable()
 export class AlbumService {
-  private _albumDialog: MdDialogRef<CreateAlbumComponent>;
+  private _albumDialog: MatDialogRef<CreateAlbumComponent>;
 
   public constructor(private store: Store<IAppStore>) {
   }
@@ -23,14 +23,18 @@ export class AlbumService {
   };
 
   public getNewAlbum(): Observable<IAlbum> {
-    return this.store.select<IAlbum>('albums', 'newAlbum');
+    return this.store.select('albums', 'newAlbum');
   }
 
-  public get albumDialog(): MdDialogRef<CreateAlbumComponent> {
+  public getUserAlbums(): Observable<Array<IAlbum>> {
+    return this.store.select('albums', 'userAlbums');
+  }
+
+  public get albumDialog(): MatDialogRef<CreateAlbumComponent> {
     return this._albumDialog;
   }
 
-  public set albumDialog(dialog: MdDialogRef<CreateAlbumComponent>) {
+  public set albumDialog(dialog: MatDialogRef<CreateAlbumComponent>) {
     this._albumDialog = dialog;
   }
 

@@ -9,7 +9,7 @@ import * as bootstrapThemeStyles from 'bootstrap/dist/css/bootstrap-theme.min.cs
 import * as appStyles from './app.styl';
 import * as mdStyles from '@angular/material/prebuilt-themes/deeppurple-amber.css';
 import { MODE } from './social-login/src/SocialLoginService';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 import { Subscription } from 'rxjs';
 
 /*
@@ -39,7 +39,7 @@ export class App implements OnDestroy {
 
   public constructor(private appState: AppService, private psHtp: HttpService,
                      private socialLoginService: SocialLoginService,
-                     private snackBar: MdSnackBar, private ref: ChangeDetectorRef) {
+                     private snackBar: MatSnackBar, private ref: ChangeDetectorRef) {
     this.notifications = appState.getNotifications()
       .map((notifications: IPSResponse[]) => notifications.filter(({read}) => !read));
 
@@ -60,7 +60,7 @@ export class App implements OnDestroy {
   }
 
   public openNotification = (notification: IPSResponse): void => {
-    const config = new MdSnackBarConfig();
+    const config = new MatSnackBarConfig();
     config.duration = 3000;
 
     this.snackBar.open(notification.message, '', config);

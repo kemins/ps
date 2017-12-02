@@ -1,34 +1,34 @@
 <div class="flex-column">
-  <md-toolbar color="primary" class="top-tool-bar">
-    <md-icon class="light" (click)="sidebar.toggle()">menu</md-icon>
+  <mat-toolbar color="primary" class="top-tool-bar">
+    <mat-icon class="light" (click)="sidebar.toggle()">menu</mat-icon>
 
     <div class="centered-box">
-      <button id="sign-in-btn" md-icon-button color="accent"
+      <button id="sign-in-btn" mat-icon-button color="accent"
           (click)="openSignIn()">
-        <md-icon class="light">account_circle</md-icon>
+        <mat-icon class="light">account_circle</mat-icon>
       </button>
       <label for="sign-in-btn" class="single-line">Sign In</label>
     </div>
 
     <div class="centered-box">
-      <button id="sign-up-btn" md-icon-button color="accent"
+      <button id="sign-up-btn" mat-icon-button color="accent"
           (click)="openSignUp()">
-        <md-icon class="light">person_add</md-icon>
+        <mat-icon class="light">person_add</mat-icon>
       </button>
 
       <label for="sign-up-btn" class="single-line">Sign Up</label>
     </div>
 
     <span class="remaining-space"></span>
-  </md-toolbar>
+  </mat-toolbar>
 
-  <md-sidenav-container>
-    <md-sidenav #sidebar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidebar>
       <ps-side-bar
           (actionDone)="sidebar.close();doAction($event)"></ps-side-bar>
-    </md-sidenav>
+    </mat-sidenav>
     <div class="grow-equally content-holder">
       <router-outlet></router-outlet>
     </div>
-  </md-sidenav-container>
+  </mat-sidenav-container>
 </div>

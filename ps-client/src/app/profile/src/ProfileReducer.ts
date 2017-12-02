@@ -1,8 +1,8 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
 import { IProfile } from './IProfile';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const profile = (profile: IProfile, action: Action) => {
+export const profile = (profile: IProfile, action: IPayloadAction) => {
   let result: IProfile;
 
   switch (action.type) {

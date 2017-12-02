@@ -1,9 +1,9 @@
-import { Action } from '@ngrx/store';
 import { IPSResponse } from '../../core';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 
-export const notifications = (notifications: Array<IPSResponse>, action: Action) => {
+export const notifications = (notifications: Array<IPSResponse>, action: IPayloadAction) => {
     let result: Array<IPSResponse>;
 
     switch (action.type) {

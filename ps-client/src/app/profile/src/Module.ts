@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -8,6 +7,11 @@ import { CoreModule, FileUploaderService } from './../../core';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent, ProfileDataService, ProfileEffectService, ProfileService } from './../';
 import { ValidatorModule } from '../../validators';
+import {
+  MatButtonModule,
+  MatCardModule, MatFormFieldModule, MatIconModule, MatMenuModule, MatRadioModule, MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,10 +23,17 @@ import { ValidatorModule } from '../../validators';
     AlertModule.forRoot(),
     HttpModule,
     CommonModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    ValidatorModule
+    ValidatorModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule
   ],
   exports: [ProfileComponent],
   providers: [

@@ -12,7 +12,7 @@ import {
 } from '../../side-bar';
 import { IProfile, ProfileService } from '../../profile';
 import { Observable } from 'rxjs';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { AlbumService, CreateAlbumComponent } from '../../albums';
 
 @Component({
@@ -26,10 +26,10 @@ export class UserBoardComponent implements OnInit {
   private currentAction: Observable<IBarAction>;
 
   public constructor(private footerBarService: FooterBarService,
-                      private sideBarService: SideBarService,
-                      private profileService: ProfileService,
-                      private albumService: AlbumService,
-                      private dialog: MdDialog) {
+                     private sideBarService: SideBarService,
+                     private profileService: ProfileService,
+                     private albumService: AlbumService,
+                     private dialog: MatDialog) {
     this.profile = profileService.getProfile();
     this.currentAction = sideBarService.getCurrentAction();
   }
@@ -44,7 +44,7 @@ export class UserBoardComponent implements OnInit {
       case BarAction.OPEN_PROFILE:
         break;
       case BarAction.CREATE_ALBUM:
-        this.albumService.albumDialog = this.dialog.open<CreateAlbumComponent>(CreateAlbumComponent, {
+        this.albumService.albumDialog = this.dialog.open(CreateAlbumComponent, {
           width: '400px'
         });
 

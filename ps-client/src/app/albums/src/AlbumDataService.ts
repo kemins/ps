@@ -16,4 +16,16 @@ export class AlbumDataService {
     return this.http.post(this.albumUrl, {album})
       .map((response: Response) => response.json());
   }
+
+  public getUserAlbums(): Observable<Array<IAlbum>> {
+    return this.http.get(this.albumUrl)
+      .map(this.extractData);
+  }
+
+  private extractData(res: Response): Array<IAlbum> {
+    const data = res.json(),
+      {albums} = data.body;
+
+    return albums;
+  }
 }

@@ -1,10 +1,9 @@
-import { Action } from '@ngrx/store';
-
 import { AppActions } from '../../AppActions';
 import { IContact } from './IContact';
 import { IAlbum } from './IAlbum';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const newAlbum = (album: IAlbum, action: Action) => {
+export const newAlbum = (album: IAlbum, action: IPayloadAction) => {
   let result: IAlbum;
 
   switch (action.type) {

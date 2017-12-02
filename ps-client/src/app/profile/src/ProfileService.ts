@@ -49,20 +49,20 @@ export class ProfileService implements CanActivate {
   }
 
   public getProfile(): Observable<IProfile> {
-    return this.store.select<IProfile>('profile', 'value');
+    return this.store.select('profile', 'value');
   }
 
   public getDirtyProfile(): Observable<IProfile> {
-    return this.store.select<IProfile>('profile', 'dirtyValue');
+    return this.store.select('profile', 'dirtyValue');
     ;
   }
 
   public getAvatar(): Observable<any> {
-    return this.store.select<any>('profile', 'avatar');
+    return this.store.select('profile', 'avatar');
   }
 
   public getDirtyAvatar(): Observable<any> {
-    return this.store.select<any>('profile', 'dirtyAvatar');
+    return this.store.select('profile', 'dirtyAvatar');
   }
 
   public logout(): void {

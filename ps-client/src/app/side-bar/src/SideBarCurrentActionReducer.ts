@@ -1,9 +1,9 @@
-import { Action } from '@ngrx/store';
 import { IBarAction } from './../../footer-bar';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 
-export const sideBarCurrentAction = (barActions: IBarAction, action: Action) => {
+export const sideBarCurrentAction = (barActions: IBarAction, action: IPayloadAction) => {
   let result: IBarAction;
 
   switch (action.type) {

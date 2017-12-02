@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CoreModule } from '../../core';
 import { NotificationTypePipe } from './NotificatioTypePipe';
 import { NotificationsEffectService } from './notifications-effect.service';
+import { MatSnackBarModule } from '@angular/material';
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import { NotificationsEffectService } from './notifications-effect.service';
     NotificationTypePipe
   ],
   imports: [
-    CoreModule
+    CoreModule,
+    MatSnackBarModule
   ],
   exports: [NotificationTypePipe],
   providers: [

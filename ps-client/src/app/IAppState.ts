@@ -1,34 +1,33 @@
-import { Observable } from 'rxjs/Observable';
 import { ISlide } from './slides';
 import { IPSResponse } from './core';
 import { IBarAction } from './footer-bar';
 import { MODE } from './social-login';
-import { IProfile, IPicture } from './profile';
+import { IPicture, IProfile } from './profile';
 import { IAlbum } from './albums';
 import { IContact } from './contact';
 
 export interface IAppStore {
-  notifications: Observable<Array<IPSResponse>>
+  notifications: Array<IPSResponse>;
   socialLogin: {
-    mode: Observable<MODE>
-  },
-  slides: Observable<Array<ISlide>>
-  notes: Observable<Array<IPSResponse>>
+    mode: MODE
+  };
+  slides: Array<ISlide>;
   contact: {
-    value: Observable<IContact>,
-    dirtyValue: Observable<IContact>,
-    token: Observable<string>
+    value: IContact,
+    dirtyValue: IContact,
+    token: string
   },
   profile: {
-    value: Observable<IProfile>,
-    dirtyValue: Observable<IProfile>,
-    avatar: Observable<IPicture>
-    dirtyAvatar: Observable<IPicture>
-  },
+    value: IProfile,
+    dirtyValue: IProfile,
+    avatar?: IPicture,
+    dirtyAvatar?: IPicture
+  };
   albums: {
-    newAlbum: Observable<IAlbum>
-  },
-  footerActions: Observable<Array<IBarAction>>;
-  sideBarActions: Observable<Array<IBarAction>>;
-  sideBarCurrentAction: Observable<IBarAction>
+    newAlbum: IAlbum,
+    userAlbums: Array<IAlbum>
+  };
+  footerActions: Array<IBarAction>;
+  sideBarActions: Array<IBarAction>;
+  sideBarCurrentAction: IBarAction
 }

@@ -5,7 +5,11 @@ import { AppActions } from '../../AppActions';
 import { Observable } from 'rxjs';
 import { IAppStore } from '../../IAppState';
 
-export enum MODE {SIGN_IN, SIGN_UP, NONE}
+export enum MODE {
+  SIGN_IN = 'SIGN_IN',
+  SIGN_UP = 'SIGN_UP',
+  NONE = 'NONE'
+}
 
 @Injectable()
 export class SocialLoginService {
@@ -23,7 +27,7 @@ export class SocialLoginService {
   }
 
   public getMode(): Observable<MODE> {
-    return this.store.select<MODE>('socialLogin', 'mode');
+    return this.store.select('socialLogin', 'mode');
   }
 
   public bootstrap() {

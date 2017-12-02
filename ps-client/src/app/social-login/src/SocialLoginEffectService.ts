@@ -6,6 +6,7 @@ import { AppActions } from '../../AppActions';
 import { SocialLoginDataService } from './SocialLoginDataService';
 import { MODE } from './SocialLoginService';
 import { IAppStore } from '../../IAppState';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 
 @Injectable()
@@ -15,12 +16,12 @@ export class SocialLoginEffectService {
     fault: AppActions.USER_AUTH_FAIL
   };
 
-  public constructor(private socialLoginDataService: SocialLoginDataService, private actions$: Actions,
+  public constructor(private socialLoginDataService: SocialLoginDataService, private actions$: Actions<IPayloadAction>,
                      private store: Store<IAppStore>) {
   }
 
   @Effect()
-  public signIn$: Observable<Action> = this.actions$
+  public signIn$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.SIGN_IN_WITH_TOKE)
     .mergeMap(({payload}) => {
       return this.socialLoginDataService.signIn(payload);
@@ -29,7 +30,7 @@ export class SocialLoginEffectService {
 
 
   @Effect()
-  public signUp$: Observable<Action> = this.actions$
+  public signUp$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.SIGN_UP_WITH_TOKE)
     .mergeMap(({payload}) => {
       return this.socialLoginDataService.signUp(payload);
@@ -37,7 +38,7 @@ export class SocialLoginEffectService {
     .map(res => ({type: this.types[res.type], payload: res}));
 
   @Effect()
-  public authSuccess$: Observable<Action> = this.actions$
+  public authSuccess$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.USER_AUTH_SUCCESS)
     .do(({payload}) => {
       this.store.dispatch({type: AppActions.SL_SET_MODE, payload: MODE.NONE});
@@ -52,7 +53,7 @@ export class SocialLoginEffectService {
     }));
 
   @Effect()
-  public logout$: Observable<Action> = this.actions$
+  public logout$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.LOGOUT_SUCCESS)
     .map(() => ({
       type: AppActions.NAVIGATE_TO, payload: {

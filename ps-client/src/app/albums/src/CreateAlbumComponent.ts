@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as createAlbumStyles from './create-album.styl';
-import { MdDialogRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AlbumService } from './AlbumService';
 
@@ -13,7 +13,7 @@ import { AlbumService } from './AlbumService';
 export class CreateAlbumComponent implements OnInit {
   private albumForm;
 
-  public constructor(private dialogRef: MdDialogRef<CreateAlbumComponent>,
+  public constructor(private dialogRef: MatDialogRef<CreateAlbumComponent>,
                      private formBuilder: FormBuilder,
                      private albumService: AlbumService) {
 

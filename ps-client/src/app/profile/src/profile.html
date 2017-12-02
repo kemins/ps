@@ -9,40 +9,40 @@
         </form>
       </label>
       <div *ngIf="(isDirtyAvatar | async)">
-        <button md-raised-button color="primary" (click)="uploadAvatar()">Upload</button>
-        <button md-raised-button color="secondary" (click)="resetAvatar()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="uploadAvatar()">Upload</button>
+        <button mat-raised-button color="secondary" (click)="resetAvatar()">Cancel</button>
       </div>
     </div>
     <div class="form-group">
-      <md-input-container>
-        <input mdInput
+      <mat-input-container>
+        <input matInput
             placeholder="Name"
             formControlName="displayName"
             name="displayName" id="displayName">
-        <md-error *ngIf="!profileForm.controls.displayName.valid">
+        <mat-error *ngIf="!profileForm.controls.displayName.valid">
           Name is required
-        </md-error>
-      </md-input-container>
+        </mat-error>
+      </mat-input-container>
     </div>
     <div class="form-group">
-      <md-input-container>
-        <input mdInput
+      <mat-input-container>
+        <input matInput
             placeholder="Email" type="email"
             formControlName="email">
-        <md-error *ngIf="!profileForm.controls.email.valid">
+        <mat-error *ngIf="!profileForm.controls.email.valid">
           Email is invalid
-        </md-error>
-      </md-input-container>
+        </mat-error>
+      </mat-input-container>
     </div>
 
     <div class="form-group">
-      <md-radio-group formControlName="gender">
-        <md-radio-button value="male">Male</md-radio-button>
-        <md-radio-button value="female">Female</md-radio-button>
-      </md-radio-group>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
     </div>
 
-    <button md-raised-button color="primary" (click)="onSubmit()"
+    <button mat-raised-button color="primary" (click)="onSubmit()"
         [disabled]="!profileForm.valid">Save
     </button>
   </form>

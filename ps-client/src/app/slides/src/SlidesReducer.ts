@@ -1,8 +1,8 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
 import { ISlide } from './ISlide';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const slides = (slides: ISlide[], action: Action) => {
+export const slides = (slides: ISlide[], action: IPayloadAction) => {
   let result;
 
   switch (action.type) {

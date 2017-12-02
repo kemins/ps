@@ -42,14 +42,14 @@ export class ContactService {
   }
 
   public getContact(): Observable<IContact> {
-    return this.store.select<IContact>('contact', 'value');
+    return this.store.select('contact', 'value');
   }
 
   public getDirtyContact(): Observable<IContact> {
-    return this.store.select<IContact>('contact', 'dirtyValue');
+    return this.store.select('contact', 'dirtyValue');
   }
 
   public getToken(): Observable<string> {
-    return this.store.select<string>('contact', 'token');
+    return this.store.select('contact', 'token');
   }
 }

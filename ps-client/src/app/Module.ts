@@ -1,16 +1,24 @@
-import { NgModule, ApplicationRef } from '@angular/core';
-import { MaterialModule } from '@angular/material';
+import { ApplicationRef, NgModule } from '@angular/core';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatMenuModule,
+  MatProgressSpinnerModule,
+  MatToolbarModule,
+  MatInputModule
+} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './AppRoutes';
 import { App } from './AppComponent';
-import { CoreModule, AppEffectService } from './core';
+import { AppEffectService, CoreModule } from './core';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppService } from './AppService';
-import { NotificationsModule } from './notifications';
+import { NotificationsEffectService, NotificationsModule } from './notifications';
 import { HMRModule } from './hmr';
-import { Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 import { FooterBarModule } from './footer-bar';
 import { IAppStore } from './IAppState';
 import { GuestBoardModule } from './guest-board';
@@ -19,19 +27,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
 import { SideBarEffectService } from './side-bar';
 import { ContactEffectService } from './contact';
-import { NotificationsEffectService } from './notifications';
 import { SlidesEffectService } from './slides';
-import { ProfileEffectService, AvatarEffectService } from './profile';
+import { AvatarEffectService, ProfileEffectService } from './profile';
 import { SocialLoginEffectService } from './social-login';
 import { NewAlbumEffectService } from './albums';
-import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   bootstrap: [App],
   declarations: [App],
   imports: [
-    MaterialModule.forRoot(),
-    AlertModule.forRoot(),
+    MatButtonModule,
+    MatMenuModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
     HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -41,18 +52,22 @@ import { AlertModule } from 'ngx-bootstrap';
     GuestBoardModule,
     UserBoardModule,
     FooterBarModule,
-    AppService.provideStore(),
+    StoreModule.forRoot(AppService.appReducer, {
+      initialState: AppService.defaultState
+    }),
     StoreDevtoolsModule,
-    EffectsModule.runAfterBootstrap(AppEffectService),
-    EffectsModule.run(SideBarEffectService),
-    EffectsModule.run(ContactEffectService),
-    EffectsModule.run(NotificationsEffectService),
-    EffectsModule.run(SlidesEffectService),
-    EffectsModule.run(ProfileEffectService),
-    EffectsModule.run(NewAlbumEffectService),
-    EffectsModule.run(AvatarEffectService),
-    EffectsModule.run(SocialLoginEffectService),
-    StoreDevtoolsModule.instrumentOnlyWithExtension()
+    EffectsModule.forRoot([
+      AppEffectService,
+      SideBarEffectService,
+      ContactEffectService,
+      NotificationsEffectService,
+      SlidesEffectService,
+      ProfileEffectService,
+      NewAlbumEffectService,
+      AvatarEffectService,
+      SocialLoginEffectService
+    ]),
+    /*StoreDevtoolsModule.instrumentOnlyWithExtension()*/
   ],
   providers: [
     AppService

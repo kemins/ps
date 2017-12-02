@@ -11,7 +11,7 @@ export class SlideService {
   }
 
   public getSlides(): Observable<ISlide[]> {
-    return this.store.select<ISlide[]>('slides');
+    return this.store.select('slides');
   }
 
   public fetchSlides() {

@@ -12,7 +12,7 @@ export class SideBarService {
   }
 
   public getActions(): Observable<Array<IBarAction>> {
-    return this.store.select<IBarAction[]>('sideBarActions');
+    return this.store.select('sideBarActions');
   }
 
   public setActions(actions: IBarAction[]): void {
@@ -23,7 +23,7 @@ export class SideBarService {
   }
 
   public getCurrentAction(): Observable<IBarAction> {
-    return this.store.select<IBarAction>('sideBarCurrentAction');
+    return this.store.select('sideBarCurrentAction');
   }
 
   public setCurrentAction(action: IBarAction): void {

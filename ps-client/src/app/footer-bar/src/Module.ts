@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
 import { FooterComponent } from './FooterBarComponent';
 import { FooterBarService } from './FooterBarService';
+import {
+  MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatMenuModule,
+  MatToolbarModule
+} from '@angular/material';
 
 
 @NgModule({
   imports: [
     RouterModule,
     CommonModule,
-    MaterialModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
   ],
   exports: [FooterComponent],
   declarations: [FooterComponent],

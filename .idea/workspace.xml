@@ -2,9 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="800e94c3-4ae5-4eb3-af1d-8df62baefed0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumsResolver.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/UserAlbumsReducer.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps-client/src/app/core/src/IPayloadAction.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/README.md" afterPath="$PROJECT_DIR$/ps-client/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/mail.js" afterPath="$PROJECT_DIR$/ps-services/routes/mail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/config/webpack.common.js" afterPath="$PROJECT_DIR$/ps-client/config/webpack.common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/package.json" afterPath="$PROJECT_DIR$/ps-client/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/AppActions.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/AppActions.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/AppComponent.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/AppComponent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/AppRoutes.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/AppRoutes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/AppService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/AppService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/IAppState.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/IAppState.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/index.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumDataService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumDataService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumsComponent.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumsComponent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/CreateAlbumComponent.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/CreateAlbumComponent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/albums.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.html" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.e2e.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/app.e2e.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.html" afterPath="$PROJECT_DIR$/ps-client/src/app/app.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/app.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/app.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/CcontactDirtyReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/CcontactDirtyReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactTokenReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactTokenReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.html" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/core/src/AppEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/core/src/AppEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.html" afterPath="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/footer-bar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" afterPath="$PROJECT_DIR$/ps-client/src/app/guest-board/src/guest-board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/home/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/home/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/home/src/home.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/home/src/home.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/notifications/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/notifications/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications.reducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications.reducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/AvatarEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/AvatarEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/DirtyProfileAvatarReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/DirtyProfileAvatarReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileAvatarReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileAvatarReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileDirtyReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileDirtyReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.styl" afterPath="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarCurrentActionReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarCurrentActionReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-item.html" afterPath="$PROJECT_DIR$/ps-client/src/app/side-bar/src/side-bar-item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginEffectService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginEffectService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginModeReducer.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginModeReducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginService.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/Module.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/Module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/UserBoardComponent.ts" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/UserBoardComponent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" afterPath="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/styles/buttons.styl" afterPath="$PROJECT_DIR$/ps-client/src/styles/buttons.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-client/src/styles/layout.styl" afterPath="$PROJECT_DIR$/ps-client/src/styles/layout.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/api/album-api.js" afterPath="$PROJECT_DIR$/ps-services/api/album-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps-services/routes/albums.js" afterPath="$PROJECT_DIR$/ps-services/routes/albums.js" />
     </list>
     <ignored path="ps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,101 +96,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/routes/mail.js">
+      <file leaf-file-name="AppService.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/AppService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="1098">
+              <caret line="74" column="17" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ps-client/README.md">
+      <file leaf-file-name="IAlbum.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/IAlbum.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+            <state relative-caret-position="18">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="captcha-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/api/captcha-api.js">
+      <file leaf-file-name="Module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/Module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="506">
+              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/Module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slides.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/routes/slides.js">
+      <file leaf-file-name="Module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/Module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="290">
+              <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/api/response-api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlidesDataService.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slide-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/api/slide-api.js">
+      <file leaf-file-name="create-album.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/api/user-api.js">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+            <state relative-caret-position="252">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mail-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps-services/api/mail-api.js">
+      <file leaf-file-name="app.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="10" />
+            <state relative-caret-position="276">
+              <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nodemailer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAppState.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps-client/src/app/IAppState.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -127,36 +204,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>express</find>
-      <find>router</find>
-      <find>userAp</find>
-      <find>userApi</find>
-      <find>routes/users</find>
-      <find>user</find>
-      <find>usersAPI</find>
-      <find>action</find>
-      <find>aut</find>
-      <find>userT</find>
-      <find>please p</find>
-      <find>User al</find>
-      <find>cre</find>
-      <find>bein</find>
-      <find>being</find>
-      <find>consol</find>
-      <find>console</find>
-      <find>error.</find>
-      <find>message</find>
-      <find>fun</find>
-      <find>var</find>
-      <find>imageUtils</find>
-      <find>config</find>
-      <find>config.captcha.url</find>
-      <find>passport</find>
-      <find>checkCaptcha</find>
-      <find>response.json</find>
-      <find>handleSuccessResponse</find>
-      <find>handleErrorResponse</find>
-      <find>My</find>
+      <find>closeNotification</find>
+      <find>mode</find>
+      <find>tok</find>
+      <find>Mo</find>
+      <find>socialLogin</find>
+      <find>ngrx/core</find>
+      <find>initi</find>
+      <find>defaultState</find>
+      <find>26</find>
+      <find>IPayloadAction'</find>
+      <find>actions$: Actions</find>
+      <find>Actions&lt;IPayloadAction</find>
+      <find>AppActions.SEND_MESSAGE</find>
+      <find>Material</find>
+      <find>MatIconModule</find>
+      <find>MatSidenavModule</find>
+      <find>MatS</find>
+      <find>defay</find>
+      <find>store</find>
+      <find>StoreConfig</find>
+      <find>forRoot</find>
+      <find>initialState</find>
+      <find>defa</find>
+      <find>mdInput</find>
+      <find>mat-form-field</find>
+      <find>mat</find>
+      <find>md</find>
+      <find>toolbar</find>
+      <find>MatInputModule</find>
+      <find>MatDialog</find>
     </findStrings>
     <replaceStrings>
       <replace>2.3.1</replace>
@@ -182,6 +259,10 @@
       <replace>AppSettings</replace>
       <replace>BarAction</replace>
       <replace>userAPI</replace>
+      <replace>MatDialogRef</replace>
+      <replace>mat-</replace>
+      <replace>actions$: Actions&lt;IPayloadAction&gt;</replace>
+      <replace>matInput</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\programing\workspace\ps\ps-client\node_modules\watchpack</dir>
@@ -191,6 +272,7 @@
       <dir>C:\programing\workspace\ps\node_modules</dir>
       <dir>C:\programing\workspace\ps\ps-client\node_modules</dir>
       <dir>C:\programing\workspace\ps\ps-client\src\app\social-login</dir>
+      <dir>C:\programing\workspace\ps\ps-client\node_modules\@ngrx</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -204,57 +286,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarCurrentActionReducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarItemComponent.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/carousel.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/slide.model.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/ISlideUrl.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesReducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/styles/layout.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/vendor.browser.ts" />
+        <option value="$PROJECT_DIR$/ps-client/package.json" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/IPayloadAction.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesService.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesEffectService.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/ISlide.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/IRawSlide.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarCurrentActionReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileDirtyReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileAvatarReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/DirtyProfileAvatarReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications.reducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/FooterBarReducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginService.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactTokenReducer.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginModeReducer.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/user-board.component.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/validators/src/email-validator.directive.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/AppComponent.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/Module.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/profile/index.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.html" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/app.state.ts" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/UserBoardComponent.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/CcontactDirtyReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/UserAlbumsReducer.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/core/src/AppEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/AvatarEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/ContactEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumEffectService.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/home/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/side-bar/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/footer-bar/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/notifications/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/guest-board/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/user-board/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/IAppState.ts" />
         <option value="$PROJECT_DIR$/ps-client/src/app/AppService.ts" />
-        <option value="$PROJECT_DIR$/ps-services/models/slides.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/reposne-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/resposne-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/app.js" />
-        <option value="$PROJECT_DIR$/ps-services/models/user.js" />
-        <option value="$PROJECT_DIR$/ps-services/models/album.js" />
-        <option value="internal/process/promises.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/response-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/users.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/album-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/albums.js" />
-        <option value="$PROJECT_DIR$/ps-services/utils/image-utils.js" />
-        <option value="$PROJECT_DIR$/ps-services/config.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/avatar.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/index.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/captcha-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/mail-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/user-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/profile.js" />
-        <option value="$PROJECT_DIR$/ps-services/api/slide-api.js" />
-        <option value="$PROJECT_DIR$/ps-services/routes/slides.js" />
-        <option value="$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts" />
-        <option value="$PROJECT_DIR$/ps-services/routes/mail.js" />
-        <option value="$PROJECT_DIR$/ps-client/README.md" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/contact.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/app.styl" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/contact/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/albums/src/Module.ts" />
+        <option value="$PROJECT_DIR$/ps-client/src/app/Module.ts" />
       </list>
     </option>
   </component>
@@ -317,7 +399,7 @@
     </entry>
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -330,55 +412,13 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-              <item name="ps-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-              <item name="ps-services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-              <item name="ps-services" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-              <item name="ps-services" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps" type="462c0819:PsiDirectoryNode" />
-              <item name="ps-services" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\programing\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="js.eslint.nodeInterpreter" value="C:\programing\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -388,21 +428,24 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ftw/mp-ui-attribute" />
     <property name="prop_add_unversioned_files" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/node6js/node" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.tslint" value="C:\programing\workspace\ps\ps-client\node_modules\tslint" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\programing\workspace\ps\ps-services\api" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\albums\src" />
-      <recent name="C:\programing\workspace\ps\ps-services\routes" />
-      <recent name="C:\programing\workspace\ps\ps-services\models" />
-      <recent name="C:\programing\workspace\ps\ps-client\src\app\side-bar\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\programing\workspace\ps\ps-client\src\app\slides\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\social-login\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\notifications\src" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\home" />
       <recent name="C:\programing\workspace\ps\ps-client\src\app\home\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\albums\src" />
+      <recent name="C:\programing\workspace\ps\ps-services\api" />
+      <recent name="C:\programing\workspace\ps\ps-services\routes" />
+      <recent name="C:\programing\workspace\ps\ps-services\models" />
+      <recent name="C:\programing\workspace\ps\ps-client\src\app\side-bar\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -492,8 +535,8 @@
     <configuration name="services debug" type="NodeJSRemoteDebug" factoryName="Node.js Remote Debug">
       <node-js-remote-debug host="localhost" />
     </configuration>
-    <configuration name="start (1)" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/ps-services/package.json" />
+    <configuration name="start (2)" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ps-client/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -532,18 +575,18 @@
       <item index="0" class="java.lang.String" itemvalue="Node.js.image-utils" />
       <item index="1" class="java.lang.String" itemvalue="Node.js Remote Debug.services debug" />
       <item index="2" class="java.lang.String" itemvalue="npm.start" />
-      <item index="3" class="java.lang.String" itemvalue="npm.start (1)" />
-      <item index="4" class="java.lang.String" itemvalue="npm.strat:client" />
-      <item index="5" class="java.lang.String" itemvalue="npm.strat:services" />
-      <item index="6" class="java.lang.String" itemvalue="npm.clean" />
+      <item index="3" class="java.lang.String" itemvalue="npm.strat:client" />
+      <item index="4" class="java.lang.String" itemvalue="npm.strat:services" />
+      <item index="5" class="java.lang.String" itemvalue="npm.clean" />
+      <item index="6" class="java.lang.String" itemvalue="npm.start (2)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="npm.start" />
-        <item index="1" class="java.lang.String" itemvalue="npm.strat:services" />
-        <item index="2" class="java.lang.String" itemvalue="npm.strat:client" />
-        <item index="3" class="java.lang.String" itemvalue="npm.clean" />
-        <item index="4" class="java.lang.String" itemvalue="npm.start (1)" />
+        <item index="1" class="java.lang.String" itemvalue="npm.start (2)" />
+        <item index="2" class="java.lang.String" itemvalue="npm.strat:services" />
+        <item index="3" class="java.lang.String" itemvalue="npm.strat:client" />
+        <item index="4" class="java.lang.String" itemvalue="npm.clean" />
       </list>
     </recent_temporary>
   </component>
@@ -664,6 +707,13 @@
       <workItem from="1510235534946" duration="4762000" />
       <workItem from="1510305471525" duration="2214000" />
       <workItem from="1510307703485" duration="1152000" />
+      <workItem from="1510409879756" duration="9349000" />
+      <workItem from="1510527832732" duration="6684000" />
+      <workItem from="1510572147430" duration="1333000" />
+      <workItem from="1510777347566" duration="4298000" />
+      <workItem from="1510784738308" duration="4014000" />
+      <workItem from="1510822602618" duration="26000" />
+      <workItem from="1512221977037" duration="1293000" />
     </task>
     <task id="LOCAL-00030" summary="Integrate social login to rx data flow.">
       <created>1478281814781</created>
@@ -1012,24 +1062,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507367000" />
+    <option name="totallyTimeSpent" value="545021000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30505794" sideWeight="0.52290076" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29985118" sideWeight="0.51241535" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31743422" sideWeight="0.5416667" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40326086" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4304348" sideWeight="0.47693452" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40296054" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30505794" sideWeight="0.47709924" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29910713" sideWeight="0.48758465" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46381578" sideWeight="0.47693452" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24762908" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2713816" sideWeight="0.45833334" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36956522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36956522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1046,18 +1096,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31743422" sideWeight="0.5416667" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4304348" sideWeight="0.47693452" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30505794" sideWeight="0.47709924" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29910713" sideWeight="0.48758465" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46381578" sideWeight="0.47693452" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2713816" sideWeight="0.45833334" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30505794" sideWeight="0.52290076" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29985118" sideWeight="0.51241535" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40326086" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40296054" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24762908" sideWeight="0.496208" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36956522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36956522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1077,7 +1127,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="NAVIGATE to user through native hash to avoid routing ng-rx conflicts" />
     <MESSAGE value="ADD cancel flow for avatar change." />
     <MESSAGE value="ADD dirty checking for avatar" />
     <MESSAGE value="COMPLETE file reader stream" />
@@ -1102,7 +1151,8 @@
     <MESSAGE value="UI: REFACTOR side bar package." />
     <MESSAGE value="UI: REFACTOR sides package." />
     <MESSAGE value="SERVICES: REFACTOR services by introducing api level." />
-    <option name="LAST_COMMIT_MESSAGE" value="SERVICES: REFACTOR services by introducing api level." />
+    <MESSAGE value="UPGRADE dependencies, ADD albums list." />
+    <option name="LAST_COMMIT_MESSAGE" value="UPGRADE dependencies, ADD albums list." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1115,32 +1165,28 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ps-services/api/mail-api.js</url>
           <line>5</line>
-          <properties />
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ps-services/api/mail-api.js</url>
           <line>8</line>
-          <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ps-services/api/mail-api.js</url>
           <line>4</line>
-          <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ps-services/api/mail-api.js</url>
           <line>9</line>
-          <properties />
           <option name="timeStamp" value="187" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="190" />
+      <option name="time" value="191" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSRemoteDebug">
@@ -1161,361 +1207,374 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/IRawSlide.ts" />
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesService.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/CcontactDirtyReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/CarouselComponent.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/ContactTokenReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/index.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/ISlideUrl.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileDirtyReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/Module.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileAvatarReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="36">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/DirtyProfileAvatarReducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumReducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/UserAlbumsReducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/ContactService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@ngrx/effects/src/actions.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/notifications/src/notifications-effect.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/AvatarEffectService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/core/src/AppEffectService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesEffectService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/Module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginDataService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="90">
+          <caret line="11" column="73" lean-forward="false" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginEffectService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="59" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/src/SocialLoginModeReducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/social-login/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/validators/src/EmailValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/AppActions.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/ProfileEffectService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="288">
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/environment.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/AlbumService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/SideBarEffectService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/NewAlbumEffectService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/material/icon/typings/icon-module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/ContactEffectService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/Module.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/footer-bar/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/home/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/notifications/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/material/sidenav/typings/sidenav-module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/material/sidenav/typings/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/material/sidenav.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@angular/material/material.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/side-bar/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/Module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/guest-board/src/Module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@ngrx/store/src/store.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/ngx-bootstrap/alert/alert.module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@ngrx/store/src/store_module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1312" column="5" lean-forward="false" selection-start-line="1312" selection-start-column="5" selection-end-line="1312" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/node_modules/@ngrx/store/src/models.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/IContact.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/IProfile.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/IPicturel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/IAlbum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/IAppState.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/user-board/src/UserBoardComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/AppRoutes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/AppService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        <state relative-caret-position="1098">
+          <caret line="74" column="17" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/AppComponent.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/src/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/public/slides/l2.png" />
-    <entry file="file://$PROJECT_DIR$/ps-services/public/slides/m_l3.png" />
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/profile/index.ts">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.html">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/create-album.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="252">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps-client/src/app/app.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/models/slides.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/models/album.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/node_modules/lodash/lodash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="11713" column="3" lean-forward="false" selection-start-line="11713" selection-start-column="3" selection-end-line="11713" selection-end-column="3" />
+        <state relative-caret-position="276">
+          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/models/user.js">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/contact/src/Module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="396">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/utils/image-utils.js">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/albums/src/Module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4752">
-          <caret line="264" column="33" lean-forward="false" selection-start-line="264" selection-start-column="33" selection-end-line="264" selection-end-column="33" />
+        <state relative-caret-position="290">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/app.js">
+    <entry file="file://$PROJECT_DIR$/ps-client/src/app/Module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/album-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/avatar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/utils/common-utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/user-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/slide-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/captcha-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/src/app/slides/src/SlidesDataService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/mail-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/api/response-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/slides.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-services/routes/mail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps-client/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="506">
+          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

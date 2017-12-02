@@ -1,17 +1,17 @@
 import { AppActions } from '../../AppActions';
 import { IContact } from './IContact';
+import { IAlbum } from './IAlbum';
 import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const contact = (contact: IContact, action: IPayloadAction) => {
-  let result: IContact;
+export const userAlbums = (albums: Array<IAlbum>, action: IPayloadAction) => {
+  let result: Array<IAlbum>;
 
   switch (action.type) {
-    case AppActions.SET_CONTACT:
-      result = Object.assign({}, action.payload);
+    case AppActions.SET_USER_ALBUMS:
+      result = [...action.payload];
       break;
-
     default:
-      result = contact;
+      result = albums;
       break;
   }
 

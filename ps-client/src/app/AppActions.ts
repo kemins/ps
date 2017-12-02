@@ -62,6 +62,8 @@ export class AppActions {
   // albums
   public static SET_NEW_ALBUM: string = 'SET_NEW_ALBUM';
   public static CREATE_NEW_ALBUM: string = 'CREATE_NEW_ALBUM';
+  public static LOAD_USER_ALBUMS: string = 'LOAD_USER_ALBUMS';
+  public static SET_USER_ALBUMS: string = 'SET_USER_ALBUMS';
   public static ALBUM_POST_SUCCESS: string = 'ALBUM_POST_SUCCESS';
   public static ALBUM_POST_FAIL: string = 'ALBUM_POST_FAIL';
 }

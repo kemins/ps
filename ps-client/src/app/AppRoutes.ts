@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
-import { AlbumsComponent } from './albums';
+import { AlbumsComponent, AlbumsResolver } from './albums';
 import { ContactComponent } from './contact';
 import { UserBoardComponent } from './user-board';
 import { GuestBoardComponent } from './guest-board';
-import { ProfileService } from './profile/src/ProfileService';
+import { ProfileService } from './profile';
 
 export const ROUTES: Routes = [
   {
@@ -41,7 +41,10 @@ export const ROUTES: Routes = [
     }, {
       path: 'albums',
       canActivate: [ProfileService],
-      component: AlbumsComponent
+      component: AlbumsComponent,
+      resolve: {
+        albums: AlbumsResolver
+      }
     }]
   },
   {

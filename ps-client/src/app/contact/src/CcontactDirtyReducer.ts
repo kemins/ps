@@ -1,10 +1,9 @@
-import { Action } from '@ngrx/store';
-
 import { AppActions } from '../../AppActions';
 import { IContact } from './IContact';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 
-export const dirtyContact = (contact: IContact, action: Action) => {
+export const dirtyContact = (contact: IContact, action: IPayloadAction) => {
   let result: IContact;
 
   switch (action.type) {

@@ -19,7 +19,7 @@ const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
  * Webpack Constants
  */
 const METADATA = {
-  title: 'Angular2 Webpack Starter',
+  title: 'Photo State',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -48,7 +48,6 @@ module.exports = {
   entry: {
 
     'polyfills': './src/polyfills.browser.ts',
-    'vendor':    './src/vendor.browser.ts',
     'main':      './src/main.browser.ts'
 
   },

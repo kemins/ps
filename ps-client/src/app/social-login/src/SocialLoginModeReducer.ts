@@ -1,8 +1,8 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 import { MODE } from './SocialLoginService';
 
-export const socialLoginMode = (mode: MODE, action: Action) => {
+export const socialLoginMode = (mode: MODE, action: IPayloadAction) => {
   let result: MODE;
 
   switch (action.type) {

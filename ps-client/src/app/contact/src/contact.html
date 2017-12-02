@@ -2,35 +2,35 @@
   <h1>Contact Form</h1>
   <form novalidate [formGroup]="contactForm">
     <div class="form-group">
-      <md-input-container>
-        <input mdInput
+      <mat-input-container>
+        <input matInput
             placeholder="Name"
             formControlName="name"
             name="name" id="name">
-        <md-error *ngIf="!contactForm.controls.name.valid">Name is required
-        </md-error>
-      </md-input-container>
+        <mat-error *ngIf="!contactForm.controls.name.valid">Name is required
+        </mat-error>
+      </mat-input-container>
     </div>
     <div class="form-group">
-      <md-input-container>
-        <input mdInput
+      <mat-input-container>
+        <input matInput
             placeholder="Email" type="email"
             formControlName="email">
-        <md-error *ngIf="!contactForm.controls.email.valid">Email is invalid
-        </md-error>
-      </md-input-container>
+        <mat-error *ngIf="!contactForm.controls.email.valid">Email is invalid
+        </mat-error>
+      </mat-input-container>
     </div>
     <div class="form-group">
-      <md-input-container>
-        <textarea mdInput
+      <mat-input-container>
+        <textarea matInput
             placeholder="Message"
             formControlName="message"
             maxlength="2000">
         </textarea>
-        <md-error *ngIf="!contactForm.controls.message.valid">Message is
+        <mat-error *ngIf="!contactForm.controls.message.valid">Message is
           required
-        </md-error>
-      </md-input-container>
+        </mat-error>
+      </mat-input-container>
     </div>
 
     <div class="form-group">
@@ -38,7 +38,7 @@
           (captchaResponse)="handleCorrectCaptcha($event)"
           (captchaExpired)="handleCorrectCaptcha(null)"></re-captcha>
     </div>
-    <button md-raised-button color="primary" (click)="onSubmit()"
+    <button mat-raised-button color="primary" (click)="onSubmit()"
         [disabled]="!contactForm.valid || !(token | async)">Send
     </button>
   </form>

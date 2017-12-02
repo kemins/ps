@@ -3,13 +3,13 @@
 
   <div class="backdrop" *ngIf="pendingRequests">
     <div class="translate-center">
-      <md-spinner mode="indeterminate"></md-spinner>
+      <mat-spinner mode="indeterminate"></mat-spinner>
     </div>
   </div>
 
   <span [hidden]="!isSocialLogin(slMode | async)" class="social-login-box">
         <div class="oa_social_login_container"></div>
-        <md-icon class="light close-social-box" (click)="closeSocialLogin()">close</md-icon>
+        <mat-icon class="light close-social-box" (click)="closeSocialLogin()">close</mat-icon>
     </span>
 
   <ps-footer></ps-footer>

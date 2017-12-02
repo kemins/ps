@@ -1,11 +1,11 @@
 <div>
-  <button *ngIf="action.link" [id]="action.label" md-icon-button color="primary"
+  <button *ngIf="action.link" [id]="action.label" mat-icon-button color="primary"
       routerLink="{{action.link}}">
-    <md-icon class="light">{{action.icon}}</md-icon>
+    <mat-icon class="light">{{action.icon}}</mat-icon>
   </button>
-  <button *ngIf="!action.link" [id]="action.label" md-icon-button color="primary"
+  <button *ngIf="!action.link" [id]="action.label" mat-icon-button color="primary"
       (click)="doAction(action)">
-    <md-icon class="light">{{action.icon}}</md-icon>
+    <mat-icon class="light">{{action.icon}}</mat-icon>
   </button>
   <label [attr.for]="action.label">{{action.label}}</label>
 </div>

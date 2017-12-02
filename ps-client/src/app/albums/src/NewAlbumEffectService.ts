@@ -8,6 +8,8 @@ import { ProfileDataService } from './profile-data.service';
 import { IPSResponse } from '../../core/src/IPSResponse';
 import { AlbumService } from './AlbumService';
 import { AlbumDataService } from './AlbumDataService';
+import { IAlbum } from './IAlbum';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 @Injectable()
 export class NewAlbumEffectService {
@@ -18,7 +20,7 @@ export class NewAlbumEffectService {
 
   public constructor(private albumService: AlbumService,
                      private albumDataService: AlbumDataService,
-                     private actions$: Actions) {
+                     private actions$: Actions<IPayloadAction>) {
   }
 
   @Effect()
@@ -33,5 +35,14 @@ export class NewAlbumEffectService {
         message: res.message,
         body: res.body
       },
+    }));
+
+  @Effect()
+  public loadUserAlbums$: Observable<Action> = this.actions$
+    .ofType(AppActions.LOAD_USER_ALBUMS)
+    .switchMap(() => this.albumDataService.getUserAlbums())
+    .map((albums: Array<IAlbum>) => ({
+      type: AppActions.SET_USER_ALBUMS,
+      payload: albums
     }));
 }

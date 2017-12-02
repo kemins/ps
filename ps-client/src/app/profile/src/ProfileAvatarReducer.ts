@@ -1,7 +1,7 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const profileAvatar = (data, action: Action) => {
+export const profileAvatar = (data, action: IPayloadAction) => {
   let result;
 
   switch (action.type) {

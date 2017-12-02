@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -12,6 +11,11 @@ import { CreateAlbumComponent } from './CreateAlbumComponent';
 import { AlbumService } from './AlbumService';
 import { AlbumDataService } from './AlbumDataService';
 import { NewAlbumEffectService } from './NewAlbumEffectService';
+import { AlbumsResolver } from './AlbumsResolver';
+import {
+  MatButtonModule, MatCardModule, MatDialog, MatFormFieldModule, MatIconModule, MatMenuModule,
+  MatToolbarModule
+} from '@angular/material';
 
 
 @NgModule({
@@ -26,10 +30,16 @@ import { NewAlbumEffectService } from './NewAlbumEffectService';
     AlertModule.forRoot(),
     HttpModule,
     CommonModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    ValidatorModule
+    ValidatorModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatDialog
   ],
   exports: [
     AlbumsComponent,
@@ -39,6 +49,7 @@ import { NewAlbumEffectService } from './NewAlbumEffectService';
     AlbumService,
     AlbumDataService,
     NewAlbumEffectService,
+    AlbumsResolver
   ]
 })
 export class AlbumsModule {

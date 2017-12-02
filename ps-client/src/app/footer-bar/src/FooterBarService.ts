@@ -11,7 +11,7 @@ export class FooterBarService {
   }
 
   public getActions(): Observable<Array<IBarAction>> {
-    return this.store.select<IBarAction[]>('footerActions');
+    return this.store.select('footerActions');
   }
 
   public setActions(actions: IBarAction[]): void {

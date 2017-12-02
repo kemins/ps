@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { ISlide } from './../';
-import { AppSettings } from '../../core/src/AppSettings';
+import { AppSettings } from '../../core';
+import { chain } from 'lodash';
 
 @Injectable()
 export class SlideDataService {
@@ -20,9 +21,12 @@ export class SlideDataService {
     const data = res.json(),
       {slides} = data.body;
 
-    return slides.map(({creationDate, url}) => ({
-      url,
-      creationDate: creationDate ? new Date(creationDate) : null
-    }));
+    return chain(slides)
+      .map(({creationDate, url}) => ({
+        url,
+        creationDate: creationDate ? new Date(creationDate) : null
+      }))
+      .shuffle()
+      .value();
   }
 }

@@ -22,4 +22,10 @@ router.post('/', (req, res, next) => {
       ({message}) => responseAPI.handleErrorResponse(res, message));
 });
 
+router.get('/', (req, res, next) => {
+  albumAPI.getUserAlbums(req.user._id)
+    .then((albums) => responseAPI.handleSuccessResponse(res, '', {albums}),
+      ({message}) => responseAPI.handleErrorResponse(res, message));
+});
+
 module.exports = router;

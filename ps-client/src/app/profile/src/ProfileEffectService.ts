@@ -5,6 +5,7 @@ import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
 import { ProfileDataService } from './ProfileDataService';
 import { ProfileService } from './ProfileService';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 @Injectable()
 export class ProfileEffectService {
@@ -20,23 +21,23 @@ export class ProfileEffectService {
 
   public constructor(private profileDataService: ProfileDataService,
               private profileService: ProfileService,
-              private actions$: Actions) {
+              private actions$: Actions<IPayloadAction>) {
   }
 
   @Effect()
-  public save$: Observable<Action> = this.actions$
+  public save$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.SAVE_PROFILE)
     .withLatestFrom(this.profileService.getDirtyProfile())
     .switchMap(([action, profile]) => this.profileDataService.save(profile))
     .map(res => ({type: this.saveTypes[res.type], payload: res}));
 
   @Effect()
-  public saveSuccess$: Observable<Action> = this.actions$
+  public saveSuccess$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.PROFILE_POST_SUCCESS)
     .map(({payload}) => ({type: AppActions.SET_PROFILE, payload: payload.body}));
 
   @Effect()
-  public logout$: Observable<Action> = this.actions$
+  public logout$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.LOGOUT)
     .mergeMap(() => this.profileDataService.logout())
     .map(res => ({type: this.logoutTypes[res.type], payload: res}));

@@ -1,7 +1,7 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const contactToken = (token: string, action: Action) => {
+export const contactToken = (token: string, action: IPayloadAction) => {
   let result: string;
 
   switch (action.type) {

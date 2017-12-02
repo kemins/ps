@@ -1,11 +1,11 @@
 <div class="flex-column">
-    <md-toolbar color="primary" class="top-tool-bar">
-        <md-icon class="light" (click)="menu.toggle()">menu</md-icon>
+    <mat-toolbar color="primary" class="top-tool-bar">
+        <mat-icon class="light" (click)="menu.toggle()">menu</mat-icon>
 
         <div class="centered-box">
-            <button id="sign-in-btn" md-icon-button color="accent"
+            <button id="sign-in-btn" mat-icon-button color="accent"
                 (click)="menu.toggle();openProfile()">
-                <md-icon class="light">account_circle</md-icon>
+                <mat-icon class="light">account_circle</mat-icon>
             </button>
             <label for="sign-in-btn" class="single-line">Profile</label>
         </div>
@@ -13,20 +13,20 @@
         <span class="remaining-space"></span>
 
         <div class="centered-box">
-            <button id="logout-btn" md-icon-button color="accent"
+            <button id="logout-btn" mat-icon-button color="accent"
                 (click)="logout()">
-                <md-icon class="light">lock</md-icon>
+                <mat-icon class="light">lock</mat-icon>
             </button>
             <label for="logout-btn" class="single-line">Logout</label>
         </div>
-    </md-toolbar>
+    </mat-toolbar>
 
-    <md-sidenav-container>
-        <md-sidenav #menu (close)="menuClose()" [style.width]="profileAction(currentAction | async) ? '400px' : '200px'">
+    <mat-sidenav-container>
+        <mat-sidenav #menu (close)="menuClose()" [style.width]="profileAction(currentAction | async) ? '400px' : '200px'">
             <ps-profile *ngIf="profileAction(currentAction | async)"></ps-profile>
             <ps-side-bar *ngIf="!profileAction(currentAction | async)" (actionDone)="doAction($event)"></ps-side-bar>
-        </md-sidenav>
+        </mat-sidenav>
 
         <router-outlet></router-outlet>
-    </md-sidenav-container>
+    </mat-sidenav-container>
 </div>

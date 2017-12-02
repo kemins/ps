@@ -8,6 +8,7 @@ import { ProfileDataService } from './ProfileDataService';
 import { IPSResponse } from '../../core';
 import { IAppStore } from '../../IAppState';
 import { includes } from 'lodash';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
 @Injectable()
 export class AvatarEffectService {
@@ -22,7 +23,7 @@ export class AvatarEffectService {
 
   public constructor(private profileService: ProfileService,
                      private profileDataService: ProfileDataService,
-                     private actions$: Actions,
+                     private actions$: Actions<IPayloadAction>,
                      private store: Store<IAppStore>) {
   }
 
@@ -42,7 +43,7 @@ export class AvatarEffectService {
     .map((picture) => ({type: AppActions.SET_DIRTY_AVATAR, payload: picture}));
 
   @Effect()
-  public uploadAvatar$: Observable<Action> = this.actions$
+  public uploadAvatar$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.UPLOAD_AVATAR)
     .withLatestFrom(this.profileService.getDirtyAvatar())
     .switchMap(([action, avatar]) => this.profileDataService.uploadAvatar(avatar.m))
@@ -55,7 +56,7 @@ export class AvatarEffectService {
     }));
 
   @Effect()
-  public uploadAvatarSuccess$: Observable<Action> = this.actions$
+  public uploadAvatarSuccess$: Observable<IPayloadAction> = this.actions$
     .ofType(AppActions.AVATAR_POST_SUCCESS)
     .do((action) => {
       this.store.dispatch({type: AppActions.SET_AVATAR, payload: action.payload.body});

@@ -1,7 +1,7 @@
-import { Action } from '@ngrx/store';
 import { AppActions } from '../../AppActions';
+import { IPayloadAction } from '../../core/src/IPayloadAction';
 
-export const dirtyProfileAvatar = (data, action: Action) => {
+export const dirtyProfileAvatar = (data, action: IPayloadAction) => {
   let result;
 
   switch (action.type) {
