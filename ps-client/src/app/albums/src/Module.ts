@@ -13,7 +13,8 @@ import { AlbumDataService } from './AlbumDataService';
 import { NewAlbumEffectService } from './NewAlbumEffectService';
 import { AlbumsResolver } from './AlbumsResolver';
 import {
-  MatButtonModule, MatCardModule, MatDialog, MatFormFieldModule, MatIconModule, MatMenuModule,
+  MatButtonModule, MatCardModule, MatDialog, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule,
+  MatMenuModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -39,7 +40,8 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatDialog
+    MatDialogModule,
+    MatInputModule
   ],
   exports: [
     AlbumsComponent,

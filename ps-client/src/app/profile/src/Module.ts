@@ -9,7 +9,7 @@ import { ProfileComponent, ProfileDataService, ProfileEffectService, ProfileServ
 import { ValidatorModule } from '../../validators';
 import {
   MatButtonModule,
-  MatCardModule, MatFormFieldModule, MatIconModule, MatMenuModule, MatRadioModule, MatSidenavModule,
+  MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatMenuModule, MatRadioModule, MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -33,7 +33,8 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatInputModule
   ],
   exports: [ProfileComponent],
   providers: [

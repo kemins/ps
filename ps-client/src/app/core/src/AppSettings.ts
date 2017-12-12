@@ -9,6 +9,6 @@ export class AppSettings {
   };
 
   public static getSetting(key: string): string {
-    return get<string>(AppSettings.settings, key);
+    return get(AppSettings.settings, key, '');
   }
 }
