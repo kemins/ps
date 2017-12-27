@@ -7,36 +7,12 @@
 
 
 <div class="example-container mat-elevation-z8">
-  <!--<mat-table #table [dataSource]="dataSource">
-
-    &lt;!&ndash;- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" &ndash;&gt;
-
-    &lt;!&ndash; Position Column &ndash;&gt;
-    <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-    </ng-container>
-
-    &lt;!&ndash; Name Column &ndash;&gt;
-    <ng-container matColumnDef="name">
+  <mat-table #table [dataSource]="datSource">
+    <ng-container matColumnDef="albumName">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      <mat-cell *matCellDef="let album"> {{album.name}} </mat-cell>
     </ng-container>
-
-    &lt;!&ndash; Weight Column &ndash;&gt;
-    <ng-container matColumnDef="weight">
-      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-    </ng-container>
-
-    &lt;!&ndash; Color Column &ndash;&gt;
-    <ng-container matColumnDef="symbol">
-      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>-->
+    <mat-header-row *matHeaderRowDef="['albumName']"></mat-header-row>
+    <mat-row *matRowDef="let album; columns: ['albumName']"></mat-row>
+  </mat-table>
 </div>

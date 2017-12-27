@@ -15,6 +15,7 @@ import { AlbumsResolver } from './AlbumsResolver';
 import {
   MatButtonModule, MatCardModule, MatDialog, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule,
   MatMenuModule,
+  MatTableModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -41,7 +42,8 @@ import {
     MatIconModule,
     MatCardModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   exports: [
     AlbumsComponent,

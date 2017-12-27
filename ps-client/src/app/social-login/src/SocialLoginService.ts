@@ -60,6 +60,7 @@ export class SocialLoginService {
   }
 
   public onLoginRedirect = (data) => {
+    console.log(data);
     let types = {
       [MODE.SIGN_IN]: AppActions.SIGN_IN_WITH_TOKE,
       [MODE.SIGN_UP]: AppActions.SIGN_UP_WITH_TOKE,
